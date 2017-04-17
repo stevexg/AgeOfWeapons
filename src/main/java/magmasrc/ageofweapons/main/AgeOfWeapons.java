@@ -19,7 +19,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 /**---------------------------------------------------------------------------------*
- * @author MagmaSrc Team (Steve44TV & XxRexRaptorxX (RexRaptor))
+ * @author MagmaSrc Team (Stvxv.g & XxRexRaptorxX (RexRaptor))
  * @forumThread 
  * @projectPage https://minecraft.curseforge.com/projects/age-of-weapons
  **---------------------------------------------------------------------------------*/
