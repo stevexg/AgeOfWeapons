@@ -25,7 +25,7 @@ public class ModBlocks {
 			
 			
 			
-			NameUtils.setNames(tableOfAges, "table_of_ages");
+			NameUtils.setNames(tableOfAges,"table_of_ages");
 			
 
 		}
