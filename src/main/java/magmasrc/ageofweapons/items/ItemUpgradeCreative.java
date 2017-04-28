@@ -8,7 +8,7 @@ public class ItemUpgradeCreative extends Item {
 	
 	public ItemUpgradeCreative() {
 		super();
-		this.setCreativeTab(CreativeTabs.MISC);  // to-do!!!
+		this.setCreativeTab(CreativeTabs.MISC);  // TODO
 		this.setMaxStackSize(1);
 		
 	}

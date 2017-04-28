@@ -42,10 +42,8 @@ public class BlockTableOfAges extends BlockContainer {
 	}
 
 	@Override
-	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand,
-									EnumFacing side, float hitX, float hitY, float hitZ) {
+	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing side, float hitX, float hitY, float hitZ) {
 		if (worldIn.isRemote) return true;
-
 		playerIn.openGui(AgeOfWeapons.instance, GuiHandlerTOA.getGuiID(), worldIn, pos.getX(), pos.getY(), pos.getZ());
 		System.out.println("Clicked! Block Class");
 		return true;

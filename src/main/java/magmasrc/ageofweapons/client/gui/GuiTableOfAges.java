@@ -16,8 +16,8 @@ public class GuiTableOfAges extends GuiContainer {
 
     final ResourceLocation texture = new ResourceLocation(AgeOfWeapons.MODID, "textures/gui/table_of_ages_gui.png");
     private TileEntityTableOfAges tileEntityTableOfAges;
-    int guiWidth = 250;
-    int guiHeigth = 222;
+    private int guiWidth = 250;
+    private int guiHeigth = 222;
 
     public GuiTableOfAges(InventoryPlayer invPlayer, TileEntityTableOfAges tile) {
         super(new ContainerTableOfAges(invPlayer, tile));

@@ -23,16 +23,16 @@ public class TileEntityTableOfAges extends TileEntity implements IInventory {
     @Override
     public ItemStack decrStackSize(int slotIndex, int count) {
         ItemStack itemStackInSlot = getStackInSlot(slotIndex);
-        if (itemStackInSlot.isEmpty()) return ItemStack.EMPTY;  // isEmpt();   EMPTY_ITEM
+        if (itemStackInSlot.isEmpty()) return ItemStack.EMPTY;
 
         ItemStack itemStackRemoved;
-        if (itemStackInSlot.getCount() <= count) {  // getStackSize()
+        if (itemStackInSlot.getCount() <= count) {
             itemStackRemoved = itemStackInSlot;
-            setInventorySlotContents(slotIndex, ItemStack.EMPTY);   // EMPTY_ITEM
+            setInventorySlotContents(slotIndex, ItemStack.EMPTY);
         } else {
             itemStackRemoved = itemStackInSlot.splitStack(count);
-            if (itemStackInSlot.getCount() == 0) { // getStackSize
-                setInventorySlotContents(slotIndex, ItemStack.EMPTY);   // EMPTY_ITEM
+            if (itemStackInSlot.getCount() == 0) {
+                setInventorySlotContents(slotIndex, ItemStack.EMPTY);
             }
         }
         markDirty();
@@ -42,35 +42,29 @@ public class TileEntityTableOfAges extends TileEntity implements IInventory {
     @Override
     public NBTTagCompound writeToNBT(NBTTagCompound parentNBTTagCompound)
     {
-        super.writeToNBT(parentNBTTagCompound); // The super call is required to save and load the tileEntity's location
+        super.writeToNBT(parentNBTTagCompound);
 
-        // to use an analogy with Java, this code generates an array of hashmaps
-        // The itemStack in each slot is converted to an NBTTagCompound, which is effectively a hashmap of key->value pairs such
-        //   as slot=1, id=2353, count=1, etc
-        // Each of these NBTTagCompound are then inserted into NBTTagList, which is similar to an array.
         NBTTagList dataForAllSlots = new NBTTagList();
         for (int i = 0; i < this.itemStacks.length; ++i) {
-            if (!this.itemStacks[i].isEmpty())	{ //isEmpty()
+            if (!this.itemStacks[i].isEmpty())	{
                 NBTTagCompound dataForThisSlot = new NBTTagCompound();
                 dataForThisSlot.setByte("Slot", (byte) i);
                 this.itemStacks[i].writeToNBT(dataForThisSlot);
                 dataForAllSlots.appendTag(dataForThisSlot);
             }
         }
-        // the array of hashmaps is then inserted into the parent hashmap for the container
         parentNBTTagCompound.setTag("Items", dataForAllSlots);
-        // return the NBT Tag Compound
         return parentNBTTagCompound;
     }
 
     @Override
     public void readFromNBT(NBTTagCompound parentNBTTagCompound)
     {
-        super.readFromNBT(parentNBTTagCompound); // The super call is required to save and load the tiles location
-        final byte NBT_TYPE_COMPOUND = 10;       // See NBTBase.createNewByType() for a listing
+        super.readFromNBT(parentNBTTagCompound);
+        final byte NBT_TYPE_COMPOUND = 10;
         NBTTagList dataForAllSlots = parentNBTTagCompound.getTagList("Items", NBT_TYPE_COMPOUND);
 
-        Arrays.fill(itemStacks, ItemStack.EMPTY);           // set all slots to empty EMPTY_ITEM
+        Arrays.fill(itemStacks, ItemStack.EMPTY);
         for (int i = 0; i < dataForAllSlots.tagCount(); ++i) {
             NBTTagCompound dataForOneSlot = dataForAllSlots.getCompoundTagAt(i);
             int slotIndex = dataForOneSlot.getByte("Slot") & 255;
@@ -107,7 +101,7 @@ public class TileEntityTableOfAges extends TileEntity implements IInventory {
 
     @Override
     public void clear() {
-        Arrays.fill(itemStacks, ItemStack.EMPTY);  //empty item
+        Arrays.fill(itemStacks, ItemStack.EMPTY);
     }
 
     @Override
@@ -148,7 +142,7 @@ public class TileEntityTableOfAges extends TileEntity implements IInventory {
     @Override
     public ItemStack removeStackFromSlot(int slotIndex) {
         ItemStack itemStack = getStackInSlot(slotIndex);
-        if (!itemStack.isEmpty()) setInventorySlotContents(slotIndex, ItemStack.EMPTY);  //isEmpty(), EMPTY_ITEM
+        if (!itemStack.isEmpty()) setInventorySlotContents(slotIndex, ItemStack.EMPTY);
         return itemStack;
     }
 

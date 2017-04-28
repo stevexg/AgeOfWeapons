@@ -23,23 +23,17 @@ public class CraftingManagerTableOfAges {
 
     public static CraftingManagerTableOfAges getInstance()
     {
-        /** The static instance of this class */
         return INSTANCE;
     }
 
 
-    /**  --------------------------------------------------------------------------------------------
-     *
-     *          RECIPES HERE
-     *
-     **  -------------------------------------------------------------------------------------------- */
     private CraftingManagerTableOfAges() {
 
 
         new ModRecipesTOA();
 
 
-        this.addRecipeTOA(new ItemStack(Items.PAPER, 3), 11, new Object[] {"###", '#', Items.REEDS});
+        //this.addRecipeTOA(new ItemStack(Items.PAPER, 3), 11, new Object[] {"###", '#', Items.REEDS});
 
     }
 
