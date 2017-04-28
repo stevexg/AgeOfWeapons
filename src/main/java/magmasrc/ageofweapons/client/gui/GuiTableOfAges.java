@@ -38,9 +38,9 @@ public class GuiTableOfAges extends GuiContainer {
 
     @Override
     protected void drawGuiContainerForegroundLayer(int mouseX, int mouseY) {
-        final int LABEL_XPOS = 5;
-        final int LABEL_YPOS = 5;
-        //fontRendererObj.drawString(tileEntityTableOfAges.getDisplayName().getUnformattedText(), LABEL_XPOS, LABEL_YPOS, Color.darkGray.getRGB());
+        fontRendererObj.drawString("Table Of Ages", 10, 5, Color.darkGray.getRGB());
+        fontRendererObj.drawString("Inventory", 95, 130, Color.darkGray.getRGB());
+        fontRendererObj.drawString("Storage", 112, 90, Color.darkGray.getRGB());
     }
 
     @Override
