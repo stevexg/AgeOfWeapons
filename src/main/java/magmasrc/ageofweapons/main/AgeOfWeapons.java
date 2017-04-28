@@ -4,9 +4,6 @@ import magmasrc.ageofweapons.proxy.ServerProxy;
 import magmasrc.ageofweapons.util.Events;
 import magmasrc.ageofweapons.util.LootHandler;
 import magmasrc.ageofweapons.util.UpdateChecker;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.Items;
-import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.Mod;
@@ -16,7 +13,6 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import net.minecraftforge.fml.common.registry.GameRegistry;
 
 /**---------------------------------------------------------------------------------*
  * @author MagmaSrc Team (Stvxv.g & XxRexRaptorxX (RexRaptor))
