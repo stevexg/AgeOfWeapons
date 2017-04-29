@@ -51,6 +51,7 @@ public class AgeOfWeapons {
     
     // Config //
     public static boolean activateUpdateChecker;
+    public static boolean activateOnlyOneTab;
 
 
 
@@ -73,7 +74,8 @@ public class AgeOfWeapons {
     	config.load();
         
     		activateUpdateChecker = config.get("EVENTS", "Activate Update-Checker", true, "[true/false]").getBoolean();
-    	
+    		//activateOnlyOneTab = config.get("GENERAL", "Activate only one creative tab", false, "[true/false]").getBoolean();
+    		
     	config.save();	
 
     	

@@ -1,4 +1,16 @@
+itemGroup.generalTab=Age of Weapons
+itemGroup.stoneAgeTab=AoW: Steinzeit
+itemGroup.antiquityTab=AoW: Antike
+itemGroup.middleAgesTab=AoW: Mittelalter
+itemGroup.neuzeitTab=AoW: Neuzeit
+itemGroup.modernAgeTab=AoW: Moderne
+itemGroup.piracyTab=AoW: Goldenes Zeitalter der Piraten
+itemGroup.edoTab=AoW: Edo Zeit
+itemGroup.mysticTab=AoW: Mystisch
+itemGroup.fantasyTab=AoW: Fantasy
+itemGroup.vsyTab=AoW: VSY
+
 tile.table_of_ages.name=Tisch der Zeitalter
 
 item.upgrade_creative.name=Kreativ Upgrade
-item.upgrade_stone_age.name=Steinzeit Upgrade
+item.upgrade_stone_age.name=Stein Upgrade
