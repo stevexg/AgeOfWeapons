@@ -52,6 +52,7 @@ public class AgeOfWeapons {
     // Config //
     public static boolean activateUpdateChecker;
     public static boolean activateOnlyOneTab;
+    public static boolean activateChainArmorCrafting;
 
 
 
@@ -75,6 +76,8 @@ public class AgeOfWeapons {
         
     		activateUpdateChecker = config.get("EVENTS", "Activate Update-Checker", true, "[true/false]").getBoolean();
     		//activateOnlyOneTab = config.get("GENERAL", "Activate only one creative tab", false, "[true/false]").getBoolean();
+    		activateChainArmorCrafting = config.get("CRAFTING", "Activate the crafting recipe for the chain armor (Table of Ages)", true, "[true/false]").getBoolean();
+
     		
     	config.save();	
 
