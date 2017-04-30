@@ -1,14 +1,14 @@
 [
 {
   "modid": "ageofweapons",
-  "name": "§9Age of Weapons",
+  "name": "Age of Weapons",
   "description": "A mod that add tons of new weapons based on time ages!",
   "version": "0.1.0",
   "mcversion": "1.11.2",
   "url": "https://minecraft.curseforge.com/projects/age-of-weapons",
   "updateUrl": "https://minecraft.curseforge.com/projects/age-of-weapons",
-  "authorList": ["§6Stvxv.g, XxRexRaptorxX (RexRaptor)"],
-  "credits": "§6The MagmaSrc Team (XxRexRaptorxX, Stvxv.g)",
+  "authorList": ["Stvxv.g, XxRexRaptorxX (RexRaptor)"],
+  "credits": "The MagmaSrc Team (XxRexRaptorxX, Stvxv.g)",
   "logoFile": "assets/ageofweapons/textures/logo/Logo.png",
   "screenshots": [],
   "dependencies": []
