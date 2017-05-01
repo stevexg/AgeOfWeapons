@@ -52,8 +52,7 @@ public class BlockTableOfAges extends BlockContainer  {
 	}
 
 	@Override
-	public boolean hasTileEntity(IBlockState state)
-	{
+	public boolean hasTileEntity(IBlockState state){
 		return true;
 	}
 
@@ -74,18 +73,21 @@ public class BlockTableOfAges extends BlockContainer  {
 	public boolean isOpaqueCube(IBlockState state) {
 		return false;
 	}
+	
+    @Override
+    public boolean isPassable(IBlockAccess worldIn, BlockPos pos){
+        return false;
+    }
 
 	
 	@SideOnly(Side.CLIENT)
-	public BlockRenderLayer getBlockLayer()
-	{
+	public BlockRenderLayer getBlockLayer(){
 		return BlockRenderLayer.CUTOUT;
 	}
 	
 
 	@Override
-	public boolean isFullCube(IBlockState state)
-	{
+	public boolean isFullCube(IBlockState state){
 		return true;
 	} 
 
