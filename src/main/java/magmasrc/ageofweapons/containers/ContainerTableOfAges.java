@@ -45,27 +45,26 @@ public class ContainerTableOfAges extends Container {
             }
         }
 
+
+        //MODULES
+        addSlotToContainer(new SlotTableOfAges(tileEntityTableOfAges, 0, 44, 185));
+        addSlotToContainer(new SlotTableOfAges(tileEntityTableOfAges, 1, 44, 153));
+        addSlotToContainer(new SlotTableOfAges(tileEntityTableOfAges, 2, 20, 153));
+        addSlotToContainer(new SlotTableOfAges(tileEntityTableOfAges, 3, 44, 120));
+        addSlotToContainer(new SlotTableOfAges(tileEntityTableOfAges, 4, 20, 120));
+        addSlotToContainer(new SlotTableOfAges(tileEntityTableOfAges, 5, 68, 120));
+        addSlotToContainer(new SlotTableOfAges(tileEntityTableOfAges, 6, 44, 87));
+        addSlotToContainer(new SlotTableOfAges(tileEntityTableOfAges, 7, 20, 87));
+        addSlotToContainer(new SlotTableOfAges(tileEntityTableOfAges, 8, 44, 55));
+        addSlotToContainer(new SlotTableOfAges(tileEntityTableOfAges, 9, 20, 55));
+        addSlotToContainer(new SlotTableOfAges(tileEntityTableOfAges, 10, 68, 55));
+        addSlotToContainer(new SlotTableOfAges(tileEntityTableOfAges, 11, 44, 23));
+
         final int TILE_INVENTORY_XPOS = 112;
         final int TILE_INVENTORY_YPOS = 100;
         for (int x = 0; x < 7; x++) {
-            addSlotToContainer(new Slot(tileEntityTableOfAges, x, TILE_INVENTORY_XPOS + SLOT_X_SPACING * x, TILE_INVENTORY_YPOS));
+            addSlotToContainer(new Slot(tileEntityTableOfAges, x+12, TILE_INVENTORY_XPOS + SLOT_X_SPACING * x, TILE_INVENTORY_YPOS));
         }
-
-
-
-        //MODULES
-        addSlotToContainer(new SlotTableOfAges(tileEntityTableOfAges, 7, 44, 185));
-        addSlotToContainer(new SlotTableOfAges(tileEntityTableOfAges, 8, 44, 153));
-        addSlotToContainer(new SlotTableOfAges(tileEntityTableOfAges, 9, 20, 153));
-        addSlotToContainer(new SlotTableOfAges(tileEntityTableOfAges, 10, 44, 120));
-        addSlotToContainer(new SlotTableOfAges(tileEntityTableOfAges, 11, 20, 120));
-        addSlotToContainer(new SlotTableOfAges(tileEntityTableOfAges, 12, 68, 120));
-        addSlotToContainer(new SlotTableOfAges(tileEntityTableOfAges, 13, 44, 87));
-        addSlotToContainer(new SlotTableOfAges(tileEntityTableOfAges, 14, 20, 87));
-        addSlotToContainer(new SlotTableOfAges(tileEntityTableOfAges, 15, 44, 55));
-        addSlotToContainer(new SlotTableOfAges(tileEntityTableOfAges, 16, 20, 55));
-        addSlotToContainer(new SlotTableOfAges(tileEntityTableOfAges, 17, 68, 55));
-        addSlotToContainer(new SlotTableOfAges(tileEntityTableOfAges, 18, 44, 23));
 
 
         //CRAFTING
@@ -81,6 +80,12 @@ public class ContainerTableOfAges extends Container {
         addSlotToContainer(new Slot(this.craftMatrix, 8, 150, 58));
 
         this.onCraftMatrixChanged(this.craftMatrix);
+
+        for (int i = 0; i < 9; i++) {
+            if (!(tileEntityTableOfAges.getStackInSlot(i+19) == null)) {
+                craftMatrix.setInventorySlotContents(i, tileEntityTableOfAges.getStackInSlot(i+19));
+            }
+        }
     }
 
     @Override
@@ -102,7 +107,7 @@ public class ContainerTableOfAges extends Container {
         final int VANILLA_SLOT_COUNT = HOTBAR_SLOT_COUNT + PLAYER_INVENTORY_SLOT_COUNT;
         final int VANILLA_FIRST_SLOT_INDEX = 0;
         final int TE_INVENTORY_FIRST_SLOT_INDEX = VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT;
-        final int TE_INVENTORY_SLOT_COUNT = 30;
+        final int TE_INVENTORY_SLOT_COUNT = 19;
 
         Slot sourceSlot = inventorySlots.get(sourceSlotIndex);
         if (sourceSlot == null || !sourceSlot.getHasStack()) return ItemStack.EMPTY;
@@ -114,6 +119,10 @@ public class ContainerTableOfAges extends Container {
                 return ItemStack.EMPTY;
             }
         } else if (sourceSlotIndex >= TE_INVENTORY_FIRST_SLOT_INDEX && sourceSlotIndex < TE_INVENTORY_FIRST_SLOT_INDEX + TE_INVENTORY_SLOT_COUNT) {
+            if (!mergeItemStack(sourceStack, VANILLA_FIRST_SLOT_INDEX, VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT, false)) {
+                return ItemStack.EMPTY;
+            }
+        } else if(sourceSlotIndex >= 55 && sourceSlotIndex <= 64) {
             if (!mergeItemStack(sourceStack, VANILLA_FIRST_SLOT_INDEX, VANILLA_FIRST_SLOT_INDEX + VANILLA_SLOT_COUNT, false)) {
                 return ItemStack.EMPTY;
             }
@@ -150,8 +159,10 @@ public class ContainerTableOfAges extends Container {
     @Override
     public void onContainerClosed(EntityPlayer playerIn)
     {
-        super.onContainerClosed(playerIn);
-        this.tileEntityTableOfAges.closeInventory(playerIn);
+        for (int i = 0; i<9; i++) {
+            tileEntityTableOfAges.setInventorySlotContents(i+19, craftMatrix.getStackInSlot(i));
+        }
+
     }
 
 }

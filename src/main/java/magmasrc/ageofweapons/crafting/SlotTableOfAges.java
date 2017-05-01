@@ -13,9 +13,13 @@ public class SlotTableOfAges extends Slot {
 
     @Override
     public boolean isItemValid(ItemStack stack) {
-        if (this.getSlotIndex() == 18 && stack.getItem() == ModItems.upgradeCreative ) {
-            return true;
-        }
+        if (this.getSlotIndex() == 11 && stack.getItem() == ModItems.upgradeCreative) return true;
+
+        if (this.getSlotIndex() == 0 && stack.getItem() == ModItems.upgradeStoneAge) return true;
+
+        if (this.getSlotIndex() == 1 && stack.getItem() == ModItems.upgradeAtiquity) return true;
+
+        if (this.getSlotIndex() == 2 && stack.getItem() == ModItems.upgradeMystic) return true;
         //TODO
         return false;
     }
