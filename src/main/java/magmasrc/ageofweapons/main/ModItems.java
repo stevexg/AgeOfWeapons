@@ -18,6 +18,10 @@ public class ModItems {
 	public static Item upgradeEdoPeriod;
 	public static Item upgradePiracy;
 	public static Item upgradeEarlyModernAge;
+	public static Item upgradeFantasy;
+	public static Item upgradeModernAge;
+	public static Item upgradeEpic;
+	public static Item upgradeFuture;
 		
 		
 
@@ -35,6 +39,10 @@ public class ModItems {
 		upgradeEdoPeriod = new ItemUpgradeEdoPeriod();
 		upgradePiracy = new ItemUpgradePiracy();
 		upgradeEarlyModernAge = new ItemUpgradeEarlyModernAge();
+		upgradeFantasy = new ItemUpgradeFantasy();
+		upgradeModernAge = new ItemUpgradeModernAge();
+		upgradeEpic = new ItemUpgradeEpic();
+		upgradeFuture = new ItemUpgradeFuture();
 		
 		
 		
@@ -50,6 +58,10 @@ public class ModItems {
 		NameUtils.setNames(upgradeEdoPeriod, "upgrade_edo_period");
 		NameUtils.setNames(upgradePiracy, "upgrade_piracy");
 		NameUtils.setNames(upgradeEarlyModernAge, "upgrade_early_modern_age");
+		NameUtils.setNames(upgradeFantasy, "upgrade_fantasy");
+		NameUtils.setNames(upgradeEpic, "upgrade_epic");
+		NameUtils.setNames(upgradeModernAge, "upgrade_modern_age");
+		NameUtils.setNames(upgradeFuture, "upgrade_future");
 		
 		
 		
@@ -72,6 +84,10 @@ public class ModItems {
 		registerItem(upgradeEdoPeriod);
 		registerItem(upgradePiracy);
 		registerItem(upgradeEarlyModernAge);
+		registerItem(upgradeFantasy);
+		registerItem(upgradeModernAge);
+		registerItem(upgradeEpic);
+		registerItem(upgradeFuture);
 		
 		
 		

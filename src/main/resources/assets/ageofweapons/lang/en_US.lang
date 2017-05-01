@@ -20,3 +20,7 @@ item.upgrade_middle_ages.name=Middle Ages Upgrade
 item.upgrade_edo_period.name=Edo Period Upgrade
 item.upgrade_piracy.name=Piracy Upgrade
 item.upgrade_early_modern_age.name=Early Modern Age Upgrade
+item.upgrade_fantasy.name=Fantasy Upgrade
+item.upgrade_modern_age.name=Modern Age Upgrade
+item.upgrade_epic.name=Epic Upgrade
+item.upgrade_future.name=Future Upgrade

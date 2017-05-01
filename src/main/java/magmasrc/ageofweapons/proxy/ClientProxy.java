@@ -23,6 +23,10 @@ public class ClientProxy extends ServerProxy {
 		registerModel(ModItems.upgradeEdoPeriod, 0, new ModelResourceLocation(ModItems.upgradeEdoPeriod.getRegistryName(), "inventory"));
 		registerModel(ModItems.upgradePiracy, 0, new ModelResourceLocation(ModItems.upgradePiracy.getRegistryName(), "inventory"));
 		registerModel(ModItems.upgradeEarlyModernAge, 0, new ModelResourceLocation(ModItems.upgradeEarlyModernAge.getRegistryName(), "inventory"));
+		registerModel(ModItems.upgradeFantasy, 0, new ModelResourceLocation(ModItems.upgradeFantasy.getRegistryName(), "inventory"));
+		registerModel(ModItems.upgradeModernAge, 0, new ModelResourceLocation(ModItems.upgradeModernAge.getRegistryName(), "inventory"));
+		registerModel(ModItems.upgradeEpic, 0, new ModelResourceLocation(ModItems.upgradeEpic.getRegistryName(), "inventory"));
+		registerModel(ModItems.upgradeFuture, 0, new ModelResourceLocation(ModItems.upgradeFuture.getRegistryName(), "inventory"));
     	
     	
     	
@@ -47,6 +51,10 @@ public class ClientProxy extends ServerProxy {
 		OreDictionary.registerOre("upgradeEdoPeriodAoW", ModItems.upgradeMiddleAges);
 		OreDictionary.registerOre("upgradePiracyAoW", ModItems.upgradeMiddleAges);
 		OreDictionary.registerOre("upgradeEarlyModernAgeAoW", ModItems.upgradeEarlyModernAge);
+		OreDictionary.registerOre("upgradeFantasyAoW", ModItems.upgradeFantasy);
+		OreDictionary.registerOre("upgradeModernAgeAoW", ModItems.upgradeModernAge);
+		OreDictionary.registerOre("upgradeEpicAoW", ModItems.upgradeEpic);
+		OreDictionary.registerOre("upgradeFutureAoW", ModItems.upgradeFuture);
     	
     	//Blocks//
     	OreDictionary.registerOre("craftingTableAoW", ModBlocks.tableOfAges);
