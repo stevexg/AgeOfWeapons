@@ -1,5 +1,6 @@
 package magmasrc.ageofweapons.util;
 
+import magmasrc.ageofweapons.main.AgeOfWeapons;
 import net.minecraft.client.Minecraft;
 import net.minecraft.util.text.Style;
 import net.minecraft.util.text.TextComponentString;
@@ -19,6 +20,7 @@ public class Events {
 	
 	@SubscribeEvent
 	public void onClientTick(ClientTickEvent event) {
+		if (AgeOfWeapons.activateUpdateChecker) {
 		if (UpdateChecker.isNewVersionAvailable() && !hasShownUp && Minecraft.getMinecraft().currentScreen == null) {
 	        
 				ClickEvent versionCheckChatClickEvent = new ClickEvent(ClickEvent.Action.OPEN_URL, "https://minecraft.curseforge.com/projects/age-of-weapons");
@@ -29,7 +31,8 @@ public class Events {
 	            Minecraft.getMinecraft().player.sendMessage(versionWarningChatComponent);
 
 			hasShownUp = true;
-		}
+			}
+		}	
 	}
 	
 

@@ -1,4 +1,16 @@
+itemGroup.generalTab=Age of Weapons
+itemGroup.stoneAgeTab=AoW: Stone Age
+itemGroup.antiquityTab=AoW: Antiquity
+itemGroup.middleAgesTab=AoW: Middle Ages
+itemGroup.neuzeitTab=AoW: Neuzeit
+itemGroup.modernAgeTab=AoW: Modern Age
+itemGroup.piracyTab=AoW: Golden age of Piracy
+itemGroup.edoTab=AoW: Edo Period
+itemGroup.mysticTab=AoW: Mystic
+itemGroup.fantasyTab=AoW: Fantasy
+itemGroup.vsyTab=AoW: BBY
+
 tile.table_of_ages.name=Table of Ages
 
 item.upgrade_creative.name=Creative Upgrade
-item.upgrade_stone_age.name=Stone Age Upgrade
+item.upgrade_stone_age.name=Stone Upgrade
