@@ -13,6 +13,7 @@ public class ModItems {
 	public static Item upgradeCreative;
 	public static Item upgradeStoneAge;
 	public static Item upgradeAtiquity;
+	public static Item upgradeMystic;
 		
 		
 
@@ -25,6 +26,7 @@ public class ModItems {
 		upgradeCreative = new ItemUpgradeCreative();
 		upgradeStoneAge = new ItemUpgradeStoneAge();
 		upgradeAtiquity = new ItemUpgradeAntiquity();
+		upgradeMystic = new ItemUpgradeMystic();
 		
 		
 		
@@ -35,6 +37,7 @@ public class ModItems {
 		NameUtils.setNames(upgradeCreative, "upgrade_creative");
 		NameUtils.setNames(upgradeStoneAge, "upgrade_stone_age");
 		NameUtils.setNames(upgradeAtiquity, "upgrade_antiquity");
+		NameUtils.setNames(upgradeMystic, "upgrade_mystic");
 		
 		
 		
@@ -52,6 +55,7 @@ public class ModItems {
 		registerItem(upgradeCreative);
 		registerItem(upgradeStoneAge);
 		registerItem(upgradeAtiquity);
+		registerItem(upgradeMystic);
 		
 		
 		

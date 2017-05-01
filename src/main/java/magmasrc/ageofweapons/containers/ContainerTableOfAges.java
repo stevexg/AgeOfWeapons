@@ -64,7 +64,7 @@ public class ContainerTableOfAges extends Container {
         addSlotToContainer(new SlotTableOfAges(tileEntityTableOfAges, 14, 20, 87));
         addSlotToContainer(new SlotTableOfAges(tileEntityTableOfAges, 15, 44, 55));
         addSlotToContainer(new SlotTableOfAges(tileEntityTableOfAges, 16, 20, 55));
-        addSlotToContainer(new SlotTableOfAges(tileEntityTableOfAges, 17, 69, 55));
+        addSlotToContainer(new SlotTableOfAges(tileEntityTableOfAges, 17, 68, 55));
         addSlotToContainer(new SlotTableOfAges(tileEntityTableOfAges, 18, 44, 23));
 
 
