@@ -2,13 +2,15 @@ itemGroup.generalTab=Age of Weapons
 itemGroup.stoneAgeTab=AoW: Steinzeit
 itemGroup.antiquityTab=AoW: Antike
 itemGroup.middleAgesTab=AoW: Mittelalter
-itemGroup.neuzeitTab=AoW: Neuzeit
+itemGroup.earlyModernAgeTab=AoW: Frühe Neuzeit
 itemGroup.modernAgeTab=AoW: Moderne
 itemGroup.piracyTab=AoW: Goldenes Zeitalter der Piraten
 itemGroup.edoTab=AoW: Edo Zeit
 itemGroup.mysticTab=AoW: Mystisch
 itemGroup.fantasyTab=AoW: Fantasy
-itemGroup.vsyTab=AoW: VSY
+itemGroup.bbyTab=AoW: VSY
+itemGroup.epicTab=AoW: Episch
+itemGroup.futureTab=Aow: Zukunft
 
 tile.table_of_ages.name=Tisch der Zeitalter
 
@@ -22,5 +24,6 @@ item.upgrade_piracy.name=Piraterie Upgrade
 item.upgrade_early_modern_age.name=FrÃ¼he Neuzeit Upgrade
 item.upgrade_fantasy.name=Fantasy Upgrade
 item.upgrade_modern_age.name=Moderne Upgrade
-item.upgrade_epic.name=Epik Upgrade
+item.upgrade_epic.name=Episch Upgrade
+item.upgrade_bby.name=VSY Upgrade
 item.upgrade_future.name=Zukunft Upgrade

@@ -20,7 +20,7 @@ public class ModTabs {
 		
 		@Override
 		public ItemStack getTabIconItem() {    	
-			return new ItemStack(ModItems.upgradeStoneAge);		   //TODO   	
+			return new ItemStack(ModItems.upgradeStoneAge);		   	
 		}
 	};
 	
@@ -29,7 +29,7 @@ public class ModTabs {
 		
 		@Override
 		public ItemStack getTabIconItem() {    	
-			return new ItemStack(ModItems.upgradeCreative);		   //TODO   	
+			return new ItemStack(ModItems.upgradeAtiquity);
 		}
 	};
 	
@@ -39,16 +39,16 @@ public class ModTabs {
 		
 		@Override
 		public ItemStack getTabIconItem() {    	
-			return new ItemStack(ModItems.upgradeCreative);		   //TODO   	
+			return new ItemStack(ModItems.upgradeMiddleAges);		   
 		}
 	};
 	
 	
-	public static CreativeTabs neuzeitTab = new CreativeTabs("neuzeitTab") {
+	public static CreativeTabs earlyModernAgeTab = new CreativeTabs("earlyModernAgeTab") {
 		
 		@Override
 		public ItemStack getTabIconItem() {    	
-			return new ItemStack(ModItems.upgradeCreative);		   //TODO   	
+			return new ItemStack(ModItems.upgradeEarlyModernAge);		   	
 		}
 	};
 	
@@ -57,7 +57,7 @@ public class ModTabs {
 		
 		@Override
 		public ItemStack getTabIconItem() {    	
-			return new ItemStack(ModItems.upgradeCreative);		   //TODO   	
+			return new ItemStack(ModItems.upgradeModernAge);		     	
 		}
 	};
 	
@@ -67,7 +67,7 @@ public class ModTabs {
 		
 		@Override
 		public ItemStack getTabIconItem() {    	
-			return new ItemStack(ModItems.upgradeCreative);		   //TODO   	
+			return new ItemStack(ModItems.upgradePiracy);		   	
 		}
 	};
 	
@@ -77,7 +77,7 @@ public class ModTabs {
 		
 		@Override
 		public ItemStack getTabIconItem() {    	
-			return new ItemStack(ModItems.upgradeCreative);		   //TODO   	
+			return new ItemStack(ModItems.upgradeEdoPeriod);		   
 		}
 	};
 	
@@ -87,7 +87,7 @@ public class ModTabs {
 		
 		@Override
 		public ItemStack getTabIconItem() {    	
-			return new ItemStack(ModItems.upgradeCreative);		   //TODO   	
+			return new ItemStack(ModItems.upgradeMystic);		   
 		}
 	};
 	
@@ -95,17 +95,35 @@ public class ModTabs {
 		
 		@Override
 		public ItemStack getTabIconItem() {    	
-			return new ItemStack(ModItems.upgradeCreative);		   //TODO   	
+			return new ItemStack(ModItems.upgradeFantasy);		   	
 		}
 	};
 	
 	
 	
-	public static CreativeTabs vsyTab = new CreativeTabs("vsyTab") {
+	public static CreativeTabs bbyTab = new CreativeTabs("bbyTab") {
 		
 		@Override
 		public ItemStack getTabIconItem() {    	
-			return new ItemStack(ModItems.upgradeCreative);		   //TODO   	
+			return new ItemStack(ModItems.upgradeBBY);		 
+		}
+	};
+	
+	
+	public static CreativeTabs epicTab = new CreativeTabs("epicTab") {
+		
+		@Override
+		public ItemStack getTabIconItem() {    	
+			return new ItemStack(ModItems.upgradeEpic);		   	
+		}
+	};
+	
+	
+	public static CreativeTabs futureTab = new CreativeTabs("futureTab") {
+		
+		@Override
+		public ItemStack getTabIconItem() {    	
+			return new ItemStack(ModItems.upgradeFuture);		    	
 		}
 	};
 

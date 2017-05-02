@@ -2,13 +2,15 @@ itemGroup.generalTab=Age of Weapons
 itemGroup.stoneAgeTab=AoW: Stone Age
 itemGroup.antiquityTab=AoW: Antiquity
 itemGroup.middleAgesTab=AoW: Middle Ages
-itemGroup.neuzeitTab=AoW: Neuzeit
+itemGroup.earlyModernAgeTab=AoW: Early Modern Age
 itemGroup.modernAgeTab=AoW: Modern Age
 itemGroup.piracyTab=AoW: Golden age of Piracy
 itemGroup.edoTab=AoW: Edo Period
 itemGroup.mysticTab=AoW: Mystic
 itemGroup.fantasyTab=AoW: Fantasy
-itemGroup.vsyTab=AoW: BBY
+itemGroup.bbyTab=AoW: BBY
+itemGroup.epicTab=AoW: Epic
+itemGroup.futureTab=Aow: Future
 
 tile.table_of_ages.name=Table of Ages
 
@@ -23,4 +25,5 @@ item.upgrade_early_modern_age.name=Early Modern Age Upgrade
 item.upgrade_fantasy.name=Fantasy Upgrade
 item.upgrade_modern_age.name=Modern Age Upgrade
 item.upgrade_epic.name=Epic Upgrade
+item.upgrade_bby.name=BBY Upgrade
 item.upgrade_future.name=Future Upgrade

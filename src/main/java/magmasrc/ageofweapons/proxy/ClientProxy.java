@@ -27,6 +27,8 @@ public class ClientProxy extends ServerProxy {
 		registerModel(ModItems.upgradeModernAge, 0, new ModelResourceLocation(ModItems.upgradeModernAge.getRegistryName(), "inventory"));
 		registerModel(ModItems.upgradeEpic, 0, new ModelResourceLocation(ModItems.upgradeEpic.getRegistryName(), "inventory"));
 		registerModel(ModItems.upgradeFuture, 0, new ModelResourceLocation(ModItems.upgradeFuture.getRegistryName(), "inventory"));
+		registerModel(ModItems.upgradeBBY, 0, new ModelResourceLocation(ModItems.upgradeBBY.getRegistryName(), "inventory"));
+
     	
     	
     	
@@ -55,6 +57,8 @@ public class ClientProxy extends ServerProxy {
 		OreDictionary.registerOre("upgradeModernAgeAoW", ModItems.upgradeModernAge);
 		OreDictionary.registerOre("upgradeEpicAoW", ModItems.upgradeEpic);
 		OreDictionary.registerOre("upgradeFutureAoW", ModItems.upgradeFuture);
+		OreDictionary.registerOre("upgradeBBYAoW", ModItems.upgradeBBY);
+
     	
     	//Blocks//
     	OreDictionary.registerOre("craftingTableAoW", ModBlocks.tableOfAges);

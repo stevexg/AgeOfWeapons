@@ -22,6 +22,7 @@ public class ModItems {
 	public static Item upgradeModernAge;
 	public static Item upgradeEpic;
 	public static Item upgradeFuture;
+	public static Item upgradeBBY;
 		
 		
 
@@ -43,6 +44,7 @@ public class ModItems {
 		upgradeModernAge = new ItemUpgradeModernAge();
 		upgradeEpic = new ItemUpgradeEpic();
 		upgradeFuture = new ItemUpgradeFuture();
+		upgradeBBY = new ItemUpgradeBBY();
 		
 		
 		
@@ -62,6 +64,7 @@ public class ModItems {
 		NameUtils.setNames(upgradeEpic, "upgrade_epic");
 		NameUtils.setNames(upgradeModernAge, "upgrade_modern_age");
 		NameUtils.setNames(upgradeFuture, "upgrade_future");
+		NameUtils.setNames(upgradeBBY, "upgrade_bby");
 		
 		
 		
@@ -88,6 +91,7 @@ public class ModItems {
 		registerItem(upgradeModernAge);
 		registerItem(upgradeEpic);
 		registerItem(upgradeFuture);
+		registerItem(upgradeBBY);
 		
 		
 		
