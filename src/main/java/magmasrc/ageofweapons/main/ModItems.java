@@ -23,6 +23,23 @@ public class ModItems {
 	public static Item upgradeEpic;
 	public static Item upgradeFuture;
 	public static Item upgradeBBY;
+	
+	public static Item bladeAxeDiamond;
+	public static Item bladeAxeGold;
+	public static Item bladeAxeIron;
+	public static Item bladeAxeStone;
+	public static Item bladeAxeWood;
+	public static Item bladeSwordDiamond;
+	public static Item bladeSwordGold;
+	public static Item bladeSwordIron;
+	public static Item bladeSwordStone;
+	public static Item bladeSwordWood;
+	public static Item bladeBroadSwordDiamond;
+	public static Item bladeBroadSwordGold;
+	public static Item bladeBroadSwordIron;
+	public static Item bladeBroadSwordStone;
+	public static Item bladeBroadSwordWood;
+	
 		
 		
 
@@ -45,6 +62,8 @@ public class ModItems {
 		upgradeEpic = new ItemUpgradeEpic();
 		upgradeFuture = new ItemUpgradeFuture();
 		upgradeBBY = new ItemUpgradeBBY();
+		
+
 		
 		
 		
