@@ -1,14 +1,23 @@
 package magmasrc.ageofweapons.main;
 
 import magmasrc.ageofweapons.items.*;
+import magmasrc.ageofweapons.items.stoneage.*;
 import magmasrc.ageofweapons.util.NameUtils;
 import net.minecraft.item.Item;
+import net.minecraft.item.Item.ToolMaterial;
+import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 
 public class ModItems {
 	
 	
+	/** Tool-Materials **/
+	
+	public static ToolMaterial Rock;
+	
+	
+	/** Items **/
 	
 	public static Item upgradeCreative;
 	public static Item upgradeStoneAge;
@@ -40,6 +49,9 @@ public class ModItems {
 	public static Item bladeBroadSwordStone;
 	public static Item bladeBroadSwordWood;
 	
+	// Stone Age
+	public static Item rock;
+	
 		
 		
 
@@ -48,6 +60,23 @@ public class ModItems {
 
 	public void init() {
 		
+		
+		   /** Tool-Materials **/   
+	/**
+	    Default Materials!   
+		WOOD(0, 59, 2.0F, 0.0F, 15),
+		STONE(1, 131, 4.0F, 1.0F, 5),
+		IRON(2, 250, 6.0F, 2.0F, 14),
+		DIAMOND(3, 1561, 8.0F, 3.0F, 10),
+		GOLD(0, 32, 12.0F, 0.0F, 22); 
+	**/	
+		//           			  name, harvestLvl, maxUses, efficienz, damage, enchant 
+   	    Rock = EnumHelper.addToolMaterial("Rock", 0, 110, 3.0F, 0.5F, 20);
+
+		
+   	    
+   	    
+   	    /** Items **/
 		
 		upgradeCreative = new ItemUpgradeCreative();
 		upgradeStoneAge = new ItemUpgradeStoneAge();
@@ -63,9 +92,10 @@ public class ModItems {
 		upgradeFuture = new ItemUpgradeFuture();
 		upgradeBBY = new ItemUpgradeBBY();
 		
+		// Stone Age
+		rock = new ItemRock(Rock);
+		
 
-		
-		
 		
 		
 		
@@ -85,7 +115,9 @@ public class ModItems {
 		NameUtils.setNames(upgradeFuture, "upgrade_future");
 		NameUtils.setNames(upgradeBBY, "upgrade_bby");
 		
-		
+		// Stone Age
+		NameUtils.setNames(rock, "rock");
+
 		
 		
    	    
@@ -111,6 +143,9 @@ public class ModItems {
 		registerItem(upgradeEpic);
 		registerItem(upgradeFuture);
 		registerItem(upgradeBBY);
+		
+		// Stone Age
+		registerItem(rock);
 		
 		
 		

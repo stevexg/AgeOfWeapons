@@ -29,6 +29,9 @@ public class ClientProxy extends ServerProxy {
 		registerModel(ModItems.upgradeFuture, 0, new ModelResourceLocation(ModItems.upgradeFuture.getRegistryName(), "inventory"));
 		registerModel(ModItems.upgradeBBY, 0, new ModelResourceLocation(ModItems.upgradeBBY.getRegistryName(), "inventory"));
 
+		// StoneAge
+		registerModel(ModItems.rock, 0, new ModelResourceLocation(ModItems.rock.getRegistryName(), "inventory"));
+
     	
     	
     	

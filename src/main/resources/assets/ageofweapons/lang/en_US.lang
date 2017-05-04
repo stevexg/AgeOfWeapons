@@ -27,3 +27,6 @@ item.upgrade_modern_age.name=Diamond Upgrade
 item.upgrade_epic.name=Platinum Upgrade
 item.upgrade_bby.name=Emerald Upgrade
 item.upgrade_future.name=Bronze Upgrade
+
+//StoneAge
+item.rock.name=Rock
