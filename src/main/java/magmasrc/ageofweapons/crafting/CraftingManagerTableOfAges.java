@@ -4,13 +4,13 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 
 import magmasrc.ageofweapons.main.AgeOfWeapons;
-import magmasrc.ageofweapons.main.ModRecipesTOA;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.InventoryCrafting;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.world.World;
 import net.minecraftforge.oredict.OreDictionary;
 
@@ -21,7 +21,7 @@ public class CraftingManagerTableOfAges {
 
     private static final CraftingManagerTableOfAges INSTANCE = new CraftingManagerTableOfAges();
 
-    private final List<ShapedRecipesTableOfAges> recipes = Lists.newArrayList();
+    private final List<IRecipe> recipes = Lists.newArrayList();
 
     public static CraftingManagerTableOfAges getInstance()
     {
@@ -32,7 +32,6 @@ public class CraftingManagerTableOfAges {
     private CraftingManagerTableOfAges() {
 
 
-        new ModRecipesTOA();
         
         /** Vanilla **/
         //items
@@ -104,7 +103,9 @@ public class CraftingManagerTableOfAges {
         this.addRecipeTOA(new ItemStack(Items.CHAINMAIL_CHESTPLATE), 0, "o o", "xxx", "xox", 'x', Items.IRON_INGOT, 'o', Items.STRING);
         this.addRecipeTOA(new ItemStack(Items.CHAINMAIL_HELMET), 0, "oxo", "x x", "   ", 'x', Items.IRON_INGOT, 'o', Items.STRING);
         this.addRecipeTOA(new ItemStack(Items.CHAINMAIL_LEGGINGS), 0, "oxo", "x x", "x x", 'x', Items.IRON_INGOT, 'o', Items.STRING);
-      }   
+      }
+
+      this.addShapelessRecipeTOA(new ItemStack(Items.APPLE), 0, new Object[] {Items.BREAD});
 
         
         
@@ -185,26 +186,70 @@ public class CraftingManagerTableOfAges {
         return shapedrecipes;
     }
 
+    public void addShapelessRecipeTOA(ItemStack stack, int neededModule, Object... recipeComponents)
+    {
+        List<ItemStack> list = Lists.<ItemStack>newArrayList();
+
+        for (Object object : recipeComponents)
+        {
+            if (object instanceof ItemStack)
+            {
+                list.add(((ItemStack)object).copy());
+            }
+            else if (object instanceof Item)
+            {
+                list.add(new ItemStack((Item)object));
+            }
+            else
+            {
+                if (!(object instanceof Block))
+                {
+                    throw new IllegalArgumentException("Invalid shapeless recipe: unknown type " + object.getClass().getName() + "!");
+                }
+
+                list.add(new ItemStack((Block)object));
+            }
+        }
+
+        this.recipes.add(new ShapelessRecipesTableOfAges(stack, list, neededModule));
+    }
+
 
 
     public ItemStack findMatchingRecipe(InventoryCrafting craftMatrix, World worldIn, int[] Modules)
     {
 
 
-        for (ShapedRecipesTableOfAges irecipe : this.recipes)
+        for (IRecipe irecipe : this.recipes)
         {
-            if (irecipe.matches(craftMatrix, worldIn))
-            {
-                int neededmod = irecipe.getModuleNeeded();
-                for (int i = 0; i<12; i++) {
-                    if (Modules[i] == 12) {
-                        return irecipe.getCraftingResult(craftMatrix);
+            try {
+                ShapedRecipesTableOfAges recipe = (ShapedRecipesTableOfAges) irecipe;
+
+                if (irecipe.matches(craftMatrix, worldIn))
+                {
+                    int neededmod = recipe.getModuleNeeded();
+                    for (int i = 0; i<12; i++) {
+                        if (Modules[i] == 12) {
+                            return recipe.getCraftingResult(craftMatrix);
+                        }
+                        if (Modules[i] == neededmod) {
+                            return recipe.getCraftingResult(craftMatrix);
+                        }
                     }
-                    if (Modules[i] == neededmod) {
-                        return irecipe.getCraftingResult(craftMatrix);
+                }
+            } catch (ClassCastException e) {
+                ShapelessRecipesTableOfAges recipe = (ShapelessRecipesTableOfAges) irecipe;
+                if (irecipe.matches(craftMatrix, worldIn))
+                {
+                    int neededmod = recipe.getModuleNeeded();
+                    for (int i = 0; i<12; i++) {
+                        if (Modules[i] == 12 || Modules[i] == neededmod) {
+                            return recipe.getCraftingResult(craftMatrix);
+                        }
                     }
                 }
             }
+
         }
 
         return ItemStack.EMPTY;
