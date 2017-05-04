@@ -105,9 +105,6 @@ public class CraftingManagerTableOfAges {
         this.addRecipeTOA(new ItemStack(Items.CHAINMAIL_LEGGINGS), 0, "oxo", "x x", "x x", 'x', Items.IRON_INGOT, 'o', Items.STRING);
       }
 
-      this.addShapelessRecipeTOA(new ItemStack(Items.APPLE), 0, new Object[] {Items.BREAD});
-
-        
         
     }
 
