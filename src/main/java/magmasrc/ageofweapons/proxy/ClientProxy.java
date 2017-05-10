@@ -32,6 +32,7 @@ public class ClientProxy extends ServerProxy {
 		// StoneAge
 		registerModel(ModItems.rock, 0, new ModelResourceLocation(ModItems.rock.getRegistryName(), "inventory"));
 		registerModel(ModItems.handAxStone, 0, new ModelResourceLocation(ModItems.handAxStone.getRegistryName(), "inventory"));
+		registerModel(ModItems.cavemanKnifeStone, 0, new ModelResourceLocation(ModItems.cavemanKnifeStone.getRegistryName(), "inventory"));
 
     	
     	

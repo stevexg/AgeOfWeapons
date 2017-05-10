@@ -30,3 +30,5 @@ item.upgrade_future.name=Bronze Upgrade
 
 //StoneAge
 item.rock.name=Rock
+item.handaxstone.name=Hand Ax
+item.cavemanknifestone.name=Caveman Knife

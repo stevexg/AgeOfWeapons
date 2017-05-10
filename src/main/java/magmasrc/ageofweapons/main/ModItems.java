@@ -16,6 +16,7 @@ public class ModItems {
 	
 	public static ToolMaterial rockToolMaterial;
 	public static ToolMaterial handAxStoneToolMaterial;
+	public static ToolMaterial cavemanKnifeStoneToolMaterial;
 	
 	
 	/** Items **/
@@ -53,6 +54,7 @@ public class ModItems {
 	// Stone Age
 	public static Item rock;
 	public static Item handAxStone;
+	public static Item cavemanKnifeStone;
 	
 		
 		
@@ -72,8 +74,9 @@ public class ModItems {
 				DIAMOND(3, 1561, 8.0F, 3.0F, 10),
 				GOLD(0, 32, 12.0F, 0.0F, 22);
 			 **/
-   	    rockToolMaterial = EnumHelper.addToolMaterial("Rock", 0, 110, 3.0F, 0.0F, 20);
-		handAxStoneToolMaterial = EnumHelper.addToolMaterial("handAxStone", 0, 100, 3.0F, 0.5F, 20);
+   	    rockToolMaterial = EnumHelper.addToolMaterial("Rock", 0, 500, 3.0F, 0.0F, 20);
+		handAxStoneToolMaterial = EnumHelper.addToolMaterial("handAxStone", 0, 400, 3.0F, 0.5F, 20);
+		cavemanKnifeStoneToolMaterial = EnumHelper.addToolMaterial("cavemanKnifeStone", 0, 100, 3.0F, 1.0F, 20);
 
 		
    	    
@@ -97,6 +100,7 @@ public class ModItems {
 		// Stone Age
 		rock = new ItemRock(rockToolMaterial);
 		handAxStone = new ItemHandAxStone(handAxStoneToolMaterial);
+		cavemanKnifeStone = new ItemCavemanKnifeStone(cavemanKnifeStoneToolMaterial);
 		
 
 		
@@ -121,6 +125,7 @@ public class ModItems {
 		// Stone Age
 		NameUtils.setNames(rock, "rock");
 		NameUtils.setNames(handAxStone, "handaxstone");
+		NameUtils.setNames(cavemanKnifeStone, "cavemanknifestone");
 
 		
 		
@@ -151,6 +156,7 @@ public class ModItems {
 		// Stone Age
 		registerItem(rock);
 		registerItem(handAxStone);
+		registerItem(cavemanKnifeStone);
 		
 		
 		

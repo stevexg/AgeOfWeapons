@@ -2,14 +2,14 @@ itemGroup.generalTab=Age of Weapons
 itemGroup.stoneAgeTab=AoW: Steinzeit
 itemGroup.antiquityTab=AoW: Antike
 itemGroup.middleAgesTab=AoW: Mittelalter
-itemGroup.earlyModernAgeTab=AoW: Fr�he Neuzeit
+itemGroup.earlyModernAgeTab=AoW: Frühe Neuzeit
 itemGroup.modernAgeTab=AoW: Moderne
 itemGroup.piracyTab=AoW: Goldenes Zeitalter der Piraten
 itemGroup.edoTab=AoW: Edo Zeit
-itemGroup.mysticTab=AoW: Mystisch
+itemGroup.mysticTab=AoW: Mystik
 itemGroup.fantasyTab=AoW: Fantasy
 itemGroup.bbyTab=AoW: VSY
-itemGroup.epicTab=AoW: Episch
+itemGroup.epicTab=AoW: Epik
 itemGroup.futureTab=Aow: Zukunft
 
 tile.table_of_ages.name=Tisch der Zeitalter
@@ -30,3 +30,5 @@ item.upgrade_future.name=Bronze Upgrade
 
 //StoneAge
 item.rock.name=Stein
+item.handaxstone.name=Hand Axt
+item.cavemanknifestone.name=Höhlenmensch Messer
