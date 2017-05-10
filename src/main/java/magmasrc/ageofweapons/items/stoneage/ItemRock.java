@@ -7,13 +7,12 @@ import com.mojang.realmsclient.gui.ChatFormatting;
 import magmasrc.ageofweapons.main.ModTabs;
 import magmasrc.ageofweapons.util.ItemCustomSword;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 public class ItemRock extends ItemCustomSword {
 
     public ItemRock(ToolMaterial material) {
-        super(material, 16); //speed
+        super(material, 16);
         
         this.setCreativeTab(ModTabs.stoneAgeTab);
         this.setMaxStackSize(64);
