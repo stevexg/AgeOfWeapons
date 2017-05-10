@@ -33,21 +33,38 @@ public class ModItems {
 	public static Item upgradeFuture;
 	public static Item upgradeBBY;
 	
-	public static Item bladeAxeDiamond;
-	public static Item bladeAxeGold;
-	public static Item bladeAxeIron;
-	public static Item bladeAxeStone;
-	public static Item bladeAxeWood;
-	public static Item bladeSwordDiamond;
-	public static Item bladeSwordGold;
-	public static Item bladeSwordIron;
-	public static Item bladeSwordStone;
-	public static Item bladeSwordWood;
-	public static Item bladeBroadSwordDiamond;
-	public static Item bladeBroadSwordGold;
-	public static Item bladeBroadSwordIron;
-	public static Item bladeBroadSwordStone;
-	public static Item bladeBroadSwordWood;
+	public static Item axeBladeDiamond;
+	public static Item axeBladeGold;
+	public static Item axeBladeIron;
+	public static Item axeBladeStone;
+	public static Item axeBladeWood;
+	public static Item swordBladeDiamond;
+	public static Item swordBladeGold;
+	public static Item swordBladeIron;
+	public static Item swordBladeStone;
+	public static Item swordBladeWood;
+	public static Item broadBladeDiamond;
+	public static Item broadBladeGold;
+	public static Item broadBladeIron;
+	public static Item broadBladeStone;
+	public static Item broadBladeWood;
+	public static Item swordHandle;
+	public static Item lumber;
+	public static Item ironStick;
+	public static Item ironLongstick;
+	public static Item woodLongstick;
+	public static Item toxin;
+	public static Item radioactiveToxin;
+	public static Item ruby;
+	public static Item sapphire;
+	public static Item diamondShard;
+	public static Item emeraldShard;
+	public static Item goldShard;
+	public static Item ironShard;
+	public static Item rubyShard;
+	public static Item sapphireShard;
+	public static Item stoneShard;
+	public static Item woodShard;
 	
 	// Stone Age
 	public static Item rock;
@@ -91,6 +108,40 @@ public class ModItems {
 		upgradeFuture = new ItemUpgradeFuture();
 		upgradeBBY = new ItemUpgradeBBY();
 		
+		axeBladeDiamond = new ItemAxeBladeDiamond();
+		axeBladeGold = new ItemAxeBladeGold();
+		axeBladeIron = new ItemAxeBladeIron();
+		axeBladeStone = new ItemAxeBladeStone();
+		axeBladeWood = new ItemAxeBladeWood();
+		swordBladeDiamond = new ItemSwordBladeDiamond();
+		swordBladeGold = new ItemSwordBladeGold();
+		swordBladeIron = new ItemSwordBladeIron();
+		swordBladeStone = new ItemSwordBladeStone();
+		swordBladeWood = new ItemSwordBladeWood();
+		broadBladeDiamond = new ItemBroadBladeDiamond();
+		broadBladeGold = new ItemBroadBladeGold();
+		broadBladeIron = new ItemBroadBladeIron();
+		broadBladeStone = new ItemBroadBladeStone();
+		broadBladeWood = new ItemBroadBladeWood();
+		ironStick = new ItemIronStick();
+		ironLongstick = new ItemIronLongstick();
+		woodLongstick = new ItemWoodLongstick();
+		lumber = new ItemLumber();
+		radioactiveToxin = new ItemRadioactiveToxin();
+		ruby = new ItemRuby();
+		sapphire = new ItemSapphire();
+		swordHandle = new ItemSwordHandle();
+		toxin = new ItemToxin();
+		diamondShard = new ItemDiamondShard();
+		emeraldShard = new ItemEmeraldShard();
+		goldShard = new ItemGoldShard();
+		ironShard = new ItemIronShard();
+		rubyShard = new ItemRubyShard();
+		sapphireShard = new ItemSapphireShard();
+		stoneShard = new ItemStoneShard();
+		woodShard = new ItemWoodShard();
+		
+		
 		// Stone Age
 		rock = new ItemRock(Rock);
 		
@@ -113,6 +164,43 @@ public class ModItems {
 		NameUtils.setNames(upgradeModernAge, "upgrade_modern_age");
 		NameUtils.setNames(upgradeFuture, "upgrade_future");
 		NameUtils.setNames(upgradeBBY, "upgrade_bby");
+		
+		NameUtils.setNames(axeBladeDiamond, "axe_blade_diamond");
+		NameUtils.setNames(axeBladeGold, "axe_blade_gold");
+		NameUtils.setNames(axeBladeIron, "axe_blade_iron");
+		NameUtils.setNames(axeBladeStone, "axe_blade_stone");
+		NameUtils.setNames(axeBladeWood, "axe_blade_wood");
+		NameUtils.setNames(swordBladeDiamond, "sword_blade_diamond");
+		NameUtils.setNames(swordBladeGold, "sword_blade_gold");
+		NameUtils.setNames(swordBladeIron, "sword_blade_iron");
+		NameUtils.setNames(swordBladeStone, "sword_blade_stone");
+		NameUtils.setNames(swordBladeWood, "sword_blade_wood");
+		NameUtils.setNames(broadBladeDiamond, "broad_blade_diamond");
+		NameUtils.setNames(broadBladeGold, "broad_blade_gold");
+		NameUtils.setNames(broadBladeIron, "broad_blade_iron");
+		NameUtils.setNames(broadBladeStone, "broad_blade_stone");
+		NameUtils.setNames(broadBladeWood, "broad_blade_wood");
+		NameUtils.setNames(ironStick, "iron_stick");
+		NameUtils.setNames(ironLongstick, "iron_longstick");
+		NameUtils.setNames(woodLongstick, "wood_longstick");
+		NameUtils.setNames(lumber, "lumber");
+		NameUtils.setNames(radioactiveToxin, "radioactive_toxin");
+		NameUtils.setNames(ruby, "ruby");
+		NameUtils.setNames(sapphire, "sapphire");
+		NameUtils.setNames(swordHandle, "sword_handle");
+		NameUtils.setNames(toxin, "toxin");
+		NameUtils.setNames(diamondShard, "diamond_shard");
+		NameUtils.setNames(emeraldShard, "emerald_shard");
+		NameUtils.setNames(goldShard, "gold_shard");
+		NameUtils.setNames(ironShard, "iron_shard");
+		NameUtils.setNames(rubyShard, "ruby_shard");
+		NameUtils.setNames(sapphireShard, "sapphire_shard");
+		NameUtils.setNames(stoneShard, "stone_shard");
+		NameUtils.setNames(woodShard, "wood_shard");
+
+
+
+		
 		
 		// Stone Age
 		NameUtils.setNames(rock, "rock");
@@ -142,6 +230,39 @@ public class ModItems {
 		registerItem(upgradeEpic);
 		registerItem(upgradeFuture);
 		registerItem(upgradeBBY);
+		
+		registerItem(axeBladeDiamond);
+		registerItem(axeBladeGold);
+		registerItem(axeBladeIron);
+		registerItem(axeBladeStone);
+		registerItem(axeBladeWood);
+		registerItem(swordBladeDiamond);
+		registerItem(swordBladeGold);
+		registerItem(swordBladeIron);
+		registerItem(swordBladeStone);
+		registerItem(swordBladeWood);
+		registerItem(broadBladeDiamond);
+		registerItem(broadBladeGold);
+		registerItem(broadBladeIron);
+		registerItem(broadBladeStone);
+		registerItem(broadBladeWood);
+		registerItem(swordHandle);
+		registerItem(ironStick);
+		registerItem(ironLongstick);
+		registerItem(woodLongstick);
+		registerItem(lumber);
+		registerItem(ruby);
+		registerItem(sapphire);
+		registerItem(toxin);
+		registerItem(radioactiveToxin);
+		registerItem(diamondShard);
+		registerItem(emeraldShard);
+		registerItem(rubyShard);
+		registerItem(sapphireShard);
+		registerItem(goldShard);
+		registerItem(ironShard);
+		registerItem(stoneShard);
+		registerItem(woodShard);
 		
 		// Stone Age
 		registerItem(rock);

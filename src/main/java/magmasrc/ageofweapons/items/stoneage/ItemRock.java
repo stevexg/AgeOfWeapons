@@ -12,7 +12,7 @@ import net.minecraft.item.ItemStack;
 public class ItemRock extends ItemCustomSword {
 
     public ItemRock(ToolMaterial material) {
-        super(material, 16);
+        super(material, 30);
         
         this.setCreativeTab(ModTabs.stoneAgeTab);
         this.setMaxStackSize(64);

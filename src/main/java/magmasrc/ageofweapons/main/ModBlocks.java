@@ -14,6 +14,8 @@ public class ModBlocks {
 
 	
 	public static Block tableOfAges;
+	public static Block crusher;
+	public static Block crusherOn;
 
 	
 	
@@ -23,6 +25,8 @@ public class ModBlocks {
 		public void init() {
 		
 			tableOfAges = new BlockTableOfAges();
+			crusher = new BlockCrusher();
+			crusherOn = new BlockCrusherOn();
 			
 			
 			
@@ -30,7 +34,8 @@ public class ModBlocks {
 			
 			
 			NameUtils.setNames(tableOfAges,"table_of_ages");
-			
+			NameUtils.setNames(crusher, "crusher");
+			NameUtils.setNames(crusherOn, "crusher_on");
 
 		}
 		
@@ -40,6 +45,8 @@ public class ModBlocks {
 			
 
 			registerBlock(tableOfAges);
+			registerBlock(crusher);
+			registerBlock(crusherOn);
 
 
 
@@ -58,5 +65,4 @@ public class ModBlocks {
 			itemblock.setUnlocalizedName(block.getUnlocalizedName()).setRegistryName(block.getRegistryName());
 			GameRegistry.register(itemblock);
 		}
-		
 }
