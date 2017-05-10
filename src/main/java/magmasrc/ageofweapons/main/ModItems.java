@@ -14,7 +14,8 @@ public class ModItems {
 	
 	/** Tool-Materials **/
 	
-	public static ToolMaterial Rock;
+	public static ToolMaterial rockToolMaterial;
+	public static ToolMaterial handAxStoneToolMaterial;
 	
 	
 	/** Items **/
@@ -51,6 +52,7 @@ public class ModItems {
 	
 	// Stone Age
 	public static Item rock;
+	public static Item handAxStone;
 	
 		
 		
@@ -70,7 +72,8 @@ public class ModItems {
 				DIAMOND(3, 1561, 8.0F, 3.0F, 10),
 				GOLD(0, 32, 12.0F, 0.0F, 22);
 			 **/
-   	    Rock = EnumHelper.addToolMaterial("Rock", 0, 110, 3.0F, 0.5F, 20);
+   	    rockToolMaterial = EnumHelper.addToolMaterial("Rock", 0, 110, 3.0F, 0.0F, 20);
+		handAxStoneToolMaterial = EnumHelper.addToolMaterial("handAxStone", 0, 100, 3.0F, 0.5F, 20);
 
 		
    	    
@@ -92,7 +95,8 @@ public class ModItems {
 		upgradeBBY = new ItemUpgradeBBY();
 		
 		// Stone Age
-		rock = new ItemRock(Rock);
+		rock = new ItemRock(rockToolMaterial);
+		handAxStone = new ItemHandAxStone(handAxStoneToolMaterial);
 		
 
 		
@@ -116,6 +120,7 @@ public class ModItems {
 		
 		// Stone Age
 		NameUtils.setNames(rock, "rock");
+		NameUtils.setNames(handAxStone, "handaxstone");
 
 		
 		
@@ -145,6 +150,7 @@ public class ModItems {
 		
 		// Stone Age
 		registerItem(rock);
+		registerItem(handAxStone);
 		
 		
 		

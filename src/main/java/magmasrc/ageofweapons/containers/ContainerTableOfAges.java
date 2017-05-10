@@ -145,7 +145,7 @@ public class ContainerTableOfAges extends Container {
         int[] modules = new int[12];
 
         for (int i = 0; i < 12; i++) {
-            if (getSlotFromInventory(tileEntityTableOfAges, i+7).getStack() != ItemStack.EMPTY) {
+            if (getSlotFromInventory(tileEntityTableOfAges, i).getStack() != ItemStack.EMPTY) {
                 modules[i] = i+1;
             } else {
                 modules[i] = 0;
