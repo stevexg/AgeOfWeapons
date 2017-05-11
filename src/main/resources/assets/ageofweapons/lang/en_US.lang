@@ -15,6 +15,10 @@ itemGroup.futureTab=Aow: Future
 tile.table_of_ages.name=Table of Ages
 tile.crusher.name=Crusher
 tile.crusher_on.name=Crusher
+tile.weapon_box.name=Weapon Box
+tile.nexus.name=NEXUS
+tile.ruby_block.name=Ruby Block
+tile.sapphire_block.name=Sapphire Block
 
 item.upgrade_creative.name=Creative Upgrade
 item.upgrade_stone_age.name=Stone Upgrade

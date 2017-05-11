@@ -16,6 +16,10 @@ public class ModBlocks {
 	public static Block tableOfAges;
 	public static Block crusher;
 	public static Block crusherOn;
+	public static Block weaponBox;
+	public static Block nexus;
+	public static Block rubyBlock;
+	public static Block sapphireBlock;
 
 	
 	
@@ -27,6 +31,10 @@ public class ModBlocks {
 			tableOfAges = new BlockTableOfAges();
 			crusher = new BlockCrusher();
 			crusherOn = new BlockCrusherOn();
+			weaponBox = new BlockWeaponBox();
+			nexus = new BlockNexus();
+			rubyBlock = new BlockRuby();
+			sapphireBlock = new BlockSapphire();
 			
 			
 			
@@ -36,6 +44,10 @@ public class ModBlocks {
 			NameUtils.setNames(tableOfAges,"table_of_ages");
 			NameUtils.setNames(crusher, "crusher");
 			NameUtils.setNames(crusherOn, "crusher_on");
+			NameUtils.setNames(weaponBox, "weapon_box");
+			NameUtils.setNames(nexus, "nexus");
+			NameUtils.setNames(rubyBlock, "ruby_block");
+			NameUtils.setNames(sapphireBlock, "sapphire_block");
 
 		}
 		
@@ -47,6 +59,10 @@ public class ModBlocks {
 			registerBlock(tableOfAges);
 			registerBlock(crusher);
 			registerBlock(crusherOn);
+			registerBlock(weaponBox);
+			registerBlock(nexus);
+			registerBlock(rubyBlock);
+			registerBlock(sapphireBlock);
 
 
 

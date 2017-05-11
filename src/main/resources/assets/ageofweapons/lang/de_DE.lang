@@ -15,6 +15,10 @@ itemGroup.futureTab=Aow: Zukunft
 tile.table_of_ages.name=Tisch der Zeitalter
 tile.crusher.name=Zerkleinerer
 tile.crusher_on.name=Zerkleinerer
+tile.weapon_box.name=Waffen Box
+tile.nexus.name=NEXUS
+tile.ruby_block.name=Rubin Block
+tile.sapphire_block.name=Saphir Block
 
 item.upgrade_creative.name=Kreativ Upgrade
 item.upgrade_stone_age.name=Stein Upgrade

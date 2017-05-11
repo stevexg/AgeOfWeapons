@@ -80,6 +80,11 @@ public class ClientProxy extends ServerProxy {
     	registerModel(ModBlocks.tableOfAges, 0, new ModelResourceLocation(ModBlocks.tableOfAges.getRegistryName(), "inventory"));
     	registerModel(ModBlocks.crusher, 0, new ModelResourceLocation(ModBlocks.crusher.getRegistryName(), "inventory"));
     	registerModel(ModBlocks.crusherOn, 0, new ModelResourceLocation(ModBlocks.crusherOn.getRegistryName(), "inventory"));
+    	registerModel(ModBlocks.nexus, 0, new ModelResourceLocation(ModBlocks.nexus.getRegistryName(), "inventory"));
+    	registerModel(ModBlocks.weaponBox, 0, new ModelResourceLocation(ModBlocks.weaponBox.getRegistryName(), "inventory"));
+    	registerModel(ModBlocks.rubyBlock, 0, new ModelResourceLocation(ModBlocks.rubyBlock.getRegistryName(), "inventory"));
+    	registerModel(ModBlocks.sapphireBlock, 0, new ModelResourceLocation(ModBlocks.sapphireBlock.getRegistryName(), "inventory"));
+
 
     	
     	
@@ -133,6 +138,11 @@ public class ClientProxy extends ServerProxy {
     	OreDictionary.registerOre("craftingTableAoW", ModBlocks.tableOfAges);
     	OreDictionary.registerOre("crusherAoW", ModBlocks.crusher);
     	OreDictionary.registerOre("crusherOnAoW", ModBlocks.crusherOn);
+    	OreDictionary.registerOre("weaponBoxAoW", ModBlocks.weaponBox);
+    	OreDictionary.registerOre("nexusAoW", ModBlocks.nexus);
+    	OreDictionary.registerOre("blockRuby", ModBlocks.rubyBlock);
+    	OreDictionary.registerOre("blockSapphire", ModBlocks.sapphireBlock);
+
 
 
     }

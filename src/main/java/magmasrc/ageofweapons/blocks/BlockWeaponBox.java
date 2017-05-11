@@ -1,131 +1,53 @@
 package magmasrc.ageofweapons.blocks;
 
-import magmasrc.ageofweapons.main.AgeOfWeapons;
+import java.util.List;
+
+import com.mojang.realmsclient.gui.ChatFormatting;
+
 import magmasrc.ageofweapons.main.ModTabs;
-import magmasrc.ageofweapons.tileentitys.TileEntityTableOfAges;
-import magmasrc.ageofweapons.util.GuiHandlerTOA;
-import net.minecraft.block.BlockBed;
-import net.minecraft.block.BlockContainer;
+import net.minecraft.block.BlockDirectional;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
-import net.minecraft.block.properties.PropertyBool;
 import net.minecraft.block.properties.PropertyDirection;
-import net.minecraft.block.properties.PropertyEnum;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.inventory.IInventory;
-import net.minecraft.inventory.InventoryHelper;
-import net.minecraft.tileentity.TileEntity;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumBlockRenderType;
 import net.minecraft.util.EnumFacing;
-import net.minecraft.util.EnumHand;
-import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.Mirror;
 import net.minecraft.util.Rotation;
-import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class BlockTableOfAges extends BlockContainer  {
-	
+public class BlockWeaponBox extends BlockDirectional {
 
 	public static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
 
-    
-	public BlockTableOfAges() {
-		super(Material.IRON);
+	public BlockWeaponBox() {
+		super(Material.WOOD);
 		this.setCreativeTab(ModTabs.generalTab);
-		this.setHardness(2.5F);
-		this.setResistance(5.0F);
-		this.setSoundType(SoundType.STONE);		
-	    this.setLightOpacity(0);
+		this.setHardness(0.5F);
+		this.setResistance(1.0F);
+		this.setSoundType(SoundType.WOOD);		
 		this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
 
 	}
 
 	
 	
-	// Function
+		// Function
 	
-	@Override
-	public TileEntity createNewTileEntity(World worldIn, int meta) {
-		return new TileEntityTableOfAges();
-	}
-
-	@Override
-	public boolean hasTileEntity(IBlockState state){
-		return true;
-	}
-
-	@Override
-	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing side, float hitX, float hitY, float hitZ) {
-		if (worldIn.isRemote) return true;
-		playerIn.openGui(AgeOfWeapons.instance, GuiHandlerTOA.getGuiID(), worldIn, pos.getX(), pos.getY(), pos.getZ());
-		return true;
-	}
 	
-
-	@Override
-	public void breakBlock(World worldIn, BlockPos pos, IBlockState state) {
-
-		TileEntity tileentity = worldIn.getTileEntity(pos);
-
-		if (tileentity instanceof IInventory)
-		{
-			InventoryHelper.dropInventoryItems(worldIn, pos, (IInventory)tileentity);
-			worldIn.updateComparatorOutputLevel(pos, this);
-		}
-
-
-
-		super.breakBlock(worldIn, pos, state);
-
-	}
 	
-
 	
-
-
-	// Custom Model
 	
-	@Override
-	public boolean isOpaqueCube(IBlockState state) {
-		return false;
-	}
-	
-    @Override
-    public boolean isPassable(IBlockAccess worldIn, BlockPos pos){
-        return true;
-    }
-
-	@Override
-	@SideOnly(Side.CLIENT)
-	public BlockRenderLayer getBlockLayer(){
-		return BlockRenderLayer.CUTOUT;
-	}
-	
-
-	@Override
-	public boolean isFullCube(IBlockState state){
-		return true;
-	} 
-
-	@Override
-	public EnumBlockRenderType getRenderType(IBlockState iBlockState) {
-		return EnumBlockRenderType.MODEL;
-	}
-	
-	@Override
-	public AxisAlignedBB getCollisionBoundingBox(IBlockState blockState, IBlockAccess worldIn, BlockPos pos) {
-		return FULL_BLOCK_AABB;
-	}
 
 	
 	
@@ -210,8 +132,17 @@ public class BlockTableOfAges extends BlockContainer  {
 		    protected BlockStateContainer createBlockState() {
 		        return new BlockStateContainer(this, new IProperty[] {FACING});
 		    }
-	
-	
+		    
+		    
+		    
+		    
+		    // other //
+		    
+		    @Override
+		    public void addInformation(ItemStack stack, EntityPlayer playerIn, List addList, boolean advanced) {
+		        addList.add(ChatFormatting.RED + "Work in progress");
+		    }		    
+		    
+	}	    
 
-
-}
+	

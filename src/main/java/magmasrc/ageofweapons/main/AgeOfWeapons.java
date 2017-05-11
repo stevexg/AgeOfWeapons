@@ -56,6 +56,8 @@ public class AgeOfWeapons {
     public static boolean activateOnlyOneTab;
     public static boolean activateChainArmorCrafting;
     public static boolean activateBasicRecipesOnWorkbench;
+    public static boolean activateWeaponBoxRecipe;
+    public static boolean activateNexusRecipe;
 
 
 
@@ -81,7 +83,10 @@ public class AgeOfWeapons {
           //activateOnlyOneTab = config.get("GENERAL", "Activate only one creative tab", false, "[true/false]").getBoolean();
     		activateChainArmorCrafting = config.get("CRAFTING", "Activate the crafting recipe for the chain armor (Table of Ages)", true, "[true/false]").getBoolean();
     		activateBasicRecipesOnWorkbench = config.get("CRAFTING", "Activate basic AoW recipes on the normal crafting table", true, "[true/false]").getBoolean();
-    		
+    		activateWeaponBoxRecipe = config.get("CRAFTING", "Activate the crafting recipe for the Weapon Box", true, "[true/false]").getBoolean();
+    		activateNexusRecipe = config.get("CRAFTING", "Activate the crafting recipe for the Nexus", false, "[true/false]").getBoolean();
+
+	
     	config.save();	
 
     	

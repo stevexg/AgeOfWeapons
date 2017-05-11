@@ -2,11 +2,11 @@
     "parent": "block/block",
 	"__comment": "Designed by RexRaptor with Cubik Studio - https://cubik.studio",
 	"textures": {
-		"particle": "blocks:cobblestone",
-		"base": "blocks:stone_diorite_smooth",
-		"color": "blocks:wool_colored_blue",
-		"nexus_shield": "blocks:iron_block",
-		"nexus": "blocks:diamond_block"
+		"particle": "minecraft:blocks/cobblestone",
+		"base": "minecraft:blocks/stone_diorite_smooth",
+		"color": "minecraft:blocks/wool_colored_blue",
+		"nexus_shield": "minecraft:blocks/iron_block",
+		"nexus": "minecraft:blocks/diamond_block"
 	},
 	"elements": [
 		{
