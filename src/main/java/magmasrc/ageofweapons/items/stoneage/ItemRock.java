@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.mojang.realmsclient.gui.ChatFormatting;
 
+import magmasrc.ageofweapons.main.AgeOfWeapons;
 import magmasrc.ageofweapons.main.ModTabs;
 import magmasrc.ageofweapons.util.ItemCustomSword;
 import net.minecraft.entity.player.EntityPlayer;
@@ -22,7 +23,9 @@ public class ItemRock extends ItemCustomSword {
     
 	@Override
 	public void addInformation(ItemStack  stack, EntityPlayer playerIn, List addList, boolean advanced) {
+		if(AgeOfWeapons.activateShowAges) {
 			addList.add(ChatFormatting.GRAY + "Stone Age");
+		}
 	}
 
 

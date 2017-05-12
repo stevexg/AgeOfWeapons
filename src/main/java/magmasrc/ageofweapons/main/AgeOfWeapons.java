@@ -58,6 +58,7 @@ public class AgeOfWeapons {
     public static boolean activateBasicRecipesOnWorkbench;
     public static boolean activateWeaponBoxRecipe;
     public static boolean activateNexusRecipe;
+    public static boolean activateShowAges;
 
 
 
@@ -85,7 +86,7 @@ public class AgeOfWeapons {
     		activateBasicRecipesOnWorkbench = config.get("CRAFTING", "Activate basic AoW recipes on the normal crafting table", true, "[true/false]").getBoolean();
     		activateWeaponBoxRecipe = config.get("CRAFTING", "Activate the crafting recipe for the Weapon Box", true, "[true/false]").getBoolean();
     		activateNexusRecipe = config.get("CRAFTING", "Activate the crafting recipe for the Nexus", false, "[true/false]").getBoolean();
-
+    		activateShowAges = config.get("GENERAL", "Show the age under the item name", true, "[true/false]").getBoolean();
 	
     	config.save();	
 

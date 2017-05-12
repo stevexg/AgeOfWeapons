@@ -4,6 +4,8 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 
 import magmasrc.ageofweapons.main.AgeOfWeapons;
+import magmasrc.ageofweapons.main.ModBlocks;
+import magmasrc.ageofweapons.main.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -70,7 +72,7 @@ public class CraftingManagerTableOfAges {
         this.addRecipeTOA(new ItemStack(Items.DIAMOND_SHOVEL), 0, " o ", " x ", " x ", 'x', Items.STICK, 'o', Items.DIAMOND);
         this.addRecipeTOA(new ItemStack(Items.DIAMOND_SWORD), 0, " o ", " o ", " x ", 'x', Items.STICK, 'o', Items.DIAMOND);
         
-        this.addRecipeTOA(new ItemStack(Items.FLINT_AND_STEEL), 0, "x  ", " o ", "   ", 'x', Items.IRON_INGOT, 'o', Items.FLINT);
+        this.addShapelessRecipeTOA(new ItemStack(Items.FLINT_AND_STEEL), 0, Items.IRON_INGOT, Items.FLINT);
         this.addRecipeTOA(new ItemStack(Items.SHEARS), 0, "   ", " x ", "x  ", 'x', Items.IRON_INGOT);
         this.addRecipeTOA(new ItemStack(Items.SHIELD), 0, "oxo", "ooo", " o ", 'x', Items.IRON_INGOT, 'o', new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE));
         this.addRecipeTOA(new ItemStack(Items.BOW), 0, "ox ", "o x", "ox ", 'x', Items.STICK, 'o', Items.STRING);
@@ -104,6 +106,59 @@ public class CraftingManagerTableOfAges {
         this.addRecipeTOA(new ItemStack(Items.CHAINMAIL_HELMET), 0, "oxo", "x x", "   ", 'x', Items.IRON_INGOT, 'o', Items.STRING);
         this.addRecipeTOA(new ItemStack(Items.CHAINMAIL_LEGGINGS), 0, "oxo", "x x", "x x", 'x', Items.IRON_INGOT, 'o', Items.STRING);
       }
+      
+      
+      
+      /** Age of Weapons **/
+      //blocks
+      this.addRecipeTOA(new ItemStack(ModBlocks.rubyBlock), 0, "xxx", "xxx", "xxx", 'x', ModItems.ruby);
+      this.addRecipeTOA(new ItemStack(ModBlocks.sapphireBlock), 0, "xxx", "xxx", "xxx", 'x', ModItems.sapphire);
+      this.addShapelessRecipeTOA(new ItemStack(ModItems.ruby, 9), 0, ModBlocks.rubyBlock);
+      this.addShapelessRecipeTOA(new ItemStack(ModItems.sapphire, 9), 0, ModBlocks.sapphireBlock);
+      this.addRecipeTOA(new ItemStack(ModBlocks.crusher), 0, "xxx", "xzx", "xox", 'x', Blocks.COBBLESTONE, 'o', Blocks.FURNACE, 'z', Items.FLINT);
+      this.addRecipeTOA(new ItemStack(ModBlocks.crusher), 0, "xxx", "xzx", "xox", 'x', Blocks.COBBLESTONE, 'o', Blocks.FURNACE, 'z', ModItems.ironShard);
+      this.addRecipeTOA(new ItemStack(ModBlocks.tableOfAges), 0, "xxx", "ozo", "oyo", 'x', Blocks.STONE_SLAB, 'o', Blocks.STONE, 'z', Blocks.CRAFTING_TABLE, 'y', Blocks.CHEST);
+  if(AgeOfWeapons.activateWeaponBoxRecipe) {    
+      this.addRecipeTOA(new ItemStack(ModBlocks.weaponBox), 0, "xxx", "xox", "xxx", 'x', new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE), 'o', Items.EMERALD);
+  }
+  if(AgeOfWeapons.activateNexusRecipe) {                                                                                                                      // change later 
+      this.addRecipeTOA(new ItemStack(ModBlocks.nexus), 0, "v v", "vzv", "xox", 'x', new ItemStack(Blocks.IRON_BLOCK), 'o', new ItemStack(Blocks.WOOL, 1, OreDictionary.WILDCARD_VALUE), 'v', Items.IRON_INGOT, 'z', Items.NETHER_STAR );
+  }
+  
+  	
+  	//items
+	this.addRecipeTOA(new ItemStack(ModItems.axeBladeDiamond), 0, "xx ", "xo ", "   ", 'x', ModItems.diamondShard, 'o', Items.DIAMOND);
+  	this.addRecipeTOA(new ItemStack(ModItems.axeBladeGold), 0, "xx ", "xo ", "   ", 'x', ModItems.goldShard, 'o', Items.GOLD_INGOT);
+  	this.addRecipeTOA(new ItemStack(ModItems.axeBladeIron), 0, "xx ", "xo ", "   ", 'x', ModItems.ironShard, 'o', Items.IRON_INGOT);
+  	this.addRecipeTOA(new ItemStack(ModItems.axeBladeStone), 0, "xx ", "xo ", "   ", 'x', ModItems.stoneShard, 'o', Blocks.COBBLESTONE);
+  	this.addRecipeTOA(new ItemStack(ModItems.axeBladeStone), 0, "xx ", "xo ", "   ", 'x', Items.FLINT, 'o', Blocks.COBBLESTONE);
+  	this.addRecipeTOA(new ItemStack(ModItems.axeBladeWood), 0, "xx ", "xo ", "   ", 'x', ModItems.woodShard, 'o', new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE));
+  	this.addRecipeTOA(new ItemStack(ModItems.swordBladeDiamond), 0, " x ", " x ", "   ", 'x', Items.DIAMOND);
+  	this.addRecipeTOA(new ItemStack(ModItems.swordBladeGold), 0, " x ", " x ", "   ", 'x', Items.GOLD_INGOT);
+  	this.addRecipeTOA(new ItemStack(ModItems.swordBladeIron), 0, " x ", " x ", "   ", 'x', Items.IRON_INGOT);
+  	this.addRecipeTOA(new ItemStack(ModItems.swordBladeStone), 0, " x ", " x ", "   ", 'x', Blocks.COBBLESTONE);
+  	this.addRecipeTOA(new ItemStack(ModItems.swordBladeWood), 0, " x ", " x ", "   ", 'x', new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE));
+  	this.addRecipeTOA(new ItemStack(ModItems.broadBladeDiamond), 0, "xx ", "xx ", "   ", 'x', ModItems.swordBladeDiamond);
+  	this.addRecipeTOA(new ItemStack(ModItems.broadBladeGold), 0, "xx ", "xx ", "   ", 'x', ModItems.swordBladeGold);
+  	this.addRecipeTOA(new ItemStack(ModItems.broadBladeIron), 0, "xx ", "xx ", "   ", 'x', ModItems.swordBladeIron);
+  	this.addRecipeTOA(new ItemStack(ModItems.broadBladeStone), 0, "xx ", "xx ", "   ", 'x', ModItems.swordBladeStone);
+  	this.addRecipeTOA(new ItemStack(ModItems.broadBladeWood), 0, "xx ", "xx ", "   ", 'x', ModItems.swordBladeWood);
+  	this.addShapelessRecipeTOA(new ItemStack(ModItems.lumber, 3), 0, new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE));
+  	this.addRecipeTOA(new ItemStack(ModItems.ironStick, 4), 0, "   ", " x ", " x ", 'x', Items.IRON_INGOT);
+  	this.addRecipeTOA(new ItemStack(ModItems.ironLongstick), 0, "   ", " x ", " x ", 'x', ModItems.ironStick);
+  	this.addRecipeTOA(new ItemStack(ModItems.woodLongstick), 0, "   ", " x ", " x ", 'x', Items.STICK);
+  	this.addRecipeTOA(new ItemStack(ModItems.swordHandle), 0, "   ", "xxx", " o ", 'x', ModItems.ironShard, 'o', Items.STICK);
+  	this.addRecipeTOA(new ItemStack(ModItems.toxin), 0, "ixi", "xox", "ccc", 'x', new ItemStack(Items.FISH, 1, 3), 'o', Items.GLASS_BOTTLE, 'i', Items.ROTTEN_FLESH, 'c', Items.FERMENTED_SPIDER_EYE);
+  	this.addRecipeTOA(new ItemStack(ModItems.radioactiveToxin), 0, "xxx", "xox", "xxx", 'x', new ItemStack(Items.FISH, 1, 3), 'o', ModItems.toxin);
+
+
+
+
+
+      
+      
+      
+      
 
         
     }
