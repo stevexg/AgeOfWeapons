@@ -65,6 +65,12 @@ public class ModItems {
 	public static Item sapphireShard;
 	public static Item stoneShard;
 	public static Item woodShard;
+	public static Item barrel;
+	public static Item blankGun;
+	public static Item gunHandle;
+	public static Item haftIron;
+	public static Item haftWood;
+	public static Item visor;
 	
 	// Stone Age
 	public static Item rock;
@@ -140,6 +146,12 @@ public class ModItems {
 		sapphireShard = new ItemSapphireShard();
 		stoneShard = new ItemStoneShard();
 		woodShard = new ItemWoodShard();
+		barrel = new ItemBarrel();
+		blankGun = new ItemBlankGun();
+		gunHandle = new ItemGunHandle();
+		haftIron = new ItemHaftIron();
+		haftWood = new ItemHaftWood();
+		visor = new ItemVisor();
 		
 		
 		// Stone Age
@@ -197,7 +209,12 @@ public class ModItems {
 		NameUtils.setNames(sapphireShard, "sapphire_shard");
 		NameUtils.setNames(stoneShard, "stone_shard");
 		NameUtils.setNames(woodShard, "wood_shard");
-
+		NameUtils.setNames(barrel, "barrel");
+		NameUtils.setNames(gunHandle, "gun_handle");
+		NameUtils.setNames(blankGun, "blank_gun");
+		NameUtils.setNames(haftIron, "haft_iron");
+		NameUtils.setNames(haftWood, "haft_wood");
+		NameUtils.setNames(visor, "visor");
 
 
 		
@@ -263,6 +280,12 @@ public class ModItems {
 		registerItem(ironShard);
 		registerItem(stoneShard);
 		registerItem(woodShard);
+		registerItem(barrel);
+		registerItem(blankGun);
+		registerItem(gunHandle);
+		registerItem(haftIron);
+		registerItem(haftWood);
+		registerItem(visor);
 		
 		// Stone Age
 		registerItem(rock);

@@ -16,7 +16,10 @@ tile.table_of_ages.name=Tisch der Zeitalter
 tile.crusher.name=Zerkleinerer
 tile.crusher_on.name=Zerkleinerer
 tile.weapon_box.name=Waffen Box
-tile.nexus.name=NEXUS
+tile.nexus.name=NEXUS (Blau)
+tile.nexus2.name=NEXUS (Rot)
+tile.nexus3.name=NEXUS (Gelb)
+tile.nexus4.name=NEXUS (Grün)
 tile.ruby_block.name=Rubin Block
 tile.sapphire_block.name=Saphir Block
 
@@ -66,6 +69,12 @@ item.ruby_shard.name=Rubin Scherbe
 item.sapphire_shard.name=Saphir Scherbe
 item.stone_shard.name=Stein Splitter
 item.wood_shard.name=Holz Splitter
+item.barrel.name=Lauf
+item.blank_gun.name=Rohe Pistole
+item.gun_handle.name=Griff
+item.haft_wood.name=Holz Schaft
+item.haft_iron.name=Eisen Schaft
+item.visor.name=Visir
 
 
 

@@ -35,8 +35,11 @@ public class ModRecipes {
 		  if(AgeOfWeapons.activateWeaponBoxRecipe) {    
 			GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.weaponBox), "xxx", "xox", "xxx", 'x', new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE), 'o', Items.EMERALD);
 		  }
-		  if(AgeOfWeapons.activateNexusRecipe) {                                                                                                                      // change later 
-			GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.nexus), "v v", "vzv", "xox", 'x', new ItemStack(Blocks.IRON_BLOCK), 'o', new ItemStack(Blocks.WOOL, 1, OreDictionary.WILDCARD_VALUE), 'v', Items.IRON_INGOT, 'z', Items.NETHER_STAR );
+		  if(AgeOfWeapons.activateNexusRecipe) {                                                                                                                   
+			  GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.nexus), 0, "v v", "vzv", "xox", 'x', new ItemStack(Blocks.IRON_BLOCK), 'o', new ItemStack(Blocks.WOOL, 1, 11), 'v', Items.IRON_INGOT, 'z', Items.NETHER_STAR );
+			  GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.nexus2), 0, "v v", "vzv", "xox", 'x', new ItemStack(Blocks.IRON_BLOCK), 'o', new ItemStack(Blocks.WOOL, 1, 14), 'v', Items.IRON_INGOT, 'z', Items.NETHER_STAR );
+			  GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.nexus3), 0, "v v", "vzv", "xox", 'x', new ItemStack(Blocks.IRON_BLOCK), 'o', new ItemStack(Blocks.WOOL, 1, 4), 'v', Items.IRON_INGOT, 'z', Items.NETHER_STAR );
+			  GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.nexus4), 0, "v v", "vzv", "xox", 'x', new ItemStack(Blocks.IRON_BLOCK), 'o', new ItemStack(Blocks.WOOL, 1, 13), 'v', Items.IRON_INGOT, 'z', Items.NETHER_STAR );
 		  }
 		  
 		  	
@@ -66,6 +69,14 @@ public class ModRecipes {
 		  GameRegistry.addShapedRecipe(new ItemStack(ModItems.radioactiveToxin), "xxx", "xox", "xxx", 'x', new ItemStack(Items.FISH, 1, 3), 'o', ModItems.toxin);
 		  GameRegistry.addRecipe(new ShapedOreRecipe(ModItems.radioactiveToxin, "xxx", "xox", "xxx", 'x', "uran", 'o', ModItems.toxin));
 		  GameRegistry.addRecipe(new ShapedOreRecipe(ModItems.radioactiveToxin, " x ", "xox", " x ", 'x', "uranium", 'o', ModItems.toxin));
+		  
+		  GameRegistry.addRecipe(new ItemStack(ModItems.blankGun), "xxx", "  x", "  x", 'x', Items.IRON_INGOT);
+		  GameRegistry.addRecipe(new ItemStack(ModItems.barrel), "   ", "xxx", "   ", 'x', Items.IRON_INGOT);
+		  GameRegistry.addRecipe(new ItemStack(ModItems.gunHandle), "   ", " x ", "x  ", 'x', Items.IRON_INGOT);
+		  GameRegistry.addRecipe(new ItemStack(ModItems.haftIron), " x ", " xx", " xx", 'x', Items.IRON_INGOT);
+		  GameRegistry.addRecipe(new ItemStack(ModItems.haftWood), " x ", " xx", " xx", 'x', new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE));
+		  GameRegistry.addRecipe(new ItemStack(ModItems.visor), "xxx", "o o", "xxx", 'x', Items.IRON_INGOT, 'o', new ItemStack(Blocks.GLASS_PANE, 1, 3));
+
 
 			
 			

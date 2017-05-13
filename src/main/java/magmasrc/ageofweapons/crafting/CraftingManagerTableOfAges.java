@@ -40,7 +40,6 @@ public class CraftingManagerTableOfAges {
         this.addRecipeTOA(new ItemStack(Items.STICK, 4), 0, "   ", " x ", " x ", 'x', new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE));
         this.addRecipeTOA(new ItemStack(Items.ARROW, 4), 0, " x ", " o ", " y ", 'x', Items.FLINT, 'o', Items.STICK, 'y', Items.FEATHER);
         this.addRecipeTOA(new ItemStack(Blocks.TORCH, 4), 0, "   ", " o ", " x ", 'x', Items.STICK, 'o', Items.COAL);
-
         //tools
         this.addRecipeTOA(new ItemStack(Items.WOODEN_AXE), 0, " oo", " xo", " x ", 'x', Items.STICK, 'o', new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE));
         this.addRecipeTOA(new ItemStack(Items.WOODEN_HOE), 0, " oo", " x ", " x ", 'x', Items.STICK, 'o', new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE));
@@ -77,8 +76,6 @@ public class CraftingManagerTableOfAges {
         this.addRecipeTOA(new ItemStack(Items.SHIELD), 0, "oxo", "ooo", " o ", 'x', Items.IRON_INGOT, 'o', new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE));
         this.addRecipeTOA(new ItemStack(Items.BOW), 0, "ox ", "o x", "ox ", 'x', Items.STICK, 'o', Items.STRING);
         this.addRecipeTOA(new ItemStack(Items.FISHING_ROD), 0, "  x", " xo", "x o", 'x', Items.STICK, 'o', Items.STRING);
-
-        
         //armor
         this.addRecipeTOA(new ItemStack(Items.LEATHER_BOOTS), 0, "   ", "x x", "x x", 'x', Items.LEATHER);
         this.addRecipeTOA(new ItemStack(Items.LEATHER_CHESTPLATE), 0, "x x", "xxx", "xxx", 'x', Items.LEATHER);
@@ -99,7 +96,6 @@ public class CraftingManagerTableOfAges {
         this.addRecipeTOA(new ItemStack(Items.DIAMOND_CHESTPLATE), 0, "x x", "xxx", "xxx", 'x', Items.DIAMOND);
         this.addRecipeTOA(new ItemStack(Items.DIAMOND_HELMET), 0, "xxx", "x x", "   ", 'x', Items.DIAMOND);
         this.addRecipeTOA(new ItemStack(Items.DIAMOND_LEGGINGS), 0, "xxx", "x x", "x x", 'x', Items.DIAMOND);
-    
       if (AgeOfWeapons.activateChainArmorCrafting){ 
         this.addRecipeTOA(new ItemStack(Items.CHAINMAIL_BOOTS), 0, "   ", "o o", "x x", 'x', Items.IRON_INGOT, 'o', Items.STRING);
         this.addRecipeTOA(new ItemStack(Items.CHAINMAIL_CHESTPLATE), 0, "o o", "xxx", "xox", 'x', Items.IRON_INGOT, 'o', Items.STRING);
@@ -121,8 +117,11 @@ public class CraftingManagerTableOfAges {
   if(AgeOfWeapons.activateWeaponBoxRecipe) {    
       this.addRecipeTOA(new ItemStack(ModBlocks.weaponBox), 0, "xxx", "xox", "xxx", 'x', new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE), 'o', Items.EMERALD);
   }
-  if(AgeOfWeapons.activateNexusRecipe) {                                                                                                                      // change later 
-      this.addRecipeTOA(new ItemStack(ModBlocks.nexus), 0, "v v", "vzv", "xox", 'x', new ItemStack(Blocks.IRON_BLOCK), 'o', new ItemStack(Blocks.WOOL, 1, OreDictionary.WILDCARD_VALUE), 'v', Items.IRON_INGOT, 'z', Items.NETHER_STAR );
+  if(AgeOfWeapons.activateNexusRecipe) {                                                                                                                      
+      this.addRecipeTOA(new ItemStack(ModBlocks.nexus), 0, "v v", "vzv", "xox", 'x', new ItemStack(Blocks.IRON_BLOCK), 'o', new ItemStack(Blocks.WOOL, 1, 11), 'v', Items.IRON_INGOT, 'z', Items.NETHER_STAR );
+      this.addRecipeTOA(new ItemStack(ModBlocks.nexus2), 0, "v v", "vzv", "xox", 'x', new ItemStack(Blocks.IRON_BLOCK), 'o', new ItemStack(Blocks.WOOL, 1, 14), 'v', Items.IRON_INGOT, 'z', Items.NETHER_STAR );
+      this.addRecipeTOA(new ItemStack(ModBlocks.nexus3), 0, "v v", "vzv", "xox", 'x', new ItemStack(Blocks.IRON_BLOCK), 'o', new ItemStack(Blocks.WOOL, 1, 4), 'v', Items.IRON_INGOT, 'z', Items.NETHER_STAR );
+      this.addRecipeTOA(new ItemStack(ModBlocks.nexus4), 0, "v v", "vzv", "xox", 'x', new ItemStack(Blocks.IRON_BLOCK), 'o', new ItemStack(Blocks.WOOL, 1, 13), 'v', Items.IRON_INGOT, 'z', Items.NETHER_STAR );
   }
   
   	
@@ -150,6 +149,13 @@ public class CraftingManagerTableOfAges {
   	this.addRecipeTOA(new ItemStack(ModItems.swordHandle), 0, "   ", "xxx", " o ", 'x', ModItems.ironShard, 'o', Items.STICK);
   	this.addRecipeTOA(new ItemStack(ModItems.toxin), 0, "ixi", "xox", "ccc", 'x', new ItemStack(Items.FISH, 1, 3), 'o', Items.GLASS_BOTTLE, 'i', Items.ROTTEN_FLESH, 'c', Items.FERMENTED_SPIDER_EYE);
   	this.addRecipeTOA(new ItemStack(ModItems.radioactiveToxin), 0, "xxx", "xox", "xxx", 'x', new ItemStack(Items.FISH, 1, 3), 'o', ModItems.toxin);
+
+  	this.addRecipeTOA(new ItemStack(ModItems.blankGun), 6, "xxx", "  x", "  x", 'x', Items.IRON_INGOT);
+  	this.addRecipeTOA(new ItemStack(ModItems.barrel), 6, "   ", "xxx", "   ", 'x', Items.IRON_INGOT);
+  	this.addRecipeTOA(new ItemStack(ModItems.gunHandle), 6, "   ", " xx", "xx ", 'x', Items.IRON_INGOT);
+  	this.addRecipeTOA(new ItemStack(ModItems.haftIron), 6, " x ", " xx", " xx", 'x', Items.IRON_INGOT);
+  	this.addRecipeTOA(new ItemStack(ModItems.haftWood), 6, " x ", " xx", " xx", 'x', new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE));
+  	this.addRecipeTOA(new ItemStack(ModItems.visor), 6, "xxx", "o o", "xxx", 'x', Items.IRON_INGOT, 'o', new ItemStack(Blocks.GLASS_PANE, 1, 3));
 
 
 

@@ -61,6 +61,12 @@ public class ClientProxy extends ServerProxy {
 		registerModel(ModItems.sapphireShard, 0, new ModelResourceLocation(ModItems.sapphireShard.getRegistryName(), "inventory"));
 		registerModel(ModItems.stoneShard, 0, new ModelResourceLocation(ModItems.stoneShard.getRegistryName(), "inventory"));
 		registerModel(ModItems.woodShard, 0, new ModelResourceLocation(ModItems.woodShard.getRegistryName(), "inventory"));
+		registerModel(ModItems.barrel, 0, new ModelResourceLocation(ModItems.barrel.getRegistryName(), "inventory"));
+		registerModel(ModItems.blankGun, 0, new ModelResourceLocation(ModItems.blankGun.getRegistryName(), "inventory"));
+		registerModel(ModItems.gunHandle, 0, new ModelResourceLocation(ModItems.gunHandle.getRegistryName(), "inventory"));
+		registerModel(ModItems.haftIron, 0, new ModelResourceLocation(ModItems.haftIron.getRegistryName(), "inventory"));
+		registerModel(ModItems.haftWood, 0, new ModelResourceLocation(ModItems.haftWood.getRegistryName(), "inventory"));
+		registerModel(ModItems.visor, 0, new ModelResourceLocation(ModItems.visor.getRegistryName(), "inventory"));
 
 
 
@@ -81,6 +87,9 @@ public class ClientProxy extends ServerProxy {
     	registerModel(ModBlocks.crusher, 0, new ModelResourceLocation(ModBlocks.crusher.getRegistryName(), "inventory"));
     	registerModel(ModBlocks.crusherOn, 0, new ModelResourceLocation(ModBlocks.crusherOn.getRegistryName(), "inventory"));
     	registerModel(ModBlocks.nexus, 0, new ModelResourceLocation(ModBlocks.nexus.getRegistryName(), "inventory"));
+    	registerModel(ModBlocks.nexus2, 0, new ModelResourceLocation(ModBlocks.nexus2.getRegistryName(), "inventory"));
+    	registerModel(ModBlocks.nexus3, 0, new ModelResourceLocation(ModBlocks.nexus3.getRegistryName(), "inventory"));
+    	registerModel(ModBlocks.nexus4, 0, new ModelResourceLocation(ModBlocks.nexus4.getRegistryName(), "inventory"));
     	registerModel(ModBlocks.weaponBox, 0, new ModelResourceLocation(ModBlocks.weaponBox.getRegistryName(), "inventory"));
     	registerModel(ModBlocks.rubyBlock, 0, new ModelResourceLocation(ModBlocks.rubyBlock.getRegistryName(), "inventory"));
     	registerModel(ModBlocks.sapphireBlock, 0, new ModelResourceLocation(ModBlocks.sapphireBlock.getRegistryName(), "inventory"));
@@ -132,6 +141,13 @@ public class ClientProxy extends ServerProxy {
 		OreDictionary.registerOre("handleSword", ModItems.swordHandle);
 		OreDictionary.registerOre("potionToxin", ModItems.toxin);
 		OreDictionary.registerOre("potionRadioactive", ModItems.radioactiveToxin);
+		OreDictionary.registerOre("partBarrel", ModItems.barrel);
+		OreDictionary.registerOre("partBlankGun", ModItems.blankGun);
+		OreDictionary.registerOre("partHandleGun", ModItems.gunHandle);
+		OreDictionary.registerOre("partHaftWood", ModItems.haftWood);
+		OreDictionary.registerOre("partHaftIron", ModItems.haftIron);
+		OreDictionary.registerOre("partVisor", ModItems.visor);
+
 
     	
     	//Blocks//
@@ -140,6 +156,9 @@ public class ClientProxy extends ServerProxy {
     	OreDictionary.registerOre("crusherOnAoW", ModBlocks.crusherOn);
     	OreDictionary.registerOre("weaponBoxAoW", ModBlocks.weaponBox);
     	OreDictionary.registerOre("nexusAoW", ModBlocks.nexus);
+    	OreDictionary.registerOre("nexusAoW", ModBlocks.nexus2);
+    	OreDictionary.registerOre("nexusAoW", ModBlocks.nexus3);
+    	OreDictionary.registerOre("nexusAoW", ModBlocks.nexus4);
     	OreDictionary.registerOre("blockRuby", ModBlocks.rubyBlock);
     	OreDictionary.registerOre("blockSapphire", ModBlocks.sapphireBlock);
 
