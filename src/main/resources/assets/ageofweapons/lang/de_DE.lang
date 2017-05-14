@@ -13,6 +13,15 @@ itemGroup.epicTab=AoW: Epik
 itemGroup.futureTab=Aow: Zukunft
 
 tile.table_of_ages.name=Tisch der Zeitalter
+tile.crusher.name=Zerkleinerer
+tile.crusher_on.name=Zerkleinerer
+tile.weapon_box.name=Waffen Box
+tile.nexus.name=NEXUS (Blau)
+tile.nexus2.name=NEXUS (Rot)
+tile.nexus3.name=NEXUS (Gelb)
+tile.nexus4.name=NEXUS (Grün)
+tile.ruby_block.name=Rubin Block
+tile.sapphire_block.name=Saphir Block
 
 item.upgrade_creative.name=Kreativ Upgrade
 item.upgrade_stone_age.name=Stein Upgrade
@@ -27,6 +36,50 @@ item.upgrade_modern_age.name=Diamant Upgrade
 item.upgrade_epic.name=Platin Upgrade
 item.upgrade_bby.name=Smaragd Upgrade
 item.upgrade_future.name=Bronze Upgrade
+
+item.axe_blade_diamond.name=Diamant Axt Schneide
+item.axe_blade_gold.name=Gold Axt Schneide
+item.axe_blade_iron.name=Eisen Axt Schneide
+item.axe_blade_stone.name=Stein Axt Schneide
+item.axe_blade_wood.name=Holz Axt Schneide
+item.sword_blade_diamond.name=Diamant Schwert Klinge
+item.sword_blade_gold.name=Gold Schwert Klinge
+item.sword_blade_iron.name=Eisen Schwert Klinge
+item.sword_blade_stone.name=Stein Schwert Klinge
+item.sword_blade_wood.name=Holz Schwert Klinge
+item.broad_blade_diamond.name=Diamant Breitklinge
+item.broad_blade_gold.name=Gold Breitklinge
+item.broad_blade_iron.name=Eisen Breitklinge
+item.broad_blade_stone.name=Stein Breitklinge
+item.broad_blade_wood.name=Holz Breitklinge
+item.iron_stick.name=Eisen Stab
+item.iron_longstick.name=Eisen Langstab
+item.wood_longstick.name=Langstab
+item.lumber.name=Holz
+item.radioactive_toxin.name=Radioaktives Gift
+item.toxin.name=Gift
+item.ruby.name=Rubin
+item.sapphire.name=Saphir
+item.sword_handle.name=Schwert Griff
+item.diamond_shard.name=Diamant Scherbe
+item.emerald_shard.name=Smaragd Scherbe
+item.gold_shard.name=Gold Splitter
+item.iron_shard.name=Eisen Splitter
+item.ruby_shard.name=Rubin Scherbe
+item.sapphire_shard.name=Saphir Scherbe
+item.stone_shard.name=Stein Splitter
+item.wood_shard.name=Holz Splitter
+item.barrel.name=Lauf
+item.blank_gun.name=Rohe Pistole
+item.gun_handle.name=Griff
+item.haft_wood.name=Holz Schaft
+item.haft_iron.name=Eisen Schaft
+item.visor.name=Visir
+
+
+
+
+
 
 //StoneAge
 item.rock.name=Stein

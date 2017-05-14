@@ -14,6 +14,15 @@ public class ModBlocks {
 
 	
 	public static Block tableOfAges;
+	public static Block crusher;
+	public static Block crusherOn;
+	public static Block weaponBox;
+	public static Block nexus;
+	public static Block nexus2;
+	public static Block nexus3;
+	public static Block nexus4;
+	public static Block rubyBlock;
+	public static Block sapphireBlock;
 
 	
 	
@@ -23,6 +32,15 @@ public class ModBlocks {
 		public void init() {
 		
 			tableOfAges = new BlockTableOfAges();
+			crusher = new BlockCrusher();
+			crusherOn = new BlockCrusherOn();
+			weaponBox = new BlockWeaponBox();
+			nexus = new BlockNexus();
+			nexus2 = new BlockNexus2();
+			nexus3 = new BlockNexus3();
+			nexus4 = new BlockNexus4();
+			rubyBlock = new BlockRuby();
+			sapphireBlock = new BlockSapphire();
 			
 			
 			
@@ -30,7 +48,15 @@ public class ModBlocks {
 			
 			
 			NameUtils.setNames(tableOfAges,"table_of_ages");
-			
+			NameUtils.setNames(crusher, "crusher");
+			NameUtils.setNames(crusherOn, "crusher_on");
+			NameUtils.setNames(weaponBox, "weapon_box");
+			NameUtils.setNames(nexus, "nexus");
+			NameUtils.setNames(nexus2, "nexus2");
+			NameUtils.setNames(nexus3, "nexus3");
+			NameUtils.setNames(nexus4, "nexus4");
+			NameUtils.setNames(rubyBlock, "ruby_block");
+			NameUtils.setNames(sapphireBlock, "sapphire_block");
 
 		}
 		
@@ -40,6 +66,15 @@ public class ModBlocks {
 			
 
 			registerBlock(tableOfAges);
+			registerBlock(crusher);
+			registerBlock(crusherOn);
+			registerBlock(weaponBox);
+			registerBlock(nexus);
+			registerBlock(nexus2);
+			registerBlock(nexus3);
+			registerBlock(nexus4);
+			registerBlock(rubyBlock);
+			registerBlock(sapphireBlock);
 
 
 
@@ -58,5 +93,4 @@ public class ModBlocks {
 			itemblock.setUnlocalizedName(block.getUnlocalizedName()).setRegistryName(block.getRegistryName());
 			GameRegistry.register(itemblock);
 		}
-		
 }

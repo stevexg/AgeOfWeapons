@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube",
+    "textures": {
+        "particle": "ageofweapons:blocks/crusher_top",
+        "up": "ageofweapons:blocks/crusher_top",
+        "down": "ageofweapons:blocks/crusher_bottom",
+        "north": "ageofweapons:blocks/crusher_front_off",
+        "east": "ageofweapons:blocks/crusher_side",
+        "west": "ageofweapons:blocks/crusher_side",
+        "south": "ageofweapons:blocks/crusher_side"
+    }
+}

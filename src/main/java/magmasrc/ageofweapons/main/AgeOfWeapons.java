@@ -26,7 +26,9 @@ public class AgeOfWeapons {
    
     public static final String MODID = "ageofweapons";
     public static final String VERSION = "0.1.0";
-    // TODO: Future & BBY texturen und funktionen tauschen
+    /* TODO: - Future & BBY texturen und funktionen tauschen
+     * 		
+     */
    
     @Instance("ageofweapons")
     public static AgeOfWeapons instance;
@@ -53,6 +55,10 @@ public class AgeOfWeapons {
     public static boolean activateUpdateChecker;
     public static boolean activateOnlyOneTab;
     public static boolean activateChainArmorCrafting;
+    public static boolean activateBasicRecipesOnWorkbench;
+    public static boolean activateWeaponBoxRecipe;
+    public static boolean activateNexusRecipe;
+    public static boolean activateShowAges;
 
 
 
@@ -75,10 +81,13 @@ public class AgeOfWeapons {
     	config.load();
         
     		activateUpdateChecker = config.get("EVENTS", "Activate Update-Checker", true, "[true/false]").getBoolean();
-    		//activateOnlyOneTab = config.get("GENERAL", "Activate only one creative tab", false, "[true/false]").getBoolean();
+          //activateOnlyOneTab = config.get("GENERAL", "Activate only one creative tab", false, "[true/false]").getBoolean();
     		activateChainArmorCrafting = config.get("CRAFTING", "Activate the crafting recipe for the chain armor (Table of Ages)", true, "[true/false]").getBoolean();
-
-    		
+    		activateBasicRecipesOnWorkbench = config.get("CRAFTING", "Activate basic AoW recipes on the normal crafting table", true, "[true/false]").getBoolean();
+    		activateWeaponBoxRecipe = config.get("CRAFTING", "Activate the crafting recipe for the Weapon Box", true, "[true/false]").getBoolean();
+    		activateNexusRecipe = config.get("CRAFTING", "Activate the crafting recipe for the Nexus", false, "[true/false]").getBoolean();
+    		activateShowAges = config.get("GENERAL", "Show the age under the item name", true, "[true/false]").getBoolean();
+	
     	config.save();	
 
     	

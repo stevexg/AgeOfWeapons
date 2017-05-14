@@ -45,6 +45,7 @@ public class BlockTableOfAges extends BlockContainer  {
 		this.setHardness(2.5F);
 		this.setResistance(5.0F);
 		this.setSoundType(SoundType.STONE);		
+	    this.setLightOpacity(0);
 		this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
 
 	}
@@ -101,10 +102,10 @@ public class BlockTableOfAges extends BlockContainer  {
 	
     @Override
     public boolean isPassable(IBlockAccess worldIn, BlockPos pos){
-        return false;
+        return true;
     }
 
-	
+	@Override
 	@SideOnly(Side.CLIENT)
 	public BlockRenderLayer getBlockLayer(){
 		return BlockRenderLayer.CUTOUT;
@@ -123,7 +124,7 @@ public class BlockTableOfAges extends BlockContainer  {
 	
 	@Override
 	public AxisAlignedBB getCollisionBoundingBox(IBlockState blockState, IBlockAccess worldIn, BlockPos pos) {
-		return null;
+		return FULL_BLOCK_AABB;
 	}
 
 	

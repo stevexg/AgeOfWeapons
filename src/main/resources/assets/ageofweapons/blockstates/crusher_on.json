@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "ageofweapons:crusher_on", "y": 0},
+        "facing=south": { "model": "ageofweapons:crusher_on", "y": 180},
+        "facing=east": {  "model": "ageofweapons:crusher_on", "y": 90},
+        "facing=west": {  "model": "ageofweapons:crusher_on", "y": 270}
+    }
+}

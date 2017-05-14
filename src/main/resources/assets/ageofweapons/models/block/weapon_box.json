@@ -1,11 +1,12 @@
 {
+    "parent": "block/block",
 	"__comment": "Designed by RexRaptor with Cubik Studio - https://cubik.studio",
 	"textures": {
-		"particle": "weapon_box_side",
-		"top": "weapon_box_top",
-		"side": "weapon_box_side",
-		"sword": "weapon_box_detail1",
-		"random": "weapon_box_detail2"
+		"particle": "ageofweapons:blocks/weapon_box_side",
+		"top": "ageofweapons:blocks/weapon_box_top",
+		"side": "ageofweapons:blocks/weapon_box_side",
+		"sword": "ageofweapons:blocks/weapon_box_detail1",
+		"random": "ageofweapons:blocks/weapon_box_detail2"
 	},
 	"elements": [
 		{
