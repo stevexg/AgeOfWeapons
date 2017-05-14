@@ -106,29 +106,26 @@ public class CraftingManagerTableOfAges {
         }
 
 
-        this.addShapelessRecipeTOA(new ItemStack(ModItems.rock, 4), 1, Blocks.COBBLESTONE);
 
-      
-      
-      
-      /** Age of Weapons **/
-      //blocks
-      this.addRecipeTOA(new ItemStack(ModBlocks.rubyBlock), 0, "xxx", "xxx", "xxx", 'x', ModItems.ruby);
-      this.addRecipeTOA(new ItemStack(ModBlocks.sapphireBlock), 0, "xxx", "xxx", "xxx", 'x', ModItems.sapphire);
-      this.addShapelessRecipeTOA(new ItemStack(ModItems.ruby, 9), 0, ModBlocks.rubyBlock);
-      this.addShapelessRecipeTOA(new ItemStack(ModItems.sapphire, 9), 0, ModBlocks.sapphireBlock);
-      this.addRecipeTOA(new ItemStack(ModBlocks.crusher), 0, "xxx", "xzx", "xox", 'x', Blocks.COBBLESTONE, 'o', Blocks.FURNACE, 'z', Items.FLINT);
-      this.addRecipeTOA(new ItemStack(ModBlocks.crusher), 0, "xxx", "xzx", "xox", 'x', Blocks.COBBLESTONE, 'o', Blocks.FURNACE, 'z', ModItems.ironShard);
-      this.addRecipeTOA(new ItemStack(ModBlocks.tableOfAges), 0, "xxx", "ozo", "oyo", 'x', Blocks.STONE_SLAB, 'o', Blocks.STONE, 'z', Blocks.CRAFTING_TABLE, 'y', Blocks.CHEST);
-      if(AgeOfWeapons.activateWeaponBoxRecipe) {
-          this.addRecipeTOA(new ItemStack(ModBlocks.weaponBox), 0, "xxx", "xox", "xxx", 'x', new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE), 'o', Items.EMERALD);
-      }
-      if(AgeOfWeapons.activateNexusRecipe) {
-          this.addRecipeTOA(new ItemStack(ModBlocks.nexus), 0, "v v", "vzv", "xox", 'x', new ItemStack(Blocks.IRON_BLOCK), 'o', new ItemStack(Blocks.WOOL, 1, 11), 'v', Items.IRON_INGOT, 'z', Items.NETHER_STAR );
-          this.addRecipeTOA(new ItemStack(ModBlocks.nexus2), 0, "v v", "vzv", "xox", 'x', new ItemStack(Blocks.IRON_BLOCK), 'o', new ItemStack(Blocks.WOOL, 1, 14), 'v', Items.IRON_INGOT, 'z', Items.NETHER_STAR );
-          this.addRecipeTOA(new ItemStack(ModBlocks.nexus3), 0, "v v", "vzv", "xox", 'x', new ItemStack(Blocks.IRON_BLOCK), 'o', new ItemStack(Blocks.WOOL, 1, 4), 'v', Items.IRON_INGOT, 'z', Items.NETHER_STAR );
-          this.addRecipeTOA(new ItemStack(ModBlocks.nexus4), 0, "v v", "vzv", "xox", 'x', new ItemStack(Blocks.IRON_BLOCK), 'o', new ItemStack(Blocks.WOOL, 1, 13), 'v', Items.IRON_INGOT, 'z', Items.NETHER_STAR );
-      }
+
+    /** Age of Weapons **/
+    //blocks
+    this.addRecipeTOA(new ItemStack(ModBlocks.rubyBlock), 0, "xxx", "xxx", "xxx", 'x', ModItems.ruby);
+    this.addRecipeTOA(new ItemStack(ModBlocks.sapphireBlock), 0, "xxx", "xxx", "xxx", 'x', ModItems.sapphire);
+    this.addShapelessRecipeTOA(new ItemStack(ModItems.ruby, 9), 0, ModBlocks.rubyBlock);
+    this.addShapelessRecipeTOA(new ItemStack(ModItems.sapphire, 9), 0, ModBlocks.sapphireBlock);
+    this.addRecipeTOA(new ItemStack(ModBlocks.crusher), 0, "xxx", "xzx", "xox", 'x', Blocks.COBBLESTONE, 'o', Blocks.FURNACE, 'z', Items.FLINT);
+    this.addRecipeTOA(new ItemStack(ModBlocks.crusher), 0, "xxx", "xzx", "xox", 'x', Blocks.COBBLESTONE, 'o', Blocks.FURNACE, 'z', ModItems.ironShard);
+    this.addRecipeTOA(new ItemStack(ModBlocks.tableOfAges), 0, "xxx", "ozo", "oyo", 'x', Blocks.STONE_SLAB, 'o', Blocks.STONE, 'z', Blocks.CRAFTING_TABLE, 'y', Blocks.CHEST);
+    if(AgeOfWeapons.activateWeaponBoxRecipe) {
+        this.addRecipeTOA(new ItemStack(ModBlocks.weaponBox), 0, "xxx", "xox", "xxx", 'x', new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE), 'o', Items.EMERALD);
+    }
+    if(AgeOfWeapons.activateNexusRecipe) {
+        this.addRecipeTOA(new ItemStack(ModBlocks.nexus), 0, "v v", "vzv", "xox", 'x', new ItemStack(Blocks.IRON_BLOCK), 'o', new ItemStack(Blocks.WOOL, 1, 11), 'v', Items.IRON_INGOT, 'z', Items.NETHER_STAR );
+        this.addRecipeTOA(new ItemStack(ModBlocks.nexus2), 0, "v v", "vzv", "xox", 'x', new ItemStack(Blocks.IRON_BLOCK), 'o', new ItemStack(Blocks.WOOL, 1, 14), 'v', Items.IRON_INGOT, 'z', Items.NETHER_STAR );
+        this.addRecipeTOA(new ItemStack(ModBlocks.nexus3), 0, "v v", "vzv", "xox", 'x', new ItemStack(Blocks.IRON_BLOCK), 'o', new ItemStack(Blocks.WOOL, 1, 4), 'v', Items.IRON_INGOT, 'z', Items.NETHER_STAR );
+        this.addRecipeTOA(new ItemStack(ModBlocks.nexus4), 0, "v v", "vzv", "xox", 'x', new ItemStack(Blocks.IRON_BLOCK), 'o', new ItemStack(Blocks.WOOL, 1, 13), 'v', Items.IRON_INGOT, 'z', Items.NETHER_STAR );
+    }
   
   	
   	//items
@@ -163,6 +160,8 @@ public class CraftingManagerTableOfAges {
   	this.addRecipeTOA(new ItemStack(ModItems.haftWood), 6, " x ", " xx", " xx", 'x', new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE));
   	this.addRecipeTOA(new ItemStack(ModItems.visor), 6, "xxx", "o o", "xxx", 'x', Items.IRON_INGOT, 'o', new ItemStack(Blocks.GLASS_PANE, 1, 3));
 
+    /** Stone Age **/
+    this.addShapelessRecipeTOA(new ItemStack(ModItems.rock, 4), 1, Blocks.COBBLESTONE);
 
     }
 
