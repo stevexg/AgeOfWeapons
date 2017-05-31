@@ -7,22 +7,22 @@ import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemSword;
 
-	public class ItemCustomSword extends ItemSword {
+	public class ItemCustomWeapon extends ItemSword {
 
 		private final float attackDamage;
 		private final float attackSpeed;
 
-		public ItemCustomSword(ToolMaterial material, float attackSpeed) {
+		public ItemCustomWeapon(ToolMaterial material, float attackSpeed) {
 			super(material);
-			this.attackSpeed = attackSpeed;
-			this.attackDamage = 3.0F + material.getDamageVsEntity();
+			this.attackSpeed = attackSpeed - 4.0F;
+			this.attackDamage = material.getDamageVsEntity() - 1.0F;
 		}
 
 
 	@Override
     public Multimap<String, AttributeModifier> getItemAttributeModifiers(EntityEquipmentSlot equipmentSlot)
     {
-        Multimap<String, AttributeModifier> multimap = super.getItemAttributeModifiers(equipmentSlot);
+        Multimap<String, AttributeModifier> multimap = HashMultimap.<String, AttributeModifier>create();
 
         if (equipmentSlot == EntityEquipmentSlot.MAINHAND)
         {

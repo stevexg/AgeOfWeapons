@@ -23,6 +23,9 @@ public class ModBlocks {
 	public static Block nexus4;
 	public static Block rubyBlock;
 	public static Block sapphireBlock;
+	public static Block amethystBlock;
+	public static Block topazBlock;
+	public static Block amberBlock;
 
 	
 	
@@ -41,6 +44,9 @@ public class ModBlocks {
 			nexus4 = new BlockNexus4();
 			rubyBlock = new BlockRuby();
 			sapphireBlock = new BlockSapphire();
+			amethystBlock = new BlockAmethyst();
+			topazBlock = new BlockTopaz();
+			amberBlock = new BlockAmber();
 			
 			
 			
@@ -57,6 +63,9 @@ public class ModBlocks {
 			NameUtils.setNames(nexus4, "nexus4");
 			NameUtils.setNames(rubyBlock, "ruby_block");
 			NameUtils.setNames(sapphireBlock, "sapphire_block");
+			NameUtils.setNames(amethystBlock, "amethyst_block");
+			NameUtils.setNames(topazBlock, "topaz_block");
+			NameUtils.setNames(amberBlock, "amber_block");
 
 		}
 		
@@ -75,6 +84,9 @@ public class ModBlocks {
 			registerBlock(nexus4);
 			registerBlock(rubyBlock);
 			registerBlock(sapphireBlock);
+			registerBlock(amethystBlock);
+			registerBlock(topazBlock);
+			registerBlock(amberBlock);
 
 
 

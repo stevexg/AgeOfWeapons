@@ -1,5 +1,6 @@
 package magmasrc.ageofweapons.main;
 
+import magmasrc.ageofweapons.proxy.ClientProxy;
 import magmasrc.ageofweapons.proxy.ServerProxy;
 import magmasrc.ageofweapons.util.Events;
 import magmasrc.ageofweapons.util.LootHandler;
@@ -35,6 +36,8 @@ public class AgeOfWeapons {
     
     @SidedProxy(clientSide = "magmasrc.ageofweapons.proxy.ClientProxy", serverSide = "magmasrc.ageofweapons.proxy.ServerProxy")
     public static ServerProxy proxy;
+    public static ClientProxy clientproxy;
+
     
     
 
@@ -59,6 +62,7 @@ public class AgeOfWeapons {
     public static boolean activateWeaponBoxRecipe;
     public static boolean activateNexusRecipe;
     public static boolean activateShowAges;
+    public static boolean activateDungeonLoot;
 
 
 
@@ -87,7 +91,8 @@ public class AgeOfWeapons {
     		activateWeaponBoxRecipe = config.get("CRAFTING", "Activate the crafting recipe for the Weapon Box", true, "[true/false]").getBoolean();
     		activateNexusRecipe = config.get("CRAFTING", "Activate the crafting recipe for the Nexus", false, "[true/false]").getBoolean();
     		activateShowAges = config.get("GENERAL", "Show the age under the item name", true, "[true/false]").getBoolean();
-	
+    		activateDungeonLoot = config.get("GENERATION", "Generate dungeon loot (means only the not important items for the mod)", true, "[true/false]").getBoolean();
+    		
     	config.save();	
 
     	
@@ -98,7 +103,8 @@ public class AgeOfWeapons {
     // Events //
     MinecraftForge.EVENT_BUS.register(new Events());  
     
-    
+    // Entitys //
+    proxy.registerRenderer();
 
     }
   

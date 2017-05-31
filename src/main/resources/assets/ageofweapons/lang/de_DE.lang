@@ -1,3 +1,4 @@
+﻿
 itemGroup.generalTab=Age of Weapons
 itemGroup.stoneAgeTab=AoW: Steinzeit
 itemGroup.antiquityTab=AoW: Antike
@@ -12,30 +13,43 @@ itemGroup.bbyTab=AoW: VSY
 itemGroup.epicTab=AoW: Epik
 itemGroup.futureTab=Aow: Zukunft
 
+
+
+
+
+//BLOCKS
 tile.table_of_ages.name=Tisch der Zeitalter
 tile.crusher.name=Zerkleinerer
 tile.crusher_on.name=Zerkleinerer
 tile.weapon_box.name=Waffen Box
-tile.nexus.name=NEXUS (Blau)
-tile.nexus2.name=NEXUS (Rot)
-tile.nexus3.name=NEXUS (Gelb)
-tile.nexus4.name=NEXUS (Gr�n)
+tile.nexus.name=§9NEXUS§r
+tile.nexus2.name=§cNEXUS§r
+tile.nexus3.name=§eNEXUS§r
+tile.nexus4.name=§aNEXUS§r
 tile.ruby_block.name=Rubin Block
 tile.sapphire_block.name=Saphir Block
+tile.amethyst_block.name=Amethyst Block
+tile.topaz_block.name=Topas Block
+tile.amber_block.name=Bernstein Block
 
+
+
+
+
+//ITEMS
 item.upgrade_creative.name=Kreativ Upgrade
 item.upgrade_stone_age.name=Stein Upgrade
 item.upgrade_antiquity.name=Lapis Upgrade
-item.upgrade_mystic.name=Saphir Upgrade
+item.upgrade_mystic.name=Amethyst Upgrade
 item.upgrade_middle_ages.name=Eisen Upgrade
-item.upgrade_edo_period.name=Kupfer Upgrade
+item.upgrade_edo_period.name=Bernstein Upgrade
 item.upgrade_piracy.name= Glas Upgrade
 item.upgrade_early_modern_age.name=Gold Upgrade
 item.upgrade_fantasy.name=Rubin Upgrade
 item.upgrade_modern_age.name=Diamant Upgrade
-item.upgrade_epic.name=Platin Upgrade
-item.upgrade_bby.name=Smaragd Upgrade
-item.upgrade_future.name=Bronze Upgrade
+item.upgrade_epic.name=Topas Upgrade
+item.upgrade_bby.name=Saphir Upgrade
+item.upgrade_future.name=Smaragd Upgrade
 
 item.axe_blade_diamond.name=Diamant Axt Schneide
 item.axe_blade_gold.name=Gold Axt Schneide
@@ -75,13 +89,21 @@ item.gun_handle.name=Griff
 item.haft_wood.name=Holz Schaft
 item.haft_iron.name=Eisen Schaft
 item.visor.name=Visir
-
-
-
-
+item.amethyst.name=Amethyst
+item.topaz.name=Topas
+item.amber.name=Bernstein
+item.amethyst_shard.name=Amethyst Scherbe
+item.topaz_shard.name=Topas Scherbe
+item.glass_shard.name=Glas Scherbe
 
 
 //StoneAge
 item.rock.name=Stein
-item.handaxstone.name=Hand Axt
-item.cavemanknifestone.name=Höhlenmensch Messer
+item.hand_ax_stone.name=Hand Axt
+item.caveman_knive_stone.name=Höhlenmensch Stein Messer
+item.caveman_knive_bone.name=Höhlenmensch Knochen Messer
+item.wood_cudgel.name=Knüppel
+item.stone_cudgel.name=Stein Knüppel
+item.ax.name=Beil
+item.throw_wood.name=Wurf Holz
+item.caveman_spear.name=Höhlenmensch Speer

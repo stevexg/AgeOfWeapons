@@ -14,9 +14,13 @@ public class ModItems {
 	
 	/** Tool-Materials **/
 	
-	public static ToolMaterial rockToolMaterial;
-	public static ToolMaterial handAxStoneToolMaterial;
-	public static ToolMaterial cavemanKnifeStoneToolMaterial;
+	public static ToolMaterial rockTM;
+	public static ToolMaterial handAxStoneTM;
+	public static ToolMaterial cavemanKniveStoneTM;
+	public static ToolMaterial cavemanKniveBoneTM;
+	public static ToolMaterial woodCudgelTM;
+	public static ToolMaterial stoneCudgelTM;
+	public static ToolMaterial axTM;
 	
 	
 	/** Items **/
@@ -73,11 +77,23 @@ public class ModItems {
 	public static Item haftIron;
 	public static Item haftWood;
 	public static Item visor;
+	public static Item amethyst;
+	public static Item amber;
+	public static Item topaz;
+	public static Item amethystShard;
+	public static Item topazShard;
+	public static Item glassShard;
 	
 	// Stone Age
 	public static Item rock;
 	public static Item handAxStone;
-	public static Item cavemanKnifeStone;
+	public static Item cavemanKniveStone;
+	public static Item cavemanKniveBone;
+	public static Item woodCudgel;
+	public static Item stoneCudgel;
+	public static Item ax;
+	public static Item throwWood;
+	public static Item cavemanSpear;
 	
 		
 		
@@ -88,20 +104,23 @@ public class ModItems {
 	public void init() {
 		
 		
-		   /** Tool-Materials **/   
-			/**
-				Default Materials!
-				WOOD(0, 59, 2.0F, 0.0F, 15),
-				STONE(1, 131, 4.0F, 1.0F, 5),
-				IRON(2, 250, 6.0F, 2.0F, 14),
-				DIAMOND(3, 1561, 8.0F, 3.0F, 10),
-				GOLD(0, 32, 12.0F, 0.0F, 22);
-			 **/
-   	    rockToolMaterial = EnumHelper.addToolMaterial("Rock", 0, 500, 3.0F, 0.0F, 20);
-		handAxStoneToolMaterial = EnumHelper.addToolMaterial("handAxStone", 0, 400, 3.0F, 0.5F, 20);
-		cavemanKnifeStoneToolMaterial = EnumHelper.addToolMaterial("cavemanKnifeStone", 0, 100, 3.0F, 1.0F, 20);
+		    /** Tool-Materials **/   
+		                                      																    	/**
+																			Default Materials!
+																	WOOD          (0,   59,  2.0F,  0.0F,  15),
+																	STONE         (1,  131,  4.0F,  1.0F,  5),
+																	IRON          (2,  250,  6.0F,  2.0F,  14),
+																	GOLD          (0,   32, 12.0F,  0.0F,  22);
+																	DIAMOND       (3, 1561,  8.0F,  3.0F,  10),     **/															
+		                                                           //     harv.lvl, uses, efficy., dmg., enchant.,
+   	    rockTM = EnumHelper.addToolMaterial ("rock",                               0,  500,  0.0F,  4.0F,  0);
+		handAxStoneTM = EnumHelper.addToolMaterial("handAxStone",                  0,  400,  1.0F,  4.5F,  0);
+		cavemanKniveStoneTM = EnumHelper.addToolMaterial("cavemanKniveStone",      0,  100,  1.0F,  5.0F,  0);
+		cavemanKniveBoneTM = EnumHelper.addToolMaterial("cavemanKniveBone",        0,   80,  1.0F,  5.0F,  0);
+		woodCudgelTM = EnumHelper.addToolMaterial("woodCudgel",                    0,  150,  1.0F,  5.0F,  0);
+		stoneCudgelTM = EnumHelper.addToolMaterial("stoneCudgel",                  1,  200,  1.0F,  6.0F,  0);
+		axTM = EnumHelper.addToolMaterial("ax",                                    1,  500,  3.0F, 5.10F,  3);
 
-		
    	    
    	    
    	    /** Items **/
@@ -158,14 +177,37 @@ public class ModItems {
 		haftIron = new ItemHaftIron();
 		haftWood = new ItemHaftWood();
 		visor = new ItemVisor();
+		amethyst = new ItemAmethyst();
+		amber = new ItemAmber();
+		topaz = new ItemTopaz();
+		amethystShard = new ItemAmethystShard();
+		topazShard = new ItemTopazShard();
+		glassShard = new ItemGlassShard();
+		
 		
 		
 		// Stone Age
-		rock = new ItemRock(rockToolMaterial);
-		handAxStone = new ItemHandAxStone(handAxStoneToolMaterial);
-		cavemanKnifeStone = new ItemCavemanKnifeStone(cavemanKnifeStoneToolMaterial);
+		rock = new ItemRock(rockTM);
+		handAxStone = new ItemHandAxStone(handAxStoneTM);
+		cavemanKniveStone = new ItemCavemanKniveStone(cavemanKniveStoneTM);
+		cavemanKniveBone = new ItemCavemanKniveStone(cavemanKniveBoneTM);
+		woodCudgel = new ItemWoodCudgel(woodCudgelTM);
+		stoneCudgel = new ItemStoneCudgel(stoneCudgelTM);
+		ax = new ItemAx(axTM);
+		throwWood = new ItemThrowWood();
+		cavemanSpear = new ItemCavemanSpear();
 		
 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		
 		
@@ -218,21 +260,32 @@ public class ModItems {
 		NameUtils.setNames(stoneShard, "stone_shard");
 		NameUtils.setNames(woodShard, "wood_shard");
 		NameUtils.setNames(barrel, "barrel");
-		NameUtils.setNames(gunHandle, "gun_handle");
+		NameUtils.setNames(gunHandle, "gun_handle");   
 		NameUtils.setNames(blankGun, "blank_gun");
 		NameUtils.setNames(haftIron, "haft_iron");
 		NameUtils.setNames(haftWood, "haft_wood");
 		NameUtils.setNames(visor, "visor");
+		NameUtils.setNames(amber, "amber");
+		NameUtils.setNames(amethyst, "amethyst");
+		NameUtils.setNames(topaz, "topaz");
+		NameUtils.setNames(amethystShard, "amethyst_shard");
+		NameUtils.setNames(topazShard, "topaz_shard");
+		NameUtils.setNames(glassShard, "glass_shard");
 
-
-		
-		
 		// Stone Age
 		NameUtils.setNames(rock, "rock");
-		NameUtils.setNames(handAxStone, "handaxstone");
-		NameUtils.setNames(cavemanKnifeStone, "cavemanknifestone");
+		NameUtils.setNames(handAxStone, "hand_ax_stone");
+		NameUtils.setNames(cavemanKniveStone, "caveman_knive_stone");
+		NameUtils.setNames(cavemanKniveBone, "caveman_knive_bone");
+		NameUtils.setNames(woodCudgel, "wood_cudgel");
+		NameUtils.setNames(stoneCudgel, "stone_cudgel");
+		NameUtils.setNames(ax, "ax");
+		NameUtils.setNames(throwWood, "throw_wood");
+		NameUtils.setNames(cavemanSpear, "caveman_spear");
 
-		
+		  //TODO: Zukünftige Items so formatieren=         <GEGENSTAND><MATERIAL>     (example: swordIron, "sword_iron")
+		  //
+		  // ist übersichtlicher in den ordnern
 		
    	    
 
@@ -280,15 +333,21 @@ public class ModItems {
 		registerItem(lumber);
 		registerItem(ruby);
 		registerItem(sapphire);
+		registerItem(amethyst);
+		registerItem(topaz);
+		registerItem(amber);
 		registerItem(toxin);
 		registerItem(radioactiveToxin);
 		registerItem(diamondShard);
 		registerItem(emeraldShard);
 		registerItem(rubyShard);
 		registerItem(sapphireShard);
+		registerItem(amethystShard);
+		registerItem(topazShard);
 		registerItem(goldShard);
 		registerItem(ironShard);
 		registerItem(stoneShard);
+		registerItem(glassShard);
 		registerItem(woodShard);
 		registerItem(barrel);
 		registerItem(blankGun);
@@ -300,7 +359,13 @@ public class ModItems {
 		// Stone Age
 		registerItem(rock);
 		registerItem(handAxStone);
-		registerItem(cavemanKnifeStone);
+		registerItem(cavemanKniveStone);
+		registerItem(cavemanKniveBone);
+		registerItem(woodCudgel);
+		registerItem(stoneCudgel);
+		registerItem(ax);
+		registerItem(throwWood);
+		registerItem(cavemanSpear);
 		
 		
 		

@@ -1,11 +1,17 @@
 package magmasrc.ageofweapons.proxy;
  
+import magmasrc.ageofweapons.entity.EntityCavemanSpear;
 import magmasrc.ageofweapons.main.ModBlocks;
 import magmasrc.ageofweapons.main.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.client.renderer.entity.Render;
+import net.minecraft.client.renderer.entity.RenderManager;
+import net.minecraft.client.renderer.entity.RenderSnowball;
 import net.minecraft.item.Item;
+import net.minecraftforge.fml.client.registry.IRenderFactory;
+import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.oredict.OreDictionary;
  
 public class ClientProxy extends ServerProxy {
@@ -67,18 +73,32 @@ public class ClientProxy extends ServerProxy {
 		registerModel(ModItems.haftIron, 0, new ModelResourceLocation(ModItems.haftIron.getRegistryName(), "inventory"));
 		registerModel(ModItems.haftWood, 0, new ModelResourceLocation(ModItems.haftWood.getRegistryName(), "inventory"));
 		registerModel(ModItems.visor, 0, new ModelResourceLocation(ModItems.visor.getRegistryName(), "inventory"));
-
-
-
-
-
+		registerModel(ModItems.amethyst, 0, new ModelResourceLocation(ModItems.amethyst.getRegistryName(), "inventory"));
+		registerModel(ModItems.amethystShard, 0, new ModelResourceLocation(ModItems.amethystShard.getRegistryName(), "inventory"));
+		registerModel(ModItems.topaz, 0, new ModelResourceLocation(ModItems.topaz.getRegistryName(), "inventory"));
+		registerModel(ModItems.topazShard, 0, new ModelResourceLocation(ModItems.topazShard.getRegistryName(), "inventory"));
+		registerModel(ModItems.amber, 0, new ModelResourceLocation(ModItems.amber.getRegistryName(), "inventory"));
+		registerModel(ModItems.glassShard, 0, new ModelResourceLocation(ModItems.glassShard.getRegistryName(), "inventory"));
+		
 		// StoneAge
 		registerModel(ModItems.rock, 0, new ModelResourceLocation(ModItems.rock.getRegistryName(), "inventory"));
 		registerModel(ModItems.handAxStone, 0, new ModelResourceLocation(ModItems.handAxStone.getRegistryName(), "inventory"));
-		registerModel(ModItems.cavemanKnifeStone, 0, new ModelResourceLocation(ModItems.cavemanKnifeStone.getRegistryName(), "inventory"));
+		registerModel(ModItems.cavemanKniveStone, 0, new ModelResourceLocation(ModItems.cavemanKniveStone.getRegistryName(), "inventory"));
+		registerModel(ModItems.cavemanKniveBone, 0, new ModelResourceLocation(ModItems.cavemanKniveBone.getRegistryName(), "inventory"));
+		registerModel(ModItems.woodCudgel, 0, new ModelResourceLocation(ModItems.woodCudgel.getRegistryName(), "inventory"));
+		registerModel(ModItems.stoneCudgel, 0, new ModelResourceLocation(ModItems.stoneCudgel.getRegistryName(), "inventory"));
+		registerModel(ModItems.ax, 0, new ModelResourceLocation(ModItems.ax.getRegistryName(), "inventory"));
+		registerModel(ModItems.throwWood, 0, new ModelResourceLocation(ModItems.throwWood.getRegistryName(), "inventory"));
+		registerModel(ModItems.cavemanSpear, 0, new ModelResourceLocation(ModItems.cavemanSpear.getRegistryName(), "inventory"));
 
     	
     	
+		
+		
+		
+		
+		
+		
     	
 		
 		
@@ -95,16 +115,18 @@ public class ClientProxy extends ServerProxy {
     	registerModel(ModBlocks.weaponBox, 0, new ModelResourceLocation(ModBlocks.weaponBox.getRegistryName(), "inventory"));
     	registerModel(ModBlocks.rubyBlock, 0, new ModelResourceLocation(ModBlocks.rubyBlock.getRegistryName(), "inventory"));
     	registerModel(ModBlocks.sapphireBlock, 0, new ModelResourceLocation(ModBlocks.sapphireBlock.getRegistryName(), "inventory"));
+    	registerModel(ModBlocks.amethystBlock, 0, new ModelResourceLocation(ModBlocks.amethystBlock.getRegistryName(), "inventory"));
+    	registerModel(ModBlocks.amberBlock, 0, new ModelResourceLocation(ModBlocks.amberBlock.getRegistryName(), "inventory"));
+    	registerModel(ModBlocks.topazBlock, 0, new ModelResourceLocation(ModBlocks.topazBlock.getRegistryName(), "inventory"));
 
+    	
 
-    	
-    	
-    	
+    //==============================================================================================================//	
     	
     	
     	/** Ore Dictionary **/
     	
-    	//Items//
+    	/**Items**/
     	OreDictionary.registerOre("upgradeCreativeAoW", ModItems.upgradeCreative);
 		OreDictionary.registerOre("upgradeStoneAgeAoW", ModItems.upgradeStoneAge);
 		OreDictionary.registerOre("upgradeAntiquityAoW", ModItems.upgradeAtiquity);
@@ -140,6 +162,20 @@ public class ClientProxy extends ServerProxy {
 		OreDictionary.registerOre("lumber", ModItems.lumber);
 		OreDictionary.registerOre("gemRuby", ModItems.ruby);
 		OreDictionary.registerOre("gemSapphire", ModItems.sapphire);
+		OreDictionary.registerOre("gemAmethyst", ModItems.amethyst);
+		OreDictionary.registerOre("gemTopaz", ModItems.topaz);
+		OreDictionary.registerOre("gemAmber", ModItems.amber);
+		OreDictionary.registerOre("shardWood", ModItems.woodShard);
+		OreDictionary.registerOre("shardIron", ModItems.ironShard);
+		OreDictionary.registerOre("shardStone", ModItems.stoneShard);
+		OreDictionary.registerOre("shardGold", ModItems.goldShard);
+		OreDictionary.registerOre("shardDiamond", ModItems.diamondShard);
+		OreDictionary.registerOre("shardEmerald", ModItems.emeraldShard);
+		OreDictionary.registerOre("shardSapphire", ModItems.sapphireShard);
+		OreDictionary.registerOre("shardRuby", ModItems.rubyShard);
+		OreDictionary.registerOre("shardTopaz", ModItems.topazShard);
+		OreDictionary.registerOre("shardAmethyst", ModItems.amethystShard);
+		OreDictionary.registerOre("shardGlass", ModItems.glassShard);
 		OreDictionary.registerOre("handleSword", ModItems.swordHandle);
 		OreDictionary.registerOre("potionToxin", ModItems.toxin);
 		OreDictionary.registerOre("potionRadioactive", ModItems.radioactiveToxin);
@@ -150,9 +186,23 @@ public class ClientProxy extends ServerProxy {
 		OreDictionary.registerOre("partHaftIron", ModItems.haftIron);
 		OreDictionary.registerOre("partVisor", ModItems.visor);
 
+		//Stone Age
+		OreDictionary.registerOre("weaponRock", ModItems.rock);
+		OreDictionary.registerOre("weaponHandAx", ModItems.handAxStone);
+		OreDictionary.registerOre("kniveCavemanStone", ModItems.cavemanKniveStone);
+		OreDictionary.registerOre("kniveCavemanBone", ModItems.cavemanKniveBone);
+		OreDictionary.registerOre("cudgelWood", ModItems.woodCudgel);
+		OreDictionary.registerOre("cudgelStone", ModItems.stoneCudgel);
+		OreDictionary.registerOre("weaponAx", ModItems.ax);
+		OreDictionary.registerOre("weaponThrowWood", ModItems.throwWood);
+		OreDictionary.registerOre("spearCaveman", ModItems.cavemanSpear);
 
+
+		
+		
+		
     	
-    	//Blocks//
+    	/**Blocks**/
     	OreDictionary.registerOre("craftingTableAoW", ModBlocks.tableOfAges);
     	OreDictionary.registerOre("crusherAoW", ModBlocks.crusher);
     	OreDictionary.registerOre("crusherOnAoW", ModBlocks.crusherOn);
@@ -163,11 +213,28 @@ public class ClientProxy extends ServerProxy {
     	OreDictionary.registerOre("nexusAoW", ModBlocks.nexus4);
     	OreDictionary.registerOre("blockRuby", ModBlocks.rubyBlock);
     	OreDictionary.registerOre("blockSapphire", ModBlocks.sapphireBlock);
+    	OreDictionary.registerOre("blockAmethyst", ModBlocks.amethystBlock);
+    	OreDictionary.registerOre("blockTopaz", ModBlocks.topazBlock);
+    	OreDictionary.registerOre("blockAmber", ModBlocks.amberBlock);
 
 
 
     }
     
+    
+    
+    
+	/** Entitys **/
+	
+	public void registerRenderer() {
+		RenderingRegistry.registerEntityRenderingHandler(EntityCavemanSpear.class, new IRenderFactory() {
+
+			@Override
+			public Render createRenderFor(RenderManager manager) {
+				return new RenderSnowball<EntityCavemanSpear>(manager, ModItems.cavemanSpear, Minecraft.getMinecraft().getRenderItem());
+			}
+		});
+	}
     
     
     

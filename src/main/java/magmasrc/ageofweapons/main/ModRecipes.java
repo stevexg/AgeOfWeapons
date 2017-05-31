@@ -27,12 +27,20 @@ public class ModRecipes {
 			
 			GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.rubyBlock), "xxx", "xxx", "xxx", 'x', ModItems.ruby);
 			GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.sapphireBlock), "xxx", "xxx", "xxx", 'x', ModItems.sapphire);
+			GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.amethystBlock), "xxx", "xxx", "xxx", 'x', ModItems.amethyst);
+			GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.topazBlock), "xxx", "xxx", "xxx", 'x', ModItems.topaz);
+			GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.amberBlock), "xxx", "xxx", "xxx", 'x', ModItems.amber);
 			GameRegistry.addShapelessRecipe(new ItemStack(ModItems.ruby, 9), ModBlocks.rubyBlock);
 			GameRegistry.addShapelessRecipe(new ItemStack(ModItems.sapphire, 9), ModBlocks.sapphireBlock);
+			GameRegistry.addShapelessRecipe(new ItemStack(ModItems.amethyst, 9), ModBlocks.amethystBlock);
+			GameRegistry.addShapelessRecipe(new ItemStack(ModItems.topaz, 9), ModBlocks.topazBlock);
+			GameRegistry.addShapelessRecipe(new ItemStack(ModItems.amber, 9), ModBlocks.amberBlock);
 			GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.crusher), "xxx", "xzx", "xox", 'x', Blocks.COBBLESTONE, 'o', Blocks.FURNACE, 'z', Items.FLINT);
 			GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.crusher), "xxx", "xzx", "xox", 'x', Blocks.COBBLESTONE, 'o', Blocks.FURNACE, 'z', ModItems.ironShard);
 			GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.tableOfAges), "xxx", "ozo", "oyo", 'x', Blocks.STONE_SLAB, 'o', Blocks.STONE, 'z', Blocks.CRAFTING_TABLE, 'y', Blocks.CHEST);
-		  if(AgeOfWeapons.activateWeaponBoxRecipe) {    
+		
+			
+			if(AgeOfWeapons.activateWeaponBoxRecipe) {    
 			GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.weaponBox), "xxx", "xox", "xxx", 'x', new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE), 'o', Items.EMERALD);
 		  }
 		  if(AgeOfWeapons.activateNexusRecipe) {                                                                                                                   
@@ -69,6 +77,10 @@ public class ModRecipes {
 		  GameRegistry.addShapedRecipe(new ItemStack(ModItems.radioactiveToxin), "xxx", "xox", "xxx", 'x', new ItemStack(Items.FISH, 1, 3), 'o', ModItems.toxin);
 		  GameRegistry.addRecipe(new ShapedOreRecipe(ModItems.radioactiveToxin, "xxx", "xox", "xxx", 'x', "uran", 'o', ModItems.toxin));
 		  GameRegistry.addRecipe(new ShapedOreRecipe(ModItems.radioactiveToxin, " x ", "xox", " x ", 'x', "uranium", 'o', ModItems.toxin));
+		  GameRegistry.addShapelessRecipe(new ItemStack(ModItems.glassShard, 4), new ItemStack(Blocks.GLASS, 1, OreDictionary.WILDCARD_VALUE));
+		  GameRegistry.addShapelessRecipe(new ItemStack(ModItems.glassShard, 4), new ItemStack(Blocks.GLASS_PANE, 1, OreDictionary.WILDCARD_VALUE));
+
+
 		  
 		  GameRegistry.addRecipe(new ItemStack(ModItems.blankGun), "xxx", "  x", "  x", 'x', Items.IRON_INGOT);
 		  GameRegistry.addRecipe(new ItemStack(ModItems.barrel), "   ", "xxx", "   ", 'x', Items.IRON_INGOT);

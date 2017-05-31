@@ -4,7 +4,6 @@ import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 
 import magmasrc.ageofweapons.main.AgeOfWeapons;
-
 import magmasrc.ageofweapons.main.ModBlocks;
 import magmasrc.ageofweapons.main.ModItems;
 import net.minecraft.block.Block;
@@ -15,6 +14,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
 
 import java.util.List;
@@ -112,11 +112,18 @@ public class CraftingManagerTableOfAges {
     //blocks
     this.addRecipeTOA(new ItemStack(ModBlocks.rubyBlock), 0, "xxx", "xxx", "xxx", 'x', ModItems.ruby);
     this.addRecipeTOA(new ItemStack(ModBlocks.sapphireBlock), 0, "xxx", "xxx", "xxx", 'x', ModItems.sapphire);
+    this.addRecipeTOA(new ItemStack(ModBlocks.amethystBlock), 0, "xxx", "xxx", "xxx", 'x', ModItems.amethyst);
+    this.addRecipeTOA(new ItemStack(ModBlocks.topazBlock), 0, "xxx", "xxx", "xxx", 'x', ModItems.topaz);
+    this.addRecipeTOA(new ItemStack(ModBlocks.amberBlock), 0, "xxx", "xxx", "xxx", 'x', ModItems.amber);
     this.addShapelessRecipeTOA(new ItemStack(ModItems.ruby, 9), 0, ModBlocks.rubyBlock);
     this.addShapelessRecipeTOA(new ItemStack(ModItems.sapphire, 9), 0, ModBlocks.sapphireBlock);
+    this.addShapelessRecipeTOA(new ItemStack(ModItems.amethyst, 9), 0, ModBlocks.amethystBlock);
+    this.addShapelessRecipeTOA(new ItemStack(ModItems.topaz, 9), 0, ModBlocks.topazBlock);
+    this.addShapelessRecipeTOA(new ItemStack(ModItems.amber, 9), 0, ModBlocks.amberBlock);
     this.addRecipeTOA(new ItemStack(ModBlocks.crusher), 0, "xxx", "xzx", "xox", 'x', Blocks.COBBLESTONE, 'o', Blocks.FURNACE, 'z', Items.FLINT);
     this.addRecipeTOA(new ItemStack(ModBlocks.crusher), 0, "xxx", "xzx", "xox", 'x', Blocks.COBBLESTONE, 'o', Blocks.FURNACE, 'z', ModItems.ironShard);
     this.addRecipeTOA(new ItemStack(ModBlocks.tableOfAges), 0, "xxx", "ozo", "oyo", 'x', Blocks.STONE_SLAB, 'o', Blocks.STONE, 'z', Blocks.CRAFTING_TABLE, 'y', Blocks.CHEST);
+
     if(AgeOfWeapons.activateWeaponBoxRecipe) {
         this.addRecipeTOA(new ItemStack(ModBlocks.weaponBox), 0, "xxx", "xox", "xxx", 'x', new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE), 'o', Items.EMERALD);
     }
@@ -152,16 +159,51 @@ public class CraftingManagerTableOfAges {
   	this.addRecipeTOA(new ItemStack(ModItems.swordHandle), 0, "   ", "xxx", " o ", 'x', ModItems.ironShard, 'o', Items.STICK);
   	this.addRecipeTOA(new ItemStack(ModItems.toxin), 0, "ixi", "xox", "ccc", 'x', new ItemStack(Items.FISH, 1, 3), 'o', Items.GLASS_BOTTLE, 'i', Items.ROTTEN_FLESH, 'c', Items.FERMENTED_SPIDER_EYE);
   	this.addRecipeTOA(new ItemStack(ModItems.radioactiveToxin), 0, "xxx", "xox", "xxx", 'x', new ItemStack(Items.FISH, 1, 3), 'o', ModItems.toxin);
+  	this.addShapelessRecipeTOA(new ItemStack(ModItems.glassShard, 4), 0, new ItemStack(Blocks.GLASS, 1, OreDictionary.WILDCARD_VALUE));
+  	this.addShapelessRecipeTOA(new ItemStack(ModItems.glassShard, 4), 0, new ItemStack(Blocks.GLASS_PANE, 1, OreDictionary.WILDCARD_VALUE));
 
-  	this.addRecipeTOA(new ItemStack(ModItems.blankGun), 6, "xxx", "  x", "  x", 'x', Items.IRON_INGOT);
-  	this.addRecipeTOA(new ItemStack(ModItems.barrel), 6, "   ", "xxx", "   ", 'x', Items.IRON_INGOT);
-  	this.addRecipeTOA(new ItemStack(ModItems.gunHandle), 6, "   ", " xx", "xx ", 'x', Items.IRON_INGOT);
-  	this.addRecipeTOA(new ItemStack(ModItems.haftIron), 6, " x ", " xx", " xx", 'x', Items.IRON_INGOT);
-  	this.addRecipeTOA(new ItemStack(ModItems.haftWood), 6, " x ", " xx", " xx", 'x', new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE));
-  	this.addRecipeTOA(new ItemStack(ModItems.visor), 6, "xxx", "o o", "xxx", 'x', Items.IRON_INGOT, 'o', new ItemStack(Blocks.GLASS_PANE, 1, 3));
+
+  	this.addRecipeTOA(new ItemStack(ModItems.blankGun), 7, "xxx", "  x", "  x", 'x', Items.IRON_INGOT);
+  	this.addRecipeTOA(new ItemStack(ModItems.barrel), 7, "   ", "xxx", "   ", 'x', Items.IRON_INGOT);
+  	this.addRecipeTOA(new ItemStack(ModItems.gunHandle), 7, "   ", " xx", "xx ", 'x', Items.IRON_INGOT);
+  	this.addRecipeTOA(new ItemStack(ModItems.haftIron), 7, " x ", " xx", " xx", 'x', Items.IRON_INGOT);
+  	this.addRecipeTOA(new ItemStack(ModItems.haftWood), 7, " x ", " xx", " xx", 'x', new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE));
+  	this.addRecipeTOA(new ItemStack(ModItems.visor), 7, "xxx", "o o", "xxx", 'x', Items.IRON_INGOT, 'o', new ItemStack(Blocks.GLASS_PANE, 1, 3));
+  	//upgrades
+  	this.addRecipeTOA(new ItemStack(ModItems.upgradeStoneAge), 0, "xxx", "xox", "xxx", 'x', ModItems.stoneShard, 'o', Blocks.STONE);
+  	this.addRecipeTOA(new ItemStack(ModItems.upgradeAtiquity), 1, "xxx", "xox", "xxx", 'x', new ItemStack(Items.DYE, 1, 4), 'o', Blocks.LAPIS_BLOCK);
+  	this.addRecipeTOA(new ItemStack(ModItems.upgradeMiddleAges), 2, "xxx", "xox", "xxx", 'x', ModItems.ironShard, 'o', Blocks.IRON_BLOCK);
+    this.addRecipeTOA(new ItemStack(ModItems.upgradeMystic), 2, "xxx", "xox", "xxx", 'x', ModItems.amethystShard, 'o', ModBlocks.amethystBlock);               
+  	this.addRecipeTOA(new ItemStack(ModItems.upgradeEarlyModernAge), 4, "xxx", "xox", "xxx", 'x', ModItems.goldShard, 'o', Blocks.GOLD_BLOCK);
+    this.addRecipeTOA(new ItemStack(ModItems.upgradePiracy), 4, "xxx", "xox", "xxx", 'x', ModItems.glassShard, 'o', new ItemStack(Blocks.GLASS, 1, 9));       
+    this.addRecipeTOA(new ItemStack(ModItems.upgradeEdoPeriod), 4, "xxx", "xox", "xxx", 'x', ModItems.amber, 'o', ModBlocks.amberBlock);               
+  	this.addRecipeTOA(new ItemStack(ModItems.upgradeModernAge), 7, "xxx", "xox", "xxx", 'x', ModItems.diamondShard, 'o', Blocks.DIAMOND_BLOCK);
+    this.addRecipeTOA(new ItemStack(ModItems.upgradeFantasy), 7, "xxx", "xox", "xxx", 'x', ModItems.rubyShard, 'o', ModBlocks.rubyBlock);        
+    this.addRecipeTOA(new ItemStack(ModItems.upgradeEpic), 11, "xxx", "xox", "xxx", 'x', ModItems.topazShard, 'o', ModBlocks.topazBlock);
+    this.addRecipeTOA(new ItemStack(ModItems.upgradeBBY), 11, "xxx", "xox", "xxx", 'x', ModItems.sapphireShard, 'o', ModBlocks.sapphireBlock);   
+  	this.addRecipeTOA(new ItemStack(ModItems.upgradeFuture), 11, "xxx", "xox", "xxx", 'x', ModItems.emeraldShard, 'o', Blocks.EMERALD_BLOCK);
+  	//creativ upgrade geht nicht und upgrade zahlen komisch durcheinander
 
     /** Stone Age **/
     this.addShapelessRecipeTOA(new ItemStack(ModItems.rock, 4), 1, Blocks.COBBLESTONE);
+  	this.addRecipeTOA(new ItemStack(ModItems.handAxStone), 1, " x ", "xxx", "   ", 'x', ModItems.stoneShard);
+  	this.addRecipeTOA(new ItemStack(ModItems.handAxStone), 1, " x ", "xxx", "   ", 'x', Items.FLINT);
+  	this.addRecipeTOA(new ItemStack(ModItems.cavemanKniveStone), 1, "  x", " o ", "  z", 'x', ModItems.stoneShard, 'o', Items.STRING, 'z', Items.STICK);
+  	this.addRecipeTOA(new ItemStack(ModItems.cavemanKniveBone), 1, "   ", " x ", "x  ", 'x', Items.BONE);
+  	this.addRecipeTOA(new ItemStack(ModItems.woodCudgel), 1, " o ", " x ", " x ", 'x', Items.STICK, 'o', ModItems.lumber);
+  	this.addRecipeTOA(new ItemStack(ModItems.stoneCudgel), 1, " o ", " x ", " x ", 'x', Items.STICK, 'o', ModItems.rock);
+  	this.addRecipeTOA(new ItemStack(ModItems.ax), 1, " oo", " xo", " x ", 'x', Items.STICK, 'o', ModItems.rock);
+  	this.addRecipeTOA(new ItemStack(ModItems.throwWood), 1, "  x", " x ", "x  ", 'x', Items.STICK);
+  	this.addRecipeTOA(new ItemStack(ModItems.cavemanSpear), 1, "   ", " x ", " x ", 'x', Items.STICK);
+
+
+
+    
+    
+    
+    
+    
+    
 
     }
 
