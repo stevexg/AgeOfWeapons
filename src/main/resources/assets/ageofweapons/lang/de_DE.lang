@@ -107,3 +107,35 @@ item.stone_cudgel.name=Stein Kn√ºppel
 item.ax.name=Beil
 item.throw_wood.name=Wurf Holz
 item.caveman_spear.name=H√∂hlenmensch Speer
+
+
+//Antiquity
+item.knive_wood.name=Holz Messer
+item.knive_stone.name=Stein Messer
+item.knive_iron.name=Eisen Messer
+item.knive_gold.name=Gold Messer
+item.knive_diamond.name=Diamant Messer
+item.dagger_wood.name=Holz Dolch
+item.dagger_stone.name=Stein Dolch
+item.dagger_iron.name=Eisen Dolch
+item.dagger_gold.name=Gold Dolch
+item.dagger_diamond.name=Diamant Dolch
+item.skewer_wood.name=Holz Spieﬂ
+item.skewer_stone.name=Stein Spieﬂ
+item.skewer_iron.name=Eisen Spieﬂ
+item.skewer_gold.name=Gold Spieﬂ
+item.skewer_diamond.name=Diamant Spieﬂ
+item.recurve_bow.name=Recurve Bogen
+
+
+
+/** TEMPLATE **/
+item._wood.name=
+item._stone.name=
+item._iron.name=
+item._gold.name=
+item._diamond.name=
+//*************//
+
+
+

@@ -1,5 +1,9 @@
 package magmasrc.ageofweapons.blocks;
 
+import java.util.List;
+
+import com.mojang.realmsclient.gui.ChatFormatting;
+
 import magmasrc.ageofweapons.main.ModTabs;
 import net.minecraft.block.BlockDirectional;
 import net.minecraft.block.SoundType;
@@ -9,6 +13,8 @@ import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.Mirror;
 import net.minecraft.util.Rotation;
@@ -121,6 +127,16 @@ public class BlockCrusher extends BlockDirectional  {
 		        return new BlockStateContainer(this, new IProperty[] {FACING});
 		    }
 	
+		    
+		    
+		    
+		    
+		    // other //
+		    
+		    @Override
+		    public void addInformation(ItemStack stack, EntityPlayer playerIn, List addList, boolean advanced) {
+		        addList.add(ChatFormatting.RED + "Work in progress");
+		    }
 	
 
 

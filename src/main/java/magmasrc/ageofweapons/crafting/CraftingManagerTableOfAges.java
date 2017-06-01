@@ -196,7 +196,23 @@ public class CraftingManagerTableOfAges {
   	this.addRecipeTOA(new ItemStack(ModItems.throwWood), 1, "  x", " x ", "x  ", 'x', Items.STICK);
   	this.addRecipeTOA(new ItemStack(ModItems.cavemanSpear), 1, "   ", " x ", " x ", 'x', Items.STICK);
 
-
+  	/** Antiquity **/
+  	this.addRecipeTOA(new ItemStack(ModItems.kniveWood), 2, "   ", " o ", " x ", 'x', Items.STICK, 'o', ModItems.woodShard);
+  	this.addRecipeTOA(new ItemStack(ModItems.kniveStone), 2, "   ", " o ", " x ", 'x', Items.STICK, 'o', ModItems.stoneShard);
+  	this.addRecipeTOA(new ItemStack(ModItems.kniveIron), 2, "   ", " o ", " x ", 'x', Items.STICK, 'o', ModItems.ironShard);
+  	this.addRecipeTOA(new ItemStack(ModItems.kniveGold), 2, "   ", " o ", " x ", 'x', Items.STICK, 'o', ModItems.goldShard);
+  	this.addRecipeTOA(new ItemStack(ModItems.kniveDiamond), 2, "   ", " o ", " x ", 'x', Items.STICK, 'o', ModItems.diamondShard);
+  	this.addRecipeTOA(new ItemStack(ModItems.skewerWood), 2, "   ", " o ", "x  ", 'x', Items.STICK, 'o', ModItems.woodShard);
+  	this.addRecipeTOA(new ItemStack(ModItems.skewerStone), 2, "   ", " o ", "x  ", 'x', Items.STICK, 'o', ModItems.stoneShard);
+  	this.addRecipeTOA(new ItemStack(ModItems.skewerIron), 2, "   ", " o ", "x  ", 'x', Items.STICK, 'o', ModItems.ironShard);
+  	this.addRecipeTOA(new ItemStack(ModItems.skewerGold), 2, "   ", " o ", "x  ", 'x', Items.STICK, 'o', ModItems.goldShard);
+  	this.addRecipeTOA(new ItemStack(ModItems.skewerDiamond), 2, "   ", " o ", "x  ", 'x', Items.STICK, 'o', ModItems.diamondShard);
+  	this.addRecipeTOA(new ItemStack(ModItems.daggerWood), 2, "   ", " o ", " x ", 'x', ModItems.swordHandle, 'o', ModItems.woodShard);
+  	this.addRecipeTOA(new ItemStack(ModItems.daggerStone), 2, "   ", " o ", " x ", 'x', ModItems.swordHandle, 'o', ModItems.stoneShard);
+  	this.addRecipeTOA(new ItemStack(ModItems.daggerIron), 2, "   ", " o ", " x ", 'x', ModItems.swordHandle, 'o', ModItems.ironShard);
+  	this.addRecipeTOA(new ItemStack(ModItems.daggerGold), 2, "   ", " o ", " x ", 'x', ModItems.swordHandle, 'o', ModItems.goldShard);
+  	this.addRecipeTOA(new ItemStack(ModItems.daggerDiamond), 2, "   ", " o ", " x ", 'x', ModItems.swordHandle, 'o', ModItems.diamondShard);
+  	this.addRecipeTOA(new ItemStack(ModItems.recurveBow), 2, " xx", "x o", " xx", 'x', Items.STICK, 'o', Items.STRING);
 
     
     

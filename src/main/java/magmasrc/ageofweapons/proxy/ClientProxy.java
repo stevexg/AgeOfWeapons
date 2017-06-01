@@ -90,9 +90,33 @@ public class ClientProxy extends ServerProxy {
 		registerModel(ModItems.ax, 0, new ModelResourceLocation(ModItems.ax.getRegistryName(), "inventory"));
 		registerModel(ModItems.throwWood, 0, new ModelResourceLocation(ModItems.throwWood.getRegistryName(), "inventory"));
 		registerModel(ModItems.cavemanSpear, 0, new ModelResourceLocation(ModItems.cavemanSpear.getRegistryName(), "inventory"));
+		
+		// Antiquity
+		registerModel(ModItems.kniveWood, 0, new ModelResourceLocation    (ModItems.kniveWood.getRegistryName(), "inventory"));
+		registerModel(ModItems.kniveStone, 0, new ModelResourceLocation   (ModItems.kniveStone.getRegistryName(), "inventory"));
+		registerModel(ModItems.kniveIron, 0, new ModelResourceLocation	  (ModItems.kniveIron.getRegistryName(), "inventory"));
+		registerModel(ModItems.kniveGold, 0, new ModelResourceLocation    (ModItems.kniveGold.getRegistryName(), "inventory"));
+		registerModel(ModItems.kniveDiamond, 0, new ModelResourceLocation (ModItems.kniveDiamond.getRegistryName(), "inventory"));
+		registerModel(ModItems.daggerWood, 0, new ModelResourceLocation   (ModItems.daggerWood.getRegistryName(), "inventory"));
+		registerModel(ModItems.daggerStone, 0, new ModelResourceLocation  (ModItems.daggerStone.getRegistryName(), "inventory"));
+		registerModel(ModItems.daggerIron, 0, new ModelResourceLocation   (ModItems.daggerIron.getRegistryName(), "inventory"));
+		registerModel(ModItems.daggerGold, 0, new ModelResourceLocation   (ModItems.daggerGold.getRegistryName(), "inventory"));
+		registerModel(ModItems.daggerDiamond, 0, new ModelResourceLocation(ModItems.daggerDiamond.getRegistryName(), "inventory"));
+		registerModel(ModItems.skewerWood, 0, new ModelResourceLocation   (ModItems.skewerWood.getRegistryName(), "inventory"));
+		registerModel(ModItems.skewerStone, 0, new ModelResourceLocation  (ModItems.skewerStone.getRegistryName(), "inventory"));
+		registerModel(ModItems.skewerIron, 0, new ModelResourceLocation   (ModItems.skewerIron.getRegistryName(), "inventory"));
+		registerModel(ModItems.skewerGold, 0, new ModelResourceLocation   (ModItems.skewerGold.getRegistryName(), "inventory"));
+		registerModel(ModItems.skewerDiamond, 0, new ModelResourceLocation(ModItems.skewerDiamond.getRegistryName(), "inventory"));
+		registerModel(ModItems.recurveBow, 0, new ModelResourceLocation(ModItems.recurveBow.getRegistryName(), "inventory"));
 
-    	
-    	
+		
+/** TEMPLATE		
+		registerModel(ModItems.Wood, 0, new ModelResourceLocation   (ModItems.Wood.getRegistryName(), "inventory"));
+		registerModel(ModItems.Stone, 0, new ModelResourceLocation  (ModItems.Stone.getRegistryName(), "inventory"));
+		registerModel(ModItems.Iron, 0, new ModelResourceLocation   (ModItems.Iron.getRegistryName(), "inventory"));
+		registerModel(ModItems.Gold, 0, new ModelResourceLocation   (ModItems.Gold.getRegistryName(), "inventory"));
+		registerModel(ModItems.Diamond, 0, new ModelResourceLocation(ModItems.Diamond.getRegistryName(), "inventory"));
+**/    	
 		
 		
 		
@@ -196,8 +220,37 @@ public class ClientProxy extends ServerProxy {
 		OreDictionary.registerOre("weaponAx", ModItems.ax);
 		OreDictionary.registerOre("weaponThrowWood", ModItems.throwWood);
 		OreDictionary.registerOre("spearCaveman", ModItems.cavemanSpear);
+		
+		//Antiquity
+		OreDictionary.registerOre("kniveWood",    ModItems.kniveWood);
+		OreDictionary.registerOre("kniveStone",   ModItems.kniveStone);
+		OreDictionary.registerOre("kniveIron",    ModItems.kniveIron);
+		OreDictionary.registerOre("kniveGold",    ModItems.kniveGold);
+		OreDictionary.registerOre("kniveDiamond", ModItems.kniveDiamond);
+		OreDictionary.registerOre("daggerWood",    ModItems.daggerWood);
+		OreDictionary.registerOre("daggerStone",   ModItems.daggerStone);
+		OreDictionary.registerOre("daggerIron",    ModItems.daggerIron);
+		OreDictionary.registerOre("daggerGold",    ModItems.daggerGold);
+		OreDictionary.registerOre("daggerDiamond", ModItems.daggerDiamond);
+		OreDictionary.registerOre("skewerWood",    ModItems.skewerWood);
+		OreDictionary.registerOre("skewerStone",   ModItems.skewerStone);
+		OreDictionary.registerOre("skewerIron",    ModItems.skewerIron);
+		OreDictionary.registerOre("skewerGold",    ModItems.skewerGold);
+		OreDictionary.registerOre("skewerDiamond", ModItems.skewerDiamond);
+		OreDictionary.registerOre("bowRecurve",   ModItems.recurveBow);
 
+		
+/** TEMPLATE		
+		OreDictionary.registerOre("Wood",    ModItems.Wood);
+		OreDictionary.registerOre("Stone",   ModItems.Stone);
+		OreDictionary.registerOre("Iron",    ModItems.Iron);
+		OreDictionary.registerOre("Gold",    ModItems.Gold);
+		OreDictionary.registerOre("Diamond", ModItems.Diamond);
+**/		
 
+		
+		
+		
 		
 		
 		

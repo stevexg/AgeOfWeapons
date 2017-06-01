@@ -103,3 +103,26 @@ item.stone_cudgel.name=Stone Cudgel
 item.ax.name=Ax
 item.throw_wood.name=Throw Wood
 item.caveman_spear.name=Caveman Spear
+
+
+//Antiquity
+item.knive_wood.name=Wooden Knive
+item.knive_stone.name=Stone Knive
+item.knive_iron.name=Iron Knive
+item.knive_gold.name=Golden Knive
+item.knive_diamond.name=Diamond Knive
+item.dagger_wood.name=Wooden Dagger
+item.dagger_stone.name=Stone Dagger
+item.dagger_iron.name=Iron Dagger
+item.dagger_gold.name=Golden Dagger
+item.dagger_diamond.name=Diamond Dagger
+item.skewer_wood.name=Wooden Skewer
+item.skewer_stone.name=Stone Skewer
+item.skewer_iron.name=Iron Skewer
+item.skewer_gold.name=Golden Skewer
+item.skewer_diamond.name=Diamond Skewer
+item.recurve_bow.name=Recurve Bow
+
+
+
+

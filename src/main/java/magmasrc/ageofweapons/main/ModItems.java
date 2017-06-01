@@ -1,6 +1,7 @@
 package magmasrc.ageofweapons.main;
 
 import magmasrc.ageofweapons.items.*;
+import magmasrc.ageofweapons.items.antiquity.*;
 import magmasrc.ageofweapons.items.stoneage.*;
 import magmasrc.ageofweapons.util.NameUtils;
 import net.minecraft.item.Item;
@@ -21,6 +22,24 @@ public class ModItems {
 	public static ToolMaterial woodCudgelTM;
 	public static ToolMaterial stoneCudgelTM;
 	public static ToolMaterial axTM;
+	
+	public static ToolMaterial kniveWoodTM;
+	public static ToolMaterial kniveStoneTM;
+	public static ToolMaterial kniveIronTM;
+	public static ToolMaterial kniveGoldTM;
+	public static ToolMaterial kniveDiamondTM;
+	public static ToolMaterial daggerWoodTM;
+	public static ToolMaterial daggerStoneTM;
+	public static ToolMaterial daggerIronTM;
+	public static ToolMaterial daggerGoldTM;
+	public static ToolMaterial daggerDiamondTM;
+	public static ToolMaterial skewerWoodTM;
+	public static ToolMaterial skewerStoneTM;
+	public static ToolMaterial skewerIronTM;
+	public static ToolMaterial skewerGoldTM;
+	public static ToolMaterial skewerDiamondTM;
+	
+	
 	
 	
 	/** Items **/
@@ -95,6 +114,28 @@ public class ModItems {
 	public static Item throwWood;
 	public static Item cavemanSpear;
 	
+	// Antiquity
+	public static Item kniveWood;
+	public static Item kniveStone;
+	public static Item kniveIron;
+	public static Item kniveGold;
+	public static Item kniveDiamond;
+	public static Item daggerWood;
+	public static Item daggerStone;
+	public static Item daggerIron;
+	public static Item daggerGold;
+	public static Item daggerDiamond;
+	public static Item skewerWood;
+	public static Item skewerStone;
+	public static Item skewerIron;
+	public static Item skewerGold;
+	public static Item skewerDiamond;
+	public static Item recurveBow;
+	
+	  //TODO: Zukünftige Items so formatieren=         <GEGENSTAND><MATERIAL>     (example: swordIron, "sword_iron")
+	  //
+	  // ist übersichtlicher in den ordnern
+	
 		
 		
 
@@ -120,9 +161,29 @@ public class ModItems {
 		woodCudgelTM = EnumHelper.addToolMaterial("woodCudgel",                    0,  150,  1.0F,  5.0F,  0);
 		stoneCudgelTM = EnumHelper.addToolMaterial("stoneCudgel",                  1,  200,  1.0F,  6.0F,  0);
 		axTM = EnumHelper.addToolMaterial("ax",                                    1,  500,  3.0F, 5.10F,  3);
+		
+		kniveWoodTM = EnumHelper.addToolMaterial("kniveWood",                      0,   50,  1.0F,  4.5F,  15);
+		kniveStoneTM = EnumHelper.addToolMaterial("kniveStone",                    1,   80,  1.0F,  5.0F,  5);
+		kniveIronTM = EnumHelper.addToolMaterial("kniveIron",                      2,  120,  1.0F,  6.0F,  14);
+		kniveGoldTM = EnumHelper.addToolMaterial("kniveGold",                      0,   60,  1.0F,  4.70F, 22);
+		kniveDiamondTM = EnumHelper.addToolMaterial("kniveDiamond",                3,  200,  1.0F,  6.50F, 10);
+		daggerWoodTM = EnumHelper.addToolMaterial("daggerWood",                    0,   80,  1.0F,  5.0F,  15);
+		daggerStoneTM = EnumHelper.addToolMaterial("daggerStone",                  1,  100,  1.0F,  5.5F,  5);
+		daggerIronTM = EnumHelper.addToolMaterial("daggerIron",                    2,  150,  1.0F,  6.0F,  14);
+		daggerGoldTM = EnumHelper.addToolMaterial("daggerGold",                    0,   90,  1.0F,  5.5F,  22);
+		daggerDiamondTM = EnumHelper.addToolMaterial("daggerDiamond",              3,  210,  1.0F,  6.80F, 10);	
+		skewerWoodTM = EnumHelper.addToolMaterial("skewerWood",                    0,  100,  1.0F,  4.5F,  15);
+		skewerStoneTM = EnumHelper.addToolMaterial("skewerStone",                  1,  150,  1.0F,  5.0F,  5);
+		skewerIronTM = EnumHelper.addToolMaterial("skewerIron",                    2,  250,  1.0F,  6.0F,  14);
+		skewerGoldTM = EnumHelper.addToolMaterial("skewerGold",                    0,  120,  1.0F,  4.70F, 22);
+		skewerDiamondTM = EnumHelper.addToolMaterial("skewerDiamond",              3,  330,  1.0F,  6.80F, 10);
 
    	    
    	    
+		
+		
+		
+		
    	    /** Items **/
 		
 		upgradeCreative = new ItemUpgradeCreative();
@@ -184,8 +245,6 @@ public class ModItems {
 		topazShard = new ItemTopazShard();
 		glassShard = new ItemGlassShard();
 		
-		
-		
 		// Stone Age
 		rock = new ItemRock(rockTM);
 		handAxStone = new ItemHandAxStone(handAxStoneTM);
@@ -197,6 +256,24 @@ public class ModItems {
 		throwWood = new ItemThrowWood();
 		cavemanSpear = new ItemCavemanSpear();
 		
+		// Antiquity
+		
+		kniveWood = new ItemKniveWood(kniveWoodTM);
+		kniveStone = new ItemKniveStone(kniveStoneTM);
+		kniveIron = new ItemKniveIron(kniveIronTM);
+		kniveGold = new ItemKniveGold(kniveGoldTM);
+		kniveDiamond = new ItemKniveDiamond(kniveDiamondTM);
+		daggerWood = new ItemDaggerWood(daggerWoodTM);
+		daggerStone = new ItemDaggerStone(daggerStoneTM);
+		daggerIron = new ItemDaggerIron(daggerIronTM);
+		daggerGold = new ItemDaggerGold(daggerGoldTM);
+		daggerDiamond = new ItemDaggerDiamond(daggerDiamondTM);
+		skewerWood = new ItemSkewerWood(skewerWoodTM);
+		skewerStone = new ItemSkewerStone(skewerStoneTM);
+		skewerIron = new ItemSkewerIron(skewerIronTM);
+		skewerGold = new ItemSkewerGold(skewerGoldTM);
+		skewerDiamond = new ItemSkewerDiamond(skewerDiamondTM);
+		recurveBow = new ItemRecurveBow();
 
 		
 		
@@ -282,10 +359,26 @@ public class ModItems {
 		NameUtils.setNames(ax, "ax");
 		NameUtils.setNames(throwWood, "throw_wood");
 		NameUtils.setNames(cavemanSpear, "caveman_spear");
+		
+		// Antiquity
+		NameUtils.setNames(kniveWood, "knive_wood");
+		NameUtils.setNames(kniveStone, "knive_stone");
+		NameUtils.setNames(kniveIron, "knive_iron");
+		NameUtils.setNames(kniveGold, "knive_gold");
+		NameUtils.setNames(kniveDiamond, "knive_diamond");
+		NameUtils.setNames(daggerWood, "dagger_wood");
+		NameUtils.setNames(daggerStone, "dagger_stone");
+		NameUtils.setNames(daggerIron, "dagger_iron");
+		NameUtils.setNames(daggerGold, "dagger_gold");
+		NameUtils.setNames(daggerDiamond, "dagger_diamond");
+		NameUtils.setNames(skewerWood, "skewer_wood");
+		NameUtils.setNames(skewerStone, "skewer_stone");
+		NameUtils.setNames(skewerIron, "skewer_iron");
+		NameUtils.setNames(skewerGold, "skewer_gold");
+		NameUtils.setNames(skewerDiamond, "skewer_diamond");
+		NameUtils.setNames(recurveBow, "recurve_bow");
 
-		  //TODO: Zukünftige Items so formatieren=         <GEGENSTAND><MATERIAL>     (example: swordIron, "sword_iron")
-		  //
-		  // ist übersichtlicher in den ordnern
+
 		
    	    
 
@@ -366,6 +459,24 @@ public class ModItems {
 		registerItem(ax);
 		registerItem(throwWood);
 		registerItem(cavemanSpear);
+		
+		// Antiquity
+		registerItem(kniveWood);
+		registerItem(kniveStone);
+		registerItem(kniveIron);
+		registerItem(kniveGold);
+		registerItem(kniveDiamond);
+		registerItem(daggerWood);
+		registerItem(daggerStone);
+		registerItem(daggerIron);
+		registerItem(daggerGold);
+		registerItem(daggerDiamond);
+		registerItem(skewerWood);
+		registerItem(skewerStone);
+		registerItem(skewerIron);
+		registerItem(skewerGold);
+		registerItem(skewerDiamond);
+		registerItem(recurveBow);
 		
 		
 		

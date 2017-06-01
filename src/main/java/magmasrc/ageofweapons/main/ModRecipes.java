@@ -80,7 +80,8 @@ public class ModRecipes {
 		  GameRegistry.addShapelessRecipe(new ItemStack(ModItems.glassShard, 4), new ItemStack(Blocks.GLASS, 1, OreDictionary.WILDCARD_VALUE));
 		  GameRegistry.addShapelessRecipe(new ItemStack(ModItems.glassShard, 4), new ItemStack(Blocks.GLASS_PANE, 1, OreDictionary.WILDCARD_VALUE));
 
-
+		  
+		  
 		  
 		  GameRegistry.addRecipe(new ItemStack(ModItems.blankGun), "xxx", "  x", "  x", 'x', Items.IRON_INGOT);
 		  GameRegistry.addRecipe(new ItemStack(ModItems.barrel), "   ", "xxx", "   ", 'x', Items.IRON_INGOT);

@@ -18,6 +18,6 @@ public class ItemUpgradePiracy extends Item {
 
     @Override
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List addList, boolean advanced) {
-        addList.add(ChatFormatting.GRAY + "Piracy");
+        addList.add(ChatFormatting.GRAY + "Golden age of Piracy");
     }
 }

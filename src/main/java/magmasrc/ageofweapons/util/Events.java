@@ -47,10 +47,10 @@ public class Events {
 	@SubscribeEvent
 	public void onFOVUpdate(FOVUpdateEvent event) {
 		EntityPlayer player = event.getEntity();
-		  if (player.isHandActive() && player.getActiveItemStack() != null && player.getActiveItemStack().getItem() == ModItems.cavemanSpear) {
+		  if (player.isHandActive() && player.getActiveItemStack() != null && player.getActiveItemStack().getItem() == ModItems.recurveBow) {
 			
 			 int i = player.getItemInUseMaxCount();
-			 float f1 = (float) i / 3.0F;
+			 float f1 = (float) i / 7.0F;
 			                      //speed
 			
 			if (f1 > 1.0F) {
@@ -59,7 +59,7 @@ public class Events {
 				f1 = f1 * f1;
 			}
 			                                        //zoom wight
-		event.setNewfov(event.getNewfov() * 1.0F - f1 * 0.45F);	
+		event.setNewfov(event.getNewfov() * 1.0F - f1 * 0.15F);	
 		} 
 	
 	}
