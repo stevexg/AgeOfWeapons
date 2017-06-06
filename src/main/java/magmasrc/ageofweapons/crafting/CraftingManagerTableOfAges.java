@@ -213,9 +213,53 @@ public class CraftingManagerTableOfAges {
   	this.addRecipeTOA(new ItemStack(ModItems.daggerGold), 2, "   ", " o ", " x ", 'x', ModItems.swordHandle, 'o', ModItems.goldShard);
   	this.addRecipeTOA(new ItemStack(ModItems.daggerDiamond), 2, "   ", " o ", " x ", 'x', ModItems.swordHandle, 'o', ModItems.diamondShard);
   	this.addRecipeTOA(new ItemStack(ModItems.recurveBow), 2, " xx", "x o", " xx", 'x', Items.STICK, 'o', Items.STRING);
+  	
+  	/** Middle Ages **/
+  	this.addRecipeTOA(new ItemStack(ModItems.battleAxeWood), 4, "ioz", " x ", " x ", 'x', Items.STICK, 'o', new ItemStack(Blocks.PLANKS,1 , OreDictionary.WILDCARD_VALUE), 'i', ModItems.axeBladeWood, 'z', ModItems.woodShard);
+  	this.addRecipeTOA(new ItemStack(ModItems.battleAxeStone), 4, "ioz", " x ", " x ", 'x', Items.STICK, 'o', new ItemStack(Blocks.COBBLESTONE,1 , OreDictionary.WILDCARD_VALUE), 'i', ModItems.axeBladeStone, 'z', ModItems.stoneShard);
+  	this.addRecipeTOA(new ItemStack(ModItems.battleAxeIron), 4, "ioz", " x ", " x ", 'x', Items.STICK, 'o', Items.IRON_INGOT, 'i', ModItems.axeBladeIron, 'z', ModItems.ironShard);
+  	this.addRecipeTOA(new ItemStack(ModItems.battleAxeGold), 4, "ioz", " x ", " x ", 'x', Items.STICK, 'o', Items.GOLD_INGOT, 'i', ModItems.axeBladeGold, 'z', ModItems.goldShard);
+  	this.addRecipeTOA(new ItemStack(ModItems.battleAxeDiamond), 4, "ioz", " x ", " x ", 'x', Items.STICK, 'o', Items.DIAMOND, 'i', ModItems.axeBladeDiamond, 'z', ModItems.diamondShard);
+  	this.addRecipeTOA(new ItemStack(ModItems.flailStone), 4, "  x", " xo", "x i", 'x', Items.STICK, 'i', ModItems.rock, 'o', Items.STRING);
+  	this.addRecipeTOA(new ItemStack(ModItems.flailIron), 4, "  x", " xo", "x i", 'x', Items.STICK, 'i', Items.IRON_INGOT, 'o', Items.STRING);
+  	this.addRecipeTOA(new ItemStack(ModItems.flailGold), 4, "  x", " xo", "x i", 'x', Items.STICK, 'i', Items.GOLD_INGOT, 'o', Items.STRING);
+  	this.addRecipeTOA(new ItemStack(ModItems.flailDiamond), 4, "  x", " xo", "x i", 'x', Items.STICK, 'i', Items.DIAMOND, 'o', Items.STRING);
+  	this.addRecipeTOA(new ItemStack(ModItems.halbertWood), 4, "ioz", " x ", " c ", 'x', Items.STICK, 'o', new ItemStack(Blocks.PLANKS,1 , OreDictionary.WILDCARD_VALUE), 'i', ModItems.axeBladeWood, 'z', ModItems.woodShard, 'c', ModItems.woodLongstick);
+  	this.addRecipeTOA(new ItemStack(ModItems.halbertStone), 4, "ioz", " x ", " c ", 'x', Items.STICK, 'o', new ItemStack(Blocks.COBBLESTONE,1 , OreDictionary.WILDCARD_VALUE), 'i', ModItems.axeBladeStone, 'z', ModItems.stoneShard, 'c', ModItems.woodLongstick);
+  	this.addRecipeTOA(new ItemStack(ModItems.halbertIron), 4, "ioz", " x ", " c ", 'x', Items.STICK, 'o', Items.IRON_INGOT, 'i', ModItems.axeBladeIron, 'z', ModItems.ironShard, 'c', ModItems.woodLongstick, 'c', ModItems.woodLongstick);
+  	this.addRecipeTOA(new ItemStack(ModItems.halbertGold), 4, "ioz", " x ", " c ", 'x', Items.STICK, 'o', Items.GOLD_INGOT, 'i', ModItems.axeBladeGold, 'z', ModItems.goldShard, 'c', ModItems.woodLongstick, 'c', ModItems.woodLongstick);
+  	this.addRecipeTOA(new ItemStack(ModItems.halbertDiamond), 4, "ioz", " x ", " c ", 'x', Items.STICK, 'o', Items.DIAMOND, 'i', ModItems.axeBladeDiamond, 'z', ModItems.diamondShard, 'c', ModItems.woodLongstick, 'c', ModItems.woodLongstick);
+  	this.addRecipeTOA(new ItemStack(ModItems.longswordWood), 4, " x ", " x ", " o ", 'x', ModItems.swordBladeWood, 'o', ModItems.swordHandle);
+  	this.addRecipeTOA(new ItemStack(ModItems.longswordStone), 4, " x ", " x ", " o ", 'x', ModItems.swordBladeStone, 'o', ModItems.swordHandle);
+  	this.addRecipeTOA(new ItemStack(ModItems.longswordIron), 4, " x ", " x ", " o ", 'x', ModItems.swordBladeIron, 'o', ModItems.swordHandle);
+  	this.addRecipeTOA(new ItemStack(ModItems.longswordGold), 4, " x ", " x ", " o ", 'x', ModItems.swordBladeGold, 'o', ModItems.swordHandle);
+  	this.addRecipeTOA(new ItemStack(ModItems.longswordDiamond), 4, " x ", " x ", " o ", 'x', ModItems.swordBladeDiamond, 'o', ModItems.swordHandle);
+  	this.addRecipeTOA(new ItemStack(ModItems.spearWood), 4, " o ", " x ", " i ", 'x', Items.STICK, 'o', ModItems.woodShard, 'i', ModItems.woodLongstick);
+  	this.addRecipeTOA(new ItemStack(ModItems.spearStone), 4, " o ", " x ", " i ", 'x', Items.STICK, 'o', ModItems.stoneShard, 'i', ModItems.woodLongstick);
+  	this.addRecipeTOA(new ItemStack(ModItems.spearStone), 4, " o ", " x ", " i ", 'x', Items.STICK, 'o', Items.FLINT, 'i', ModItems.woodLongstick);
+  	this.addRecipeTOA(new ItemStack(ModItems.spearIron), 4, " o ", " x ", " i ", 'x', Items.STICK, 'o', ModItems.ironShard, 'i', ModItems.woodLongstick);
+  	this.addRecipeTOA(new ItemStack(ModItems.spearGold), 4, " o ", " x ", " i ", 'x', Items.STICK, 'o', ModItems.goldShard, 'i', ModItems.woodLongstick);
+  	this.addRecipeTOA(new ItemStack(ModItems.spearDiamond), 4, " o ", " x ", " i ", 'x', Items.STICK, 'o', ModItems.diamondShard, 'i', ModItems.woodLongstick);
+  	this.addRecipeTOA(new ItemStack(ModItems.tridentWood), 4, "ooo", " x ", " i ", 'x', Items.STICK, 'o', ModItems.woodShard, 'i', ModItems.woodLongstick);
+  	this.addRecipeTOA(new ItemStack(ModItems.tridentStone), 4, "ooo", " x ", " i ", 'x', Items.STICK, 'o', ModItems.stoneShard, 'i', ModItems.woodLongstick);
+  	this.addRecipeTOA(new ItemStack(ModItems.tridentStone), 4, "ooo", " x ", " i ", 'x', Items.STICK, 'o', Items.FLINT, 'i', ModItems.woodLongstick);
+  	this.addRecipeTOA(new ItemStack(ModItems.tridentIron), 4, "ooo", " x ", " i ", 'x', Items.STICK, 'o', ModItems.ironShard, 'i', ModItems.woodLongstick);
+  	this.addRecipeTOA(new ItemStack(ModItems.tridentGold), 4, "ooo", " x ", " i ", 'x', Items.STICK, 'o', ModItems.goldShard, 'i', ModItems.woodLongstick);
+  	this.addRecipeTOA(new ItemStack(ModItems.tridentDiamond), 4, "ooo", " x ", " i ", 'x', Items.STICK, 'o', ModItems.diamondShard, 'i', ModItems.woodLongstick);
+  	this.addRecipeTOA(new ItemStack(ModItems.waraxeWood), 4, "oco", " x ", " x ", 'x', Items.STICK, 'o', ModItems.axeBladeWood, 'c', new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE));
+  	this.addRecipeTOA(new ItemStack(ModItems.waraxeStone), 4, "oco", " x ", " x ", 'x', Items.STICK, 'o', ModItems.axeBladeStone, 'c', new ItemStack(Blocks.COBBLESTONE, 1, OreDictionary.WILDCARD_VALUE));
+  	this.addRecipeTOA(new ItemStack(ModItems.waraxeIron), 4, "oco", " x ", " x ", 'x', Items.STICK, 'o', ModItems.axeBladeIron, 'c', Items.IRON_INGOT);
+  	this.addRecipeTOA(new ItemStack(ModItems.waraxeGold), 4, "oco", " x ", " x ", 'x', Items.STICK, 'o', ModItems.axeBladeGold, 'c', Items.GOLD_INGOT);
+  	this.addRecipeTOA(new ItemStack(ModItems.waraxeDiamond), 4, "oco", " x ", " x ", 'x', Items.STICK, 'o', ModItems.axeBladeDiamond, 'c', Items.DIAMOND);
+  	this.addRecipeTOA(new ItemStack(ModItems.warhammerWood), 4, "ooo", "oxo", " x ", 'x', Items.STICK, 'o', new ItemStack(Blocks.PLANKS, 1 , OreDictionary.WILDCARD_VALUE)); 
+  	this.addRecipeTOA(new ItemStack(ModItems.warhammerStone), 4, "ooo", "oxo", " x ", 'x', Items.STICK, 'o', new ItemStack(Blocks.COBBLESTONE, 1 , OreDictionary.WILDCARD_VALUE)); 
+  	this.addRecipeTOA(new ItemStack(ModItems.warhammerIron), 4, "ooo", "oxo", " x ", 'x', Items.STICK, 'o', Items.IRON_INGOT); 
+  	this.addRecipeTOA(new ItemStack(ModItems.warhammerGold), 4, "ooo", "oxo", " x ", 'x', Items.STICK, 'o', Items.GOLD_INGOT); 
+  	this.addRecipeTOA(new ItemStack(ModItems.warhammerDiamond), 4, "ooo", "oxo", " x ", 'x', Items.STICK, 'o', Items.DIAMOND); 
+  	this.addRecipeTOA(new ItemStack(ModItems.crossbow), 4, "  o", " x ", "xi ", 'x', Items.STICK, 'o', Items.BOW, 'i', Blocks.TRIPWIRE_HOOK); 
+  	this.addRecipeTOA(new ItemStack(ModItems.longbow), 4, " xo", "x o", " xo", 'x', ModItems.woodLongstick, 'o', Items.STRING); 
 
-    
-    
+
     
     
     

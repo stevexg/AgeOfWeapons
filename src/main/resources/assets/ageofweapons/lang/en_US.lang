@@ -124,5 +124,49 @@ item.skewer_diamond.name=Diamond Skewer
 item.recurve_bow.name=Recurve Bow
 
 
+//MiddleAges
+item.battle_axe_wood.name=Wooden Battle Axe
+item.battle_axe_stone.name=Stone Battle Axe
+item.battle_axe_iron.name=Iron Battle Axe
+item.battle_axe_gold.name=Golden Battle Axe
+item.battle_axe_diamond.name=Diamond Battle Axe
+item.flail_stone.name=Stone Flail
+item.flail_iron.name=Iron Flail
+item.flail_gold.name=Golden Flail
+item.flail_diamond.name=Diamond Flail
+item.halbert_wood.name=Wooden Halbert
+item.halbert_stone.name=Stone Halbert
+item.halbert_iron.name=Iron Halbert
+item.halbert_gold.name=Golden Halbert
+item.halbert_diamond.name=Diamond Halbert
+item.longsword_wood.name=Wooden Longsword
+item.longsword_stone.name=Stone Longsword
+item.longsword_iron.name=Iron Longsword
+item.longsword_gold.name=Golden Longsword
+item.longsword_diamond.name=Diamond Longsword
+item.spear_wood.name=Wooden Spear
+item.spear_stone.name=Stone Spear
+item.spear_iron.name=Iron Spear
+item.spear_gold.name=Golden Spear
+item.spear_diamond.name=Diamond Spear
+item.trident_wood.name=Wooden Trident
+item.trident_stone.name=Stone Trident
+item.trident_iron.name=Iron Trident
+item.trident_gold.name=Golden Trident
+item.trident_diamond.name=Diamond Trident
+item.war_axe_wood.name=Wooden War Axe
+item.war_axe_stone.name=Stone War Axe
+item.war_axe_iron.name=Iron War Axe
+item.war_axe_gold.name=Golden War Axe
+item.war_axe_diamond.name=Diamond War Axe
+item.war_hammer_wood.name=Wooden War Hammer
+item.war_hammer_stone.name=Stone War Hammer
+item.war_hammer_iron.name=Iron War Hammer
+item.war_hammer_gold.name=Golden War Hammer
+item.war_hammer_diamond.name=Diamond War Hammer
+item.longbow.name=Longbow
+item.crossbow.name=Crossbow
+
+
 
 

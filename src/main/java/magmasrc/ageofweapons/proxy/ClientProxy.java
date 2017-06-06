@@ -108,7 +108,49 @@ public class ClientProxy extends ServerProxy {
 		registerModel(ModItems.skewerGold, 0, new ModelResourceLocation   (ModItems.skewerGold.getRegistryName(), "inventory"));
 		registerModel(ModItems.skewerDiamond, 0, new ModelResourceLocation(ModItems.skewerDiamond.getRegistryName(), "inventory"));
 		registerModel(ModItems.recurveBow, 0, new ModelResourceLocation(ModItems.recurveBow.getRegistryName(), "inventory"));
-
+		
+		// MiddleAges
+		registerModel(ModItems.crossbow, 0, new ModelResourceLocation(ModItems.crossbow.getRegistryName(), "inventory"));
+		registerModel(ModItems.longbow, 0, new ModelResourceLocation(ModItems.longbow.getRegistryName(), "inventory"));
+		registerModel(ModItems.battleAxeWood, 0, new ModelResourceLocation   (ModItems.battleAxeWood.getRegistryName(), "inventory"));
+		registerModel(ModItems.battleAxeStone, 0, new ModelResourceLocation  (ModItems.battleAxeStone.getRegistryName(), "inventory"));
+		registerModel(ModItems.battleAxeIron, 0, new ModelResourceLocation   (ModItems.battleAxeIron.getRegistryName(), "inventory"));
+		registerModel(ModItems.battleAxeGold, 0, new ModelResourceLocation   (ModItems.battleAxeGold.getRegistryName(), "inventory"));
+		registerModel(ModItems.battleAxeDiamond, 0, new ModelResourceLocation(ModItems.battleAxeDiamond.getRegistryName(), "inventory"));
+		registerModel(ModItems.flailStone, 0, new ModelResourceLocation  (ModItems.flailStone.getRegistryName(), "inventory"));
+		registerModel(ModItems.flailIron, 0, new ModelResourceLocation   (ModItems.flailIron.getRegistryName(), "inventory"));
+		registerModel(ModItems.flailGold, 0, new ModelResourceLocation   (ModItems.flailGold.getRegistryName(), "inventory"));
+		registerModel(ModItems.flailDiamond, 0, new ModelResourceLocation(ModItems.flailDiamond.getRegistryName(), "inventory"));
+		registerModel(ModItems.halbertWood, 0, new ModelResourceLocation   (ModItems.halbertWood.getRegistryName(), "inventory"));
+		registerModel(ModItems.halbertStone, 0, new ModelResourceLocation  (ModItems.halbertStone.getRegistryName(), "inventory"));
+		registerModel(ModItems.halbertIron, 0, new ModelResourceLocation   (ModItems.halbertIron.getRegistryName(), "inventory"));
+		registerModel(ModItems.halbertGold, 0, new ModelResourceLocation   (ModItems.halbertGold.getRegistryName(), "inventory"));
+		registerModel(ModItems.halbertDiamond, 0, new ModelResourceLocation(ModItems.halbertDiamond.getRegistryName(), "inventory"));
+		registerModel(ModItems.longswordWood, 0, new ModelResourceLocation   (ModItems.longswordWood.getRegistryName(), "inventory"));
+		registerModel(ModItems.longswordStone, 0, new ModelResourceLocation  (ModItems.longswordStone.getRegistryName(), "inventory"));
+		registerModel(ModItems.longswordIron, 0, new ModelResourceLocation   (ModItems.longswordIron.getRegistryName(), "inventory"));
+		registerModel(ModItems.longswordGold, 0, new ModelResourceLocation   (ModItems.longswordGold.getRegistryName(), "inventory"));
+		registerModel(ModItems.longswordDiamond, 0, new ModelResourceLocation(ModItems.longswordDiamond.getRegistryName(), "inventory"));
+		registerModel(ModItems.spearWood, 0, new ModelResourceLocation   (ModItems.spearWood.getRegistryName(), "inventory"));
+		registerModel(ModItems.spearStone, 0, new ModelResourceLocation  (ModItems.spearStone.getRegistryName(), "inventory"));
+		registerModel(ModItems.spearIron, 0, new ModelResourceLocation   (ModItems.spearIron.getRegistryName(), "inventory"));
+		registerModel(ModItems.spearGold, 0, new ModelResourceLocation   (ModItems.spearGold.getRegistryName(), "inventory"));
+		registerModel(ModItems.spearDiamond, 0, new ModelResourceLocation(ModItems.spearDiamond.getRegistryName(), "inventory"));
+		registerModel(ModItems.tridentWood, 0, new ModelResourceLocation   (ModItems.tridentWood.getRegistryName(), "inventory"));
+		registerModel(ModItems.tridentStone, 0, new ModelResourceLocation  (ModItems.tridentStone.getRegistryName(), "inventory"));
+		registerModel(ModItems.tridentIron, 0, new ModelResourceLocation   (ModItems.tridentIron.getRegistryName(), "inventory"));
+		registerModel(ModItems.tridentGold, 0, new ModelResourceLocation   (ModItems.tridentGold.getRegistryName(), "inventory"));
+		registerModel(ModItems.tridentDiamond, 0, new ModelResourceLocation(ModItems.tridentDiamond.getRegistryName(), "inventory"));
+		registerModel(ModItems.waraxeWood, 0, new ModelResourceLocation   (ModItems.waraxeWood.getRegistryName(), "inventory"));
+		registerModel(ModItems.waraxeStone, 0, new ModelResourceLocation  (ModItems.waraxeStone.getRegistryName(), "inventory"));
+		registerModel(ModItems.waraxeIron, 0, new ModelResourceLocation   (ModItems.waraxeIron.getRegistryName(), "inventory"));
+		registerModel(ModItems.waraxeGold, 0, new ModelResourceLocation   (ModItems.waraxeGold.getRegistryName(), "inventory"));
+		registerModel(ModItems.waraxeDiamond, 0, new ModelResourceLocation(ModItems.waraxeDiamond.getRegistryName(), "inventory"));
+		registerModel(ModItems.warhammerWood, 0, new ModelResourceLocation   (ModItems.warhammerWood.getRegistryName(), "inventory"));
+		registerModel(ModItems.warhammerStone, 0, new ModelResourceLocation  (ModItems.warhammerStone.getRegistryName(), "inventory"));
+		registerModel(ModItems.warhammerIron, 0, new ModelResourceLocation   (ModItems.warhammerIron.getRegistryName(), "inventory"));
+		registerModel(ModItems.warhammerGold, 0, new ModelResourceLocation   (ModItems.warhammerGold.getRegistryName(), "inventory"));
+		registerModel(ModItems.warhammerDiamond, 0, new ModelResourceLocation(ModItems.warhammerDiamond.getRegistryName(), "inventory"));
 		
 /** TEMPLATE		
 		registerModel(ModItems.Wood, 0, new ModelResourceLocation   (ModItems.Wood.getRegistryName(), "inventory"));

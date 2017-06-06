@@ -128,6 +128,49 @@ item.skewer_diamond.name=Diamant Spieﬂ
 item.recurve_bow.name=Recurve Bogen
 
 
+//MiddleAges
+item.battle_axe_wood.name=Holz Kampf Axt
+item.battle_axe_stone.name=Stein Kampf Axt
+item.battle_axe_iron.name=Eisen Kampf Axt
+item.battle_axe_gold.name=Gold Kampf Axt
+item.battle_axe_diamond.name=Diamant Kampf Axt
+item.flail_stone.name=Stein Morgenstern
+item.flail_iron.name=Eisen Morgenstern
+item.flail_gold.name=Gold Morgenstern
+item.flail_diamond.name=Diamant Morgenstern
+item.halbert_wood.name=Holz Hellebarde
+item.halbert_stone.name=Stein Hellebarde
+item.halbert_iron.name=Eisen Hellebarde
+item.halbert_gold.name=Gold Hellebarde
+item.halbert_diamond.name=Diamant Hellebarde
+item.longsword_wood.name=Holz Langschwert
+item.longsword_stone.name=Stein Langschwert
+item.longsword_iron.name=Eisen Langschwert
+item.longsword_gold.name=Gold Langschwert
+item.longsword_diamond.name=Diamant Langschwert
+item.spear_wood.name=Holz Speer
+item.spear_stone.name=Stein Speer
+item.spear_iron.name=Eisen Speer
+item.spear_gold.name=Gold Speer
+item.spear_diamond.name=Diamant Speer
+item.trident_wood.name=Holz Dreizack
+item.trident_stone.name=Stein Dreizack
+item.trident_iron.name=Eisen Dreizack
+item.trident_gold.name=Gold Dreizack
+item.trident_diamond.name=Diamant Dreizack
+item.war_axe_wood.name=Holz Streitaxt
+item.war_axe_stone.name=Stein Streitaxt
+item.war_axe_iron.name=Eisen Streitaxt
+item.war_axe_gold.name=Gold Streitaxt
+item.war_axe_diamond.name=Diamant Streitaxt
+item.war_hammer_wood.name=Holz Kriegshammer
+item.war_hammer_stone.name=Stein Kriegshammer
+item.war_hammer_iron.name=Eisen Kriegshammer
+item.war_hammer_gold.name=Gold Kriegshammer
+item.war_hammer_diamond.name=Diamant Kriegshammer
+item.longbow.name=Langbogen
+item.crossbow.name=Armbrust
+
 
 /** TEMPLATE **/
 item._wood.name=
