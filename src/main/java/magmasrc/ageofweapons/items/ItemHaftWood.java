@@ -8,7 +8,7 @@ public class ItemHaftWood extends Item {
 	
 	public ItemHaftWood () {
 		super();
-		this.setCreativeTab(ModTabs.generalTab);
+		this.setCreativeTab(ModTabs.earlyModernAgeTab);
 	}
 
 }

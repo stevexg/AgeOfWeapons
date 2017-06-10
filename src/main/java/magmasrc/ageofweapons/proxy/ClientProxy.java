@@ -1,6 +1,7 @@
 package magmasrc.ageofweapons.proxy;
  
 import magmasrc.ageofweapons.entity.EntityCavemanSpear;
+import magmasrc.ageofweapons.entity.EntityDynamite;
 import magmasrc.ageofweapons.main.ModBlocks;
 import magmasrc.ageofweapons.main.ModItems;
 import net.minecraft.block.Block;
@@ -79,6 +80,7 @@ public class ClientProxy extends ServerProxy {
 		registerModel(ModItems.topazShard, 0, new ModelResourceLocation(ModItems.topazShard.getRegistryName(), "inventory"));
 		registerModel(ModItems.amber, 0, new ModelResourceLocation(ModItems.amber.getRegistryName(), "inventory"));
 		registerModel(ModItems.glassShard, 0, new ModelResourceLocation(ModItems.glassShard.getRegistryName(), "inventory"));
+		registerModel(ModItems.hammer, 0, new ModelResourceLocation(ModItems.hammer.getRegistryName(), "inventory"));
 		
 		// StoneAge
 		registerModel(ModItems.rock, 0, new ModelResourceLocation(ModItems.rock.getRegistryName(), "inventory"));
@@ -90,6 +92,10 @@ public class ClientProxy extends ServerProxy {
 		registerModel(ModItems.ax, 0, new ModelResourceLocation(ModItems.ax.getRegistryName(), "inventory"));
 		registerModel(ModItems.throwWood, 0, new ModelResourceLocation(ModItems.throwWood.getRegistryName(), "inventory"));
 		registerModel(ModItems.cavemanSpear, 0, new ModelResourceLocation(ModItems.cavemanSpear.getRegistryName(), "inventory"));
+	  	registerModel(ModItems.cavemanHelmet, 0, new ModelResourceLocation(ModItems.cavemanHelmet.getRegistryName(), "inventory"));
+    	registerModel(ModItems.cavemanChestplate, 0, new ModelResourceLocation(ModItems.cavemanChestplate.getRegistryName(), "inventory"));
+    	registerModel(ModItems.cavemanLeggings, 0, new ModelResourceLocation(ModItems.cavemanLeggings.getRegistryName(), "inventory"));
+    	registerModel(ModItems.cavemanBoots, 0, new ModelResourceLocation(ModItems.cavemanBoots.getRegistryName(), "inventory"));
 		
 		// Antiquity
 		registerModel(ModItems.kniveWood, 0, new ModelResourceLocation    (ModItems.kniveWood.getRegistryName(), "inventory"));
@@ -152,6 +158,23 @@ public class ClientProxy extends ServerProxy {
 		registerModel(ModItems.warhammerGold, 0, new ModelResourceLocation   (ModItems.warhammerGold.getRegistryName(), "inventory"));
 		registerModel(ModItems.warhammerDiamond, 0, new ModelResourceLocation(ModItems.warhammerDiamond.getRegistryName(), "inventory"));
 		
+		//Early Modern Age
+		registerModel(ModItems.multiToolWood, 0, new ModelResourceLocation   (ModItems.multiToolWood.getRegistryName(), "inventory"));
+		registerModel(ModItems.multiToolStone, 0, new ModelResourceLocation  (ModItems.multiToolStone.getRegistryName(), "inventory"));
+		registerModel(ModItems.multiToolIron, 0, new ModelResourceLocation   (ModItems.multiToolIron.getRegistryName(), "inventory"));
+		registerModel(ModItems.multiToolGold, 0, new ModelResourceLocation   (ModItems.multiToolGold.getRegistryName(), "inventory"));
+		registerModel(ModItems.multiToolDiamond, 0, new ModelResourceLocation(ModItems.multiToolDiamond.getRegistryName(), "inventory"));
+		registerModel(ModItems.compoundBow, 0, new ModelResourceLocation   (ModItems.compoundBow.getRegistryName(), "inventory"));
+		registerModel(ModItems.dynamite, 0, new ModelResourceLocation   (ModItems.dynamite.getRegistryName(), "inventory"));
+		registerModel(ModItems.oldAmmo, 0, new ModelResourceLocation   (ModItems.oldAmmo.getRegistryName(), "inventory"));
+		registerModel(ModItems.oldShotgunAmmo, 0, new ModelResourceLocation   (ModItems.oldShotgunAmmo.getRegistryName(), "inventory"));
+		registerModel(ModItems.cannonball, 0, new ModelResourceLocation   (ModItems.cannonball.getRegistryName(), "inventory"));
+		registerModel(ModItems.pebble, 0, new ModelResourceLocation   (ModItems.pebble.getRegistryName(), "inventory"));
+		registerModel(ModItems.nails, 0, new ModelResourceLocation   (ModItems.nails.getRegistryName(), "inventory"));
+		registerModel(ModItems.nails_toxic, 0, new ModelResourceLocation   (ModItems.nails_toxic.getRegistryName(), "inventory"));
+
+		
+		
 /** TEMPLATE		
 		registerModel(ModItems.Wood, 0, new ModelResourceLocation   (ModItems.Wood.getRegistryName(), "inventory"));
 		registerModel(ModItems.Stone, 0, new ModelResourceLocation  (ModItems.Stone.getRegistryName(), "inventory"));
@@ -184,6 +207,18 @@ public class ClientProxy extends ServerProxy {
     	registerModel(ModBlocks.amethystBlock, 0, new ModelResourceLocation(ModBlocks.amethystBlock.getRegistryName(), "inventory"));
     	registerModel(ModBlocks.amberBlock, 0, new ModelResourceLocation(ModBlocks.amberBlock.getRegistryName(), "inventory"));
     	registerModel(ModBlocks.topazBlock, 0, new ModelResourceLocation(ModBlocks.topazBlock.getRegistryName(), "inventory"));
+
+    	registerModel(ModBlocks.barbedWire, 0, new ModelResourceLocation(ModBlocks.barbedWire.getRegistryName(), "inventory"));
+    	registerModel(ModBlocks.nailTrap, 0, new ModelResourceLocation(ModBlocks.nailTrap.getRegistryName(), "inventory"));
+    	registerModel(ModBlocks.toxicNailTrap, 0, new ModelResourceLocation(ModBlocks.toxicNailTrap.getRegistryName(), "inventory"));
+    	registerModel(ModBlocks.explosiveMine, 0, new ModelResourceLocation(ModBlocks.explosiveMine.getRegistryName(), "inventory"));
+    	registerModel(ModBlocks.toxicMine, 0, new ModelResourceLocation(ModBlocks.toxicMine.getRegistryName(), "inventory"));
+    	registerModel(ModBlocks.razorWire, 0, new ModelResourceLocation(ModBlocks.razorWire.getRegistryName(), "inventory"));
+    	registerModel(ModBlocks.bearTrap, 0, new ModelResourceLocation(ModBlocks.bearTrap.getRegistryName(), "inventory"));
+    	registerModel(ModBlocks.fallTrapDirt, 0, new ModelResourceLocation(ModBlocks.fallTrapDirt.getRegistryName(), "inventory"));
+    	registerModel(ModBlocks.fallTrapPlanks, 0, new ModelResourceLocation(ModBlocks.fallTrapPlanks.getRegistryName(), "inventory"));
+    	registerModel(ModBlocks.fallTrapStone, 0, new ModelResourceLocation(ModBlocks.fallTrapStone.getRegistryName(), "inventory"));
+
 
     	
 
@@ -251,7 +286,8 @@ public class ClientProxy extends ServerProxy {
 		OreDictionary.registerOre("partHaftWood", ModItems.haftWood);
 		OreDictionary.registerOre("partHaftIron", ModItems.haftIron);
 		OreDictionary.registerOre("partVisor", ModItems.visor);
-
+		OreDictionary.registerOre("toolHammer", ModItems.hammer);
+		
 		//Stone Age
 		OreDictionary.registerOre("weaponRock", ModItems.rock);
 		OreDictionary.registerOre("weaponHandAx", ModItems.handAxStone);
@@ -280,7 +316,17 @@ public class ClientProxy extends ServerProxy {
 		OreDictionary.registerOre("skewerGold",    ModItems.skewerGold);
 		OreDictionary.registerOre("skewerDiamond", ModItems.skewerDiamond);
 		OreDictionary.registerOre("bowRecurve",   ModItems.recurveBow);
+		
+		/*******/
+		
+		//Early Modern Age
+		OreDictionary.registerOre("ammoOld", ModItems.oldAmmo);
+		OreDictionary.registerOre("ammoShotgunOld", ModItems.oldShotgunAmmo);
+		OreDictionary.registerOre("ammoPebble", ModItems.pebble);
+		OreDictionary.registerOre("ammoCannonball", ModItems.cannonball);
+		OreDictionary.registerOre("bowCompound", ModItems.compoundBow);
 
+		
 		
 /** TEMPLATE		
 		OreDictionary.registerOre("Wood",    ModItems.Wood);
@@ -322,11 +368,21 @@ public class ClientProxy extends ServerProxy {
 	/** Entitys **/
 	
 	public void registerRenderer() {
-		RenderingRegistry.registerEntityRenderingHandler(EntityCavemanSpear.class, new IRenderFactory() {
+	/**	RenderingRegistry.registerEntityRenderingHandler(EntityCavemanSpear.class, new IRenderFactory() {
 
 			@Override
 			public Render createRenderFor(RenderManager manager) {
 				return new RenderSnowball<EntityCavemanSpear>(manager, ModItems.cavemanSpear, Minecraft.getMinecraft().getRenderItem());
+			}
+		});
+	**/	
+		
+		
+		RenderingRegistry.registerEntityRenderingHandler(EntityDynamite.class, new IRenderFactory() {
+
+			@Override
+			public Render createRenderFor(RenderManager manager) {
+				return new RenderSnowball<EntityDynamite>(manager, ModItems.dynamite, Minecraft.getMinecraft().getRenderItem());
 			}
 		});
 	}

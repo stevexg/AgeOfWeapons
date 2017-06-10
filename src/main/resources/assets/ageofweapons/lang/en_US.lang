@@ -30,6 +30,17 @@ tile.amethyst_block.name=Amethyst Block
 tile.topaz_block.name=Topaz Block
 tile.amber_block.name=Amber Block
 
+tile.barbed_wire.name=Barbed Wire
+tile.nail_trap.name=Nail Trap
+tile.toxic_nail_trap.name=Toxic Nail Trap
+tile.explosive_mine.name=Explosive Mine
+tile.toxic_mine.name=Toxic Mine
+tile.razor_wire.name=Razor Wire
+tile.bear_trap.name=Bear Trap
+tile.fall_trap_dirt.name=Dirt Fall Trap
+tile.fall_trap_planks.name=Planks Fall Trap
+tile.fall_trap_stone.name=Stone Fall Trap
+
 
 
 //ITEMS
@@ -103,6 +114,10 @@ item.stone_cudgel.name=Stone Cudgel
 item.ax.name=Ax
 item.throw_wood.name=Throw Wood
 item.caveman_spear.name=Caveman Spear
+item.caveman_helmet.name=Caveman Cap
+item.caveman_chestplate.name=Caveman Tunic
+item.caveman_leggings.name=Caveman Pants
+item.caveman_boots.name=Caveman Boots
 
 
 //Antiquity
@@ -166,6 +181,23 @@ item.war_hammer_gold.name=Golden War Hammer
 item.war_hammer_diamond.name=Diamond War Hammer
 item.longbow.name=Longbow
 item.crossbow.name=Crossbow
+item.hammer.name=Hammer
+
+
+//EarlyModernAge
+item.multi_tool_wood.name=Wooden Multi Tool
+item.multi_tool_stone.name=Stone Multi Tool
+item.multi_tool_iron.name=Iron Multi Tool
+item.multi_tool_gold.name=Golden Mutli Tool
+item.multi_tool_diamond.name=Diamond Multi Tool
+item.old_ammo.name=Old Ammo
+item.old_shotgun_ammo.name=Old Shotgun Ammo
+item.cannonball.name=Cannonball
+item.pebble.name=Pebble
+item.compound_bow.name=Compound Bow
+item.dynamite.name=Dynamite
+item.nails.name=Nails
+item.nails_toxic.name=Toxic Nails
 
 
 

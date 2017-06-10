@@ -2,18 +2,27 @@ package magmasrc.ageofweapons.main;
 
 import magmasrc.ageofweapons.items.*;
 import magmasrc.ageofweapons.items.antiquity.*;
+import magmasrc.ageofweapons.items.earlymodernage.*;
 import magmasrc.ageofweapons.items.middleages.*;
 import magmasrc.ageofweapons.items.stoneage.*;
 import magmasrc.ageofweapons.util.NameUtils;
+import net.minecraft.init.SoundEvents;
+import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
+import net.minecraft.item.ItemArmor;
+import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 
 public class ModItems {
 	
+	/** Armor-Materials **/
 	
+	public static ArmorMaterial cavemanAM;
+	
+
 	/** Tool-Materials **/
 	
 	public static ToolMaterial rockTM;
@@ -80,6 +89,13 @@ public class ModItems {
 	public static ToolMaterial warhammerGoldTM;
 	public static ToolMaterial warhammerDiamondTM;
 	
+	public static ToolMaterial multiToolWoodTM;
+	public static ToolMaterial multiToolStoneTM;
+	public static ToolMaterial multiToolIronTM;
+	public static ToolMaterial multiToolGoldTM;
+	public static ToolMaterial multiToolDiamondTM;
+
+	
 	
 	
 	
@@ -143,6 +159,7 @@ public class ModItems {
 	public static Item amethystShard;
 	public static Item topazShard;
 	public static Item glassShard;
+	public static Item hammer;
 	
 	// Stone Age
 	public static Item rock;
@@ -154,6 +171,10 @@ public class ModItems {
 	public static Item ax;
 	public static Item throwWood;
 	public static Item cavemanSpear;
+	public static ItemArmor cavemanHelmet;
+	public static ItemArmor cavemanChestplate;
+	public static ItemArmor cavemanLeggings;
+	public static ItemArmor cavemanBoots;
 	
 	// Antiquity
 	public static Item kniveWood;
@@ -215,6 +236,21 @@ public class ModItems {
 	public static Item warhammerDiamond;
 	public static Item longbow;
 	public static Item crossbow;
+	
+	// Early Modern Age
+	public static Item multiToolWood;
+	public static Item multiToolStone;
+	public static Item multiToolIron;
+	public static Item multiToolGold;
+	public static Item compoundBow;
+	public static Item dynamite;
+	public static Item multiToolDiamond;
+	public static Item oldAmmo;
+	public static Item oldShotgunAmmo;
+	public static Item cannonball;
+	public static Item pebble;
+	public static Item nails;
+	public static Item nails_toxic;
 
 	
 	
@@ -306,6 +342,11 @@ public class ModItems {
 		warhammerGoldTM = EnumHelper.addToolMaterial("warhammerGold",              0,  160, 12.0F,   7.8F, 22);
 		warhammerDiamondTM = EnumHelper.addToolMaterial("warhammerDiamond",        3,  250,  8.0F,   9.0F, 10);
                                                                      //     harv.lvl, uses, efficy., dmg., enchant.,
+		multiToolWoodTM = EnumHelper.addToolMaterial("multiToolWood",              0,  120,  2.0F,   5.0F, 15);
+		multiToolStoneTM = EnumHelper.addToolMaterial("multiToolStone",            1,  160,  4.0F,   5.5F,  5);
+		multiToolIronTM = EnumHelper.addToolMaterial("multiToolIron",         	   2,  230,  6.0F,   6.0F, 14);
+		multiToolGoldTM = EnumHelper.addToolMaterial("multiToolGold",              0,  130, 12.0F,   5.2F, 22);
+		multiToolDiamondTM = EnumHelper.addToolMaterial("multiToolDiamond",        3, 1000,  8.0F,   7.0F, 10);
 
 /** TEMPLATE		
 		WoodTM = EnumHelper.addToolMaterial("Wood",                  0,  x,  2.0F,   xF, 15);
@@ -318,6 +359,17 @@ public class ModItems {
 		
 		
 		
+		
+		/** Armor-Materials **/
+																																						/**
+		    																					 {1, 3, 2, 1} for leather armor (7 at all)
+		    																					 {2, 5, 4, 1} for chain armor (12 at all)
+		    																					 {2, 6, 5, 2} for iron armor (15 at all)
+		    																					 {2, 5, 3, 1} for gold armor (11 at all)
+		    																				   	 {3, 8, 6, 3} for diamond armor (20 at all - do not use more!)
+		 																																				**/
+		 cavemanAM = EnumHelper.addArmorMaterial("caveman", "ageofweapons:caveman", 10, new int[]{1, 2, 1, 1}, 10, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0);
+			
 		
 		
 		
@@ -381,6 +433,7 @@ public class ModItems {
 		amethystShard = new ItemAmethystShard();
 		topazShard = new ItemTopazShard();
 		glassShard = new ItemGlassShard();
+		hammer = new ItemHammer();
 		
 		// Stone Age
 		rock = new ItemRock(rockTM);
@@ -392,6 +445,10 @@ public class ModItems {
 		ax = new ItemAx(axTM);
 		throwWood = new ItemThrowWood();
 		cavemanSpear = new ItemCavemanSpear();
+		cavemanHelmet = new ItemCavemanArmor(cavemanAM, 1, EntityEquipmentSlot.HEAD); 
+		cavemanChestplate = new ItemCavemanArmor(cavemanAM, 1, EntityEquipmentSlot.CHEST);
+		cavemanLeggings = new ItemCavemanArmor(cavemanAM, 2, EntityEquipmentSlot.LEGS); 
+		cavemanBoots = new ItemCavemanArmor(cavemanAM, 1, EntityEquipmentSlot.FEET); 
 		
 		// Antiquity
 		kniveWood = new ItemKniveWood(kniveWoodTM);
@@ -453,6 +510,21 @@ public class ModItems {
 		warhammerDiamond = new ItemWarHammerDiamond(warhammerDiamondTM);
 		longbow = new ItemLongbow();
 		crossbow = new ItemCrossbow();
+		
+		// Early Modern Age
+		multiToolWood = new ItemMultiToolWood(multiToolWoodTM);
+		multiToolStone = new ItemMultiToolStone(multiToolStoneTM);
+		multiToolIron = new ItemMultiToolIron(multiToolIronTM);
+		multiToolGold = new ItemMultiToolGold(multiToolGoldTM);
+		multiToolDiamond = new ItemMultiToolDiamond(multiToolDiamondTM);
+		oldAmmo = new ItemOldAmmo();
+		oldShotgunAmmo = new ItemOldShotgunAmmo();
+		cannonball = new ItemCannonball();
+		pebble = new ItemPebble();
+		dynamite = new ItemDynamite();
+		compoundBow = new ItemCompoundBow();
+		nails = new ItemNails();
+		nails_toxic = new ItemToxicNails();
 		
 /** TEMPLATE		
 		Wood = new ItemWood(WoodTM);
@@ -532,6 +604,7 @@ public class ModItems {
 		NameUtils.setNames(amethystShard, "amethyst_shard");
 		NameUtils.setNames(topazShard, "topaz_shard");
 		NameUtils.setNames(glassShard, "glass_shard");
+		NameUtils.setNames(hammer, "hammer");
 
 		// Stone Age
 		NameUtils.setNames(rock, "rock");
@@ -543,6 +616,10 @@ public class ModItems {
 		NameUtils.setNames(ax, "ax");
 		NameUtils.setNames(throwWood, "throw_wood");
 		NameUtils.setNames(cavemanSpear, "caveman_spear");
+		NameUtils.setNames(cavemanHelmet, "caveman_helmet");
+		NameUtils.setNames(cavemanChestplate, "caveman_chestplate");
+		NameUtils.setNames(cavemanLeggings, "caveman_leggings");
+		NameUtils.setNames(cavemanBoots, "caveman_boots");
 		
 		// Antiquity
 		NameUtils.setNames(kniveWood, "knive_wood");
@@ -604,6 +681,21 @@ public class ModItems {
 		NameUtils.setNames(warhammerDiamond, "war_hammer_diamond");
 		NameUtils.setNames(longbow, "longbow");
 		NameUtils.setNames(crossbow, "crossbow");
+		
+		// Early Modern Age
+		NameUtils.setNames(multiToolWood, "multi_tool_wood");
+		NameUtils.setNames(multiToolStone, "multi_tool_stone");
+		NameUtils.setNames(multiToolIron, "multi_tool_iron");
+		NameUtils.setNames(multiToolGold, "multi_tool_gold");
+		NameUtils.setNames(multiToolDiamond, "multi_tool_diamond");
+		NameUtils.setNames(oldAmmo, "old_ammo");
+		NameUtils.setNames(oldShotgunAmmo, "old_shotgun_ammo");
+		NameUtils.setNames(cannonball, "cannonball");
+		NameUtils.setNames(pebble, "pebble");
+		NameUtils.setNames(dynamite, "dynamite");
+		NameUtils.setNames(compoundBow, "compound_bow");
+		NameUtils.setNames(nails, "nails");
+		NameUtils.setNames(nails_toxic, "nails_toxic");
 		
 		
 /**		
@@ -675,13 +767,7 @@ public class ModItems {
 		registerItem(ironShard);
 		registerItem(stoneShard);
 		registerItem(glassShard);
-		registerItem(woodShard);
-		registerItem(barrel);
-		registerItem(blankGun);
-		registerItem(gunHandle);
-		registerItem(haftIron);
-		registerItem(haftWood);
-		registerItem(visor);
+		registerItem(hammer);
 		
 		// Stone Age
 		registerItem(rock);
@@ -693,6 +779,10 @@ public class ModItems {
 		registerItem(ax);
 		registerItem(throwWood);
 		registerItem(cavemanSpear);
+		registerItem(cavemanHelmet);
+		registerItem(cavemanChestplate);
+		registerItem(cavemanLeggings);
+		registerItem(cavemanBoots);
 		
 		// Antiquity
 		registerItem(kniveWood);
@@ -754,6 +844,30 @@ public class ModItems {
 		registerItem(warhammerDiamond);
 		registerItem(longbow);
 		registerItem(crossbow);
+		
+		// Early Modern Age
+		registerItem(multiToolWood);
+		registerItem(multiToolStone);
+		registerItem(multiToolIron);
+		registerItem(multiToolGold);
+		registerItem(multiToolDiamond);
+		registerItem(dynamite);
+		registerItem(compoundBow);
+		registerItem(oldAmmo);
+		registerItem(oldShotgunAmmo);
+		registerItem(cannonball);
+		registerItem(pebble);
+		registerItem(woodShard);
+		registerItem(barrel);
+		registerItem(blankGun);
+		registerItem(gunHandle);
+		registerItem(haftIron);
+		registerItem(haftWood);
+		registerItem(visor);
+		registerItem(nails);
+		registerItem(nails_toxic);
+		
+		
 		
 /** TEMPLATE		
 		registerItem(Wood);

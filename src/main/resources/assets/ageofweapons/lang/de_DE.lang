@@ -32,6 +32,16 @@ tile.amethyst_block.name=Amethyst Block
 tile.topaz_block.name=Topas Block
 tile.amber_block.name=Bernstein Block
 
+tile.barbed_wire.name=Stacheldraht
+tile.nail_trap.name=Nagel Falle
+tile.toxic_nail_trap.name=Giftige Nagel Falle
+tile.explosive_mine.name=Explosive Mine
+tile.toxic_mine.name=Gift Mine
+tile.razor_wire.name=Bandstacheldraht
+tile.bear_trap.name=Bären Falle
+tile.fall_trap_dirt.name=Erd Gruben Falle
+tile.fall_trap_planks.name=Brett Gruben Falle
+tile.fall_trap_stone.name=Stein Gruben Falle
 
 
 
@@ -95,6 +105,7 @@ item.amber.name=Bernstein
 item.amethyst_shard.name=Amethyst Scherbe
 item.topaz_shard.name=Topas Scherbe
 item.glass_shard.name=Glas Scherbe
+item.hammer.name=Hammer
 
 
 //StoneAge
@@ -107,6 +118,10 @@ item.stone_cudgel.name=Stein Knüppel
 item.ax.name=Beil
 item.throw_wood.name=Wurf Holz
 item.caveman_spear.name=Höhlenmensch Speer
+item.caveman_helmet.name=Höhlenmensch Kopfschutz
+item.caveman_chestplate.name=Höhlenmensch Harnisch
+item.caveman_leggings.name=Höhlenmensch Beinschutz
+item.caveman_boots.name=Höhlenmensch Stiefel
 
 
 //Antiquity
@@ -170,6 +185,21 @@ item.war_hammer_gold.name=Gold Kriegshammer
 item.war_hammer_diamond.name=Diamant Kriegshammer
 item.longbow.name=Langbogen
 item.crossbow.name=Armbrust
+
+//EarlyModernAge
+item.multi_tool_wood.name=Holz Mehrfach Werkzeug
+item.multi_tool_stone.name=Stein Mehrfach Werkzeug
+item.multi_tool_iron.name=Eisen Mehrfach Werkzeug
+item.multi_tool_gold.name=Gold Mehrfach Werkzeug
+item.multi_tool_diamond.name=Diamant Mehrfach Werkzeug
+item.old_ammo.name=Alte Munition
+item.old_shotgun_ammo.name=Alte Schrot Munition
+item.cannonball.name=Kanonen Kugel
+item.pebble.name=Steinchen
+item.compound_bow.name=Compoundbogen
+item.dynamite.name=Dynamit Stange
+item.nails.name=Nägel
+item.nails_toxic.name=Giftige Nägel
 
 
 /** TEMPLATE **/

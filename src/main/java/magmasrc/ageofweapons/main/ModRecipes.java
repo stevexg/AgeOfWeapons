@@ -90,8 +90,24 @@ public class ModRecipes {
 		  GameRegistry.addRecipe(new ItemStack(ModItems.haftWood), " x ", " xx", " xx", 'x', new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE));
 		  GameRegistry.addRecipe(new ItemStack(ModItems.visor), "xxx", "o o", "xxx", 'x', Items.IRON_INGOT, 'o', new ItemStack(Blocks.GLASS_PANE, 1, 3));
 
+		  
+		  
+		  GameRegistry.addShapelessRecipe(new ItemStack(ModItems.woodShard, 3), new ItemStack(ModItems.hammer, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE));
+		  GameRegistry.addShapelessRecipe(new ItemStack(ModItems.stoneShard, 3), new ItemStack(ModItems.hammer, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.COBBLESTONE, 1, OreDictionary.WILDCARD_VALUE));
+		  GameRegistry.addShapelessRecipe(new ItemStack(ModItems.stoneShard, 3), new ItemStack(ModItems.hammer, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.STONE, 1, OreDictionary.WILDCARD_VALUE));
+		  GameRegistry.addShapelessRecipe(new ItemStack(ModItems.ironShard, 3), new ItemStack(ModItems.hammer, 1, OreDictionary.WILDCARD_VALUE), Items.IRON_INGOT);
+		  GameRegistry.addShapelessRecipe(new ItemStack(ModItems.goldShard, 3), new ItemStack(ModItems.hammer, 1, OreDictionary.WILDCARD_VALUE), Items.GOLD_INGOT);
+		  GameRegistry.addShapelessRecipe(new ItemStack(ModItems.emeraldShard, 3), new ItemStack(ModItems.hammer, 1, OreDictionary.WILDCARD_VALUE), Items.EMERALD);
+		  GameRegistry.addShapelessRecipe(new ItemStack(ModItems.diamondShard, 3), new ItemStack(ModItems.hammer, 1, OreDictionary.WILDCARD_VALUE), Items.DIAMOND);
+		  GameRegistry.addShapelessRecipe(new ItemStack(ModItems.glassShard, 4), new ItemStack(ModItems.hammer, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.GLASS, 1, OreDictionary.WILDCARD_VALUE));
+		  GameRegistry.addShapelessRecipe(new ItemStack(ModItems.glassShard, 4), new ItemStack(ModItems.hammer, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.GLASS_PANE, 1, OreDictionary.WILDCARD_VALUE));
+		  GameRegistry.addShapelessRecipe(new ItemStack(ModItems.amethystShard, 3), new ItemStack(ModItems.hammer, 1, OreDictionary.WILDCARD_VALUE), ModItems.amethyst);
+		  GameRegistry.addShapelessRecipe(new ItemStack(ModItems.rubyShard, 3), new ItemStack(ModItems.hammer, 1, OreDictionary.WILDCARD_VALUE), ModItems.ruby);
+		  GameRegistry.addShapelessRecipe(new ItemStack(ModItems.sapphireShard, 3), new ItemStack(ModItems.hammer, 1, OreDictionary.WILDCARD_VALUE), ModItems.sapphire);
+		  GameRegistry.addShapelessRecipe(new ItemStack(ModItems.topazShard, 3), new ItemStack(ModItems.hammer, 1, OreDictionary.WILDCARD_VALUE), ModItems.topaz);
+	
+		  GameRegistry.addRecipe(new ItemStack(ModItems.hammer), " x ", " o ", " ", 'x', Blocks.STONE, 'o', Items.STICK);
 
-			
 			
 			
 			

@@ -26,7 +26,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 public class AgeOfWeapons {
    
     public static final String MODID = "ageofweapons";
-    public static final String VERSION = "0.3.0";
+    public static final String VERSION = "0.4.0";
 
    
     @Instance("ageofweapons")
@@ -34,9 +34,8 @@ public class AgeOfWeapons {
     
     @SidedProxy(clientSide = "magmasrc.ageofweapons.proxy.ClientProxy", serverSide = "magmasrc.ageofweapons.proxy.ServerProxy")
     public static ServerProxy proxy;
-    public static ClientProxy clientproxy;
 
-    
+    //TODO Steve: ThrowWood/Caveman Spear, creativ upgrade fixen, Schusswaffen, Crusher, schauen wegen OreRecipes, Weapon Box, item das einen block setzt...weil ich das ned hinkriege xD ._.
     
 
     
@@ -46,6 +45,9 @@ public class AgeOfWeapons {
     // Blocks //
     public ModBlocks blocks;
     
+    // Entitys //
+    public ModEntitys entitys;
+    
     // Recipes //
     public ModRecipes recipes;
     
@@ -54,13 +56,14 @@ public class AgeOfWeapons {
     
     // Config //
     public static boolean activateUpdateChecker;
-    public static boolean activateOnlyOneTab;
+    public static boolean activateOnlyOneTab;     			// TODO later
     public static boolean activateChainArmorCrafting;
     public static boolean activateBasicRecipesOnWorkbench;
     public static boolean activateWeaponBoxRecipe;
     public static boolean activateNexusRecipe;
     public static boolean activateShowAges;
     public static boolean activateDungeonLoot;
+    public static boolean activateHardcoreMode;				//TODO later
 
 
 
@@ -101,9 +104,8 @@ public class AgeOfWeapons {
     // Events //
     MinecraftForge.EVENT_BUS.register(new Events());  
     
-    // Entitys //
+    // Entity Renderer //
     proxy.registerRenderer();
-
     }
   
     
@@ -126,6 +128,9 @@ public class AgeOfWeapons {
        	items.init();
     	items.register();
     	
+    	// Entitys //
+    	entitys = new ModEntitys();
+    	
     	// Recipes //
     	recipes = new ModRecipes();
     	recipes.register();
@@ -135,7 +140,7 @@ public class AgeOfWeapons {
     	
     	
     	// proxy //
-         proxy.registerClientStuff();
+        proxy.registerClientStuff();
         
 
          
@@ -157,7 +162,6 @@ public class AgeOfWeapons {
     
     @EventHandler
     public void postInit(FMLPostInitializationEvent event) {
-              
     }
  
 }
