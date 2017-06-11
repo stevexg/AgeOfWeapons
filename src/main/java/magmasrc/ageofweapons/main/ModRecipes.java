@@ -83,12 +83,12 @@ public class ModRecipes {
 		  
 		  
 		  
-		  GameRegistry.addRecipe(new ItemStack(ModItems.blankGun), "xxx", "  x", "  x", 'x', Items.IRON_INGOT);
-		  GameRegistry.addRecipe(new ItemStack(ModItems.barrel), "   ", "xxx", "   ", 'x', Items.IRON_INGOT);
-		  GameRegistry.addRecipe(new ItemStack(ModItems.gunHandle), "   ", " x ", "x  ", 'x', Items.IRON_INGOT);
-		  GameRegistry.addRecipe(new ItemStack(ModItems.haftIron), " x ", " xx", " xx", 'x', Items.IRON_INGOT);
-		  GameRegistry.addRecipe(new ItemStack(ModItems.haftWood), " x ", " xx", " xx", 'x', new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE));
-		  GameRegistry.addRecipe(new ItemStack(ModItems.visor), "xxx", "o o", "xxx", 'x', Items.IRON_INGOT, 'o', new ItemStack(Blocks.GLASS_PANE, 1, 3));
+		  GameRegistry.addShapedRecipe(new ItemStack(ModItems.blankGun), "xxx", "  x", "  x", 'x', Items.IRON_INGOT);
+		  GameRegistry.addShapedRecipe(new ItemStack(ModItems.barrel), "   ", "xxx", "   ", 'x', Items.IRON_INGOT);
+		  GameRegistry.addShapedRecipe(new ItemStack(ModItems.gunHandle), "   ", " x ", "x  ", 'x', Items.IRON_INGOT);
+		  GameRegistry.addShapedRecipe(new ItemStack(ModItems.haftIron), " x ", " xx", " xx", 'x', Items.IRON_INGOT);
+		  GameRegistry.addShapedRecipe(new ItemStack(ModItems.haftWood), " x ", " xx", " xx", 'x', new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE));
+		  GameRegistry.addShapedRecipe(new ItemStack(ModItems.visor), "xxx", "o o", "xxx", 'x', Items.IRON_INGOT, 'o', new ItemStack(Blocks.GLASS_PANE, 1, 3));
 
 		  
 		  
@@ -106,7 +106,7 @@ public class ModRecipes {
 		  GameRegistry.addShapelessRecipe(new ItemStack(ModItems.sapphireShard, 3), new ItemStack(ModItems.hammer, 1, OreDictionary.WILDCARD_VALUE), ModItems.sapphire);
 		  GameRegistry.addShapelessRecipe(new ItemStack(ModItems.topazShard, 3), new ItemStack(ModItems.hammer, 1, OreDictionary.WILDCARD_VALUE), ModItems.topaz);
 	
-		  GameRegistry.addRecipe(new ItemStack(ModItems.hammer), " x ", " o ", " ", 'x', Blocks.STONE, 'o', Items.STICK);
+		  GameRegistry.addShapedRecipe(new ItemStack(ModItems.hammer), " x ", " o ", " ", 'x', Blocks.STONE, 'o', Items.STICK);
 
 			
 			

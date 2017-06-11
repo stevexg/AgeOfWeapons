@@ -20,6 +20,8 @@ import net.minecraftforge.oredict.OreDictionary;
 import java.util.List;
 import java.util.Map;
 
+import sun.management.resources.agent;
+
 public class CraftingManagerTableOfAges {
 
     private static final CraftingManagerTableOfAges INSTANCE = new CraftingManagerTableOfAges();
@@ -178,26 +180,35 @@ public class CraftingManagerTableOfAges {
  **/ 	
   	this.addRecipeTOA(new ItemStack(ModItems.hammer), 0, " x ", " o ", " ", 'x', Blocks.STONE, 'o', Items.STICK);
 
-
   	this.addRecipeTOA(new ItemStack(ModItems.blankGun), 7, "xxx", "  x", "  x", 'x', Items.IRON_INGOT);
   	this.addRecipeTOA(new ItemStack(ModItems.barrel), 7, "   ", "xxx", "   ", 'x', Items.IRON_INGOT);
   	this.addRecipeTOA(new ItemStack(ModItems.gunHandle), 7, "   ", " xx", "xx ", 'x', Items.IRON_INGOT);
   	this.addRecipeTOA(new ItemStack(ModItems.haftIron), 7, " x ", " xx", " xx", 'x', Items.IRON_INGOT);
   	this.addRecipeTOA(new ItemStack(ModItems.haftWood), 7, " x ", " xx", " xx", 'x', new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE));
   	this.addRecipeTOA(new ItemStack(ModItems.visor), 7, "xxx", "o o", "xxx", 'x', Items.IRON_INGOT, 'o', new ItemStack(Blocks.GLASS_PANE, 1, 3));
+  
+  	
   	//upgrades
   	this.addRecipeTOA(new ItemStack(ModItems.upgradeStoneAge), 0, "xxx", "xox", "xxx", 'x', ModItems.stoneShard, 'o', Blocks.STONE);
   	this.addRecipeTOA(new ItemStack(ModItems.upgradeAtiquity), 1, "xxx", "xox", "xxx", 'x', new ItemStack(Items.DYE, 1, 4), 'o', Blocks.LAPIS_BLOCK);
   	this.addRecipeTOA(new ItemStack(ModItems.upgradeMiddleAges), 2, "xxx", "xox", "xxx", 'x', ModItems.ironShard, 'o', Blocks.IRON_BLOCK);
-    this.addRecipeTOA(new ItemStack(ModItems.upgradeMystic), 2, "xxx", "xox", "xxx", 'x', ModItems.amethystShard, 'o', ModBlocks.amethystBlock);               
-  	this.addRecipeTOA(new ItemStack(ModItems.upgradeEarlyModernAge), 4, "xxx", "xox", "xxx", 'x', ModItems.goldShard, 'o', Blocks.GOLD_BLOCK);
-    this.addRecipeTOA(new ItemStack(ModItems.upgradePiracy), 4, "xxx", "xox", "xxx", 'x', ModItems.glassShard, 'o', new ItemStack(Blocks.GLASS, 1, 9));       
-    this.addRecipeTOA(new ItemStack(ModItems.upgradeEdoPeriod), 4, "xxx", "xox", "xxx", 'x', ModItems.amber, 'o', ModBlocks.amberBlock);               
+    this.addRecipeTOA(new ItemStack(ModItems.upgradeEarlyModernAge), 4, "xxx", "xox", "xxx", 'x', ModItems.goldShard, 'o', Blocks.GOLD_BLOCK);
   	this.addRecipeTOA(new ItemStack(ModItems.upgradeModernAge), 7, "xxx", "xox", "xxx", 'x', ModItems.diamondShard, 'o', Blocks.DIAMOND_BLOCK);
+  if(AgeOfWeapons.activateMystic) {	
+    this.addRecipeTOA(new ItemStack(ModItems.upgradeMystic), 2, "xxx", "xox", "xxx", 'x', ModItems.amethystShard, 'o', ModBlocks.amethystBlock);               	
+ }if(AgeOfWeapons.activatePiracy) { 
+    this.addRecipeTOA(new ItemStack(ModItems.upgradePiracy), 4, "xxx", "xox", "xxx", 'x', ModItems.glassShard, 'o', new ItemStack(Blocks.GLASS, 1, 9));         
+ }if(AgeOfWeapons.activateEdoPeriod) { 
+    this.addRecipeTOA(new ItemStack(ModItems.upgradeEdoPeriod), 4, "xxx", "xox", "xxx", 'x', ModItems.amber, 'o', ModBlocks.amberBlock);               
+ }if(AgeOfWeapons.activateFantasy) { 
     this.addRecipeTOA(new ItemStack(ModItems.upgradeFantasy), 7, "xxx", "xox", "xxx", 'x', ModItems.rubyShard, 'o', ModBlocks.rubyBlock);        
+ }if(AgeOfWeapons.activateEpic) { 
     this.addRecipeTOA(new ItemStack(ModItems.upgradeEpic), 11, "xxx", "xox", "xxx", 'x', ModItems.topazShard, 'o', ModBlocks.topazBlock);
+ }if(AgeOfWeapons.activateBBY) { 
     this.addRecipeTOA(new ItemStack(ModItems.upgradeBBY), 11, "xxx", "xox", "xxx", 'x', ModItems.sapphireShard, 'o', ModBlocks.sapphireBlock);   
-  	this.addRecipeTOA(new ItemStack(ModItems.upgradeFuture), 11, "xxx", "xox", "xxx", 'x', ModItems.emeraldShard, 'o', Blocks.EMERALD_BLOCK);
+ }if(AgeOfWeapons.activateFuture) { 
+    this.addRecipeTOA(new ItemStack(ModItems.upgradeFuture), 11, "xxx", "xox", "xxx", 'x', ModItems.emeraldShard, 'o', Blocks.EMERALD_BLOCK);
+ }   
   	//creativ upgrade geht nicht und upgrade zahlen komisch durcheinander !!!!!!!!!<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
     /** Stone Age **/

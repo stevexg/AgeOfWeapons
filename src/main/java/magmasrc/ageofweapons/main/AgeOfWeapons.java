@@ -35,7 +35,7 @@ public class AgeOfWeapons {
     @SidedProxy(clientSide = "magmasrc.ageofweapons.proxy.ClientProxy", serverSide = "magmasrc.ageofweapons.proxy.ServerProxy")
     public static ServerProxy proxy;
 
-    //TODO Steve: ThrowWood/Caveman Spear, creativ upgrade fixen, Schusswaffen, Crusher, schauen wegen OreRecipes, Weapon Box, item das einen block setzt...weil ich das ned hinkriege xD ._.
+    //TODO Steve: JEI Support, ThrowWood/Caveman Spear, creativ upgrade fixen, Schusswaffen, Crusher, schauen wegen OreRecipes, Weapon Box, item das einen block setzt...weil ich das ned hinkriege xD ._.
     
 
     
@@ -64,6 +64,14 @@ public class AgeOfWeapons {
     public static boolean activateShowAges;
     public static boolean activateDungeonLoot;
     public static boolean activateHardcoreMode;				//TODO later
+    
+    public static boolean activatePiracy;
+    public static boolean activateEdoPeriod;
+    public static boolean activateMystic;
+    public static boolean activateBBY;
+    public static boolean activateFantasy;
+    public static boolean activateEpic;
+    public static boolean activateFuture;
 
 
 
@@ -93,6 +101,14 @@ public class AgeOfWeapons {
     		activateNexusRecipe = config.get("CRAFTING", "Activate the crafting recipe for the Nexus", false, "[true/false]").getBoolean();
     		activateShowAges = config.get("GENERAL", "Show the age under the item name", true, "[true/false]").getBoolean();
     		activateDungeonLoot = config.get("GENERATION", "Generate dungeon loot (means only the not important items for the mod)", true, "[true/false]").getBoolean();
+    		
+    		activateBBY = config.get("AGES", "Activate the recipe for the BBY Upgrade", true, "[true/false]").getBoolean();
+    		activateEdoPeriod = config.get("AGES", "Activate the recipe for the Edo Period Upgrade", true, "[true/false]").getBoolean();
+    		activateEpic = config.get("AGES", "Activate the recipe for the Epic Upgrade", true, "[true/false]").getBoolean();
+    		activateFantasy = config.get("AGES", "Activate the recipe for the Fantasy Upgrade", true, "[true/false]").getBoolean();
+    		activateFuture = config.get("AGES", "Activate the recipe for the Future Upgrade", true, "[true/false]").getBoolean();
+    		activateMystic = config.get("AGES", "Activate the recipe for the Mystic Upgrade", true, "[true/false]").getBoolean();
+    		activatePiracy = config.get("AGES", "Activate the recipe for the Piracy Upgrade", true, "[true/false]").getBoolean();
     		
     	config.save();	
 
