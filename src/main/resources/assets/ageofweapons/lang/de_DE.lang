@@ -201,6 +201,20 @@ item.dynamite.name=Dynamit Stange
 item.nails.name=Nägel
 item.nails_toxic.name=Giftige Nägel
 
+//Mystic
+item.mystic_knive.name=Mystisches Schwert
+item.pufferfish_stick.name=Kugelfisch auf einem Stab
+item.scepter_unholy.name=Unheiliges Zepter
+item.wand_basic.name=Zauberstab
+item.wand_nether.name=Nether Zauberstab
+item.wand_aether.name=Aether Zauberstab
+item.wand_curse.name=Verfluchter Zauberstab
+item.wand_holy.name=Heiliger Zauberstab
+item.wand_maelstrom.name=Malstrom Zauberstab
+item.warhorn_offensive.name=Ofensives Kriegshorn
+item.warhorn_defensive.name=Defensives Kriegshorn
+
+
 
 /** TEMPLATE **/
 item._wood.name=

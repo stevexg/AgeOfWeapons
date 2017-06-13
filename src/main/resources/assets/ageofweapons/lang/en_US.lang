@@ -199,6 +199,19 @@ item.dynamite.name=Dynamite
 item.nails.name=Nails
 item.nails_toxic.name=Toxic Nails
 
+//Mystic
+item.mystic_knive.name=Mystic Knive
+item.pufferfish_stick.name=Pufferfish on a stick
+item.scepter_unholy.name=Unholy Scepter
+item.wand_basic.name=Basic Wand
+item.wand_nether.name=Nether Wand
+item.wand_aether.name=Aether Wand
+item.wand_curse.name=Curse Wand
+item.wand_holy.name=Holy Wand
+item.wand_maelstrom.name=Maelstrom Wand
+item.warhorn_offensive.name=Offensive Warhorn
+item.warhorn_defensive.name=Defensive Warhorn
+
 
 
 

@@ -4,6 +4,7 @@ import magmasrc.ageofweapons.items.*;
 import magmasrc.ageofweapons.items.antiquity.*;
 import magmasrc.ageofweapons.items.earlymodernage.*;
 import magmasrc.ageofweapons.items.middleages.*;
+import magmasrc.ageofweapons.items.mystic.*;
 import magmasrc.ageofweapons.items.stoneage.*;
 import magmasrc.ageofweapons.util.NameUtils;
 import net.minecraft.init.SoundEvents;
@@ -94,6 +95,8 @@ public class ModItems {
 	public static ToolMaterial multiToolIronTM;
 	public static ToolMaterial multiToolGoldTM;
 	public static ToolMaterial multiToolDiamondTM;
+	
+	public static ToolMaterial mysticKniveTM;
 
 	
 	
@@ -250,7 +253,20 @@ public class ModItems {
 	public static Item cannonball;
 	public static Item pebble;
 	public static Item nails;
-	public static Item nails_toxic;
+	public static Item nailsToxic;
+	
+	// Mystic
+	public static Item mysticKnive;
+	public static Item pufferfishStick;
+	public static Item scepterUnholy;
+	public static Item wandAether;
+	public static Item wandBasic;
+	public static Item wandCurse;
+	public static Item wandHoly;
+	public static Item wandMaelstrom;
+	public static Item wandNether;
+	public static Item warhornOffensive;
+	public static Item warhornDefensive;
 
 	
 	
@@ -347,7 +363,10 @@ public class ModItems {
 		multiToolIronTM = EnumHelper.addToolMaterial("multiToolIron",         	   2,  230,  6.0F,   6.0F, 14);
 		multiToolGoldTM = EnumHelper.addToolMaterial("multiToolGold",              0,  130, 12.0F,   5.2F, 22);
 		multiToolDiamondTM = EnumHelper.addToolMaterial("multiToolDiamond",        3, 1000,  8.0F,   7.0F, 10);
+        															//     harv.lvl, uses, efficy., dmg., enchant.,
+		mysticKniveTM = EnumHelper.addToolMaterial("mysticKnive",                  3,  250,  1.0F,  6.50F, 40);
 
+		
 /** TEMPLATE		
 		WoodTM = EnumHelper.addToolMaterial("Wood",                  0,  x,  2.0F,   xF, 15);
 		StoneTM = EnumHelper.addToolMaterial("Stone",                1,  x,  4.0F,   xF,  5);
@@ -524,7 +543,21 @@ public class ModItems {
 		dynamite = new ItemDynamite();
 		compoundBow = new ItemCompoundBow();
 		nails = new ItemNails();
-		nails_toxic = new ItemToxicNails();
+		nailsToxic = new ItemToxicNails();
+		
+		// Mystic
+		mysticKnive = new ItemMysticKnive(mysticKniveTM);
+		pufferfishStick = new ItemPufferfishStick();
+		scepterUnholy = new ItemScepterUnholy();
+		wandAether = new ItemWandAether();
+		wandBasic = new ItemWandBasic();
+		wandHoly = new ItemWandHoly();
+		wandCurse = new ItemWandCurse();
+		wandMaelstrom = new ItemWandMaelstrom();
+		wandNether = new ItemWandNether();
+		warhornOffensive = new ItemWarhornOffensive();
+		warhornDefensive = new ItemWarhornDefensive();
+		
 		
 /** TEMPLATE		
 		Wood = new ItemWood(WoodTM);
@@ -695,7 +728,22 @@ public class ModItems {
 		NameUtils.setNames(dynamite, "dynamite");
 		NameUtils.setNames(compoundBow, "compound_bow");
 		NameUtils.setNames(nails, "nails");
-		NameUtils.setNames(nails_toxic, "nails_toxic");
+		NameUtils.setNames(nailsToxic, "nails_toxic");
+		
+		// Mystic
+		NameUtils.setNames(mysticKnive, "mystic_knive");
+		NameUtils.setNames(pufferfishStick, "pufferfish_stick");
+		NameUtils.setNames(scepterUnholy, "scepter_unholy");
+		NameUtils.setNames(wandAether, "wand_aether");
+		NameUtils.setNames(wandNether, "wand_nether");
+		NameUtils.setNames(wandBasic, "wand_basic");
+		NameUtils.setNames(wandCurse, "wand_curse");
+		NameUtils.setNames(wandHoly, "wand_holy");
+		NameUtils.setNames(wandMaelstrom, "wand_maelstrom");
+		NameUtils.setNames(warhornDefensive, "warhorn_defensive");
+		NameUtils.setNames(warhornOffensive, "warhorn_offensive");
+		
+
 		
 		
 /**		
@@ -865,7 +913,20 @@ public class ModItems {
 		registerItem(haftWood);
 		registerItem(visor);
 		registerItem(nails);
-		registerItem(nails_toxic);
+		registerItem(nailsToxic);
+		
+		// Mystic
+		registerItem(mysticKnive);
+		registerItem(pufferfishStick);
+		registerItem(scepterUnholy);
+		registerItem(wandBasic);
+		registerItem(wandNether);
+		registerItem(wandAether);
+		registerItem(wandHoly);
+		registerItem(wandCurse);
+		registerItem(wandMaelstrom);
+		registerItem(warhornDefensive);
+		registerItem(warhornOffensive);
 		
 		
 		

@@ -104,7 +104,7 @@ public class ItemCrossbow extends ItemBow {
               }
 
               //   float f = getArrowVelocity(i);
-              float f = (float) i / 5.0F;
+              float f = (float) i / 18.0F;
 
               if (f > 1.0F) {
                   f = 1.0F;

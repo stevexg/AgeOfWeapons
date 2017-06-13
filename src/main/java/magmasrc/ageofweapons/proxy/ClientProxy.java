@@ -2,6 +2,7 @@ package magmasrc.ageofweapons.proxy;
  
 import magmasrc.ageofweapons.entity.EntityCavemanSpear;
 import magmasrc.ageofweapons.entity.EntityDynamite;
+import magmasrc.ageofweapons.entity.render.EntityDynamiteRenderer;
 import magmasrc.ageofweapons.main.ModBlocks;
 import magmasrc.ageofweapons.main.ModItems;
 import net.minecraft.block.Block;
@@ -171,8 +172,22 @@ public class ClientProxy extends ServerProxy {
 		registerModel(ModItems.cannonball, 0, new ModelResourceLocation   (ModItems.cannonball.getRegistryName(), "inventory"));
 		registerModel(ModItems.pebble, 0, new ModelResourceLocation   (ModItems.pebble.getRegistryName(), "inventory"));
 		registerModel(ModItems.nails, 0, new ModelResourceLocation   (ModItems.nails.getRegistryName(), "inventory"));
-		registerModel(ModItems.nails_toxic, 0, new ModelResourceLocation   (ModItems.nails_toxic.getRegistryName(), "inventory"));
+		registerModel(ModItems.nailsToxic, 0, new ModelResourceLocation   (ModItems.nailsToxic.getRegistryName(), "inventory"));
 
+		//Mystic
+		registerModel(ModItems.mysticKnive, 0, new ModelResourceLocation   (ModItems.mysticKnive.getRegistryName(), "inventory"));
+		registerModel(ModItems.pufferfishStick, 0, new ModelResourceLocation   (ModItems.pufferfishStick.getRegistryName(), "inventory"));
+		registerModel(ModItems.scepterUnholy, 0, new ModelResourceLocation   (ModItems.scepterUnholy.getRegistryName(), "inventory"));
+		registerModel(ModItems.wandBasic, 0, new ModelResourceLocation   (ModItems.wandBasic.getRegistryName(), "inventory"));
+		registerModel(ModItems.wandAether, 0, new ModelResourceLocation   (ModItems.wandAether.getRegistryName(), "inventory"));
+		registerModel(ModItems.wandNether, 0, new ModelResourceLocation   (ModItems.wandNether.getRegistryName(), "inventory"));
+		registerModel(ModItems.wandCurse, 0, new ModelResourceLocation   (ModItems.wandCurse.getRegistryName(), "inventory"));
+		registerModel(ModItems.wandHoly, 0, new ModelResourceLocation   (ModItems.wandHoly.getRegistryName(), "inventory"));
+		registerModel(ModItems.wandMaelstrom, 0, new ModelResourceLocation   (ModItems.wandMaelstrom.getRegistryName(), "inventory"));
+		registerModel(ModItems.warhornDefensive, 0, new ModelResourceLocation   (ModItems.warhornDefensive.getRegistryName(), "inventory"));
+		registerModel(ModItems.warhornOffensive, 0, new ModelResourceLocation   (ModItems.warhornOffensive.getRegistryName(), "inventory"));
+
+		
 		
 		
 /** TEMPLATE		
@@ -368,26 +383,19 @@ public class ClientProxy extends ServerProxy {
 	/** Entitys **/
 	
 	public void registerRenderer() {
-	/**	RenderingRegistry.registerEntityRenderingHandler(EntityCavemanSpear.class, new IRenderFactory() {
 
-			@Override
-			public Render createRenderFor(RenderManager manager) {
-				return new RenderSnowball<EntityCavemanSpear>(manager, ModItems.cavemanSpear, Minecraft.getMinecraft().getRenderItem());
-			}
-		});
-	**/	
 		
-		
+	/**
 		RenderingRegistry.registerEntityRenderingHandler(EntityDynamite.class, new IRenderFactory() {
 
 			@Override
 			public Render createRenderFor(RenderManager manager) {
 				return new RenderSnowball<EntityDynamite>(manager, ModItems.dynamite, Minecraft.getMinecraft().getRenderItem());
 			}
-		});
+		}); **/
+		 RenderingRegistry.registerEntityRenderingHandler(EntityDynamite.class, EntityDynamiteRenderer.FACTORY);
+
 	}
-    
-    
     
     
     public void registerModel(Object obj, int meta, ModelResourceLocation loc) {

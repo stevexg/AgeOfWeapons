@@ -103,12 +103,12 @@ public class ItemCompoundBow extends ItemBow {
                   itemstack = new ItemStack(Items.ARROW);
               }
 
-              //   float f = getArrowVelocity(i);
-              float f = (float) i / 5.0F;
+           //   float f = getArrowVelocity(i);
+              float f = (float) i / 15.0F;
 
               if (f > 1.0F) {
                   f = 1.0F;
-          }
+          } 
 
               if ((double)f >= 0.1D)
               {
