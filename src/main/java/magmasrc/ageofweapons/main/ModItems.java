@@ -3,6 +3,7 @@ package magmasrc.ageofweapons.main;
 import magmasrc.ageofweapons.items.*;
 import magmasrc.ageofweapons.items.antiquity.*;
 import magmasrc.ageofweapons.items.earlymodernage.*;
+import magmasrc.ageofweapons.items.fantasy.*;
 import magmasrc.ageofweapons.items.middleages.*;
 import magmasrc.ageofweapons.items.mystic.*;
 import magmasrc.ageofweapons.items.stoneage.*;
@@ -97,6 +98,32 @@ public class ModItems {
 	public static ToolMaterial multiToolDiamondTM;
 	
 	public static ToolMaterial mysticKniveTM;
+	
+	public static ToolMaterial clawWoodTM;
+	public static ToolMaterial clawStoneTM;
+	public static ToolMaterial clawIronTM;
+	public static ToolMaterial clawGoldTM;
+	public static ToolMaterial clawDiamondTM;
+	public static ToolMaterial clawSwordWoodTM;
+	public static ToolMaterial clawSwordStoneTM;
+	public static ToolMaterial clawSwordIronTM;
+	public static ToolMaterial clawSwordGoldTM;
+	public static ToolMaterial clawSwordDiamondTM;
+	public static ToolMaterial claymoreWoodTM;
+	public static ToolMaterial claymoreStoneTM;
+	public static ToolMaterial claymoreIronTM;
+	public static ToolMaterial claymoreGoldTM;
+	public static ToolMaterial claymoreDiamondTM;
+	public static ToolMaterial longClaymoreWoodTM;
+	public static ToolMaterial longClaymoreStoneTM;
+	public static ToolMaterial longClaymoreIronTM;
+	public static ToolMaterial longClaymoreGoldTM;
+	public static ToolMaterial longClaymoreDiamondTM;
+	public static ToolMaterial fantasySwordWoodTM;
+	public static ToolMaterial fantasySwordStoneTM;
+	public static ToolMaterial fantasySwordIronTM;
+	public static ToolMaterial fantasySwordGoldTM;
+	public static ToolMaterial fantasySwordDiamondTM;
 
 	
 	
@@ -267,8 +294,35 @@ public class ModItems {
 	public static Item wandNether;
 	public static Item warhornOffensive;
 	public static Item warhornDefensive;
-
 	
+	// Fantasy
+	public static Item clawWood;
+	public static Item clawStone;
+	public static Item clawIron;
+	public static Item clawGold;
+	public static Item clawDiamond;
+	public static Item clawSwordWood;
+	public static Item clawSwordStone;
+	public static Item clawSwordIron;
+	public static Item clawSwordGold;
+	public static Item clawSwordDiamond;
+	public static Item claymoreWood;
+	public static Item claymoreStone;
+	public static Item claymoreIron;
+	public static Item claymoreGold;
+	public static Item claymoreDiamond;
+	public static Item longClaymoreWood;
+	public static Item longClaymoreStone;
+	public static Item longClaymoreIron;
+	public static Item longClaymoreGold;
+	public static Item longClaymoreDiamond;
+	public static Item fantasySwordWood;
+	public static Item fantasySwordStone;
+	public static Item fantasySwordIron;
+	public static Item fantasySwordGold;
+	public static Item fantasySwordDiamond;
+	public static Item lightBow;
+	public static Item shadowBow;
 	
 	
 	
@@ -286,14 +340,14 @@ public class ModItems {
 		
 		
 		    /** Tool-Materials **/   
-		                                      																    	/**
-																			Default Materials!
-																	WOOD          (0,   59,  2.0F,  0.0F,  15),
-																	STONE         (1,  131,  4.0F,  1.0F,  5),
-																	IRON          (2,  250,  6.0F,  2.0F,  14),
-																	GOLD          (0,   32, 12.0F,  0.0F,  22);
-																	DIAMOND       (3, 1561,  8.0F,  3.0F,  10),     **/															
-		                                                           //     harv.lvl, uses, efficy., dmg., enchant.,
+		                                      																    				/**
+																			Default Materials, Tools!				  Sword dmg.
+																	WOOD          (0,   59,  2.0F,  0.0F,  15);			4.0F
+																	STONE         (1,  131,  4.0F,  1.0F,  5);			5.0F
+																	IRON          (2,  250,  6.0F,  2.0F,  14);			6.0F
+																	GOLD          (0,   32, 12.0F,  0.0F,  22);			4.0F
+																	DIAMOND       (3, 1561,  8.0F,  3.0F,  10);			7.0F  	 **/															
+		                                                             //     harv.lvl, uses, efficy., dmg., enchant.,
    	    rockTM = EnumHelper.addToolMaterial ("rock",                               0,  500,  0.0F,  4.0F,  0);
 		handAxStoneTM = EnumHelper.addToolMaterial("handAxStone",                  0,  400,  1.0F,  4.5F,  0);
 		cavemanKniveStoneTM = EnumHelper.addToolMaterial("cavemanKniveStone",      0,  100,  1.0F,  5.0F,  0);
@@ -320,43 +374,43 @@ public class ModItems {
                                                                      //     harv.lvl, uses, efficy., dmg., enchant.,
 		battleAxeWoodTM = EnumHelper.addToolMaterial("battleAxeWood",              0,  150,  2.0F,  6.50F, 15);
 		battleAxeStoneTM = EnumHelper.addToolMaterial("battleAxeStone",            1,  230,  4.0F,   7.0F,  5);
-		battleAxeIronTM = EnumHelper.addToolMaterial("battleAxeIron",              2,  300,  6.0F,  7.80F, 14);
+		battleAxeIronTM = EnumHelper.addToolMaterial("battleAxeIron",              2,  500,  6.0F,  7.80F, 14);
 		battleAxeGoldTM = EnumHelper.addToolMaterial("battleAxeGold",              0,  160, 12.0F,   7.0F, 22);
-		battleAxeDiamondTM = EnumHelper.addToolMaterial("battleAxeDiamond",        3,  350,  8.0F,   8.0F, 10);
+		battleAxeDiamondTM = EnumHelper.addToolMaterial("battleAxeDiamond",        3, 1500,  8.0F,   8.0F, 10);
 		flailStoneTM = EnumHelper.addToolMaterial("flailStone",                    1,   30,  1.0F,   7.0F,  5);
 		flailIronTM = EnumHelper.addToolMaterial("flailIron",                      2,   50,  1.0F,  7.50F, 14);
 		flailGoldTM = EnumHelper.addToolMaterial("flailGold",                      0,   20,  1.0F,   7.0F, 22);
-		flailDiamondTM = EnumHelper.addToolMaterial("flailDiamond",                3,   80,  1.0F,   8.0F, 10);
+		flailDiamondTM = EnumHelper.addToolMaterial("flailDiamond",                3,  300,  1.0F,   8.0F, 10);
 		halbertWoodTM = EnumHelper.addToolMaterial("halbertWood",                  0,  250,  1.0F,  7.50F, 15); 
 		halbertStoneTM = EnumHelper.addToolMaterial("halbertStone",                1,  300,  1.0F,   8.0F,  5);
 		halbertIronTM = EnumHelper.addToolMaterial("halbertIron",                  2,  350,  1.0F,  8.80F, 14);
 		halbertGoldTM = EnumHelper.addToolMaterial("halbertGold",                  0,  280,  1.0F,  2.80F, 22);
-		halbertDiamondTM = EnumHelper.addToolMaterial("halbertDiamond",            3,  390,  1.0F,   9.0F, 10);
+		halbertDiamondTM = EnumHelper.addToolMaterial("halbertDiamond",            3, 1700,  1.0F,   9.0F, 10);
 		longswordWoodTM = EnumHelper.addToolMaterial("longswordWood",              0,  180,  2.0F,  6.50F, 15);
 		longswordStoneTM = EnumHelper.addToolMaterial("longswordStone",            1,  250,  4.0F,   7.0F,  5);
 		longswordIronTM = EnumHelper.addToolMaterial("longswordIron",              2,  300,  6.0F,  7.50F, 14);
 		longswordGoldTM = EnumHelper.addToolMaterial("longswordGold",              0,  190, 12.0F,   7.0F, 22);
-		longswordDiamondTM = EnumHelper.addToolMaterial("longswordDiamond",        3,  360,  8.0F,   8.0F, 10);
+		longswordDiamondTM = EnumHelper.addToolMaterial("longswordDiamond",        3, 1600,  8.0F,   8.0F, 10);
 		spearWoodTM = EnumHelper.addToolMaterial("spearWood",                      0,  135,  2.0F,   4.0F, 15);
 		spearStoneTM = EnumHelper.addToolMaterial("spearStone",                    1,  180,  4.0F,   4.5F,  5);
 		spearIronTM = EnumHelper.addToolMaterial("spearIron",                      2,  230,  6.0F,   5.0F, 14);
 		spearGoldTM = EnumHelper.addToolMaterial("spearGold",                      0,  140, 12.0F,   4.3F, 22);
-		spearDiamondTM = EnumHelper.addToolMaterial("spearDiamond",                3,  280,  8.0F,   6.0F, 10);
+		spearDiamondTM = EnumHelper.addToolMaterial("spearDiamond",                3,  500,  8.0F,   6.0F, 10);
 		tridentWoodTM = EnumHelper.addToolMaterial("tridentWood",                  0,  155,  2.0F,  2.85F, 15);
 		tridentStoneTM = EnumHelper.addToolMaterial("tridentStone",                1,  200,  4.0F,  5.30F,  5);
 		tridentIronTM = EnumHelper.addToolMaterial("tridentIron",                  2,  250,  6.0F,  6.80F, 14);
 		tridentGoldTM = EnumHelper.addToolMaterial("tridentGold",                  0,  165, 12.0F,  5.35F, 22);
-		tridentDiamondTM = EnumHelper.addToolMaterial("tridentDiamond",            3,  290,  8.0F,  7.10F, 10);
+		tridentDiamondTM = EnumHelper.addToolMaterial("tridentDiamond",            3, 1000,  8.0F,  7.10F, 10);
 		waraxeWoodTM = EnumHelper.addToolMaterial("waraxeWood",                    0,  200,  2.0F,   7.0F, 15);
 		waraxeStoneTM = EnumHelper.addToolMaterial("waraxeStone",                  1,  300,  4.0F,  8.50F,  5);
 		waraxeIronTM = EnumHelper.addToolMaterial("waraxeIron",                    2,  350,  6.0F,   9.0F, 14);
 		waraxeGoldTM = EnumHelper.addToolMaterial("waraxeGold",                    0,  215, 12.0F,   8.3F, 22);
-		waraxeDiamondTM = EnumHelper.addToolMaterial("waraxeDiamond",              3,  400,  8.0F,   9.5F, 10);
-		warhammerWoodTM = EnumHelper.addToolMaterial("warhammerWood",              0,  100,  2.0F,   7.5F, 15);
-		warhammerStoneTM = EnumHelper.addToolMaterial("warhammerStone",            1,  150,  4.0F,   8.0F,  5);
-		warhammerIronTM = EnumHelper.addToolMaterial("warhammerIron",              2,  200,  6.0F,   8.6F, 14);
-		warhammerGoldTM = EnumHelper.addToolMaterial("warhammerGold",              0,  160, 12.0F,   7.8F, 22);
-		warhammerDiamondTM = EnumHelper.addToolMaterial("warhammerDiamond",        3,  250,  8.0F,   9.0F, 10);
+		waraxeDiamondTM = EnumHelper.addToolMaterial("waraxeDiamond",              3, 2000,  8.0F,   9.5F, 10);
+		warhammerWoodTM = EnumHelper.addToolMaterial("warhammerWood",              0,  200,  2.0F,   7.5F, 15);
+		warhammerStoneTM = EnumHelper.addToolMaterial("warhammerStone",            1,  300,  4.0F,   8.0F,  5);
+		warhammerIronTM = EnumHelper.addToolMaterial("warhammerIron",              2,  800,  6.0F,   8.6F, 14);
+		warhammerGoldTM = EnumHelper.addToolMaterial("warhammerGold",              0,  280, 12.0F,   7.8F, 22);
+		warhammerDiamondTM = EnumHelper.addToolMaterial("warhammerDiamond",        3, 5000,  8.0F,   9.0F, 10);
                                                                      //     harv.lvl, uses, efficy., dmg., enchant.,
 		multiToolWoodTM = EnumHelper.addToolMaterial("multiToolWood",              0,  120,  2.0F,   5.0F, 15);
 		multiToolStoneTM = EnumHelper.addToolMaterial("multiToolStone",            1,  160,  4.0F,   5.5F,  5);
@@ -366,6 +420,31 @@ public class ModItems {
         															//     harv.lvl, uses, efficy., dmg., enchant.,
 		mysticKniveTM = EnumHelper.addToolMaterial("mysticKnive",                  3,  250,  1.0F,  6.50F, 40);
 
+		clawWoodTM = EnumHelper.addToolMaterial("clawWood",         	           0,   50,  2.0F,   5.5F, 18);
+		clawStoneTM = EnumHelper.addToolMaterial("clawStone",            	       1,  120,  4.0F,   6.0F,  8);
+		clawIronTM = EnumHelper.addToolMaterial("clawIron",                  	   2,  240,  6.0F,   6.5F, 17);
+		clawGoldTM = EnumHelper.addToolMaterial("clawGold",                        0,   30, 12.0F,   5.7F, 25);
+		clawDiamondTM = EnumHelper.addToolMaterial("clawDiamond",            	   3, 1550,  8.0F,   7.0F, 13);
+		clawSwordWoodTM = EnumHelper.addToolMaterial("clawSwordWood",              0,   70,  2.0F,   6.0F, 18);
+		clawSwordStoneTM = EnumHelper.addToolMaterial("clawSwordStone",            1,  150,  4.0F,   6.5F,  8);
+		clawSwordIronTM = EnumHelper.addToolMaterial("clawSwordIron",              2,  270,  6.0F,   7.0F, 17);
+		clawSwordGoldTM = EnumHelper.addToolMaterial("clawSwordGold",              0,   50, 12.0F,   6.3F, 25);
+		clawSwordDiamondTM = EnumHelper.addToolMaterial("clawSwordDiamond",        3, 1580,  8.0F,   7.5F, 13);
+		claymoreWoodTM = EnumHelper.addToolMaterial("claymoreWood",                0,  250,  2.0F,   5.5F, 18);
+		claymoreStoneTM = EnumHelper.addToolMaterial("claymoreStone",              1,  330,  4.0F,   6.0F,  8);
+		claymoreIronTM = EnumHelper.addToolMaterial("claymoreIron",                2,  550,  6.0F,   7.0F, 17);
+		claymoreGoldTM = EnumHelper.addToolMaterial("claymoreGold",                0,  232, 12.0F,   5.8F, 25);
+		claymoreDiamondTM = EnumHelper.addToolMaterial("claymoreDiamond",          3, 1760,  8.0F,   8.0F, 13);
+		longClaymoreWoodTM = EnumHelper.addToolMaterial("longClaymoreWood",        0,  500,  2.0F,   6.5F, 18);
+		longClaymoreStoneTM = EnumHelper.addToolMaterial("longClaymoreStone",      1,  650,  4.0F,   7.0F,  8);
+		longClaymoreIronTM = EnumHelper.addToolMaterial("longClaymoreIron",        2,  800,  6.0F,   7.5F, 17);
+		longClaymoreGoldTM = EnumHelper.addToolMaterial("longClaymoreGold",        0,  530, 12.0F,   6.8F, 25);
+		longClaymoreDiamondTM = EnumHelper.addToolMaterial("longClaymoreDiamond",  3, 2000,  8.0F,   8.0F, 13);
+		fantasySwordWoodTM = EnumHelper.addToolMaterial("fantasySwordWood",        0,  450,  2.0F,   7.0F, 15);
+		fantasySwordStoneTM = EnumHelper.addToolMaterial("fantasySwordStone",      1,  600,  4.0F,   7.5F, 20);
+		fantasySwordIronTM = EnumHelper.addToolMaterial("fantasySwordIron",        2,  750,  6.0F,   9.0F, 19);
+		fantasySwordGoldTM = EnumHelper.addToolMaterial("fantasySwordGold",        0,  480, 12.0F,   8.3F, 27);
+		fantasySwordDiamondTM = EnumHelper.addToolMaterial("fantasySwordDiamond",  3, 1950,  8.0F,  10.0F, 15);
 		
 /** TEMPLATE		
 		WoodTM = EnumHelper.addToolMaterial("Wood",                  0,  x,  2.0F,   xF, 15);
@@ -373,6 +452,13 @@ public class ModItems {
 		IronTM = EnumHelper.addToolMaterial("Iron",                  2,  x,  6.0F,   xF, 14);
 		GoldTM = EnumHelper.addToolMaterial("Gold",                  0,  x, 12.0F,   xF, 22);
 		DiamondTM = EnumHelper.addToolMaterial("Diamond",            3,  x,  8.0F,   xF, 10);
+		
+																			Default Materials, Tools			     Sword dmg.
+																	WOOD          (0,   59,  2.0F,  0.0F,  15);			4.0F
+																	STONE         (1,  131,  4.0F,  1.0F,  5);			5.0F
+																	IRON          (2,  250,  6.0F,  2.0F,  14);			6.0F
+																	GOLD          (0,   32, 12.0F,  0.0F,  22);			4.0F
+																	DIAMOND       (3, 1561,  8.0F,  3.0F,  10);			7.0F
 **/   	    
 		
 		
@@ -382,9 +468,9 @@ public class ModItems {
 		/** Armor-Materials **/
 																																						/**
 		    																					 {1, 3, 2, 1} for leather armor (7 at all)
-		    																					 {2, 5, 4, 1} for chain armor (12 at all)
-		    																					 {2, 6, 5, 2} for iron armor (15 at all)
-		    																					 {2, 5, 3, 1} for gold armor (11 at all)
+		    																					 {2, 5, 4, 1} for chain armor   (12 at all)
+		    																					 {2, 6, 5, 2} for iron armor    (15 at all)
+		    																					 {2, 5, 3, 1} for gold armor    (11 at all)
 		    																				   	 {3, 8, 6, 3} for diamond armor (20 at all - do not use more!)
 		 																																				**/
 		 cavemanAM = EnumHelper.addArmorMaterial("caveman", "ageofweapons:caveman", 10, new int[]{1, 2, 1, 1}, 10, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0);
@@ -558,6 +644,34 @@ public class ModItems {
 		warhornOffensive = new ItemWarhornOffensive();
 		warhornDefensive = new ItemWarhornDefensive();
 		
+		// Fantasy
+		clawWood = new ItemClawWood(clawWoodTM);
+		clawStone = new ItemClawStone(clawStoneTM);
+		clawIron = new ItemClawIron(clawIronTM);
+		clawGold = new ItemClawGold(clawGoldTM);
+		clawDiamond = new ItemClawDiamond(clawDiamondTM);
+		clawSwordWood = new ItemClawSwordWood(clawSwordWoodTM);
+		clawSwordStone = new ItemClawSwordStone(clawSwordStoneTM);
+		clawSwordIron = new ItemClawSwordIron(clawSwordIronTM);
+		clawSwordGold = new ItemClawSwordGold(clawSwordGoldTM);
+		clawSwordDiamond = new ItemClawSwordDiamond(clawSwordDiamondTM);
+		claymoreWood = new ItemClaymoreWood(claymoreWoodTM);
+		claymoreStone = new ItemClaymoreStone(claymoreStoneTM);
+		claymoreIron = new ItemClaymoreIron(claymoreIronTM);
+		claymoreGold = new ItemClaymoreGold(claymoreGoldTM);
+		claymoreDiamond = new ItemClaymoreDiamond(claymoreDiamondTM);
+		longClaymoreWood = new ItemLongClaymoreWood(longClaymoreWoodTM);
+		longClaymoreStone = new ItemLongClaymoreStone(longClaymoreStoneTM);
+		longClaymoreIron = new ItemLongClaymoreIron(longClaymoreIronTM);
+		longClaymoreGold = new ItemLongClaymoreGold(longClaymoreGoldTM);
+		longClaymoreDiamond = new ItemLongClaymoreDiamond(longClaymoreDiamondTM);
+		fantasySwordWood = new ItemFantasySwordWood(fantasySwordWoodTM);
+		fantasySwordStone = new ItemFantasySwordStone(fantasySwordStoneTM);
+		fantasySwordIron = new ItemFantasySwordIron(fantasySwordIronTM);
+		fantasySwordGold = new ItemFantasySwordGold(fantasySwordGoldTM);
+		fantasySwordDiamond = new ItemFantasySwordDiamond(fantasySwordDiamondTM);
+		lightBow = new ItemLightBow();
+		shadowBow = new ItemShadowBow();
 		
 /** TEMPLATE		
 		Wood = new ItemWood(WoodTM);
@@ -743,6 +857,34 @@ public class ModItems {
 		NameUtils.setNames(warhornDefensive, "warhorn_defensive");
 		NameUtils.setNames(warhornOffensive, "warhorn_offensive");
 		
+		//Fantasy
+		NameUtils.setNames(clawWood, "claw_wood");
+		NameUtils.setNames(clawStone, "claw_stone");
+		NameUtils.setNames(clawIron, "claw_iron");
+		NameUtils.setNames(clawGold, "claw_gold");
+		NameUtils.setNames(clawDiamond, "claw_diamond");
+		NameUtils.setNames(claymoreWood, "claymore_wood");
+		NameUtils.setNames(claymoreStone, "claymore_stone");
+		NameUtils.setNames(claymoreIron, "claymore_iron");
+		NameUtils.setNames(claymoreGold, "claymore_gold");
+		NameUtils.setNames(claymoreDiamond, "claymore_diamond");
+		NameUtils.setNames(clawSwordWood, "claw_sword_wood");
+		NameUtils.setNames(clawSwordStone, "claw_sword_stone");
+		NameUtils.setNames(clawSwordIron, "claw_sword_iron");
+		NameUtils.setNames(clawSwordGold, "claw_sword_gold");
+		NameUtils.setNames(clawSwordDiamond, "claw_sword_diamond");
+		NameUtils.setNames(longClaymoreWood, "long_claymore_wood");
+		NameUtils.setNames(longClaymoreStone, "long_claymore_stone");
+		NameUtils.setNames(longClaymoreIron, "long_claymore_iron");
+		NameUtils.setNames(longClaymoreGold, "long_claymore_gold");
+		NameUtils.setNames(longClaymoreDiamond, "long_claymore_diamond");
+		NameUtils.setNames(fantasySwordWood, "fantasy_sword_wood");
+		NameUtils.setNames(fantasySwordStone, "fantasy_sword_stone");
+		NameUtils.setNames(fantasySwordIron, "fantasy_sword_iron");
+		NameUtils.setNames(fantasySwordGold, "fantasy_sword_gold");
+		NameUtils.setNames(fantasySwordDiamond, "fantasy_sword_diamond");
+		NameUtils.setNames(lightBow, "light_bow");
+		NameUtils.setNames(shadowBow, "shadow_bow");
 
 		
 		
@@ -927,6 +1069,35 @@ public class ModItems {
 		registerItem(wandMaelstrom);
 		registerItem(warhornDefensive);
 		registerItem(warhornOffensive);
+		
+		// Fantasy
+		registerItem(clawWood);
+		registerItem(clawStone);
+		registerItem(clawIron);
+		registerItem(clawGold);
+		registerItem(clawDiamond);
+		registerItem(clawSwordWood);
+		registerItem(clawSwordStone);
+		registerItem(clawSwordIron);
+		registerItem(clawSwordGold);
+		registerItem(clawSwordDiamond);
+		registerItem(claymoreWood);
+		registerItem(claymoreStone);
+		registerItem(claymoreIron);
+		registerItem(claymoreGold);
+		registerItem(claymoreDiamond);
+		registerItem(longClaymoreWood);
+		registerItem(longClaymoreStone);
+		registerItem(longClaymoreIron);
+		registerItem(longClaymoreGold);
+		registerItem(longClaymoreDiamond);
+		registerItem(fantasySwordWood);
+		registerItem(fantasySwordStone);
+		registerItem(fantasySwordIron);
+		registerItem(fantasySwordGold);
+		registerItem(fantasySwordDiamond);
+		registerItem(lightBow);
+		registerItem(shadowBow);
 		
 		
 		

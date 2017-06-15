@@ -214,6 +214,34 @@ item.wand_maelstrom.name=Malstrom Zauberstab
 item.warhorn_offensive.name=Ofensives Kriegshorn
 item.warhorn_defensive.name=Defensives Kriegshorn
 
+//Fantasy
+item.claw_wood.name=Holz Klaue
+item.claw_stone.name=Stein Klaue
+item.claw_iron.name=Eisen Klaue
+item.claw_gold.name=Gold Klaue
+item.claw_diamond.name=Diamant Klaue
+item.claw_sword_wood.name=Holz Klauenschwert
+item.claw_sword_stone.name=Stein Klauenschwert
+item.claw_sword_iron.name=Eisen Klauenschwert
+item.claw_sword_gold.name=Gold Klauenschwert
+item.claw_sword_diamond.name=Diamant Klauenschwert
+item.claymore_wood.name=Holz Breitschwert
+item.claymore_stone.name=Stein Breitschwert
+item.claymore_iron.name=Eisen Breitschwert
+item.claymore_gold.name=Gold Breitschwert
+item.claymore_diamond.name=Diamant Breitschwert
+item.long_claymore_wood.name=Langes Holz Breitschwert
+item.long_claymore_stone.name=Langes Stein Breitschwert
+item.long_claymore_iron.name=Langes Eisen Breitschwert
+item.long_claymore_gold.name=Langes Gold Breitschwert
+item.long_claymore_diamond.name=Langes Diamant  Breitschwert
+item.fantasy_sword_wood.name=Holz Fantasy Schwert
+item.fantasy_sword_stone.name=Stein Fantasy Schwert
+item.fantasy_sword_iron.name=Eisen Fantasy Schwert
+item.fantasy_sword_gold.name=Gold Fantasy Schwert
+item.fantasy_sword_diamond.name=Diamant Fantasy Schwert
+item.light_bow.name=Licht Bogen
+item.shadow_bow.name=Schatten Bogen
 
 
 /** TEMPLATE **/

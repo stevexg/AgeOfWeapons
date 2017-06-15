@@ -222,7 +222,11 @@ public class CraftingManagerTableOfAges {
   	this.addRecipeTOA(new ItemStack(ModItems.ax), 1, " oo", " xo", " x ", 'x', Items.STICK, 'o', ModItems.rock);
   	this.addRecipeTOA(new ItemStack(ModItems.throwWood), 1, "  x", " x ", "x  ", 'x', Items.STICK);
   	this.addRecipeTOA(new ItemStack(ModItems.cavemanSpear), 1, "   ", " x ", " x ", 'x', Items.STICK);
-
+  	this.addRecipeTOA(new ItemStack(ModItems.cavemanBoots), 1, "   ", "x x", "o o", 'x', Items.STRING, 'o', Items.LEATHER);
+  	this.addRecipeTOA(new ItemStack(ModItems.cavemanChestplate), 1, "o  ", "oo ", "ooo", 'o', Items.LEATHER);
+  	this.addRecipeTOA(new ItemStack(ModItems.cavemanLeggings), 1, "ooo", "   ", "   ", 'o', Items.LEATHER);
+  	this.addRecipeTOA(new ItemStack(ModItems.cavemanHelmet), 1, "xox", "o o", "   ", 'x', Items.STRING, 'o', Items.LEATHER);
+  	
   	/** Antiquity **/
   	this.addRecipeTOA(new ItemStack(ModItems.kniveWood), 2, "   ", " o ", " x ", 'x', Items.STICK, 'o', ModItems.woodShard);
   	this.addRecipeTOA(new ItemStack(ModItems.kniveStone), 2, "   ", " o ", " x ", 'x', Items.STICK, 'o', ModItems.stoneShard);
@@ -327,10 +331,35 @@ public class CraftingManagerTableOfAges {
   	this.addRecipeTOA(new ItemStack(ModItems.warhornDefensive), 3, "x x", " xo", "  x", 'x', Items.IRON_INGOT, 'o', Items.EMERALD); 
   	this.addRecipeTOA(new ItemStack(ModItems.warhornOffensive), 3, "x x", " xo", "  x", 'x', Items.IRON_INGOT, 'o', ModItems.topaz); 
 
-    
-    
-    
-    
+  	/** Fantasy **/
+  	this.addRecipeTOA(new ItemStack(ModItems.clawWood), 8, "xxx", "oxo", " o ", 'x', ModItems.kniveWood, 'o', ModItems.ironStick); 
+  	this.addRecipeTOA(new ItemStack(ModItems.clawStone), 8, "xxx", "oxo", " o ", 'x', ModItems.kniveStone, 'o', ModItems.ironStick); 
+  	this.addRecipeTOA(new ItemStack(ModItems.clawIron), 8, "xxx", "oxo", " o ", 'x', ModItems.kniveIron, 'o', ModItems.ironStick); 
+  	this.addRecipeTOA(new ItemStack(ModItems.clawGold), 8, "xxx", "oxo", " o ", 'x', ModItems.kniveGold, 'o', ModItems.ironStick); 
+  	this.addRecipeTOA(new ItemStack(ModItems.clawDiamond), 8, "xxx", "oxo", " o ", 'x', ModItems.kniveDiamond, 'o', ModItems.ironStick); 
+  	this.addRecipeTOA(new ItemStack(ModItems.clawSwordWood), 8, "   ", "x x", " o ", 'x', ModItems.swordBladeWood, 'o', ModItems.swordHandle); 
+  	this.addRecipeTOA(new ItemStack(ModItems.clawSwordStone), 8, "   ", "x x", " o ", 'x', ModItems.swordBladeStone, 'o', ModItems.swordHandle); 
+  	this.addRecipeTOA(new ItemStack(ModItems.clawSwordIron), 8, "   ", "x x", " o ", 'x', ModItems.swordBladeIron, 'o', ModItems.swordHandle); 
+  	this.addRecipeTOA(new ItemStack(ModItems.clawSwordGold), 8, "   ", "x x", " o ", 'x', ModItems.swordBladeGold, 'o', ModItems.swordHandle); 
+  	this.addRecipeTOA(new ItemStack(ModItems.clawSwordDiamond), 8, "   ", "x x", " o ", 'x', ModItems.swordBladeDiamond, 'o', ModItems.swordHandle); 
+  	this.addRecipeTOA(new ItemStack(ModItems.claymoreWood), 8, "   ", " x ", " o ", 'x', ModItems.broadBladeWood, 'o', ModItems.swordHandle); 
+  	this.addRecipeTOA(new ItemStack(ModItems.claymoreStone), 8, "   ", " x ", " o ", 'x', ModItems.broadBladeStone, 'o', ModItems.swordHandle); 
+  	this.addRecipeTOA(new ItemStack(ModItems.claymoreIron), 8, "   ", " x ", " o ", 'x', ModItems.broadBladeIron, 'o', ModItems.swordHandle); 
+  	this.addRecipeTOA(new ItemStack(ModItems.claymoreGold), 8, "   ", " x ", " o ", 'x', ModItems.broadBladeGold, 'o', ModItems.swordHandle); 
+  	this.addRecipeTOA(new ItemStack(ModItems.claymoreDiamond), 8, "   ", " x ", " o ", 'x', ModItems.broadBladeDiamond, 'o', ModItems.swordHandle); 
+	this.addRecipeTOA(new ItemStack(ModItems.longClaymoreWood), 8, " x ", " x ", " o ", 'x', ModItems.broadBladeWood, 'o', ModItems.swordHandle); 
+  	this.addRecipeTOA(new ItemStack(ModItems.longClaymoreStone), 8, " x ", " x ", " o ", 'x', ModItems.broadBladeStone, 'o', ModItems.swordHandle); 
+  	this.addRecipeTOA(new ItemStack(ModItems.longClaymoreIron), 8, " x ", " x ", " o ", 'x', ModItems.broadBladeIron, 'o', ModItems.swordHandle); 
+  	this.addRecipeTOA(new ItemStack(ModItems.longClaymoreGold), 8, " x ", " x ", " o ", 'x', ModItems.broadBladeGold, 'o', ModItems.swordHandle); 
+  	this.addRecipeTOA(new ItemStack(ModItems.longClaymoreDiamond), 8, " x ", " x ", " o ", 'x', ModItems.broadBladeDiamond, 'o', ModItems.swordHandle); 
+  	this.addRecipeTOA(new ItemStack(ModItems.fantasySwordWood), 8, " xi", "ixi", " o ", 'x', ModItems.broadBladeWood, 'o', ModItems.swordHandle, 'i', ModItems.woodShard); 
+  	this.addRecipeTOA(new ItemStack(ModItems.fantasySwordStone), 8, " xi", "ixi", " o ", 'x', ModItems.broadBladeStone, 'o', ModItems.swordHandle, 'i', ModItems.stoneShard); 
+  	this.addRecipeTOA(new ItemStack(ModItems.fantasySwordIron), 8, " xi", "ixi", " o ", 'x', ModItems.broadBladeIron, 'o', ModItems.swordHandle, 'i', ModItems.ironShard); 
+  	this.addRecipeTOA(new ItemStack(ModItems.fantasySwordGold), 8, " xi", "ixi", " o ", 'x', ModItems.broadBladeGold, 'o', ModItems.swordHandle, 'i', ModItems.goldShard); 
+  	this.addRecipeTOA(new ItemStack(ModItems.fantasySwordDiamond), 8, " xi", "ixi", " o ", 'x', ModItems.broadBladeDiamond, 'o', ModItems.swordHandle, 'i', ModItems.diamondShard); 
+  	this.addShapelessRecipeTOA(new ItemStack(ModItems.lightBow), 3, Items.BOW, Items.GLOWSTONE_DUST, Items.GLOWSTONE_DUST, Items.GLOWSTONE_DUST);
+  	this.addShapelessRecipeTOA(new ItemStack(ModItems.shadowBow), 3, Items.BOW, Items.FIREWORK_CHARGE, Items.FIREWORK_CHARGE, Items.FIREWORK_CHARGE);
+
 
     }
 

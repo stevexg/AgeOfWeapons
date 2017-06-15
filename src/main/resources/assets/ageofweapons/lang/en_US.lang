@@ -212,6 +212,35 @@ item.wand_maelstrom.name=Maelstrom Wand
 item.warhorn_offensive.name=Offensive Warhorn
 item.warhorn_defensive.name=Defensive Warhorn
 
+//Fantasy
+item.claw_wood.name=Wooden Claw
+item.claw_stone.name=Stone Claw
+item.claw_iron.name=Iron Claw
+item.claw_gold.name=Golden Claw
+item.claw_diamond.name=Diamond Claw
+item.claw_sword_wood.name=Wooden Claw Sword
+item.claw_sword_stone.name=Stone Claw Sword
+item.claw_sword_iron.name=Iron Claw Sword
+item.claw_sword_gold.name=Golden Claw Sword
+item.claw_sword_diamond.name=Diamond Claw Sword
+item.claymore_wood.name=Wooden Claymore
+item.claymore_stone.name=Stone Claymore
+item.claymore_iron.name=Iron Claymore
+item.claymore_gold.name=Golden Claymore
+item.claymore_diamond.name=Diamond Claymore
+item.long_claymore_wood.name=Long Wooden Claymore
+item.long_claymore_stone.name=Long Stone Claymore
+item.long_claymore_iron.name=Long Iron Claymore
+item.long_claymore_gold.name=Long Golden Claymore
+item.long_claymore_diamond.name=Long Diamond Claymore
+item.fantasy_sword_wood.name=Wooden Fantasy Sword
+item.fantasy_sword_stone.name=Stone Fantasy Sword
+item.fantasy_sword_iron.name=Iron Fantasy Sword
+item.fantasy_sword_gold.name=Golden Fantasy Sword
+item.fantasy_sword_diamond.name=Diamond Fantasy Sword
+item.light_bow.name=Light Bow
+item.shadow_bow.name=Shadow Bow
+
 
 
 

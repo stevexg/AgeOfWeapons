@@ -26,7 +26,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 public class AgeOfWeapons {
    
     public static final String MODID = "ageofweapons";
-    public static final String VERSION = "0.5.0";
+    public static final String VERSION = "0.6.0";
 
    
     @Instance("ageofweapons")
@@ -36,7 +36,6 @@ public class AgeOfWeapons {
     public static ServerProxy proxy;
 
     //TODO Steve: JEI Support, ThrowWood/Caveman Spear, creativ upgrade fixen, Schusswaffen, Crusher, schauen wegen OreRecipes, Weapon Box, item das einen block setzt...weil ich das ned hinkriege xD ._.
-    
 
     
     // Items //
@@ -72,6 +71,8 @@ public class AgeOfWeapons {
     public static boolean activateFantasy;
     public static boolean activateEpic;
     public static boolean activateFuture;
+    
+    public static float battleAxeMultiplier;					//TODO later (for all weapon types)
 
 
 

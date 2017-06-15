@@ -16,7 +16,7 @@ import net.minecraft.item.ItemStack;
 public class ItemAx extends ItemCustomAxe {
 
     public ItemAx(ToolMaterial material) {
-        super(material, -2.8F);
+        super(material, 1.2F);
         
         this.setCreativeTab(ModTabs.stoneAgeTab);
         this.setMaxStackSize(1);

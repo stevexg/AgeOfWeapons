@@ -47,7 +47,7 @@ public class ItemWarhornOffensive extends Item {
     public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn) {
 	        ItemStack itemstack = playerIn.getHeldItem(handIn);
 
-    		worldIn.playSound((EntityPlayer)null, playerIn.posX, playerIn.posY, playerIn.posZ, SoundEvents.ENTITY_ENDERDRAGON_GROWL, SoundCategory.PLAYERS, 0.5F, 0.5F / (itemRand.nextFloat() * 0.4F + 0.8F));
+    		worldIn.playSound((EntityPlayer)null, playerIn.posX, playerIn.posY, playerIn.posZ, SoundEvents.ENTITY_ENDERDRAGON_GROWL, SoundCategory.PLAYERS, 8.0F, 0.5F / (itemRand.nextFloat() * 0.4F + 0.8F));
 	    		playerIn.getCooldownTracker().setCooldown(this, 20000);
 	    		
 	    if(!worldIn.isRemote) {        

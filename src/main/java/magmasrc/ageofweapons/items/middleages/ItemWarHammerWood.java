@@ -62,10 +62,10 @@ public class ItemWarHammerWood extends ItemCustomWeapon {
 	            IBlockState iblockstate = worldIn.getBlockState(pos);
 	            Block block = iblockstate.getBlock();
 
-	            if (facing != EnumFacing.DOWN && worldIn.getBlockState(pos.up()).getMaterial() == Material.AIR && block == Blocks.GRASS)
+	            if (facing != EnumFacing.DOWN && block == Blocks.STONE)
 	            {
-	                IBlockState iblockstate1 = Blocks.GRASS_PATH.getDefaultState();
-	                worldIn.playSound(player, pos, SoundEvents.ITEM_SHOVEL_FLATTEN, SoundCategory.BLOCKS, 1.0F, 1.0F);
+	                IBlockState iblockstate1 = Blocks.COBBLESTONE.getDefaultState();
+	                worldIn.playSound(player, pos, SoundEvents.BLOCK_STONE_BREAK, SoundCategory.BLOCKS, 1.0F, 1.0F);
 
 	                if (!worldIn.isRemote)
 	                {
