@@ -1,4 +1,4 @@
-﻿
+ï»¿
 itemGroup.generalTab=Age of Weapons
 itemGroup.stoneAgeTab=AoW: Steinzeit
 itemGroup.antiquityTab=AoW: Antike
@@ -10,7 +10,7 @@ itemGroup.edoTab=AoW: Edo Zeit
 itemGroup.mysticTab=AoW: Mystik
 itemGroup.fantasyTab=AoW: Fantasy
 itemGroup.bbyTab=AoW: VSY
-itemGroup.epicTab=AoW: Epik
+itemGroup.epicTab=AoW: Episch
 itemGroup.futureTab=Aow: Zukunft
 
 
@@ -135,11 +135,11 @@ item.dagger_stone.name=Stein Dolch
 item.dagger_iron.name=Eisen Dolch
 item.dagger_gold.name=Gold Dolch
 item.dagger_diamond.name=Diamant Dolch
-item.skewer_wood.name=Holz Spie�
-item.skewer_stone.name=Stein Spie�
-item.skewer_iron.name=Eisen Spie�
-item.skewer_gold.name=Gold Spie�
-item.skewer_diamond.name=Diamant Spie�
+item.skewer_wood.name=Holz Spieß
+item.skewer_stone.name=Stein Spieß
+item.skewer_iron.name=Eisen Spieß
+item.skewer_gold.name=Gold Spieß
+item.skewer_diamond.name=Diamant Spieß
 item.recurve_bow.name=Recurve Bogen
 
 
@@ -242,6 +242,29 @@ item.fantasy_sword_gold.name=Gold Fantasy Schwert
 item.fantasy_sword_diamond.name=Diamant Fantasy Schwert
 item.light_bow.name=Licht Bogen
 item.shadow_bow.name=Schatten Bogen
+
+//EdoPeriod
+item.katana_wood.name=Holz Katana
+item.katana_stone.name=Stein Katana
+item.katana_iron.name=Eisen Katana
+item.katana_gold.name=Gold Katana
+item.katana_diamond.name=Diamant Katana
+item.ninjato_wood.name=Holz Ninjatō
+item.ninjato_stone.name=Stein Ninjatō
+item.ninjato_iron.name=Eisen Ninjatō
+item.ninjato_gold.name=Gold Ninjatō
+item.ninjato_diamond.name=Diamant Ninjatō
+item.baton_iron.name=Eisen Kampfstab
+item.baton_wood.name=Holz Kampfstab
+item.blowgun.name=Blasrohr
+item.kunai.name=Kunai
+item.lash.name=Peitsche
+item.nunchuck_wood.name=Holz Nunchuck
+item.nunchuck_iron.name=Eisen Nunchuck
+item.throwing_star.name=Wurfstern
+item.throwing_knive_iron.name=Eisen Wurfmesser
+item.throwing_knive_gold.name=Gold Wurfmesser
+item.throwing_knive_diamond.name=Diamant Wurfmesser
 
 
 /** TEMPLATE **/

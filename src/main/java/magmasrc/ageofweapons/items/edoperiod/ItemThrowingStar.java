@@ -1,0 +1,31 @@
+package magmasrc.ageofweapons.items.edoperiod;
+
+import java.util.List;
+
+import com.mojang.realmsclient.gui.ChatFormatting;
+
+import magmasrc.ageofweapons.main.AgeOfWeapons;
+import magmasrc.ageofweapons.main.ModTabs;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+
+public class ItemThrowingStar extends Item {
+	
+	public ItemThrowingStar () {
+		super();
+		this.setCreativeTab(ModTabs.edoTab);
+	}
+	
+	
+    
+    @Override
+    public void addInformation(ItemStack stack, EntityPlayer playerIn, List addList, boolean advanced) {
+    	if(AgeOfWeapons.activateShowAges) {
+    		addList.add(ChatFormatting.DARK_GRAY + "Edo Period");
+    	}	
+    	
+		addList.add(ChatFormatting.RED + "Work in progress");
+    }
+
+}

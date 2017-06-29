@@ -209,7 +209,7 @@ public class CraftingManagerTableOfAges {
  }if(AgeOfWeapons.activateFuture) { 
     this.addRecipeTOA(new ItemStack(ModItems.upgradeFuture), 11, "xxx", "xox", "xxx", 'x', ModItems.emeraldShard, 'o', Blocks.EMERALD_BLOCK);
  }   
-  	//creativ upgrade geht nicht und upgrade zahlen komisch durcheinander !!!!!!!!!<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+  	//creativ upgrade geht nicht !!!!!!!!!<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
     /** Stone Age **/
     this.addShapelessRecipeTOA(new ItemStack(ModItems.rock, 4), 1, Blocks.COBBLESTONE);
@@ -357,11 +357,40 @@ public class CraftingManagerTableOfAges {
   	this.addRecipeTOA(new ItemStack(ModItems.fantasySwordIron), 8, " xi", "ixi", " o ", 'x', ModItems.broadBladeIron, 'o', ModItems.swordHandle, 'i', ModItems.ironShard); 
   	this.addRecipeTOA(new ItemStack(ModItems.fantasySwordGold), 8, " xi", "ixi", " o ", 'x', ModItems.broadBladeGold, 'o', ModItems.swordHandle, 'i', ModItems.goldShard); 
   	this.addRecipeTOA(new ItemStack(ModItems.fantasySwordDiamond), 8, " xi", "ixi", " o ", 'x', ModItems.broadBladeDiamond, 'o', ModItems.swordHandle, 'i', ModItems.diamondShard); 
-  	this.addShapelessRecipeTOA(new ItemStack(ModItems.lightBow), 3, Items.BOW, Items.GLOWSTONE_DUST, Items.GLOWSTONE_DUST, Items.GLOWSTONE_DUST);
-  	this.addShapelessRecipeTOA(new ItemStack(ModItems.shadowBow), 3, Items.BOW, Items.FIREWORK_CHARGE, Items.FIREWORK_CHARGE, Items.FIREWORK_CHARGE);
+  	this.addShapelessRecipeTOA(new ItemStack(ModItems.lightBow), 8, Items.BOW, Items.GLOWSTONE_DUST, Items.GLOWSTONE_DUST, Items.GLOWSTONE_DUST);
+  	this.addShapelessRecipeTOA(new ItemStack(ModItems.shadowBow), 8, Items.BOW, Items.FIREWORK_CHARGE, Items.FIREWORK_CHARGE, Items.FIREWORK_CHARGE);
 
+  	/** Edo Period **/
+  	this.addShapelessRecipeTOA(new ItemStack(ModItems.batonWood), 5, ModItems.woodLongstick);
+  	this.addShapelessRecipeTOA(new ItemStack(ModItems.batonIron), 5, ModItems.ironLongstick);
+  	this.addRecipeTOA(new ItemStack(ModItems.blowgun), 5, " x ", " x ", " x ", 'x', Items.REEDS); 
+  	this.addRecipeTOA(new ItemStack(ModItems.lash), 5, " oo", "o  ", " x ", 'x', Items.LEATHER, 'o', Items.STRING);
+  	this.addRecipeTOA(new ItemStack(ModItems.throwingStar), 5, " x ", "x x", " x ", 'x', ModItems.ironShard); 
+  	this.addRecipeTOA(new ItemStack(ModItems.kunai), 5, "   ", " x ", " o ", 'x', ModItems.ironShard, 'o', Blocks.TRIPWIRE_HOOK); 
+  	this.addRecipeTOA(new ItemStack(ModItems.nunchuckWood), 5, "x  ", " o ", "  x", 'x', Items.STICK, 'o', Items.STRING); 
+  	this.addRecipeTOA(new ItemStack(ModItems.nunchuckIron), 5, "x  ", " o ", "  x", 'x', ModItems.ironStick, 'o', Items.STRING); 
+  	this.addRecipeTOA(new ItemStack(ModItems.throwingKnifeIron), 5, "   ", " o ", " x ", 'x', ModItems.ironStick, 'o', ModItems.ironShard); 
+  	this.addRecipeTOA(new ItemStack(ModItems.throwingKnifeGold), 5, "   ", " o ", " x ", 'x', ModItems.ironStick, 'o', ModItems.goldShard); 
+  	this.addRecipeTOA(new ItemStack(ModItems.throwingKnifeDiamond), 5, "   ", " o ", " x ", 'x', ModItems.ironStick, 'o', ModItems.diamondShard); 
+  	this.addRecipeTOA(new ItemStack(ModItems.katanaWood), 5, "  o", " o ", "x ", 'x', ModItems.swordHandle, 'o', ModItems.swordBladeWood); 
+  	this.addRecipeTOA(new ItemStack(ModItems.katanaStone), 5, "  o", " o ", "x ", 'x', ModItems.swordHandle, 'o', ModItems.swordBladeStone); 
+  	this.addRecipeTOA(new ItemStack(ModItems.katanaIron), 5, "  o", " o ", "x ", 'x', ModItems.swordHandle, 'o', ModItems.swordBladeIron); 
+  	this.addRecipeTOA(new ItemStack(ModItems.katanaGold), 5, "  o", " o ", "x ", 'x', ModItems.swordHandle, 'o', ModItems.swordBladeGold); 
+  	this.addRecipeTOA(new ItemStack(ModItems.katanaDiamond), 5, "  o", " o ", "x ", 'x', ModItems.swordHandle, 'o', ModItems.swordBladeDiamond); 
+  	this.addRecipeTOA(new ItemStack(ModItems.ninjatoWood), 5, "  o", " o ", "x ", 'x', ModItems.ironStick, 'o', ModItems.swordBladeWood); 
+  	this.addRecipeTOA(new ItemStack(ModItems.ninjatoStone), 5, "  o", " o ", "x ", 'x', ModItems.ironStick, 'o', ModItems.swordBladeStone); 
+  	this.addRecipeTOA(new ItemStack(ModItems.ninjatoIron), 5, "  o", " o ", "x ", 'x', ModItems.ironStick, 'o', ModItems.swordBladeIron); 
+  	this.addRecipeTOA(new ItemStack(ModItems.ninjatoGold), 5, "  o", " o ", "x ", 'x', ModItems.ironStick, 'o', ModItems.swordBladeGold); 
+  	this.addRecipeTOA(new ItemStack(ModItems.ninjatoDiamond), 5, "  o", " o ", "x ", 'x', ModItems.ironStick, 'o', ModItems.swordBladeDiamond); 
+
+
+  	
+  	
+  	
 
     }
+    
+    
 
     public  ShapedRecipesTableOfAges addRecipeTOA(ItemStack stack, int neededModule, Object... recipeComponents)
     {

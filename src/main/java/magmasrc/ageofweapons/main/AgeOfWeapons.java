@@ -1,9 +1,9 @@
 package magmasrc.ageofweapons.main;
 
-import magmasrc.ageofweapons.proxy.ClientProxy;
 import magmasrc.ageofweapons.proxy.ServerProxy;
 import magmasrc.ageofweapons.util.Events;
 import magmasrc.ageofweapons.util.LootHandler;
+import magmasrc.ageofweapons.util.OreDictionaryHandler;
 import magmasrc.ageofweapons.util.UpdateChecker;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
@@ -26,7 +26,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 public class AgeOfWeapons {
    
     public static final String MODID = "ageofweapons";
-    public static final String VERSION = "0.6.0";
+    public static final String VERSION = "0.7.0";
 
    
     @Instance("ageofweapons")
@@ -162,7 +162,10 @@ public class AgeOfWeapons {
 
          
          /** Handler **/
-         
+        
+     	// OreDictionary //
+     	OreDictionaryHandler.registerOreDictionary();
+       
       	 // Loot Gen //
      	 MinecraftForge.EVENT_BUS.register(new LootHandler());
 

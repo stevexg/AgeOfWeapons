@@ -3,6 +3,7 @@ package magmasrc.ageofweapons.main;
 import magmasrc.ageofweapons.items.*;
 import magmasrc.ageofweapons.items.antiquity.*;
 import magmasrc.ageofweapons.items.earlymodernage.*;
+import magmasrc.ageofweapons.items.edoperiod.*;
 import magmasrc.ageofweapons.items.fantasy.*;
 import magmasrc.ageofweapons.items.middleages.*;
 import magmasrc.ageofweapons.items.mystic.*;
@@ -23,6 +24,8 @@ public class ModItems {
 	/** Armor-Materials **/
 	
 	public static ArmorMaterial cavemanAM;
+	public static ArmorMaterial assassinAM;
+	public static ArmorMaterial ninjaAM;
 	
 
 	/** Tool-Materials **/
@@ -124,6 +127,28 @@ public class ModItems {
 	public static ToolMaterial fantasySwordIronTM;
 	public static ToolMaterial fantasySwordGoldTM;
 	public static ToolMaterial fantasySwordDiamondTM;
+	
+	public static ToolMaterial batonIronTM;
+	public static ToolMaterial batonWoodTM;
+	public static ToolMaterial katanaWoodTM;
+	public static ToolMaterial katanaStoneTM;
+	public static ToolMaterial katanaIronTM;
+	public static ToolMaterial katanaGoldTM;
+	public static ToolMaterial katanaDiamondTM;
+	public static ToolMaterial ninjatoWoodTM;
+	public static ToolMaterial ninjatoStoneTM;
+	public static ToolMaterial ninjatoIronTM;
+	public static ToolMaterial ninjatoGoldTM;
+	public static ToolMaterial ninjatoDiamondTM;
+	public static ToolMaterial kunaiTM;
+	public static ToolMaterial lashTM;
+	public static ToolMaterial nunchuckWoodTM;
+	public static ToolMaterial nunchuckIronTM;
+	public static ToolMaterial throwingKniveIronTM;
+	public static ToolMaterial throwingKniveGoldTM;
+	public static ToolMaterial throwingKniveDiamondTM;
+
+	
 
 	
 	
@@ -324,11 +349,33 @@ public class ModItems {
 	public static Item lightBow;
 	public static Item shadowBow;
 	
+	// Edo Period
+	public static Item batonWood;
+	public static Item batonIron;
+	public static Item blowgun;
+	public static Item katanaWood;
+	public static Item katanaStone;
+	public static Item katanaIron;
+	public static Item katanaGold;
+	public static Item katanaDiamond;	
+	public static Item ninjatoWood;
+	public static Item ninjatoStone;
+	public static Item ninjatoIron;
+	public static Item ninjatoGold;
+	public static Item ninjatoDiamond;
+	public static Item kunai;
+	public static Item lash;
+	public static Item nunchuckWood;
+	public static Item nunchuckIron;
+	public static Item throwingStar;
+	public static Item throwingKnifeIron;
+	public static Item throwingKnifeGold;
+	public static Item throwingKnifeDiamond;
 	
 	
-	  //TODO: Zukünftige Items so formatieren=         <GEGENSTAND><MATERIAL>     (example: swordIron, "sword_iron")
-	  //
-	  // ist übersichtlicher in den ordnern
+	
+	  //Items so formatieren:     <GEGENSTAND><MATERIAL>     (example: swordIron, "sword_iron")
+
 	
 		
 		
@@ -419,7 +466,7 @@ public class ModItems {
 		multiToolDiamondTM = EnumHelper.addToolMaterial("multiToolDiamond",        3, 1000,  8.0F,   7.0F, 10);
         															//     harv.lvl, uses, efficy., dmg., enchant.,
 		mysticKniveTM = EnumHelper.addToolMaterial("mysticKnive",                  3,  250,  1.0F,  6.50F, 40);
-
+																	//     harv.lvl, uses, efficy., dmg., enchant.,
 		clawWoodTM = EnumHelper.addToolMaterial("clawWood",         	           0,   50,  2.0F,   5.5F, 18);
 		clawStoneTM = EnumHelper.addToolMaterial("clawStone",            	       1,  120,  4.0F,   6.0F,  8);
 		clawIronTM = EnumHelper.addToolMaterial("clawIron",                  	   2,  240,  6.0F,   6.5F, 17);
@@ -445,6 +492,28 @@ public class ModItems {
 		fantasySwordIronTM = EnumHelper.addToolMaterial("fantasySwordIron",        2,  750,  6.0F,   9.0F, 19);
 		fantasySwordGoldTM = EnumHelper.addToolMaterial("fantasySwordGold",        0,  480, 12.0F,   8.3F, 27);
 		fantasySwordDiamondTM = EnumHelper.addToolMaterial("fantasySwordDiamond",  3, 1950,  8.0F,  10.0F, 15);
+																	//     harv.lvl, uses, efficy., dmg., enchant.,
+		katanaWoodTM = EnumHelper.addToolMaterial("katanaWood",                    0,  550,  2.0F,   7.0F, 15);
+		katanaStoneTM = EnumHelper.addToolMaterial("katanaStone",                  1,  700,  4.0F,   7.5F,  5);
+		katanaIronTM = EnumHelper.addToolMaterial("katanaIron",                    2,  850,  6.0F,   8.0F, 14);
+		katanaGoldTM = EnumHelper.addToolMaterial("katanaGold",                    0,  580, 12.0F,   7.3F, 22);
+		katanaDiamondTM = EnumHelper.addToolMaterial("katanaDiamond",              3, 2050,  8.0F,   8.5F, 15);
+		ninjatoWoodTM = EnumHelper.addToolMaterial("ninjatoWood",                  0,  600,  2.0F,   6.5F, 15);
+		ninjatoStoneTM = EnumHelper.addToolMaterial("ninjatoStone",                1,  700,  4.0F,   7.0F,  5);
+		ninjatoIronTM = EnumHelper.addToolMaterial("ninjatoIron",                  2,  900,  6.0F,   7.5F, 14);
+		ninjatoGoldTM = EnumHelper.addToolMaterial("ninjatoGold",                  0,  650, 12.0F,   6.8F, 22);
+		ninjatoDiamondTM = EnumHelper.addToolMaterial("ninjatoDiamond",            3, 2100,  8.0F,   8.0F, 13);
+		kunaiTM = EnumHelper.addToolMaterial("kunai",                              0,   80,  1.0F,   1.3F, 10);
+		throwingKniveIronTM = EnumHelper.addToolMaterial("throwingKniveIron",      0,   50,  1.0F,   1.5F,  8);
+		throwingKniveGoldTM = EnumHelper.addToolMaterial("throwingKniveGold",      0,   20,  1.0F,   2.0F, 15);
+		throwingKniveDiamondTM = EnumHelper.addToolMaterial("throwingKniveDiamond",0,  100,  1.0F,   2.5F, 10);
+		lashTM = EnumHelper.addToolMaterial("lash",                                0,  120,  1.0F,   1.5F,  0);
+		batonWoodTM = EnumHelper.addToolMaterial("batonWood",                      0,  100,  1.0F,   2.0F,  5);
+		batonIronTM = EnumHelper.addToolMaterial("batonIron",                      0,  300,  1.0F,   2.8F, 10);
+		nunchuckWoodTM = EnumHelper.addToolMaterial("nunchuckWood",                0,  100,  8.0F,   2.5F,  8);
+		nunchuckIronTM = EnumHelper.addToolMaterial("nunchuckIron",                0,  300,  8.0F,   3.3F, 10);
+
+		
 		
 /** TEMPLATE		
 		WoodTM = EnumHelper.addToolMaterial("Wood",                  0,  x,  2.0F,   xF, 15);
@@ -452,6 +521,12 @@ public class ModItems {
 		IronTM = EnumHelper.addToolMaterial("Iron",                  2,  x,  6.0F,   xF, 14);
 		GoldTM = EnumHelper.addToolMaterial("Gold",                  0,  x, 12.0F,   xF, 22);
 		DiamondTM = EnumHelper.addToolMaterial("Diamond",            3,  x,  8.0F,   xF, 10);
+		
+		
+		
+		
+		
+		
 		
 																			Default Materials, Tools			     Sword dmg.
 																	WOOD          (0,   59,  2.0F,  0.0F,  15);			4.0F
@@ -673,6 +748,30 @@ public class ModItems {
 		lightBow = new ItemLightBow();
 		shadowBow = new ItemShadowBow();
 		
+		//Edo Period
+		katanaWood = new ItemKatanaWood(katanaWoodTM);
+		katanaStone = new ItemKatanaStone(katanaStoneTM);
+		katanaIron = new ItemKatanaIron(katanaIronTM);
+		katanaGold = new ItemKatanaGold(katanaGoldTM);
+		katanaDiamond = new ItemKatanaDiamond(katanaDiamondTM);
+		ninjatoWood = new ItemNinjatoWood(ninjatoWoodTM);
+		ninjatoStone = new ItemNinjatoStone(ninjatoStoneTM);
+		ninjatoIron = new ItemNinjatoIron(ninjatoIronTM);
+		ninjatoGold = new ItemNinjatoGold(ninjatoGoldTM);
+		ninjatoDiamond = new ItemNinjatoDiamond(ninjatoDiamondTM);
+		batonWood = new ItemBatonWood(batonWoodTM);
+		batonIron = new ItemBatonIron(batonIronTM);
+		blowgun = new ItemBlowgun();
+		kunai = new ItemKunai(kunaiTM);
+		lash = new ItemLash(lashTM);
+		throwingStar = new ItemThrowingStar();
+		nunchuckWood = new ItemNunchuckWood(nunchuckWoodTM);
+		nunchuckIron = new ItemNunchuckIron(nunchuckIronTM);
+		throwingKnifeIron = new ItemThrowingKniveIron(throwingKniveIronTM);
+		throwingKnifeGold = new ItemThrowingKniveGold(throwingKniveGoldTM);
+		throwingKnifeDiamond = new ItemThrowingKniveDiamond(throwingKniveDiamondTM);
+
+		
 /** TEMPLATE		
 		Wood = new ItemWood(WoodTM);
 		Stone = new ItemStone(StoneTM);
@@ -885,6 +984,30 @@ public class ModItems {
 		NameUtils.setNames(fantasySwordDiamond, "fantasy_sword_diamond");
 		NameUtils.setNames(lightBow, "light_bow");
 		NameUtils.setNames(shadowBow, "shadow_bow");
+		
+		//Edo Period
+		NameUtils.setNames(katanaWood, "katana_wood");
+		NameUtils.setNames(katanaStone, "katana_stone");
+		NameUtils.setNames(katanaIron, "katana_iron");
+		NameUtils.setNames(katanaGold, "katana_gold");
+		NameUtils.setNames(katanaDiamond, "katana_diamond");
+		NameUtils.setNames(ninjatoWood, "ninjato_wood");
+		NameUtils.setNames(ninjatoStone, "ninjato_stone");
+		NameUtils.setNames(ninjatoIron, "ninjato_iron");
+		NameUtils.setNames(ninjatoGold, "ninjato_gold");
+		NameUtils.setNames(ninjatoDiamond, "ninjato_diamond");
+		NameUtils.setNames(batonWood, "baton_wood");
+		NameUtils.setNames(batonIron, "baton_iron");
+		NameUtils.setNames(blowgun, "blowgun");
+		NameUtils.setNames(kunai, "kunai");
+		NameUtils.setNames(lash, "lash");
+		NameUtils.setNames(nunchuckWood, "nunchuck_wood");
+		NameUtils.setNames(nunchuckIron, "nunchuck_iron");
+		NameUtils.setNames(throwingStar, "throwing_star");
+		NameUtils.setNames(throwingKnifeIron, "throwing_knive_iron");
+		NameUtils.setNames(throwingKnifeGold, "throwing_knive_gold");
+		NameUtils.setNames(throwingKnifeDiamond, "throwing_knive_diamond");
+
 
 		
 		
@@ -1098,6 +1221,29 @@ public class ModItems {
 		registerItem(fantasySwordDiamond);
 		registerItem(lightBow);
 		registerItem(shadowBow);
+		
+		// Edo Period
+		registerItem(batonWood);
+		registerItem(batonIron);
+		registerItem(blowgun);
+		registerItem(katanaWood);
+		registerItem(katanaStone);
+		registerItem(katanaIron);
+		registerItem(katanaGold);
+		registerItem(katanaDiamond);
+		registerItem(throwingKnifeIron);
+		registerItem(throwingKnifeGold);
+		registerItem(throwingKnifeDiamond);
+		registerItem(throwingStar);
+		registerItem(kunai);
+		registerItem(ninjatoWood);
+		registerItem(ninjatoStone);
+		registerItem(ninjatoIron);
+		registerItem(ninjatoGold);
+		registerItem(ninjatoDiamond);
+		registerItem(nunchuckWood);
+		registerItem(nunchuckIron);
+		registerItem(lash);
 		
 		
 		

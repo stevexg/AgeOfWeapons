@@ -27,7 +27,7 @@ import com.mojang.realmsclient.gui.ChatFormatting;
 public class ItemMultiToolDiamond extends ItemTool {
 
     public ItemMultiToolDiamond(ToolMaterial material) {
-        super(-1.0F, 1.0F, ModItems.multiToolDiamondTM, Sets.newHashSet(Block.REGISTRY));
+        super(-1.0F, -3.0F, ModItems.multiToolDiamondTM, Sets.newHashSet(Block.REGISTRY));
         this.setCreativeTab(ModTabs.earlyModernAgeTab);
         this.setHarvestLevel("pickaxe", ModItems.multiToolDiamondTM.getHarvestLevel());
         this.setMaxStackSize(1);

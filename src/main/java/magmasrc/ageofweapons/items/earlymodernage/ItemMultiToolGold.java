@@ -27,7 +27,7 @@ import com.mojang.realmsclient.gui.ChatFormatting;
 public class ItemMultiToolGold extends ItemTool {
 
     public ItemMultiToolGold(ToolMaterial material) {
-        super(-1.0F, 1.0F, ModItems.multiToolGoldTM, Sets.newHashSet(Block.REGISTRY));
+        super(-1.0F, -3.0F, ModItems.multiToolGoldTM, Sets.newHashSet(Block.REGISTRY));
         this.setCreativeTab(ModTabs.earlyModernAgeTab);
         this.setHarvestLevel("pickaxe", ModItems.multiToolGoldTM.getHarvestLevel());
         this.setMaxStackSize(1);
