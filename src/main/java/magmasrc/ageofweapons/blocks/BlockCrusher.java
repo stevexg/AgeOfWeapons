@@ -1,10 +1,13 @@
 package magmasrc.ageofweapons.blocks;
 
 import java.util.List;
+import java.util.Random;
 
 import com.mojang.realmsclient.gui.ChatFormatting;
 
+import magmasrc.ageofweapons.main.ModBlocks;
 import magmasrc.ageofweapons.main.ModTabs;
+import magmasrc.ageofweapons.tileentitys.TileEntityCrusher;
 import net.minecraft.block.BlockDirectional;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
@@ -14,18 +17,31 @@ import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
+import net.minecraft.init.SoundEvents;
+import net.minecraft.inventory.Container;
+import net.minecraft.inventory.InventoryHelper;
 import net.minecraft.item.ItemStack;
+import net.minecraft.stats.StatList;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.tileentity.TileEntityFurnace;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.util.EnumHand;
+import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.Mirror;
 import net.minecraft.util.Rotation;
+import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class BlockCrusher extends BlockDirectional  {
 	
 
 	public static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
-
+    //private final boolean isBurning;
+    private static boolean keepInventory;
     
 	public BlockCrusher() {
 		super(Material.ROCK);
@@ -34,6 +50,8 @@ public class BlockCrusher extends BlockDirectional  {
 		this.setResistance(5.0F);
 		this.setSoundType(SoundType.STONE);		
 		this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
+        //this.isBurning = isBurning;
+
 
 	}
 
@@ -41,10 +59,123 @@ public class BlockCrusher extends BlockDirectional  {
 	
 		// Function
 
-	
 
+
+	    /**
+	     * Called when the block is right clicked by a player.
+	     */
+	    @Override
+	    public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ)
+	    {
+	        if (worldIn.isRemote)
+	        {
+	            return true;
+	        }
+	        else
+	        {
+	            TileEntity tileentity = worldIn.getTileEntity(pos);
+
+	            if (tileentity instanceof TileEntityFurnace)
+	            {
+	                playerIn.displayGUIChest((TileEntityFurnace)tileentity);
+	                playerIn.addStat(StatList.FURNACE_INTERACTION);
+	            }
+
+	            return true;
+	        }
+	    }
+
+
+
+	    public static void setState(boolean active, World worldIn, BlockPos pos)
+	    {
+	        IBlockState iblockstate = worldIn.getBlockState(pos);
+	        TileEntity tileentity = worldIn.getTileEntity(pos);
+	        keepInventory = true;
+
+	        if (active)
+	        {
+	            worldIn.setBlockState(pos, ModBlocks.crusherOn.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
+	            worldIn.setBlockState(pos, ModBlocks.crusherOn.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
+	        }
+	        else
+	        {
+	            worldIn.setBlockState(pos, ModBlocks.crusher.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
+	            worldIn.setBlockState(pos, ModBlocks.crusher.getDefaultState().withProperty(FACING, iblockstate.getValue(FACING)), 3);
+	        }
+
+	        keepInventory = false;
+
+	        if (tileentity != null)
+	        {
+	            tileentity.validate();
+	            worldIn.setTileEntity(pos, tileentity);
+	        }
+	    }
+
+	    /**
+	     * Returns a new instance of a block's tile entity class. Called on placing the block.
+	     */
+	    public TileEntity createNewTileEntity(World worldIn, int meta) {
+	        return new TileEntityCrusher();
+	    }    
 	
 	
+	    public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack)
+	    {
+	        worldIn.setBlockState(pos, state.withProperty(FACING, placer.getHorizontalFacing().getOpposite()), 2);
+
+	        if (stack.hasDisplayName())
+	        {
+	            TileEntity tileentity = worldIn.getTileEntity(pos);
+
+	            if (tileentity instanceof TileEntityFurnace)
+	            {
+	                ((TileEntityFurnace)tileentity).setCustomInventoryName(stack.getDisplayName());
+	            }
+	        }
+	    }
+
+	    /**
+	     * Called serverside after this block is replaced with another in Chunk, but before the Tile Entity is updated
+	     */
+	    @Override
+	    public void breakBlock(World worldIn, BlockPos pos, IBlockState state)
+	    {
+	        if (!keepInventory)
+	        {
+	            TileEntity tileentity = worldIn.getTileEntity(pos);
+
+	            if (tileentity instanceof TileEntityCrusher)
+	            {
+	                InventoryHelper.dropInventoryItems(worldIn, pos, (TileEntityCrusher)tileentity);
+	                worldIn.updateComparatorOutputLevel(pos, this);
+	            }
+	        }
+
+	        super.breakBlock(worldIn, pos, state);
+	    }
+
+	    @Override
+	    public boolean hasComparatorInputOverride(IBlockState state) {
+	        return true;
+	    }
+
+	    @Override
+	    public int getComparatorInputOverride(IBlockState blockState, World worldIn, BlockPos pos) {
+	        return Container.calcRedstone(worldIn.getTileEntity(pos));
+	    }
+
+	    @Override
+	    public ItemStack getItem(World worldIn, BlockPos pos, IBlockState state){
+	        return new ItemStack(ModBlocks.crusher);
+	    }
+	        
+ 
+	        
+	        
+	        
+	        
 	
 	
 		// Facing

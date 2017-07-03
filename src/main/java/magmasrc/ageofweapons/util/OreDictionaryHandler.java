@@ -48,6 +48,7 @@ public class OreDictionaryHandler {
 			OreDictionary.registerOre("longstickIron", ModItems.ironLongstick);
 			OreDictionary.registerOre("longstickWood", ModItems.woodLongstick);
 			OreDictionary.registerOre("lumber", ModItems.lumber);
+			OreDictionary.registerOre("cloth", ModItems.cloth);
 			OreDictionary.registerOre("gemRuby", ModItems.ruby);
 			OreDictionary.registerOre("gemSapphire", ModItems.sapphire);
 			OreDictionary.registerOre("gemAmethyst", ModItems.amethyst);

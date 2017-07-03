@@ -106,6 +106,7 @@ item.amethyst_shard.name=Amethyst Scherbe
 item.topaz_shard.name=Topas Scherbe
 item.glass_shard.name=Glas Scherbe
 item.hammer.name=Hammer
+item.cloth.name=Stoff
 
 
 //StoneAge
@@ -265,6 +266,14 @@ item.throwing_star.name=Wurfstern
 item.throwing_knive_iron.name=Eisen Wurfmesser
 item.throwing_knive_gold.name=Gold Wurfmesser
 item.throwing_knive_diamond.name=Diamant Wurfmesser
+item.assassin_helmet.name=Assassinen Kopfbedekung
+item.assassin_chestplate.name=Assassinen Harnisch
+item.assassin_leggings.name=Assassinen Beinschutz
+item.assassin_boots.name=Assassinen Stiefel
+item.ninja_helmet.name=Ninja Kopfbedekung
+item.ninja_chestplate.name=Ninja Mantel
+item.ninja_leggings.name=Ninja Hose
+item.ninja_boots.name=Ninja Stiefel
 
 
 /** TEMPLATE **/

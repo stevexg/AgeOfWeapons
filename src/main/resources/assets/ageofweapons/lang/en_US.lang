@@ -102,6 +102,7 @@ item.amber.name=Amber
 item.amethyst_shard.name=Amethyst Shard
 item.topaz_shard.name=Topaz Shard
 item.glass_shard.name=Glass Shard
+item.cloth.name=Cloth
 
 
 //StoneAge
@@ -263,6 +264,14 @@ item.throwing_star.name=Throwing Star
 item.throwing_knive_iron.name=Iron Throwing Knive
 item.throwing_knive_gold.name=Golden Throwing Knive
 item.throwing_knive_diamond.name=Diamond Throwing Knive
+item.assassin_helmet.name=Assassin Cap
+item.assassin_chestplate.name=Assassin Tunic
+item.assassin_leggings.name=Assassin Pants
+item.assassin_boots.name=Assassin Boots
+item.ninja_helmet.name=Ninja Cap
+item.ninja_chestplate.name=Ninja Tunic
+item.ninja_leggings.name=Ninja Pants
+item.ninja_boots.name=Ninja Boots
 
 
 

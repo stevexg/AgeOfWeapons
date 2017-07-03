@@ -6,9 +6,9 @@ import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 
-public class ItemCavemanArmor extends ItemArmor {
+public class ItemArmorCaveman extends ItemArmor {
 
-	public ItemCavemanArmor(ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn) {
+	public ItemArmorCaveman(ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn) {
 		super(materialIn, renderIndexIn, equipmentSlotIn);
 		this.setCreativeTab(ModTabs.stoneAgeTab);
 	}

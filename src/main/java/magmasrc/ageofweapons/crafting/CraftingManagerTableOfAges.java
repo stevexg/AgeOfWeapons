@@ -43,7 +43,76 @@ public class CraftingManagerTableOfAges {
         this.addRecipeTOA(new ItemStack(Items.STICK, 4), 0, "   ", " x ", " x ", 'x', new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE));
         this.addRecipeTOA(new ItemStack(Items.ARROW, 4), 0, " x ", " o ", " y ", 'x', Items.FLINT, 'o', Items.STICK, 'y', Items.FEATHER);
         this.addRecipeTOA(new ItemStack(Blocks.TORCH, 4), 0, "   ", " o ", " x ", 'x', Items.STICK, 'o', Items.COAL);
+
         //tools
+    if(AgeOfWeapons.activateHardcoreMode) {                     // HARDCORE MODE
+    	
+    	 this.addRecipeTOA(new ItemStack(Items.WOODEN_AXE), 1, " oo", " xo", " x ", 'x', Items.STICK, 'o', new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE));
+         this.addRecipeTOA(new ItemStack(Items.WOODEN_HOE), 1, " oo", " x ", " x ", 'x', Items.STICK, 'o', new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE));
+         this.addRecipeTOA(new ItemStack(Items.WOODEN_PICKAXE), 1, "ooo", " x ", " x ", 'x', Items.STICK, 'o', new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE));
+         this.addRecipeTOA(new ItemStack(Items.WOODEN_SHOVEL), 1, " o ", " x ", " x ", 'x', Items.STICK, 'o', new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE));
+         this.addRecipeTOA(new ItemStack(Items.WOODEN_SWORD), 1, " o ", " o ", " x ", 'x', Items.STICK, 'o', new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE));
+
+         this.addRecipeTOA(new ItemStack(Items.STONE_AXE), 1, " oo", " xo", " x ", 'x', Items.STICK, 'o', new ItemStack(Blocks.COBBLESTONE, 1, OreDictionary.WILDCARD_VALUE));
+         this.addRecipeTOA(new ItemStack(Items.STONE_HOE), 1, " oo", " x ", " x ", 'x', Items.STICK, 'o', new ItemStack(Blocks.COBBLESTONE, 1, OreDictionary.WILDCARD_VALUE));
+         this.addRecipeTOA(new ItemStack(Items.STONE_PICKAXE), 1, "ooo", " x ", " x ", 'x', Items.STICK, 'o', new ItemStack(Blocks.COBBLESTONE, 1, OreDictionary.WILDCARD_VALUE));
+         this.addRecipeTOA(new ItemStack(Items.STONE_SHOVEL), 1, " o ", " x ", " x ", 'x', Items.STICK, 'o', new ItemStack(Blocks.COBBLESTONE, 1, OreDictionary.WILDCARD_VALUE));
+         this.addRecipeTOA(new ItemStack(Items.STONE_SWORD), 1, " o ", " o ", " x ", 'x', Items.STICK, 'o', new ItemStack(Blocks.COBBLESTONE, 1, OreDictionary.WILDCARD_VALUE));
+         
+         this.addRecipeTOA(new ItemStack(Items.IRON_AXE), 4, " oo", " xo", " x ", 'x', Items.STICK, 'o', Items.IRON_INGOT);
+         this.addRecipeTOA(new ItemStack(Items.IRON_HOE), 4, " oo", " x ", " x ", 'x', Items.STICK, 'o', Items.IRON_INGOT);
+         this.addRecipeTOA(new ItemStack(Items.IRON_PICKAXE), 4, "ooo", " x ", " x ", 'x', Items.STICK, 'o', Items.IRON_INGOT);
+         this.addRecipeTOA(new ItemStack(Items.IRON_SHOVEL), 4, " o ", " x ", " x ", 'x', Items.STICK, 'o', Items.IRON_INGOT);
+         this.addRecipeTOA(new ItemStack(Items.IRON_SWORD), 4, " o ", " o ", " x ", 'x', Items.STICK, 'o', Items.IRON_INGOT);
+         
+         this.addRecipeTOA(new ItemStack(Items.GOLDEN_AXE), 4, " oo", " xo", " x ", 'x', Items.STICK, 'o', Items.GOLD_INGOT);
+         this.addRecipeTOA(new ItemStack(Items.GOLDEN_HOE), 4, " oo", " x ", " x ", 'x', Items.STICK, 'o', Items.GOLD_INGOT);
+         this.addRecipeTOA(new ItemStack(Items.GOLDEN_PICKAXE), 4, "ooo", " x ", " x ", 'x', Items.STICK, 'o', Items.GOLD_INGOT);
+         this.addRecipeTOA(new ItemStack(Items.GOLDEN_SHOVEL), 4, " o ", " x ", " x ", 'x', Items.STICK, 'o', Items.GOLD_INGOT);
+         this.addRecipeTOA(new ItemStack(Items.GOLDEN_SWORD), 4, " o ", " o ", " x ", 'x', Items.STICK, 'o', Items.GOLD_INGOT);
+         
+         this.addRecipeTOA(new ItemStack(Items.DIAMOND_AXE), 7, " oo", " xo", " x ", 'x', Items.STICK, 'o', Items.DIAMOND);
+         this.addRecipeTOA(new ItemStack(Items.DIAMOND_HOE), 7, " oo", " x ", " x ", 'x', Items.STICK, 'o', Items.DIAMOND);
+         this.addRecipeTOA(new ItemStack(Items.DIAMOND_PICKAXE), 7, "ooo", " x ", " x ", 'x', Items.STICK, 'o', Items.DIAMOND);
+         this.addRecipeTOA(new ItemStack(Items.DIAMOND_SHOVEL), 7, " o ", " x ", " x ", 'x', Items.STICK, 'o', Items.DIAMOND);
+         this.addRecipeTOA(new ItemStack(Items.DIAMOND_SWORD), 7, " o ", " o ", " x ", 'x', Items.STICK, 'o', Items.DIAMOND);
+         
+         this.addShapelessRecipeTOA(new ItemStack(Items.FLINT_AND_STEEL), 7, Items.IRON_INGOT, Items.FLINT);
+         this.addRecipeTOA(new ItemStack(Items.SHEARS), 4, "   ", " x ", "x  ", 'x', Items.IRON_INGOT);
+         this.addRecipeTOA(new ItemStack(Items.SHIELD), 2, "oxo", "ooo", " o ", 'x', Items.IRON_INGOT, 'o', new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE));
+         this.addRecipeTOA(new ItemStack(Items.BOW), 1, "ox ", "o x", "ox ", 'x', Items.STICK, 'o', Items.STRING);
+         this.addRecipeTOA(new ItemStack(Items.FISHING_ROD), 2, "  x", " xo", "x o", 'x', Items.STICK, 'o', Items.STRING);
+         //armor
+         this.addRecipeTOA(new ItemStack(Items.LEATHER_BOOTS), 2, "   ", "x x", "x x", 'x', Items.LEATHER);
+         this.addRecipeTOA(new ItemStack(Items.LEATHER_CHESTPLATE), 2, "x x", "xxx", "xxx", 'x', Items.LEATHER);
+         this.addRecipeTOA(new ItemStack(Items.LEATHER_HELMET), 2, "xxx", "x x", "   ", 'x', Items.LEATHER);
+         this.addRecipeTOA(new ItemStack(Items.LEATHER_LEGGINGS), 2, "xxx", "x x", "x x", 'x', Items.LEATHER);
+         
+         this.addRecipeTOA(new ItemStack(Items.IRON_BOOTS), 4, "   ", "x x", "x x", 'x', Items.IRON_INGOT);
+         this.addRecipeTOA(new ItemStack(Items.IRON_CHESTPLATE), 4, "x x", "xxx", "xxx", 'x', Items.IRON_INGOT);
+         this.addRecipeTOA(new ItemStack(Items.IRON_HELMET), 4, "xxx", "x x", "   ", 'x', Items.IRON_INGOT);
+         this.addRecipeTOA(new ItemStack(Items.IRON_LEGGINGS), 4, "xxx", "x x", "x x", 'x', Items.IRON_INGOT);
+         
+         this.addRecipeTOA(new ItemStack(Items.GOLDEN_BOOTS), 4, "   ", "x x", "x x", 'x', Items.GOLD_INGOT);
+         this.addRecipeTOA(new ItemStack(Items.GOLDEN_CHESTPLATE), 4, "x x", "xxx", "xxx", 'x', Items.GOLD_INGOT);
+         this.addRecipeTOA(new ItemStack(Items.GOLDEN_HELMET), 4, "xxx", "x x", "   ", 'x', Items.GOLD_INGOT);
+         this.addRecipeTOA(new ItemStack(Items.GOLDEN_LEGGINGS), 4, "xxx", "x x", "x x", 'x', Items.GOLD_INGOT);
+         
+         this.addRecipeTOA(new ItemStack(Items.DIAMOND_BOOTS), 7, "   ", "x x", "x x", 'x', Items.DIAMOND);
+         this.addRecipeTOA(new ItemStack(Items.DIAMOND_CHESTPLATE), 7, "x x", "xxx", "xxx", 'x', Items.DIAMOND);
+         this.addRecipeTOA(new ItemStack(Items.DIAMOND_HELMET), 7, "xxx", "x x", "   ", 'x', Items.DIAMOND);
+         this.addRecipeTOA(new ItemStack(Items.DIAMOND_LEGGINGS), 7, "xxx", "x x", "x x", 'x', Items.DIAMOND);
+     
+         if (AgeOfWeapons.activateChainArmorCrafting){
+             this.addRecipeTOA(new ItemStack(Items.CHAINMAIL_BOOTS), 4, "   ", "o o", "x x", 'x', Items.IRON_INGOT, 'o', Items.STRING);
+             this.addRecipeTOA(new ItemStack(Items.CHAINMAIL_CHESTPLATE), 4, "o o", "xxx", "xox", 'x', Items.IRON_INGOT, 'o', Items.STRING);
+             this.addRecipeTOA(new ItemStack(Items.CHAINMAIL_HELMET), 4, "oxo", "x x", "   ", 'x', Items.IRON_INGOT, 'o', Items.STRING);
+             this.addRecipeTOA(new ItemStack(Items.CHAINMAIL_LEGGINGS), 4, "oxo", "x x", "x x", 'x', Items.IRON_INGOT, 'o', Items.STRING);
+         }
+
+    	
+    } else {                                                    // NORMAL MODE
+    	
         this.addRecipeTOA(new ItemStack(Items.WOODEN_AXE), 0, " oo", " xo", " x ", 'x', Items.STICK, 'o', new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE));
         this.addRecipeTOA(new ItemStack(Items.WOODEN_HOE), 0, " oo", " x ", " x ", 'x', Items.STICK, 'o', new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE));
         this.addRecipeTOA(new ItemStack(Items.WOODEN_PICKAXE), 0, "ooo", " x ", " x ", 'x', Items.STICK, 'o', new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE));
@@ -106,7 +175,7 @@ public class CraftingManagerTableOfAges {
             this.addRecipeTOA(new ItemStack(Items.CHAINMAIL_HELMET), 0, "oxo", "x x", "   ", 'x', Items.IRON_INGOT, 'o', Items.STRING);
             this.addRecipeTOA(new ItemStack(Items.CHAINMAIL_LEGGINGS), 0, "oxo", "x x", "x x", 'x', Items.IRON_INGOT, 'o', Items.STRING);
         }
-
+    }   
 
 
 
@@ -122,20 +191,20 @@ public class CraftingManagerTableOfAges {
     this.addShapelessRecipeTOA(new ItemStack(ModItems.amethyst, 9), 0, ModBlocks.amethystBlock);
     this.addShapelessRecipeTOA(new ItemStack(ModItems.topaz, 9), 0, ModBlocks.topazBlock);
     this.addShapelessRecipeTOA(new ItemStack(ModItems.amber, 9), 0, ModBlocks.amberBlock);
-    this.addRecipeTOA(new ItemStack(ModBlocks.crusher), 0, "xxx", "xzx", "xox", 'x', Blocks.COBBLESTONE, 'o', Blocks.FURNACE, 'z', Items.FLINT);
-    this.addRecipeTOA(new ItemStack(ModBlocks.crusher), 0, "xxx", "xzx", "xox", 'x', Blocks.COBBLESTONE, 'o', Blocks.FURNACE, 'z', ModItems.ironShard);
+    this.addRecipeTOA(new ItemStack(ModBlocks.crusher), 7, "xxx", "xzx", "xox", 'x', Blocks.COBBLESTONE, 'o', Blocks.FURNACE, 'z', Items.FLINT);
+    this.addRecipeTOA(new ItemStack(ModBlocks.crusher), 7, "xxx", "xzx", "xox", 'x', Blocks.COBBLESTONE, 'o', Blocks.FURNACE, 'z', ModItems.ironShard);
     this.addRecipeTOA(new ItemStack(ModBlocks.tableOfAges), 0, "xxx", "ozo", "oyo", 'x', Blocks.STONE_SLAB, 'o', Blocks.STONE, 'z', Blocks.CRAFTING_TABLE, 'y', Blocks.CHEST);
 
     if(AgeOfWeapons.activateWeaponBoxRecipe) {
-        this.addRecipeTOA(new ItemStack(ModBlocks.weaponBox), 0, "xxx", "xox", "xxx", 'x', new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE), 'o', Items.EMERALD);
+        this.addRecipeTOA(new ItemStack(ModBlocks.weaponBox), 7, "xxx", "xox", "xxx", 'x', new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE), 'o', Items.EMERALD);
     }
     if(AgeOfWeapons.activateNexusRecipe) {
-        this.addRecipeTOA(new ItemStack(ModBlocks.nexus), 0, "v v", "vzv", "xox", 'x', new ItemStack(Blocks.IRON_BLOCK), 'o', new ItemStack(Blocks.WOOL, 1, 11), 'v', Items.IRON_INGOT, 'z', Items.NETHER_STAR );
-        this.addRecipeTOA(new ItemStack(ModBlocks.nexus2), 0, "v v", "vzv", "xox", 'x', new ItemStack(Blocks.IRON_BLOCK), 'o', new ItemStack(Blocks.WOOL, 1, 14), 'v', Items.IRON_INGOT, 'z', Items.NETHER_STAR );
-        this.addRecipeTOA(new ItemStack(ModBlocks.nexus3), 0, "v v", "vzv", "xox", 'x', new ItemStack(Blocks.IRON_BLOCK), 'o', new ItemStack(Blocks.WOOL, 1, 4), 'v', Items.IRON_INGOT, 'z', Items.NETHER_STAR );
-        this.addRecipeTOA(new ItemStack(ModBlocks.nexus4), 0, "v v", "vzv", "xox", 'x', new ItemStack(Blocks.IRON_BLOCK), 'o', new ItemStack(Blocks.WOOL, 1, 13), 'v', Items.IRON_INGOT, 'z', Items.NETHER_STAR );
+        this.addRecipeTOA(new ItemStack(ModBlocks.nexus), 11, "v v", "vzv", "xox", 'x', new ItemStack(Blocks.IRON_BLOCK), 'o', new ItemStack(Blocks.WOOL, 1, 11), 'v', Items.IRON_INGOT, 'z', Items.NETHER_STAR );
+        this.addRecipeTOA(new ItemStack(ModBlocks.nexus2), 11, "v v", "vzv", "xox", 'x', new ItemStack(Blocks.IRON_BLOCK), 'o', new ItemStack(Blocks.WOOL, 1, 14), 'v', Items.IRON_INGOT, 'z', Items.NETHER_STAR );
+        this.addRecipeTOA(new ItemStack(ModBlocks.nexus3), 11, "v v", "vzv", "xox", 'x', new ItemStack(Blocks.IRON_BLOCK), 'o', new ItemStack(Blocks.WOOL, 1, 4), 'v', Items.IRON_INGOT, 'z', Items.NETHER_STAR );
+        this.addRecipeTOA(new ItemStack(ModBlocks.nexus4), 11, "v v", "vzv", "xox", 'x', new ItemStack(Blocks.IRON_BLOCK), 'o', new ItemStack(Blocks.WOOL, 1, 13), 'v', Items.IRON_INGOT, 'z', Items.NETHER_STAR );
     }
-  
+
   	
   	//items
 	this.addRecipeTOA(new ItemStack(ModItems.axeBladeDiamond), 0, "xx ", "xo ", "   ", 'x', ModItems.diamondShard, 'o', Items.DIAMOND);
@@ -163,7 +232,7 @@ public class CraftingManagerTableOfAges {
   	this.addRecipeTOA(new ItemStack(ModItems.radioactiveToxin), 0, "xxx", "xox", "xxx", 'x', new ItemStack(Items.FISH, 1, 3), 'o', ModItems.toxin);
   	this.addShapelessRecipeTOA(new ItemStack(ModItems.glassShard, 4), 0, new ItemStack(Blocks.GLASS, 1, OreDictionary.WILDCARD_VALUE));
   	this.addShapelessRecipeTOA(new ItemStack(ModItems.glassShard, 4), 0, new ItemStack(Blocks.GLASS_PANE, 1, OreDictionary.WILDCARD_VALUE));
-/**       schauen was rumbuggt
+/**       schauen was rumbuggt  (wegen Hammer)
   	this.addRecipeTOA(new ItemStack(ModItems.woodShard, 3), 0, new ItemStack(ModItems.hammer, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE));
   	this.addRecipeTOA(new ItemStack(ModItems.stoneShard, 3), 0, new ItemStack(ModItems.hammer, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.COBBLESTONE, 1, OreDictionary.WILDCARD_VALUE));
   	this.addRecipeTOA(new ItemStack(ModItems.stoneShard, 3), 0, new ItemStack(ModItems.hammer, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.STONE, 1, OreDictionary.WILDCARD_VALUE));
@@ -186,7 +255,8 @@ public class CraftingManagerTableOfAges {
   	this.addRecipeTOA(new ItemStack(ModItems.haftIron), 7, " x ", " xx", " xx", 'x', Items.IRON_INGOT);
   	this.addRecipeTOA(new ItemStack(ModItems.haftWood), 7, " x ", " xx", " xx", 'x', new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE));
   	this.addRecipeTOA(new ItemStack(ModItems.visor), 7, "xxx", "o o", "xxx", 'x', Items.IRON_INGOT, 'o', new ItemStack(Blocks.GLASS_PANE, 1, 3));
-  
+  	this.addRecipeTOA(new ItemStack(ModItems.cloth), 0, "   ", "xxx", "xxx", 'x', Items.STRING);
+
   	
   	//upgrades
   	this.addRecipeTOA(new ItemStack(ModItems.upgradeStoneAge), 0, "xxx", "xox", "xxx", 'x', ModItems.stoneShard, 'o', Blocks.STONE);
@@ -209,7 +279,6 @@ public class CraftingManagerTableOfAges {
  }if(AgeOfWeapons.activateFuture) { 
     this.addRecipeTOA(new ItemStack(ModItems.upgradeFuture), 11, "xxx", "xox", "xxx", 'x', ModItems.emeraldShard, 'o', Blocks.EMERALD_BLOCK);
  }   
-  	//creativ upgrade geht nicht !!!!!!!!!<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
     /** Stone Age **/
     this.addShapelessRecipeTOA(new ItemStack(ModItems.rock, 4), 1, Blocks.COBBLESTONE);
@@ -372,19 +441,24 @@ public class CraftingManagerTableOfAges {
   	this.addRecipeTOA(new ItemStack(ModItems.throwingKnifeIron), 5, "   ", " o ", " x ", 'x', ModItems.ironStick, 'o', ModItems.ironShard); 
   	this.addRecipeTOA(new ItemStack(ModItems.throwingKnifeGold), 5, "   ", " o ", " x ", 'x', ModItems.ironStick, 'o', ModItems.goldShard); 
   	this.addRecipeTOA(new ItemStack(ModItems.throwingKnifeDiamond), 5, "   ", " o ", " x ", 'x', ModItems.ironStick, 'o', ModItems.diamondShard); 
-  	this.addRecipeTOA(new ItemStack(ModItems.katanaWood), 5, "  o", " o ", "x ", 'x', ModItems.swordHandle, 'o', ModItems.swordBladeWood); 
-  	this.addRecipeTOA(new ItemStack(ModItems.katanaStone), 5, "  o", " o ", "x ", 'x', ModItems.swordHandle, 'o', ModItems.swordBladeStone); 
-  	this.addRecipeTOA(new ItemStack(ModItems.katanaIron), 5, "  o", " o ", "x ", 'x', ModItems.swordHandle, 'o', ModItems.swordBladeIron); 
-  	this.addRecipeTOA(new ItemStack(ModItems.katanaGold), 5, "  o", " o ", "x ", 'x', ModItems.swordHandle, 'o', ModItems.swordBladeGold); 
-  	this.addRecipeTOA(new ItemStack(ModItems.katanaDiamond), 5, "  o", " o ", "x ", 'x', ModItems.swordHandle, 'o', ModItems.swordBladeDiamond); 
-  	this.addRecipeTOA(new ItemStack(ModItems.ninjatoWood), 5, "  o", " o ", "x ", 'x', ModItems.ironStick, 'o', ModItems.swordBladeWood); 
-  	this.addRecipeTOA(new ItemStack(ModItems.ninjatoStone), 5, "  o", " o ", "x ", 'x', ModItems.ironStick, 'o', ModItems.swordBladeStone); 
-  	this.addRecipeTOA(new ItemStack(ModItems.ninjatoIron), 5, "  o", " o ", "x ", 'x', ModItems.ironStick, 'o', ModItems.swordBladeIron); 
-  	this.addRecipeTOA(new ItemStack(ModItems.ninjatoGold), 5, "  o", " o ", "x ", 'x', ModItems.ironStick, 'o', ModItems.swordBladeGold); 
-  	this.addRecipeTOA(new ItemStack(ModItems.ninjatoDiamond), 5, "  o", " o ", "x ", 'x', ModItems.ironStick, 'o', ModItems.swordBladeDiamond); 
-
-
-  	
+  	this.addRecipeTOA(new ItemStack(ModItems.katanaWood), 5, "  o", " o ", "x  ", 'x', ModItems.swordHandle, 'o', ModItems.swordBladeWood); 
+  	this.addRecipeTOA(new ItemStack(ModItems.katanaStone), 5, "  o", " o ", "x  ", 'x', ModItems.swordHandle, 'o', ModItems.swordBladeStone); 
+  	this.addRecipeTOA(new ItemStack(ModItems.katanaIron), 5, "  o", " o ", "x  ", 'x', ModItems.swordHandle, 'o', ModItems.swordBladeIron); 
+  	this.addRecipeTOA(new ItemStack(ModItems.katanaGold), 5, "  o", " o ", "x  ", 'x', ModItems.swordHandle, 'o', ModItems.swordBladeGold); 
+  	this.addRecipeTOA(new ItemStack(ModItems.katanaDiamond), 5, "  o", " o ", "x  ", 'x', ModItems.swordHandle, 'o', ModItems.swordBladeDiamond); 
+  	this.addRecipeTOA(new ItemStack(ModItems.ninjatoWood), 5, "  o", " o ", "x  ", 'x', ModItems.ironStick, 'o', ModItems.swordBladeWood); 
+  	this.addRecipeTOA(new ItemStack(ModItems.ninjatoStone), 5, "  o", " o ", "x  ", 'x', ModItems.ironStick, 'o', ModItems.swordBladeStone); 
+  	this.addRecipeTOA(new ItemStack(ModItems.ninjatoIron), 5, "  o", " o ", "x  ", 'x', ModItems.ironStick, 'o', ModItems.swordBladeIron); 
+  	this.addRecipeTOA(new ItemStack(ModItems.ninjatoGold), 5, "  o", " o ", "x  ", 'x', ModItems.ironStick, 'o', ModItems.swordBladeGold); 
+  	this.addRecipeTOA(new ItemStack(ModItems.ninjatoDiamond), 5, "  o", " o ", "x  ", 'x', ModItems.ironStick, 'o', ModItems.swordBladeDiamond); 
+  	this.addRecipeTOA(new ItemStack(ModItems.ninjaBoots), 5, "   ", "x x", "x x", 'x', ModItems.cloth); 
+  	this.addRecipeTOA(new ItemStack(ModItems.ninjaHelmet), 5, "xxx", "x x", " x ", 'x', ModItems.cloth); 
+  	this.addRecipeTOA(new ItemStack(ModItems.ninjaLeggings), 5, "xxx", "x x", "x x", 'x', ModItems.cloth); 
+  	this.addRecipeTOA(new ItemStack(ModItems.ninjaChestplate), 5, "x x", "xxx", "xxx", 'x', ModItems.cloth); 
+  	this.addRecipeTOA(new ItemStack(ModItems.assassinBoots), 5, "   ", "x x", "o o", 'x', ModItems.cloth, 'o', Items.LEATHER); 
+  	this.addRecipeTOA(new ItemStack(ModItems.assassinHelmet), 5, " x ", "xxx", "x x", 'x', ModItems.cloth); 
+  	this.addRecipeTOA(new ItemStack(ModItems.assassinLeggings), 5, "xxx", "o o", "o o", 'x', ModItems.cloth, 'o', Items.LEATHER); 
+  	this.addRecipeTOA(new ItemStack(ModItems.assassinChestplate), 5, "x x", "oxo", "ooo", 'x', ModItems.cloth, 'o', Items.LEATHER); 
   	
   	
 

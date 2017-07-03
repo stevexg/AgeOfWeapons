@@ -215,6 +215,7 @@ public class ModItems {
 	public static Item topazShard;
 	public static Item glassShard;
 	public static Item hammer;
+	public static Item cloth;
 	
 	// Stone Age
 	public static Item rock;
@@ -371,6 +372,14 @@ public class ModItems {
 	public static Item throwingKnifeIron;
 	public static Item throwingKnifeGold;
 	public static Item throwingKnifeDiamond;
+	public static ItemArmor assassinHelmet;
+	public static ItemArmor assassinChestplate;
+	public static ItemArmor assassinLeggings;
+	public static ItemArmor assassinBoots;
+	public static ItemArmor ninjaHelmet;
+	public static ItemArmor ninjaChestplate;
+	public static ItemArmor ninjaLeggings;
+	public static ItemArmor ninjaBoots;
 	
 	
 	
@@ -542,13 +551,15 @@ public class ModItems {
 		
 		/** Armor-Materials **/
 																																						/**
-		    																					 {1, 3, 2, 1} for leather armor (7 at all)
-		    																					 {2, 5, 4, 1} for chain armor   (12 at all)
-		    																					 {2, 6, 5, 2} for iron armor    (15 at all)
-		    																					 {2, 5, 3, 1} for gold armor    (11 at all)
-		    																				   	 {3, 8, 6, 3} for diamond armor (20 at all - do not use more!)
+		    																					     {1, 3, 2, 1} for leather armor (7 at all)
+		    																					     {2, 5, 4, 1} for chain armor   (12 at all)
+		    																					     {2, 6, 5, 2} for iron armor    (15 at all)
+		    																					     {2, 5, 3, 1} for gold armor    (11 at all)
+		    																				   	     {3, 8, 6, 3} for diamond armor (20 at all - do not use more!)
 		 																																				**/
-		 cavemanAM = EnumHelper.addArmorMaterial("caveman", "ageofweapons:caveman", 10, new int[]{1, 2, 1, 1}, 10, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0);
+		 cavemanAM = EnumHelper.addArmorMaterial("caveman", "ageofweapons:caveman", 10, new int[]    {1, 2, 1, 1}, 10, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0);
+		 ninjaAM = EnumHelper.addArmorMaterial("ninja", "ageofweapons:ninja", 10, new int[]          {1, 4, 3, 1}, 10, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0);
+		 assassinAM = EnumHelper.addArmorMaterial("assassin", "ageofweapons:assassin", 10, new int[] {2, 4, 3, 1}, 10, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0);
 			
 		
 		
@@ -614,6 +625,7 @@ public class ModItems {
 		topazShard = new ItemTopazShard();
 		glassShard = new ItemGlassShard();
 		hammer = new ItemHammer();
+		cloth = new ItemCloth();
 		
 		// Stone Age
 		rock = new ItemRock(rockTM);
@@ -625,10 +637,10 @@ public class ModItems {
 		ax = new ItemAx(axTM);
 		throwWood = new ItemThrowWood();
 		cavemanSpear = new ItemCavemanSpear();
-		cavemanHelmet = new ItemCavemanArmor(cavemanAM, 1, EntityEquipmentSlot.HEAD); 
-		cavemanChestplate = new ItemCavemanArmor(cavemanAM, 1, EntityEquipmentSlot.CHEST);
-		cavemanLeggings = new ItemCavemanArmor(cavemanAM, 2, EntityEquipmentSlot.LEGS); 
-		cavemanBoots = new ItemCavemanArmor(cavemanAM, 1, EntityEquipmentSlot.FEET); 
+		cavemanHelmet = new ItemArmorCaveman(cavemanAM, 1, EntityEquipmentSlot.HEAD); 
+		cavemanChestplate = new ItemArmorCaveman(cavemanAM, 1, EntityEquipmentSlot.CHEST);
+		cavemanLeggings = new ItemArmorCaveman(cavemanAM, 2, EntityEquipmentSlot.LEGS); 
+		cavemanBoots = new ItemArmorCaveman(cavemanAM, 1, EntityEquipmentSlot.FEET); 
 		
 		// Antiquity
 		kniveWood = new ItemKniveWood(kniveWoodTM);
@@ -770,6 +782,14 @@ public class ModItems {
 		throwingKnifeIron = new ItemThrowingKniveIron(throwingKniveIronTM);
 		throwingKnifeGold = new ItemThrowingKniveGold(throwingKniveGoldTM);
 		throwingKnifeDiamond = new ItemThrowingKniveDiamond(throwingKniveDiamondTM);
+		assassinHelmet = new ItemArmorAssassin(assassinAM, 1, EntityEquipmentSlot.HEAD); 
+		assassinChestplate = new ItemArmorAssassin(assassinAM, 1, EntityEquipmentSlot.CHEST);
+		assassinLeggings = new ItemArmorAssassin(assassinAM, 2, EntityEquipmentSlot.LEGS); 
+		assassinBoots = new ItemArmorAssassin(assassinAM, 1, EntityEquipmentSlot.FEET); 
+		ninjaHelmet = new ItemArmorNinja(ninjaAM, 1, EntityEquipmentSlot.HEAD); 
+		ninjaChestplate = new ItemArmorNinja(ninjaAM, 1, EntityEquipmentSlot.CHEST);
+		ninjaLeggings = new ItemArmorNinja(ninjaAM, 2, EntityEquipmentSlot.LEGS); 
+		ninjaBoots = new ItemArmorNinja(ninjaAM, 1, EntityEquipmentSlot.FEET); 
 
 		
 /** TEMPLATE		
@@ -851,6 +871,7 @@ public class ModItems {
 		NameUtils.setNames(topazShard, "topaz_shard");
 		NameUtils.setNames(glassShard, "glass_shard");
 		NameUtils.setNames(hammer, "hammer");
+		NameUtils.setNames(cloth, "cloth");
 
 		// Stone Age
 		NameUtils.setNames(rock, "rock");
@@ -1007,6 +1028,14 @@ public class ModItems {
 		NameUtils.setNames(throwingKnifeIron, "throwing_knive_iron");
 		NameUtils.setNames(throwingKnifeGold, "throwing_knive_gold");
 		NameUtils.setNames(throwingKnifeDiamond, "throwing_knive_diamond");
+		NameUtils.setNames(assassinHelmet, "assassin_helmet");
+		NameUtils.setNames(assassinChestplate, "assassin_chestplate");
+		NameUtils.setNames(assassinLeggings, "assassin_leggings");
+		NameUtils.setNames(assassinBoots, "assassin_boots");
+		NameUtils.setNames(ninjaHelmet, "ninja_helmet");
+		NameUtils.setNames(ninjaChestplate, "ninja_chestplate");
+		NameUtils.setNames(ninjaLeggings, "ninja_leggings");
+		NameUtils.setNames(ninjaBoots, "ninja_boots");
 
 
 		
@@ -1080,6 +1109,7 @@ public class ModItems {
 		registerItem(ironShard);
 		registerItem(stoneShard);
 		registerItem(glassShard);
+		registerItem(cloth);
 		registerItem(hammer);
 		
 		// Stone Age
@@ -1244,6 +1274,14 @@ public class ModItems {
 		registerItem(nunchuckWood);
 		registerItem(nunchuckIron);
 		registerItem(lash);
+		registerItem(assassinHelmet);
+		registerItem(assassinChestplate);
+		registerItem(assassinLeggings);
+		registerItem(assassinBoots);
+		registerItem(ninjaHelmet);
+		registerItem(ninjaChestplate);
+		registerItem(ninjaLeggings);
+		registerItem(ninjaBoots);
 		
 		
 		

@@ -3,21 +3,20 @@ package magmasrc.ageofweapons.entity;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.projectile.EntityThrowable;
+import net.minecraft.entity.projectile.EntityArrow;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumParticleTypes;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class EntityDynamite extends EntityThrowable{
+public class EntityThrowingDiamondKnive extends EntityThrowable{
 
-	public EntityDynamite(World worldIn) {
+	public EntityThrowingDiamondKnive(World worldIn) {
 		super(worldIn);
 	}
 	
 	
-	public EntityDynamite(World worldIn, EntityLivingBase throwerIn) {
+	public EntityThrowingDiamondKnive(World worldIn, EntityLivingBase throwerIn) {
 		super(worldIn, throwerIn);
 	}
 
@@ -28,11 +27,10 @@ public class EntityDynamite extends EntityThrowable{
 		     if (result.entityHit instanceof Entity) {
 		            int i = 1;
 
-		            result.entityHit.attackEntityFrom(DamageSource.GENERIC, 4.0F);
+		            result.entityHit.attackEntityFrom(DamageSource.GENERIC, 3.0F);
 		        }
 
 		        if (!this.world.isRemote) {
-					this.world.createExplosion(this, posX, posY, posZ, 2.0F, true);
 		            this.world.setEntityState(this, (byte)1);
 		            this.setDead();
 		        }
@@ -43,10 +41,10 @@ public class EntityDynamite extends EntityThrowable{
 	@Override
 	public void onUpdate() {
 		super.onUpdate();
-		// ohne ! oder mit !
-		if (this.world.isRemote && !this.inGround) {
-			this.world.spawnParticle(EnumParticleTypes.LAVA, this.posX, this.posY, this.posZ, 0.0D, 0.0D, 0.0D, new int[0]);
-    		}
+		
+		if (!this.world.isRemote && !this.inGround) {
+			this.world.spawnParticle(EnumParticleTypes.CRIT, this.posX, this.posY, this.posZ, 0.0D, 0.0D, 0.0D, new int[0]);
+		}
 	}
 	
 	

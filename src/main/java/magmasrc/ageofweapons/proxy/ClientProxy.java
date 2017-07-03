@@ -82,6 +82,7 @@ public class ClientProxy extends ServerProxy {
 		registerModel(ModItems.amber, 0, new ModelResourceLocation(ModItems.amber.getRegistryName(), "inventory"));
 		registerModel(ModItems.glassShard, 0, new ModelResourceLocation(ModItems.glassShard.getRegistryName(), "inventory"));
 		registerModel(ModItems.hammer, 0, new ModelResourceLocation(ModItems.hammer.getRegistryName(), "inventory"));
+		registerModel(ModItems.cloth, 0, new ModelResourceLocation(ModItems.cloth.getRegistryName(), "inventory"));
 		
 		// StoneAge
 		registerModel(ModItems.rock, 0, new ModelResourceLocation(ModItems.rock.getRegistryName(), "inventory"));
@@ -238,6 +239,14 @@ public class ClientProxy extends ServerProxy {
 		registerModel(ModItems.throwingKnifeIron, 0, new ModelResourceLocation    (ModItems.throwingKnifeIron.getRegistryName(), "inventory"));
 		registerModel(ModItems.throwingKnifeGold, 0, new ModelResourceLocation    (ModItems.throwingKnifeGold.getRegistryName(), "inventory"));
 		registerModel(ModItems.throwingKnifeDiamond, 0, new ModelResourceLocation    (ModItems.throwingKnifeDiamond.getRegistryName(), "inventory"));
+	  	registerModel(ModItems.assassinHelmet, 0, new ModelResourceLocation(ModItems.assassinHelmet.getRegistryName(), "inventory"));
+    	registerModel(ModItems.assassinChestplate, 0, new ModelResourceLocation(ModItems.assassinChestplate.getRegistryName(), "inventory"));
+    	registerModel(ModItems.assassinLeggings, 0, new ModelResourceLocation(ModItems.assassinLeggings.getRegistryName(), "inventory"));
+    	registerModel(ModItems.assassinBoots, 0, new ModelResourceLocation(ModItems.assassinBoots.getRegistryName(), "inventory"));
+	  	registerModel(ModItems.ninjaHelmet, 0, new ModelResourceLocation(ModItems.ninjaHelmet.getRegistryName(), "inventory"));
+    	registerModel(ModItems.ninjaChestplate, 0, new ModelResourceLocation(ModItems.ninjaChestplate.getRegistryName(), "inventory"));
+    	registerModel(ModItems.ninjaLeggings, 0, new ModelResourceLocation(ModItems.ninjaLeggings.getRegistryName(), "inventory"));
+    	registerModel(ModItems.ninjaBoots, 0, new ModelResourceLocation(ModItems.ninjaBoots.getRegistryName(), "inventory"));
 
 		
 /** TEMPLATE		

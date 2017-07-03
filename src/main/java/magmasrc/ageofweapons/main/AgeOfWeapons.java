@@ -26,7 +26,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 public class AgeOfWeapons {
    
     public static final String MODID = "ageofweapons";
-    public static final String VERSION = "0.7.0";
+    public static final String VERSION = "0.8.0";
 
    
     @Instance("ageofweapons")
@@ -35,7 +35,7 @@ public class AgeOfWeapons {
     @SidedProxy(clientSide = "magmasrc.ageofweapons.proxy.ClientProxy", serverSide = "magmasrc.ageofweapons.proxy.ServerProxy")
     public static ServerProxy proxy;
 
-    //TODO Steve: JEI Support, ThrowWood/Caveman Spear, creativ upgrade fixen, Schusswaffen, Crusher, schauen wegen OreRecipes, Weapon Box, item das einen block setzt...weil ich das ned hinkriege xD ._.
+    //TODO Steve: JEI Support!, ThrowWood/Caveman Spear, Crusher, Schusswaffen, schauen wegen OreRecipes, Weapon Box, item das einen block setzt...weil ich das ned hinkriege xD ._.
 
     
     // Items //
@@ -62,7 +62,7 @@ public class AgeOfWeapons {
     public static boolean activateNexusRecipe;
     public static boolean activateShowAges;
     public static boolean activateDungeonLoot;
-    public static boolean activateHardcoreMode;				//TODO later
+    public static boolean activateHardcoreMode;			
     
     public static boolean activatePiracy;
     public static boolean activateEdoPeriod;
@@ -102,6 +102,7 @@ public class AgeOfWeapons {
     		activateNexusRecipe = config.get("CRAFTING", "Activate the crafting recipe for the Nexus", false, "[true/false]").getBoolean();
     		activateShowAges = config.get("GENERAL", "Show the age under the item name", true, "[true/false]").getBoolean();
     		activateDungeonLoot = config.get("GENERATION", "Generate dungeon loot (means only the not important items for the mod)", true, "[true/false]").getBoolean();
+    		activateHardcoreMode = config.get("GENERAL", "You can only craft vanilla tools/weapons/armor in the Table of Ages and in the right age", false, "[true/false]").getBoolean();
     		
     		activateBBY = config.get("AGES", "Activate the recipe for the BBY Upgrade", true, "[true/false]").getBoolean();
     		activateEdoPeriod = config.get("AGES", "Activate the recipe for the Edo Period Upgrade", true, "[true/false]").getBoolean();
@@ -150,6 +151,7 @@ public class AgeOfWeapons {
     	
     	// Recipes //
     	recipes = new ModRecipes();
+    	recipes.unregister();
     	recipes.register();
     	
         // Creative Tabs //
