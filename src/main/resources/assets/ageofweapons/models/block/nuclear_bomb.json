@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube",
+    "textures": {
+        "particle": "ageofweapons:blocks/nuclear_bomb_side",
+        "up": "ageofweapons:blocks/nuclear_bomb_top",
+        "down": "ageofweapons:blocks/nuclear_bomb_bottom",
+        "north": "ageofweapons:blocks/nuclear_bomb_side",
+        "east": "ageofweapons:blocks/nuclear_bomb_side",
+        "west": "ageofweapons:blocks/nuclear_bomb_side",
+        "south": "ageofweapons:blocks/nuclear_bomb_side"
+    }
+}

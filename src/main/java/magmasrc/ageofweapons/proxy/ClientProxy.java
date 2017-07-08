@@ -174,6 +174,8 @@ public class ClientProxy extends ServerProxy {
 		registerModel(ModItems.pebble, 0, new ModelResourceLocation   (ModItems.pebble.getRegistryName(), "inventory"));
 		registerModel(ModItems.nails, 0, new ModelResourceLocation   (ModItems.nails.getRegistryName(), "inventory"));
 		registerModel(ModItems.nailsToxic, 0, new ModelResourceLocation   (ModItems.nailsToxic.getRegistryName(), "inventory"));
+		registerModel(ModItems.blankRifle, 0, new ModelResourceLocation   (ModItems.blankRifle.getRegistryName(), "inventory"));
+
 
 		//Mystic
 		registerModel(ModItems.mysticKnive, 0, new ModelResourceLocation   (ModItems.mysticKnive.getRegistryName(), "inventory"));
@@ -248,6 +250,32 @@ public class ClientProxy extends ServerProxy {
     	registerModel(ModItems.ninjaLeggings, 0, new ModelResourceLocation(ModItems.ninjaLeggings.getRegistryName(), "inventory"));
     	registerModel(ModItems.ninjaBoots, 0, new ModelResourceLocation(ModItems.ninjaBoots.getRegistryName(), "inventory"));
 
+    	//Modern Age
+    	registerModel(ModItems.fieldGlasses, 0, new ModelResourceLocation(ModItems.fieldGlasses.getRegistryName(), "inventory"));
+    	registerModel(ModItems.nightVisionGoggles, 0, new ModelResourceLocation(ModItems.nightVisionGoggles.getRegistryName(), "inventory"));
+    	registerModel(ModItems.taser, 0, new ModelResourceLocation(ModItems.taser.getRegistryName(), "inventory"));
+    	registerModel(ModItems.flameThrower, 0, new ModelResourceLocation(ModItems.flameThrower.getRegistryName(), "inventory"));
+    	registerModel(ModItems.industrialExcavator, 0, new ModelResourceLocation(ModItems.industrialExcavator.getRegistryName(), "inventory"));
+    	registerModel(ModItems.industrialMiner, 0, new ModelResourceLocation(ModItems.industrialMiner.getRegistryName(), "inventory"));
+		registerModel(ModItems.tankFlame, 0, new ModelResourceLocation   (ModItems.tankFlame.getRegistryName(), "inventory"));
+		registerModel(ModItems.machineCase, 0, new ModelResourceLocation   (ModItems.machineCase.getRegistryName(), "inventory"));
+		registerModel(ModItems.ammoSmall, 0, new ModelResourceLocation   (ModItems.ammoSmall.getRegistryName(), "inventory"));
+		registerModel(ModItems.ammoBig, 0, new ModelResourceLocation   (ModItems.ammoBig.getRegistryName(), "inventory"));
+		registerModel(ModItems.ammoBundleSmall, 0, new ModelResourceLocation   (ModItems.ammoBundleSmall.getRegistryName(), "inventory"));
+		registerModel(ModItems.ammoBundleBig, 0, new ModelResourceLocation   (ModItems.ammoBundleBig.getRegistryName(), "inventory"));
+		registerModel(ModItems.concentratedGunpowder, 0, new ModelResourceLocation   (ModItems.concentratedGunpowder.getRegistryName(), "inventory"));
+		registerModel(ModItems.magazineSmall, 0, new ModelResourceLocation   (ModItems.magazineSmall.getRegistryName(), "inventory"));
+		registerModel(ModItems.magazineLong, 0, new ModelResourceLocation   (ModItems.magazineLong.getRegistryName(), "inventory"));
+		registerModel(ModItems.magazineBig, 0, new ModelResourceLocation   (ModItems.magazineBig.getRegistryName(), "inventory"));
+		registerModel(ModItems.magazineDrum, 0, new ModelResourceLocation   (ModItems.magazineDrum.getRegistryName(), "inventory"));
+		registerModel(ModItems.shotgunAmmo, 0, new ModelResourceLocation   (ModItems.shotgunAmmo.getRegistryName(), "inventory"));
+		registerModel(ModItems.shotgunAmmo2, 0, new ModelResourceLocation   (ModItems.shotgunAmmo2.getRegistryName(), "inventory"));
+    	
+    	//Future
+		registerModel(ModItems.tankPoison, 0, new ModelResourceLocation   (ModItems.tankPoison.getRegistryName(), "inventory"));
+    	registerModel(ModItems.poisonThrower, 0, new ModelResourceLocation(ModItems.poisonThrower.getRegistryName(), "inventory"));
+    	registerModel(ModItems.industrialMultiTool, 0, new ModelResourceLocation(ModItems.industrialMultiTool.getRegistryName(), "inventory"));
+
 		
 /** TEMPLATE		
 		registerModel(ModItems.Wood, 0, new ModelResourceLocation    (ModItems.Wood.getRegistryName(), "inventory"));
@@ -292,6 +320,9 @@ public class ClientProxy extends ServerProxy {
     	registerModel(ModBlocks.fallTrapDirt, 0, new ModelResourceLocation(ModBlocks.fallTrapDirt.getRegistryName(), "inventory"));
     	registerModel(ModBlocks.fallTrapPlanks, 0, new ModelResourceLocation(ModBlocks.fallTrapPlanks.getRegistryName(), "inventory"));
     	registerModel(ModBlocks.fallTrapStone, 0, new ModelResourceLocation(ModBlocks.fallTrapStone.getRegistryName(), "inventory"));
+
+    	registerModel(ModBlocks.neutronBomb, 0, new ModelResourceLocation(ModBlocks.neutronBomb.getRegistryName(), "inventory"));
+    	registerModel(ModBlocks.nuclearBomb, 0, new ModelResourceLocation(ModBlocks.nuclearBomb.getRegistryName(), "inventory"));
 
     	
     }

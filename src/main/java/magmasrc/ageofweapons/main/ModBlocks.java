@@ -38,6 +38,9 @@ public class ModBlocks {
 	public static Block fallTrapPlanks;
 	public static Block bearTrap;
 	
+	public static Block neutronBomb;
+	public static Block nuclearBomb;
+	
 	
 	
 	
@@ -69,6 +72,9 @@ public class ModBlocks {
 			fallTrapStone = new BlockFallTrapStone();
 			bearTrap = new BlockBearTrap();
 			
+			neutronBomb = new BlockNeutronBomb();
+			nuclearBomb = new BlockNuclearBomb();
+			
 			
 			
 			
@@ -97,6 +103,9 @@ public class ModBlocks {
 			NameUtils.setNames(fallTrapPlanks, "fall_trap_planks");
 			NameUtils.setNames(fallTrapStone, "fall_trap_stone");
 			NameUtils.setNames(bearTrap, "bear_trap");
+			
+			NameUtils.setNames(neutronBomb, "neutron_bomb");
+			NameUtils.setNames(nuclearBomb, "nuclear_bomb");
 
 		}
 		
@@ -129,6 +138,9 @@ public class ModBlocks {
 			registerBlock(fallTrapDirt);
 			registerBlock(fallTrapPlanks);
 			registerBlock(fallTrapStone);
+			
+			registerBlock(neutronBomb);
+			registerBlock(nuclearBomb);
 			
 			
 

@@ -41,6 +41,9 @@ tile.fall_trap_dirt.name=Dirt Fall Trap
 tile.fall_trap_planks.name=Planks Fall Trap
 tile.fall_trap_stone.name=Stone Fall Trap
 
+tile.neutron_bomb.name=Neutron Bomb
+tile.nuclear_bomb.name=Nuclear Bomb
+
 
 
 //ITEMS
@@ -92,6 +95,7 @@ item.stone_shard.name=Stone Shard
 item.wood_shard.name=Wood Shard
 item.barrel.name=Barrel
 item.blank_gun.name=Blank Gun
+item.blank_rifle.name=Blank Rifle
 item.gun_handle.name=Gun Handle
 item.haft_wood.name=Wooden Haft
 item.haft_iron.name=Iron Haft
@@ -272,6 +276,33 @@ item.ninja_helmet.name=Ninja Cap
 item.ninja_chestplate.name=Ninja Tunic
 item.ninja_leggings.name=Ninja Pants
 item.ninja_boots.name=Ninja Boots
+
+//ModernAge
+item.field_glasses.name=Field Glasses
+item.night_vision_goggles.name=Night Vision Goggles
+item.taser.name=Taser
+item.flame_thrower.name=Flamethrower
+item.industrial_miner.name=Industrial Miner
+item.industrial_excavator.name=Industrial Excavator
+item.tank_flame.name=Tank (Fire)
+
+item.machine_case.name=Machine Case
+item.ammo_small.name=Small Ammo
+item.ammo_big.name=Big Ammo
+item.ammo_bundle_small.name=Small Ammo Bundle
+item.ammo_bundle_big.name=Big Ammo Bundle
+item.concentrated_gunpowder.name=Concentrated Gunpowder
+item.magazine_small.name=Small Magazine
+item.magazine_long.name=Long Magazine
+item.magazine_big.name=Big Magazine
+item.magazine_drum.name=Magazine Drum
+item.shotgun_ammo.name=Red Shotgun Ammo
+item.shotgun_ammo2.name=Blue Shotgun Ammo
+
+//Future
+item.poison_thrower.name=Poisonthrower
+item.industrial_multi_tool.name=Industrial Multi Tool
+item.tank_poison.name=Tank (Poison)
 
 
 

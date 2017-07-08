@@ -5,7 +5,9 @@ import magmasrc.ageofweapons.items.antiquity.*;
 import magmasrc.ageofweapons.items.earlymodernage.*;
 import magmasrc.ageofweapons.items.edoperiod.*;
 import magmasrc.ageofweapons.items.fantasy.*;
+import magmasrc.ageofweapons.items.future.*;
 import magmasrc.ageofweapons.items.middleages.*;
+import magmasrc.ageofweapons.items.modernage.*;
 import magmasrc.ageofweapons.items.mystic.*;
 import magmasrc.ageofweapons.items.stoneage.*;
 import magmasrc.ageofweapons.util.NameUtils;
@@ -26,6 +28,7 @@ public class ModItems {
 	public static ArmorMaterial cavemanAM;
 	public static ArmorMaterial assassinAM;
 	public static ArmorMaterial ninjaAM;
+	public static ArmorMaterial nightVisionGogglesAM;
 	
 
 	/** Tool-Materials **/
@@ -147,6 +150,8 @@ public class ModItems {
 	public static ToolMaterial throwingKniveIronTM;
 	public static ToolMaterial throwingKniveGoldTM;
 	public static ToolMaterial throwingKniveDiamondTM;
+	
+	public static ToolMaterial industrialTM;
 
 	
 
@@ -216,6 +221,7 @@ public class ModItems {
 	public static Item glassShard;
 	public static Item hammer;
 	public static Item cloth;
+	public static Item blankRifle;
 	
 	// Stone Age
 	public static Item rock;
@@ -381,6 +387,33 @@ public class ModItems {
 	public static ItemArmor ninjaLeggings;
 	public static ItemArmor ninjaBoots;
 	
+	// Modern Age 
+	public static Item tankFlame;
+	public static Item tankPoison;
+	public static Item machineCase;
+	public static Item ammoSmall;
+	public static Item ammoBig;
+	public static Item ammoBundleSmall;
+	public static Item ammoBundleBig;
+	public static Item concentratedGunpowder;      // all TODO
+	public static Item magazineSmall;
+	public static Item magazineBig;
+	public static Item magazineLong;
+	public static Item magazineDrum;
+	public static Item shotgunAmmo;
+	public static Item shotgunAmmo2;   
+	
+	public static Item fieldGlasses;
+	public static Item nightVisionGoggles;
+	public static Item taser;
+	public static Item flameThrower;
+	public static Item industrialMiner;
+	public static Item industrialExcavator;
+	
+	// Future
+	public static Item poisonThrower;
+	public static Item industrialMultiTool;
+	
 	
 	
 	  //Items so formatieren:     <GEGENSTAND><MATERIAL>     (example: swordIron, "sword_iron")
@@ -522,6 +555,8 @@ public class ModItems {
 		nunchuckWoodTM = EnumHelper.addToolMaterial("nunchuckWood",                0,  100,  8.0F,   2.5F,  8);
 		nunchuckIronTM = EnumHelper.addToolMaterial("nunchuckIron",                0,  300,  8.0F,   3.3F, 10);
 
+		industrialTM = EnumHelper.addToolMaterial("industrial",                    3,  800,  12.0F,   5.0F, 10);
+
 		
 		
 /** TEMPLATE		
@@ -551,16 +586,17 @@ public class ModItems {
 		
 		/** Armor-Materials **/
 																																						/**
-		    																					     {1, 3, 2, 1} for leather armor (7 at all)
-		    																					     {2, 5, 4, 1} for chain armor   (12 at all)
-		    																					     {2, 6, 5, 2} for iron armor    (15 at all)
-		    																					     {2, 5, 3, 1} for gold armor    (11 at all)
-		    																				   	     {3, 8, 6, 3} for diamond armor (20 at all - do not use more!)
+		    																		5                {1, 3, 2, 1} for leather armor (7 at all)
+		    																		15    			 {2, 5, 4, 1} for chain armor   (12 at all)
+		    																		15    			 {2, 6, 5, 2} for iron armor    (15 at all)
+		    																		7    			 {2, 5, 3, 1} for gold armor    (11 at all)
+		    														   				32               {3, 8, 6, 3} for diamond armor (20 at all - do not use more!)
 		 																																				**/
-		 cavemanAM = EnumHelper.addArmorMaterial("caveman", "ageofweapons:caveman", 10, new int[]    {1, 2, 1, 1}, 10, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0);
+		 cavemanAM = EnumHelper.addArmorMaterial("caveman", "ageofweapons:caveman", 3, new int[]     {1, 2, 1, 1}, 0, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0);
 		 ninjaAM = EnumHelper.addArmorMaterial("ninja", "ageofweapons:ninja", 10, new int[]          {1, 4, 3, 1}, 10, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0);
-		 assassinAM = EnumHelper.addArmorMaterial("assassin", "ageofweapons:assassin", 10, new int[] {2, 4, 3, 1}, 10, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0);
-			
+		 assassinAM = EnumHelper.addArmorMaterial("assassin", "ageofweapons:assassin", 12, new int[] {2, 4, 3, 1}, 10, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0);
+         nightVisionGogglesAM = EnumHelper.addArmorMaterial("nightVisionGoggles", "ageofweapons:night_vision_goggles", 0, new int[]{1, 0, 0, 0}, 10, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0);
+
 		
 		
 		
@@ -626,6 +662,23 @@ public class ModItems {
 		glassShard = new ItemGlassShard();
 		hammer = new ItemHammer();
 		cloth = new ItemCloth();
+		tankFlame = new ItemTankFlame();
+		tankPoison = new ItemTankPoison();
+		machineCase = new ItemMachineCase();
+		ammoSmall = new ItemAmmoSmall();
+		ammoBig = new ItemAmmoBig();
+		ammoBundleSmall = new ItemAmmoBundleSmall();
+		ammoBundleBig = new ItemAmmoBig();
+		concentratedGunpowder = new ItemConcentratedGunpowder();
+		magazineSmall = new ItemMagazineSmall();
+		magazineLong = new ItemMagazineLong();
+		magazineBig = new ItemMagazineBig();
+		magazineDrum = new ItemMagazineDrum();
+		shotgunAmmo = new ItemShotgunAmmo();
+		shotgunAmmo2 = new ItemShotgunAmmo2();
+		blankRifle = new ItemBlankRifle();
+		
+		
 		
 		// Stone Age
 		rock = new ItemRock(rockTM);
@@ -760,7 +813,7 @@ public class ModItems {
 		lightBow = new ItemLightBow();
 		shadowBow = new ItemShadowBow();
 		
-		//Edo Period
+		// Edo Period
 		katanaWood = new ItemKatanaWood(katanaWoodTM);
 		katanaStone = new ItemKatanaStone(katanaStoneTM);
 		katanaIron = new ItemKatanaIron(katanaIronTM);
@@ -790,6 +843,18 @@ public class ModItems {
 		ninjaChestplate = new ItemArmorNinja(ninjaAM, 1, EntityEquipmentSlot.CHEST);
 		ninjaLeggings = new ItemArmorNinja(ninjaAM, 2, EntityEquipmentSlot.LEGS); 
 		ninjaBoots = new ItemArmorNinja(ninjaAM, 1, EntityEquipmentSlot.FEET); 
+		
+		// Modern Age
+		fieldGlasses = new ItemFieldGlasses();
+		taser = new ItemTaser();
+		flameThrower = new ItemFlameThrower();
+		industrialMiner = new ItemIndustrialMiner(industrialTM);
+		industrialExcavator = new ItemIndustrialExcavator(industrialTM);
+		nightVisionGoggles = new ItemNightVisionGoggles(nightVisionGogglesAM, 1, EntityEquipmentSlot.HEAD); 
+		
+		// Future
+		poisonThrower = new ItemPoisonGun();
+		industrialMultiTool = new ItemIndustrialMultiTool(industrialTM);
 
 		
 /** TEMPLATE		
@@ -872,6 +937,21 @@ public class ModItems {
 		NameUtils.setNames(glassShard, "glass_shard");
 		NameUtils.setNames(hammer, "hammer");
 		NameUtils.setNames(cloth, "cloth");
+		NameUtils.setNames(tankFlame, "tank_flame");
+		NameUtils.setNames(tankPoison, "tank_poison");
+		NameUtils.setNames(machineCase, "machine_case");
+		NameUtils.setNames(ammoSmall, "ammo_small");
+		NameUtils.setNames(ammoBig, "ammo_big");
+		NameUtils.setNames(ammoBundleSmall, "ammo_bundle_small");
+		NameUtils.setNames(ammoBundleBig, "ammo_bundle_big");
+		NameUtils.setNames(concentratedGunpowder, "concentrated_gunpowder");
+		NameUtils.setNames(magazineSmall, "magazine_small");
+		NameUtils.setNames(magazineLong, "magazine_long");
+		NameUtils.setNames(magazineBig, "magazine_big");
+		NameUtils.setNames(magazineDrum, "magazine_drum");
+		NameUtils.setNames(shotgunAmmo, "shotgun_ammo");
+		NameUtils.setNames(shotgunAmmo2, "shotgun_ammo2");
+		NameUtils.setNames(blankRifle, "blank_rifle");
 
 		// Stone Age
 		NameUtils.setNames(rock, "rock");
@@ -977,7 +1057,7 @@ public class ModItems {
 		NameUtils.setNames(warhornDefensive, "warhorn_defensive");
 		NameUtils.setNames(warhornOffensive, "warhorn_offensive");
 		
-		//Fantasy
+		// Fantasy
 		NameUtils.setNames(clawWood, "claw_wood");
 		NameUtils.setNames(clawStone, "claw_stone");
 		NameUtils.setNames(clawIron, "claw_iron");
@@ -1006,7 +1086,7 @@ public class ModItems {
 		NameUtils.setNames(lightBow, "light_bow");
 		NameUtils.setNames(shadowBow, "shadow_bow");
 		
-		//Edo Period
+		// Edo Period
 		NameUtils.setNames(katanaWood, "katana_wood");
 		NameUtils.setNames(katanaStone, "katana_stone");
 		NameUtils.setNames(katanaIron, "katana_iron");
@@ -1036,7 +1116,18 @@ public class ModItems {
 		NameUtils.setNames(ninjaChestplate, "ninja_chestplate");
 		NameUtils.setNames(ninjaLeggings, "ninja_leggings");
 		NameUtils.setNames(ninjaBoots, "ninja_boots");
-
+		
+		// Modern Age
+		NameUtils.setNames(fieldGlasses, "field_glasses");
+		NameUtils.setNames(nightVisionGoggles, "night_vision_goggles");
+		NameUtils.setNames(taser, "taser");
+		NameUtils.setNames(flameThrower, "flame_thrower");
+		NameUtils.setNames(industrialMiner, "industrial_miner");
+		NameUtils.setNames(industrialExcavator, "industrial_excavator");
+		
+		// Future
+		NameUtils.setNames(poisonThrower, "poison_thrower");
+		NameUtils.setNames(industrialMultiTool, "industrial_multi_tool");
 
 		
 		
@@ -1111,6 +1202,20 @@ public class ModItems {
 		registerItem(glassShard);
 		registerItem(cloth);
 		registerItem(hammer);
+		registerItem(tankFlame);
+		registerItem(tankPoison);
+		registerItem(machineCase);
+		registerItem(concentratedGunpowder);
+		registerItem(ammoSmall);
+		registerItem(ammoBig);
+		registerItem(ammoBundleSmall);
+		registerItem(ammoBundleBig);
+		registerItem(magazineSmall);
+		registerItem(magazineLong);
+		registerItem(magazineBig);
+		registerItem(magazineDrum);
+		registerItem(shotgunAmmo);
+		registerItem(shotgunAmmo2);
 		
 		// Stone Age
 		registerItem(rock);
@@ -1203,6 +1308,7 @@ public class ModItems {
 		registerItem(woodShard);
 		registerItem(barrel);
 		registerItem(blankGun);
+		registerItem(blankRifle);
 		registerItem(gunHandle);
 		registerItem(haftIron);
 		registerItem(haftWood);
@@ -1282,6 +1388,18 @@ public class ModItems {
 		registerItem(ninjaChestplate);
 		registerItem(ninjaLeggings);
 		registerItem(ninjaBoots);
+		
+		// Modern Age
+		registerItem(fieldGlasses);
+		registerItem(nightVisionGoggles);
+		registerItem(taser);
+		registerItem(flameThrower);
+		registerItem(industrialMiner);
+		registerItem(industrialExcavator);
+		
+		// Future
+		registerItem(poisonThrower);
+		registerItem(industrialMultiTool);
 		
 		
 		

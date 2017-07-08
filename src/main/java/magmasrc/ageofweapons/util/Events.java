@@ -126,7 +126,22 @@ public class Events {
 			}
 			                                        //zoom wight
 		event.setNewfov(event.getNewfov() * 1.0F - f1 * 0.10F);	
-		} 		  
+		} 	
+		  
+		  if (player.isHandActive() && player.getActiveItemStack() != null && player.getActiveItemStack().getItem() == ModItems.fieldGlasses) {
+				
+			 int i = player.getItemInUseMaxCount();
+			 float f1 = (float) i / 10.0F;
+			                      //speed
+			
+			if (f1 > 1.0F) {
+				f1 = 1.0F;
+			} else {
+				f1 = f1 * f1;
+			}
+			                                        //zoom wight
+		event.setNewfov(event.getNewfov() * 1.0F - f1 * 0.80F);	
+		} 
 		  
 		  
 		  

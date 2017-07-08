@@ -1,14 +1,14 @@
-package magmasrc.ageofweapons.items;
+package magmasrc.ageofweapons.items.modernage;
 
 import magmasrc.ageofweapons.main.AgeOfWeapons;
 import magmasrc.ageofweapons.main.ModTabs;
 import net.minecraft.item.Item;
 
-public class ItemBlankGun extends Item {
+public class ItemMachineCase extends Item {
 	
-	public ItemBlankGun () {
+	public ItemMachineCase () {
 		super();
-		this.setCreativeTab(ModTabs.earlyModernAgeTab);
+		this.setCreativeTab(ModTabs.modernAgeTab);
 		this.setMaxStackSize(16);
 	}
 

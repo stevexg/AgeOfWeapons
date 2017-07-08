@@ -26,7 +26,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 public class AgeOfWeapons {
    
     public static final String MODID = "ageofweapons";
-    public static final String VERSION = "0.8.0";
+    public static final String VERSION = "0.9.0";
 
    
     @Instance("ageofweapons")
@@ -62,7 +62,8 @@ public class AgeOfWeapons {
     public static boolean activateNexusRecipe;
     public static boolean activateShowAges;
     public static boolean activateDungeonLoot;
-    public static boolean activateHardcoreMode;			
+    public static boolean activateHardcoreMode;	
+    public static boolean activateBombs;         
     
     public static boolean activatePiracy;
     public static boolean activateEdoPeriod;
@@ -72,7 +73,7 @@ public class AgeOfWeapons {
     public static boolean activateEpic;
     public static boolean activateFuture;
     
-    public static float battleAxeMultiplier;					//TODO later (for all weapon types)
+    public static float battleAxeModifier;					//TODO later (for all weapon types)
 
 
 
@@ -91,7 +92,7 @@ public class AgeOfWeapons {
     	
     	
     // Config //
-    net.minecraftforge.common.config.Configuration config = new Configuration(event.getSuggestedConfigurationFile());
+    Configuration config = new Configuration(event.getSuggestedConfigurationFile());
     	config.load();
         
     		activateUpdateChecker = config.get("EVENTS", "Activate Update-Checker", true, "[true/false]").getBoolean();
@@ -103,6 +104,8 @@ public class AgeOfWeapons {
     		activateShowAges = config.get("GENERAL", "Show the age under the item name", true, "[true/false]").getBoolean();
     		activateDungeonLoot = config.get("GENERATION", "Generate dungeon loot (means only the not important items for the mod)", true, "[true/false]").getBoolean();
     		activateHardcoreMode = config.get("GENERAL", "You can only craft vanilla tools/weapons/armor in the Table of Ages and in the right age", false, "[true/false]").getBoolean();
+    		activateBombs = config.get("CRAFTING", "Activate the crafting recipes for the bombs", true, "[true/false]").getBoolean();
+
     		
     		activateBBY = config.get("AGES", "Activate the recipe for the BBY Upgrade", true, "[true/false]").getBoolean();
     		activateEdoPeriod = config.get("AGES", "Activate the recipe for the Edo Period Upgrade", true, "[true/false]").getBoolean();

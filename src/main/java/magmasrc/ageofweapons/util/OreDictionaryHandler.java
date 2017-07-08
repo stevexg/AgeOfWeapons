@@ -70,6 +70,7 @@ public class OreDictionaryHandler {
 			OreDictionary.registerOre("potionRadioactive", ModItems.radioactiveToxin);
 			OreDictionary.registerOre("partBarrel", ModItems.barrel);
 			OreDictionary.registerOre("partBlankGun", ModItems.blankGun);
+			OreDictionary.registerOre("partBlankRifle", ModItems.blankRifle);
 			OreDictionary.registerOre("partHandleGun", ModItems.gunHandle);
 			OreDictionary.registerOre("partHaftWood", ModItems.haftWood);
 			OreDictionary.registerOre("partHaftIron", ModItems.haftIron);
@@ -113,6 +114,22 @@ public class OreDictionaryHandler {
 			OreDictionary.registerOre("ammoPebble", ModItems.pebble);
 			OreDictionary.registerOre("ammoCannonball", ModItems.cannonball);
 			OreDictionary.registerOre("bowCompound", ModItems.compoundBow);
+			
+			//Modern Age
+			OreDictionary.registerOre("tankFire", ModItems.tankFlame);
+			OreDictionary.registerOre("tankPoison", ModItems.tankPoison);
+			OreDictionary.registerOre("caseMachine", ModItems.machineCase);
+			OreDictionary.registerOre("ammoSmall", ModItems.ammoBig);
+			OreDictionary.registerOre("ammoBig", ModItems.ammoSmall);
+			OreDictionary.registerOre("dustGunpowderConcentrated", ModItems.concentratedGunpowder);
+			OreDictionary.registerOre("magazineSmall", ModItems.magazineSmall);
+			OreDictionary.registerOre("magazineLong", ModItems.magazineLong);
+			OreDictionary.registerOre("magazineBig", ModItems.magazineBig);
+			OreDictionary.registerOre("magazineDrum", ModItems.magazineDrum);
+			OreDictionary.registerOre("ammoShotgun", ModItems.shotgunAmmo);
+			OreDictionary.registerOre("ammoShotgun", ModItems.shotgunAmmo2);
+
+
 
 			
 			
@@ -145,6 +162,8 @@ public class OreDictionaryHandler {
 	    	OreDictionary.registerOre("blockAmethyst", ModBlocks.amethystBlock);
 	    	OreDictionary.registerOre("blockTopaz", ModBlocks.topazBlock);
 	    	OreDictionary.registerOre("blockAmber", ModBlocks.amberBlock);
+	    	OreDictionary.registerOre("tntNuclear", ModBlocks.nuclearBomb);
+	    	OreDictionary.registerOre("tntNeutron", ModBlocks.neutronBomb);
 
 
 

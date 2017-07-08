@@ -43,6 +43,9 @@ tile.fall_trap_dirt.name=Erd Gruben Falle
 tile.fall_trap_planks.name=Brett Gruben Falle
 tile.fall_trap_stone.name=Stein Gruben Falle
 
+tile.neutron_bomb.name=Neutronen Bombe
+tile.nuclear_bomb.name=Nuklear Bombe
+
 
 
 
@@ -94,7 +97,8 @@ item.sapphire_shard.name=Saphir Scherbe
 item.stone_shard.name=Stein Splitter
 item.wood_shard.name=Holz Splitter
 item.barrel.name=Lauf
-item.blank_gun.name=Rohe Pistole
+item.blank_gun.name=Blankes Pistole
+item.blank_rifle.name=Blankes Gewehr
 item.gun_handle.name=Griff
 item.haft_wood.name=Holz Schaft
 item.haft_iron.name=Eisen Schaft
@@ -188,11 +192,11 @@ item.longbow.name=Langbogen
 item.crossbow.name=Armbrust
 
 //EarlyModernAge
-item.multi_tool_wood.name=Holz Mehrfach Werkzeug
-item.multi_tool_stone.name=Stein Mehrfach Werkzeug
-item.multi_tool_iron.name=Eisen Mehrfach Werkzeug
-item.multi_tool_gold.name=Gold Mehrfach Werkzeug
-item.multi_tool_diamond.name=Diamant Mehrfach Werkzeug
+item.multi_tool_wood.name=Holz Multifunktions Werkzeug
+item.multi_tool_stone.name=Stein Multifunktions Werkzeug
+item.multi_tool_iron.name=Eisen Multifunktions Werkzeug
+item.multi_tool_gold.name=Gold Multifunktions Werkzeug
+item.multi_tool_diamond.name=Diamant Multifunktions Werkzeug
 item.old_ammo.name=Alte Munition
 item.old_shotgun_ammo.name=Alte Schrot Munition
 item.cannonball.name=Kanonen Kugel
@@ -274,6 +278,33 @@ item.ninja_helmet.name=Ninja Kopfbedekung
 item.ninja_chestplate.name=Ninja Mantel
 item.ninja_leggings.name=Ninja Hose
 item.ninja_boots.name=Ninja Stiefel
+
+//ModernAge
+item.field_glasses.name=Fernglas
+item.night_vision_goggles.name=Nachtsicht Gerät
+item.taser.name=Elektro Schocker
+item.flame_thrower.name=Flammenwerfer
+item.industrial_miner.name=Industrieller Schürfer
+item.industrial_excavator.name=Industrieller Gräber
+item.tank_flame.name=Tank (Feuer)
+item.machine_case.name=Maschinen Gehäuse
+item.ammo_small.name=Kleine Munition
+item.ammo_big.name=Große Munition
+item.ammo_bundle_small.name=Kleiner Munitionsgürtel
+item.ammo_bundle_big.name=Großer Munitionsgürtel
+item.concentrated_gunpowder.name=Konzentriertes Schießpulver
+item.magazine_small.name=Kleines Magazin
+item.magazine_long.name=Langes Magazin
+item.magazine_big.name=Großes Magazin
+item.magazine_drum.name=Magazin Trommel
+item.shotgun_ammo.name=Rote Schrot Munition
+item.shotgun_ammo2.name=Blaue Schrot Munition
+
+//Future
+item.poison_thrower.name=Giftwerfer
+item.industrial_multi_tool.name=Industrielles Multifunktions Werkzeug
+item.tank_poison.name=Tank (Gift)
+
 
 
 /** TEMPLATE **/

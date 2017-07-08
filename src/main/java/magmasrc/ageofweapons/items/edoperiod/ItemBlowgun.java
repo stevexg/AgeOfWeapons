@@ -46,8 +46,8 @@ public class ItemBlowgun extends ItemBow {
 	            {
 	                return entityIn == null ? 0.0F : (entityIn.getActiveItemStack().getItem() != ModItems.blowgun ? 0.0F : (float)(stack.getMaxItemUseDuration() - entityIn.getItemInUseCount()) / 40.0F);   //20 = default speed
 	            }
-	        });
-	        this.addPropertyOverride(new ResourceLocation("pulling"), new IItemPropertyGetter()
+	        }); 
+	         this.addPropertyOverride(new ResourceLocation("pulling"), new IItemPropertyGetter()
 	        {
 	            @SideOnly(Side.CLIENT)
 	            public float apply(ItemStack stack, @Nullable World worldIn, @Nullable EntityLivingBase entityIn)
@@ -56,7 +56,7 @@ public class ItemBlowgun extends ItemBow {
 	            }
 	        });
 
-	}
+	}  
 	
 	  private ItemStack findAmmo(EntityPlayer player)
 	    {
