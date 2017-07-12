@@ -480,15 +480,15 @@ public class CraftingManagerTableOfAges {
 	this.addRecipeTOA(new ItemStack(ModItems.nightVisionGoggles), 9, " x ", " o ", " i ", 'x', new ItemStack(Blocks.STAINED_GLASS_PANE, 1, 5), 'o', Items.REDSTONE, 'i', ModItems.fieldGlasses); 
 	this.addRecipeTOA(new ItemStack(ModItems.fieldGlasses), 9, "   ", "xox", "xox", 'x', Items.IRON_INGOT, 'o', Blocks.IRON_BARS); 
 	this.addRecipeTOA(new ItemStack(ModItems.machineCase), 9, "xix", "xox", "xxx", 'x', Items.IRON_INGOT, 'o', Blocks.REDSTONE_BLOCK, 'i', Items.DIAMOND); 
-	this.addRecipeTOA(new ItemStack(ModItems.tankFlame), 9, " x", "xox", " x ", 'x', Items.IRON_INGOT, 'o', Items.BLAZE_POWDER); 
+	this.addRecipeTOA(new ItemStack(ModItems.tankFlame), 9, " x ", "xox", " x ", 'x', Items.IRON_INGOT, 'o', Items.BLAZE_POWDER); 
 	
 	this.addRecipeTOA(new ItemStack(ModItems.industrialMiner), 9, "xxx", " o ", "   ", 'x', Items.IRON_PICKAXE, 'o', ModItems.machineCase); 
 	this.addRecipeTOA(new ItemStack(ModItems.industrialExcavator), 9, "xxx", " o ", "   ", 'x', Items.IRON_SHOVEL, 'o', ModItems.machineCase); 
-	this.addRecipeTOA(new ItemStack(ModItems.flameThrower), 9, "  xz", "xxo", " i ", 'i', ModItems.gunHandle, 'x', ModItems.barrel, 'z', ModItems.tankFlame, 'o', ModItems.blankRifle); 
+	this.addRecipeTOA(new ItemStack(ModItems.flameThrower), 9, " xz", "xxo", " i ", 'i', ModItems.gunHandle, 'x', ModItems.barrel, 'z', ModItems.tankFlame, 'o', ModItems.blankRifle); 
 
 
 	/** Future #11 **/
-	this.addRecipeTOA(new ItemStack(ModItems.tankPoison), 11, " x", "xox", " x ", 'x', Items.IRON_INGOT, 'o', ModItems.toxin); 
+	this.addRecipeTOA(new ItemStack(ModItems.tankPoison), 11, " x ", "xox", " x ", 'x', Items.IRON_INGOT, 'o', ModItems.toxin); 
 
 	this.addRecipeTOA(new ItemStack(ModItems.industrialMultiTool), 11, "xyz", " o ", "   ", 'y', Items.IRON_SHOVEL, 'x', Items.IRON_PICKAXE, 'z', Items.IRON_AXE, 'o', ModItems.machineCase); 
 	this.addRecipeTOA(new ItemStack(ModItems.poisonThrower), 11, "  xz", "xxo", " i ", 'i', ModItems.gunHandle, 'x', ModItems.barrel, 'z', ModItems.tankPoison, 'o', ModItems.blankRifle); 
