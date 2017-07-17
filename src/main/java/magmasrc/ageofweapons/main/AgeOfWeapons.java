@@ -73,7 +73,39 @@ public class AgeOfWeapons {
     public static boolean activateEpic;
     public static boolean activateFuture;
     
-    public static float battleAxeModifier;					//TODO later (for all weapon types)
+    public static float daggerModifier;					//TODO later (for all weapon types)
+    public static float kniveModifier;
+    public static float skewerModifier;
+    public static float cavemanKniveModifier;
+    public static float boneKniveModifier;
+    public static float cudgelModifier;
+    public static float handAxModifier;
+    public static float rockModifier;
+    public static float battleAxeModifier;
+    public static float flailModifier;
+    public static float halbertModifier;
+    public static float longswordModifier;
+    public static float spearModifier;
+    public static float tridentModifier;
+    public static float warAxeModifier;
+    public static float warHammerModifier;
+    public static float industrialMinerModifier;
+    public static float industrialExcavatorModifier;
+    public static float industrialMultiToolModifier;
+    public static float mysticKniveModifier;
+    public static float multiToolModifier;
+    public static float batonModifier;
+    public static float katanaModifier;
+    public static float ninjatoModifier;
+    public static float nunchuckModifier;
+    public static float clawModifier;
+    public static float clawSwordModifier;
+    public static float claymoreModifier;
+    public static float fantasySwordModifier;
+    public static float longClaymoreModifier;
+    
+    
+    
 
 
 

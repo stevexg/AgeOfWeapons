@@ -1,6 +1,6 @@
 {
     "parent": "item/handheld",
     "textures": {
-        "layer0": "ageofweapons:items/middleages/battle_axe.iron"
+        "layer0": "ageofweapons:items/middleages/battle_axe.diamond"
     }
 }
