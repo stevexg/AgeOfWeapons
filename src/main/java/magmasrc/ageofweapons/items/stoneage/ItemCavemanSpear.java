@@ -38,7 +38,7 @@ public class ItemCavemanSpear extends ItemBow {
 	public ItemCavemanSpear() {
 		    this.maxStackSize = 1;
 	        this.setMaxDamage(0);
-	        this.setCreativeTab(ModTabs.stoneAgeTab);
+	    //    this.setCreativeTab(ModTabs.stoneAgeTab);		WIP
 	        this.addPropertyOverride(new ResourceLocation("pull"), new IItemPropertyGetter()
 
 	        {

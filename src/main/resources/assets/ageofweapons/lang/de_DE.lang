@@ -240,11 +240,11 @@ item.long_claymore_stone.name=Langes Stein Breitschwert
 item.long_claymore_iron.name=Langes Eisen Breitschwert
 item.long_claymore_gold.name=Langes Gold Breitschwert
 item.long_claymore_diamond.name=Langes Diamant  Breitschwert
-item.fantasy_sword_wood.name=Holz Fantasy Schwert
-item.fantasy_sword_stone.name=Stein Fantasy Schwert
-item.fantasy_sword_iron.name=Eisen Fantasy Schwert
-item.fantasy_sword_gold.name=Gold Fantasy Schwert
-item.fantasy_sword_diamond.name=Diamant Fantasy Schwert
+item.fantasy_sword_wood.name=Holz Drachentöter Schwert
+item.fantasy_sword_stone.name=Stein Drachentöter Schwert
+item.fantasy_sword_iron.name=Eisen Drachentöter Schwert
+item.fantasy_sword_gold.name=Gold Drachentöter Schwert
+item.fantasy_sword_diamond.name=Diamant Drachentöter Schwert
 item.light_bow.name=Licht Bogen
 item.shadow_bow.name=Schatten Bogen
 

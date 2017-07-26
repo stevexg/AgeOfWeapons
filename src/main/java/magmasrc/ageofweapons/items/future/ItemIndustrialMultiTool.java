@@ -76,27 +76,53 @@ public class ItemIndustrialMultiTool extends ItemCustomIndustrialMulti {
 	            {
 	                if (block == Blocks.GRASS || block == Blocks.GRASS_PATH)
 	                {
-	                    this.setBlock(itemstack, player, worldIn, pos, Blocks.FARMLAND.getDefaultState());
+	                    this.setBlock(itemstack, player, worldIn, pos.add(0, 0, 0), Blocks.FARMLAND.getDefaultState());
+	                    this.setBlock(itemstack, player, worldIn, pos.add(1, 0, 0), Blocks.FARMLAND.getDefaultState());
+	                    this.setBlock(itemstack, player, worldIn, pos.add(0, 0, 1), Blocks.FARMLAND.getDefaultState());
+	                    this.setBlock(itemstack, player, worldIn, pos.add(-1, 0, 0), Blocks.FARMLAND.getDefaultState());
+	                    this.setBlock(itemstack, player, worldIn, pos.add(0, 0, -1), Blocks.FARMLAND.getDefaultState());
+	                    this.setBlock(itemstack, player, worldIn, pos.add(1, 0, 1), Blocks.FARMLAND.getDefaultState());
+	                    this.setBlock(itemstack, player, worldIn, pos.add(-1, 0, -1), Blocks.FARMLAND.getDefaultState());
+	                    this.setBlock(itemstack, player, worldIn, pos.add(-1, 0, 1), Blocks.FARMLAND.getDefaultState());
+	                    this.setBlock(itemstack, player, worldIn, pos.add(1, 0, -1), Blocks.FARMLAND.getDefaultState());
 	                    return EnumActionResult.SUCCESS;
 	                }
-
 	                if (block == Blocks.DIRT)
 	                {
 	                    switch ((BlockDirt.DirtType)iblockstate.getValue(BlockDirt.VARIANT))
 	                    {
 	                        case DIRT:
-	                            this.setBlock(itemstack, player, worldIn, pos, Blocks.FARMLAND.getDefaultState());
+	    	                    this.setBlock(itemstack, player, worldIn, pos.add(0, 0, 0), Blocks.FARMLAND.getDefaultState());
+	    	                    this.setBlock(itemstack, player, worldIn, pos.add(1, 0, 0), Blocks.FARMLAND.getDefaultState());
+	    	                    this.setBlock(itemstack, player, worldIn, pos.add(0, 0, 1), Blocks.FARMLAND.getDefaultState());
+	    	                    this.setBlock(itemstack, player, worldIn, pos.add(-1, 0, 0), Blocks.FARMLAND.getDefaultState());
+	    	                    this.setBlock(itemstack, player, worldIn, pos.add(0, 0, -1), Blocks.FARMLAND.getDefaultState());
+	    	                    this.setBlock(itemstack, player, worldIn, pos.add(1, 0, 1), Blocks.FARMLAND.getDefaultState());
+	    	                    this.setBlock(itemstack, player, worldIn, pos.add(-1, 0, -1), Blocks.FARMLAND.getDefaultState());
+	    	                    this.setBlock(itemstack, player, worldIn, pos.add(-1, 0, 1), Blocks.FARMLAND.getDefaultState());
+	    	                    this.setBlock(itemstack, player, worldIn, pos.add(1, 0, -1), Blocks.FARMLAND.getDefaultState());
 	                            return EnumActionResult.SUCCESS;
+	                            
 	                        case COARSE_DIRT:
-	                            this.setBlock(itemstack, player, worldIn, pos, Blocks.DIRT.getDefaultState().withProperty(BlockDirt.VARIANT, BlockDirt.DirtType.DIRT));
+	                            this.setBlock(itemstack, player, worldIn, pos.add(0, 0, 0), Blocks.DIRT.getDefaultState().withProperty(BlockDirt.VARIANT, BlockDirt.DirtType.DIRT));
+	                            this.setBlock(itemstack, player, worldIn, pos.add(1, 0, 0), Blocks.DIRT.getDefaultState().withProperty(BlockDirt.VARIANT, BlockDirt.DirtType.DIRT));
+	                            this.setBlock(itemstack, player, worldIn, pos.add(0, 0, 1), Blocks.DIRT.getDefaultState().withProperty(BlockDirt.VARIANT, BlockDirt.DirtType.DIRT));
+	                            this.setBlock(itemstack, player, worldIn, pos.add(-1, 0, 0), Blocks.DIRT.getDefaultState().withProperty(BlockDirt.VARIANT, BlockDirt.DirtType.DIRT));
+	                            this.setBlock(itemstack, player, worldIn, pos.add(0, 0, -1), Blocks.DIRT.getDefaultState().withProperty(BlockDirt.VARIANT, BlockDirt.DirtType.DIRT));
+	                            this.setBlock(itemstack, player, worldIn, pos.add(1, 0, 1), Blocks.DIRT.getDefaultState().withProperty(BlockDirt.VARIANT, BlockDirt.DirtType.DIRT));
+	                            this.setBlock(itemstack, player, worldIn, pos.add(-1, 0, -1), Blocks.DIRT.getDefaultState().withProperty(BlockDirt.VARIANT, BlockDirt.DirtType.DIRT));
+	                            this.setBlock(itemstack, player, worldIn, pos.add(1, 0, -1), Blocks.DIRT.getDefaultState().withProperty(BlockDirt.VARIANT, BlockDirt.DirtType.DIRT));
+	                            this.setBlock(itemstack, player, worldIn, pos.add(-1, 0, 1), Blocks.DIRT.getDefaultState().withProperty(BlockDirt.VARIANT, BlockDirt.DirtType.DIRT));
 	                            return EnumActionResult.SUCCESS;
 	                    }
 	                }
 	            }
-
 	            return EnumActionResult.PASS;
 	        }
 	    }
+	 
+	 
+	 
 	 
 	 
 	 

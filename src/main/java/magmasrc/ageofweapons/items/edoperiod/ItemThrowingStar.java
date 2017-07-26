@@ -22,7 +22,7 @@ public class ItemThrowingStar extends Item {
 	
 	public ItemThrowingStar () {
 		super();
-		this.setCreativeTab(ModTabs.edoTab);
+	//	this.setCreativeTab(ModTabs.edoTab);			WIP
 	}
 	
 	
