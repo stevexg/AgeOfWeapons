@@ -8,7 +8,8 @@ public class ItemBlankGun extends Item {
 	
 	public ItemBlankGun () {
 		super();
-		this.setCreativeTab(ModTabs.generalTab);
+		this.setCreativeTab(ModTabs.earlyModernAgeTab);
+		this.setMaxStackSize(16);
 	}
 
 }

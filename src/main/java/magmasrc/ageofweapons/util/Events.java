@@ -1,11 +1,14 @@
 package magmasrc.ageofweapons.util;
 
 import magmasrc.ageofweapons.main.AgeOfWeapons;
+import magmasrc.ageofweapons.main.ModItems;
 import net.minecraft.client.Minecraft;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.text.Style;
 import net.minecraft.util.text.TextComponentString;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.util.text.event.ClickEvent;
+import net.minecraftforge.client.event.FOVUpdateEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent.ClientTickEvent;
 
@@ -35,7 +38,115 @@ public class Events {
 		}	
 	}
 	
-
+	
+	
+	
+	
+	/** FOV **/ 
+	
+	@SubscribeEvent
+	public void onFOVUpdate(FOVUpdateEvent event) {
+		EntityPlayer player = event.getEntity();
+		  if (player.isHandActive() && player.getActiveItemStack() != null && player.getActiveItemStack().getItem() == ModItems.recurveBow) {
+			
+			 int i = player.getItemInUseMaxCount();
+			 float f1 = (float) i / 7.0F;
+			                      //speed
+			
+			if (f1 > 1.0F) {
+				f1 = 1.0F;
+			} else {
+				f1 = f1 * f1;
+			}
+			                                        //zoom wight
+		event.setNewfov(event.getNewfov() * 1.0F - f1 * 0.15F);	
+		} 
+		  
+		  
+		  if (player.isHandActive() && player.getActiveItemStack() != null && player.getActiveItemStack().getItem() == ModItems.crossbow) {
+				
+			 int i = player.getItemInUseMaxCount();
+			 float f1 = (float) i / 7.0F;
+			                      //speed
+			
+			if (f1 > 1.0F) {
+				f1 = 1.0F;
+			} else {
+				f1 = f1 * f1;
+			}
+			                                        //zoom wight
+		event.setNewfov(event.getNewfov() * 1.0F - f1 * 0.30F);	
+		} 
+		  
+		  
+		  
+		  if (player.isHandActive() && player.getActiveItemStack() != null && player.getActiveItemStack().getItem() == ModItems.longbow) {
+				
+			 int i = player.getItemInUseMaxCount();
+			 float f1 = (float) i / 7.0F;
+			                      //speed
+			
+			if (f1 > 1.0F) {
+				f1 = 1.0F;
+			} else {
+				f1 = f1 * f1;
+			}
+			                                        //zoom wight
+		event.setNewfov(event.getNewfov() * 1.0F - f1 * 0.15F);	
+		} 
+		  
+		  
+		  
+		  if (player.isHandActive() && player.getActiveItemStack() != null && player.getActiveItemStack().getItem() == ModItems.compoundBow) {
+				
+			 int i = player.getItemInUseMaxCount();
+			 float f1 = (float) i / 7.0F;
+			                      //speed
+			
+			if (f1 > 1.0F) {
+				f1 = 1.0F;
+			} else {
+				f1 = f1 * f1;
+			}
+			                                        //zoom wight
+		event.setNewfov(event.getNewfov() * 1.0F - f1 * 0.60F);	
+		} 
+		  
+		  
+		  if (player.isHandActive() && player.getActiveItemStack() != null && player.getActiveItemStack().getItem() == ModItems.blowgun) {
+				
+			 int i = player.getItemInUseMaxCount();
+			 float f1 = (float) i / 10.0F;
+			                      //speed
+			
+			if (f1 > 1.0F) {
+				f1 = 1.0F;
+			} else {
+				f1 = f1 * f1;
+			}
+			                                        //zoom wight
+		event.setNewfov(event.getNewfov() * 1.0F - f1 * 0.10F);	
+		} 	
+		  
+		  if (player.isHandActive() && player.getActiveItemStack() != null && player.getActiveItemStack().getItem() == ModItems.fieldGlasses) {
+				
+			 int i = player.getItemInUseMaxCount();
+			 float f1 = (float) i / 10.0F;
+			                      //speed
+			
+			if (f1 > 1.0F) {
+				f1 = 1.0F;
+			} else {
+				f1 = f1 * f1;
+			}
+			                                        //zoom wight
+		event.setNewfov(event.getNewfov() * 1.0F - f1 * 0.80F);	
+		} 
+		  
+		  
+		  
+	}	  
+	
 }
 
 

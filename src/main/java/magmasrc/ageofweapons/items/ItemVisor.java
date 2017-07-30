@@ -8,7 +8,7 @@ public class ItemVisor extends Item {
 	
 	public ItemVisor () {
 		super();
-		this.setCreativeTab(ModTabs.generalTab);
+		this.setCreativeTab(ModTabs.earlyModernAgeTab);
 	}
 
 }

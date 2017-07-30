@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube",
+    "textures": {
+        "particle": "ageofweapons:items/earlymodernage/fall_trap_stone",
+        "up": "minecraft:blocks/stone",
+        "down": "ageofweapons:items/earlymodernage/fall_trap_stone",
+        "north": "ageofweapons:items/earlymodernage/fall_trap_stone",
+        "east": "ageofweapons:items/earlymodernage/fall_trap_stone",
+        "west": "ageofweapons:items/earlymodernage/fall_trap_stone",
+        "south": "ageofweapons:items/earlymodernage/fall_trap_stone"
+    }
+}

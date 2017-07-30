@@ -8,7 +8,7 @@ public class ItemBarrel extends Item {
 	
 	public ItemBarrel () {
 		super();
-		this.setCreativeTab(ModTabs.generalTab);
+		this.setCreativeTab(ModTabs.earlyModernAgeTab);
 	}
 
 }

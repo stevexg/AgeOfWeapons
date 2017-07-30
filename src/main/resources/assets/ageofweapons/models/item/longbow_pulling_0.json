@@ -1,0 +1,6 @@
+{
+    "parent": "item/bow",
+    "textures": {
+        "layer0": "ageofweapons:items/middleages/longbow_pulling_0"
+    }
+}

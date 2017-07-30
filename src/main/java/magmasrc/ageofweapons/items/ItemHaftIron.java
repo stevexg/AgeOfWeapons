@@ -8,7 +8,7 @@ public class ItemHaftIron extends Item {
 	
 	public ItemHaftIron () {
 		super();
-		this.setCreativeTab(ModTabs.generalTab);
+		this.setCreativeTab(ModTabs.earlyModernAgeTab);
 	}
 
 }

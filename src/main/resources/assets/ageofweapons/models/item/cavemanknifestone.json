@@ -1,6 +1,0 @@
-{
-  "parent": "item/handheld",
-  "textures": {
-    "layer0": "ageofweapons:items/stoneage/caveman_knife.stone"
-  }
-}

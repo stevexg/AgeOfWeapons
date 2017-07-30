@@ -54,7 +54,10 @@ public class BlockNexus3 extends Block {
 
 	@Override
 	public void onBlockClicked(World worldIn, BlockPos pos, EntityPlayer playerIn) {
+			worldIn.playSound((double)pos.getX() + 0.5D, (double)pos.getY() + 0.5D, (double)pos.getZ() + 0.5D, SoundEvents.ENTITY_TNT_PRIMED, SoundCategory.BLOCKS, 1, 0, false);
+
 		if(!worldIn.isRemote) {
+			Minecraft.getMinecraft().player.sendMessage(new TextComponentString(TextFormatting.YELLOW + "The Nexus is attacked!"));	
 	    	EntityAreaEffectCloud cloud = new EntityAreaEffectCloud(worldIn, pos.getX() + 0.5F, pos.getY()+ 0.5F, pos.getZ() + 0.5F);
 	    	cloud.addEffect(new PotionEffect(MobEffects.INSTANT_DAMAGE, 200, 0));
 	    	cloud.setDuration(50);
@@ -62,7 +65,7 @@ public class BlockNexus3 extends Block {
 	    	cloud.setCustomNameTag("Nexus");
 	    	cloud.setWaitTime(250);
 	    	cloud.setParticle(EnumParticleTypes.SMOKE_NORMAL);
-	    	worldIn.playSound((double)pos.getX() + 0.5D, (double)pos.getY() + 0.5D, (double)pos.getZ() + 0.5D, SoundEvents.BLOCK_METAL_BREAK, SoundCategory.BLOCKS, 0, 0, false);
+	    	worldIn.playSound((double)pos.getX() + 0.5D, (double)pos.getY() + 0.5D, (double)pos.getZ() + 0.5D, SoundEvents.BLOCK_ANVIL_BREAK, SoundCategory.BLOCKS, 1, 0, false);
 	    	worldIn.spawnEntity(cloud);
 	    	}   
 	 } 
@@ -70,6 +73,9 @@ public class BlockNexus3 extends Block {
 	
 	@Override
 	public void onBlockDestroyedByPlayer(World worldIn, BlockPos pos, IBlockState state) {
+			worldIn.playSound((double)pos.getX() + 0.5D, (double)pos.getY() + 0.5D, (double)pos.getZ() + 0.5D, SoundEvents.ENTITY_ENDERDRAGON_DEATH, SoundCategory.BLOCKS, 10, 0, false);
+    		worldIn.playSound((double)pos.getX() + 0.5D, (double)pos.getY() + 0.5D, (double)pos.getZ() + 0.5D, SoundEvents.ENTITY_LIGHTNING_IMPACT, SoundCategory.BLOCKS, 10, 0, false);
+
 		if(!worldIn.isRemote) {
 			Minecraft.getMinecraft().player.sendMessage(new TextComponentString(TextFormatting.YELLOW + "The Nexus is destroyed!"));	
 		}
@@ -78,6 +84,8 @@ public class BlockNexus3 extends Block {
 	
 	@Override
 	public void onBlockAdded(World worldIn, BlockPos pos, IBlockState state) {
+			worldIn.playSound((double)pos.getX() + 0.5D, (double)pos.getY() + 0.5D, (double)pos.getZ() + 0.5D, SoundEvents.ENTITY_EXPERIENCE_ORB_PICKUP, SoundCategory.BLOCKS, 1, 0, false);
+
 		if(!worldIn.isRemote) {
 			Minecraft.getMinecraft().player.sendMessage(new TextComponentString(TextFormatting.YELLOW + "The Nexus is placed!"));	
 		}
@@ -96,6 +104,14 @@ public class BlockNexus3 extends Block {
 		worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, d0, d1, d2, 0.0D, 0.0D, 0.0D, new int[0]);
 	}
 
+	
+	
+	
+	
+	@Override
+    public Item getItemDropped(IBlockState state, Random rand, int fortune) {
+        return Items.NETHER_STAR;
+    }
 	
 
 	
@@ -150,9 +166,5 @@ public class BlockNexus3 extends Block {
 		 public void addInformation(ItemStack stack, EntityPlayer playerIn, List addList, boolean advanced) {
 			addList.add(ChatFormatting.RED + "Work in progress");
 		    }
-		
-		@Override
-		 public Item getItemDropped(IBlockState state, Random rand, int fortune){
-		        return null;
-		 }
+
 	}

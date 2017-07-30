@@ -18,7 +18,7 @@ public class ItemCustomAxe extends ItemTool {
 	public ItemCustomAxe(ToolMaterial material, float attackSpeed) {
 		super(material, EFFECTIVE_ON);
 		this.damageVsEntity = material.getDamageVsEntity();
-		this.attackSpeed = attackSpeed;
+		this.attackSpeed = attackSpeed - 4.0F;
 		ObfuscationReflectionHelper.setPrivateValue(ItemTool.class, this, "axe", "toolClass");
 	}
 

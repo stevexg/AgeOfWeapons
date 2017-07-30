@@ -1,0 +1,12 @@
+{
+    "parent": "block/cube",
+    "textures": {
+        "particle": "ageofweapons:items/earlymodernage/fall_trap_dirt",
+        "up": "minecraft:blocks/dirt",
+        "down": "ageofweapons:items/earlymodernage/fall_trap_dirt",
+        "north": "ageofweapons:items/earlymodernage/fall_trap_dirt",
+        "east": "ageofweapons:items/earlymodernage/fall_trap_dirt",
+        "west": "ageofweapons:items/earlymodernage/fall_trap_dirt",
+        "south": "ageofweapons:items/earlymodernage/fall_trap_dirt"
+    }
+}
