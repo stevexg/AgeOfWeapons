@@ -644,4 +644,8 @@ public class CraftingManagerTableOfAges {
         return ItemStack.EMPTY;
     }
 
+    public List<IRecipe> getRecipeList() {
+        return this.recipes;
+    }
+
 }

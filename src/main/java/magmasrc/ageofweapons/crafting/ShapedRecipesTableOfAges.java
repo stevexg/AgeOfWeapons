@@ -141,6 +141,8 @@ public class ShapedRecipesTableOfAges implements IRecipe
         return itemstack;
     }
 
+    public Object[] getInput() { return recipeItems; }
+
     public int getModuleNeeded() {
         return module;
     }
