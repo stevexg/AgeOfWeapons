@@ -33,6 +33,33 @@ public class LootHandler
 	            addLoot(pool, ModItems.ruby, 3);
 	            addLoot(pool, ModItems.sapphire, 3);
 	            addLoot(pool, ModItems.amber, 3);
+	            
+			     if(AgeOfWeapons.activateDungeonLoot) {	
+			            addLoot(pool, ModItems.handAxStone, 3);
+			            addLoot(pool, ModItems.daggerIron, 3);
+			            addLoot(pool, ModItems.daggerStone, 3);
+			            addLoot(pool, ModItems.kniveWood, 3);
+			            addLoot(pool, ModItems.kniveGold, 3);
+			            addLoot(pool, ModItems.recurveBow, 3);
+			            addLoot(pool, ModItems.skewerDiamond, 3);
+			            addLoot(pool, ModItems.skewerIron, 3);
+			            addLoot(pool, ModItems.battleAxeGold, 3);
+			            addLoot(pool, ModItems.crossbow, 2);
+			            addLoot(pool, ModItems.flailStone, 3);
+			            addLoot(pool, ModItems.halbertGold, 3);
+			            addLoot(pool, ModItems.hammer, 3);
+			            addLoot(pool, ModItems.longswordWood, 3);
+			            addLoot(pool, ModItems.longswordIron, 3);
+			            addLoot(pool, ModItems.spearWood, 3);
+			            addLoot(pool, ModItems.spearIron, 3);
+			            addLoot(pool, ModItems.spearDiamond, 3);
+			            addLoot(pool, ModItems.tridentWood, 3);
+			            addLoot(pool, ModItems.waraxeIron, 3);
+			            addLoot(pool, ModItems.warhammerStone, 3);
+			            addLoot(pool, ModItems.multiToolStone, 2);
+			            addLoot(pool, ModItems.multiToolGold, 2);
+			            addLoot(pool, ModItems.compoundBow, 1);
+				     }
 	        }
 	        
 	        
@@ -43,6 +70,33 @@ public class LootHandler
 	            addLoot(pool, ModItems.ruby, 3);
 	            addLoot(pool, ModItems.sapphire, 3);
 	            addLoot(pool, ModItems.amber, 3);
+	            
+			     if(AgeOfWeapons.activateDungeonLoot) {	
+			            addLoot(pool, ModItems.handAxStone, 3);
+			            addLoot(pool, ModItems.daggerIron, 3);
+			            addLoot(pool, ModItems.daggerStone, 3);
+			            addLoot(pool, ModItems.kniveWood, 3);
+			            addLoot(pool, ModItems.kniveGold, 3);
+			            addLoot(pool, ModItems.recurveBow, 3);
+			            addLoot(pool, ModItems.skewerDiamond, 3);
+			            addLoot(pool, ModItems.skewerIron, 3);
+			            addLoot(pool, ModItems.battleAxeGold, 3);
+			            addLoot(pool, ModItems.crossbow, 2);
+			            addLoot(pool, ModItems.flailStone, 3);
+			            addLoot(pool, ModItems.halbertGold, 3);
+			            addLoot(pool, ModItems.hammer, 3);
+			            addLoot(pool, ModItems.longswordWood, 3);
+			            addLoot(pool, ModItems.longswordIron, 3);
+			            addLoot(pool, ModItems.spearWood, 3);
+			            addLoot(pool, ModItems.spearIron, 3);
+			            addLoot(pool, ModItems.spearDiamond, 3);
+			            addLoot(pool, ModItems.tridentWood, 3);
+			            addLoot(pool, ModItems.waraxeIron, 3);
+			            addLoot(pool, ModItems.warhammerStone, 3);
+			            addLoot(pool, ModItems.multiToolStone, 2);
+			            addLoot(pool, ModItems.multiToolGold, 2);
+			            addLoot(pool, ModItems.compoundBow, 1);
+				     }
 	        }
 	        
 	        
@@ -53,6 +107,33 @@ public class LootHandler
 	            addLoot(pool, ModItems.ruby, 3);
 	            addLoot(pool, ModItems.sapphire, 3);
 	            addLoot(pool, ModItems.amber, 3);
+	            
+			     if(AgeOfWeapons.activateDungeonLoot) {	
+			            addLoot(pool, ModItems.handAxStone, 3);
+			            addLoot(pool, ModItems.daggerIron, 3);
+			            addLoot(pool, ModItems.daggerStone, 3);
+			            addLoot(pool, ModItems.kniveWood, 3);
+			            addLoot(pool, ModItems.kniveGold, 3);
+			            addLoot(pool, ModItems.recurveBow, 3);
+			            addLoot(pool, ModItems.skewerDiamond, 3);
+			            addLoot(pool, ModItems.skewerIron, 3);
+			            addLoot(pool, ModItems.battleAxeGold, 3);
+			            addLoot(pool, ModItems.crossbow, 2);
+			            addLoot(pool, ModItems.flailStone, 3);
+			            addLoot(pool, ModItems.halbertGold, 3);
+			            addLoot(pool, ModItems.hammer, 3);
+			            addLoot(pool, ModItems.longswordWood, 3);
+			            addLoot(pool, ModItems.longswordIron, 3);
+			            addLoot(pool, ModItems.spearWood, 3);
+			            addLoot(pool, ModItems.spearIron, 3);
+			            addLoot(pool, ModItems.spearDiamond, 3);
+			            addLoot(pool, ModItems.tridentWood, 3);
+			            addLoot(pool, ModItems.waraxeIron, 3);
+			            addLoot(pool, ModItems.warhammerStone, 3);
+			            addLoot(pool, ModItems.multiToolStone, 2);
+			            addLoot(pool, ModItems.multiToolGold, 2);
+			            addLoot(pool, ModItems.compoundBow, 1);
+				     }
 	        }
 	        
 	        
@@ -67,6 +148,31 @@ public class LootHandler
 	            addLoot(pool, ModItems.swordBladeIron, 5);
 	            addLoot(pool, ModItems.axeBladeIron, 5);
 	            addLoot(pool, ModItems.ironStick, 5);
+	            
+	            addLoot(pool, ModItems.handAxStone, 3);
+	            addLoot(pool, ModItems.daggerIron, 3);
+	            addLoot(pool, ModItems.daggerStone, 3);
+	            addLoot(pool, ModItems.kniveWood, 3);
+	            addLoot(pool, ModItems.kniveGold, 3);
+	            addLoot(pool, ModItems.recurveBow, 3);
+	            addLoot(pool, ModItems.skewerDiamond, 3);
+	            addLoot(pool, ModItems.skewerIron, 3);
+	            addLoot(pool, ModItems.battleAxeGold, 3);
+	            addLoot(pool, ModItems.crossbow, 2);
+	            addLoot(pool, ModItems.flailStone, 3);
+	            addLoot(pool, ModItems.halbertGold, 3);
+	            addLoot(pool, ModItems.hammer, 3);
+	            addLoot(pool, ModItems.longswordWood, 3);
+	            addLoot(pool, ModItems.longswordIron, 3);
+	            addLoot(pool, ModItems.spearWood, 3);
+	            addLoot(pool, ModItems.spearIron, 3);
+	            addLoot(pool, ModItems.spearDiamond, 3);
+	            addLoot(pool, ModItems.tridentWood, 3);
+	            addLoot(pool, ModItems.waraxeIron, 3);
+	            addLoot(pool, ModItems.warhammerStone, 3);
+	            addLoot(pool, ModItems.multiToolStone, 2);
+	            addLoot(pool, ModItems.multiToolGold, 2);
+	            addLoot(pool, ModItems.compoundBow, 1);
 	          }  
 	        }
 	        
@@ -87,7 +193,33 @@ public class LootHandler
 	            addLoot(pool, ModItems.amber, 10);
 	            addLoot(pool, ModItems.upgradeEpic, 1);
 	            addLoot(pool, ModItems.topaz, 1);
-
+	            
+		     if(AgeOfWeapons.activateDungeonLoot) {	
+	            addLoot(pool, ModItems.handAxStone, 3);
+	            addLoot(pool, ModItems.daggerIron, 3);
+	            addLoot(pool, ModItems.daggerStone, 3);
+	            addLoot(pool, ModItems.kniveWood, 3);
+	            addLoot(pool, ModItems.kniveGold, 3);
+	            addLoot(pool, ModItems.recurveBow, 3);
+	            addLoot(pool, ModItems.skewerDiamond, 3);
+	            addLoot(pool, ModItems.skewerIron, 3);
+	            addLoot(pool, ModItems.battleAxeGold, 3);
+	            addLoot(pool, ModItems.crossbow, 2);
+	            addLoot(pool, ModItems.flailStone, 3);
+	            addLoot(pool, ModItems.halbertGold, 3);
+	            addLoot(pool, ModItems.hammer, 3);
+	            addLoot(pool, ModItems.longswordWood, 3);
+	            addLoot(pool, ModItems.longswordIron, 3);
+	            addLoot(pool, ModItems.spearWood, 3);
+	            addLoot(pool, ModItems.spearIron, 3);
+	            addLoot(pool, ModItems.spearDiamond, 3);
+	            addLoot(pool, ModItems.tridentWood, 3);
+	            addLoot(pool, ModItems.waraxeIron, 3);
+	            addLoot(pool, ModItems.warhammerStone, 3);
+	            addLoot(pool, ModItems.multiToolStone, 2);
+	            addLoot(pool, ModItems.multiToolGold, 2);
+	            addLoot(pool, ModItems.compoundBow, 1);
+		     }
 	        }
 	        
 	        
@@ -100,6 +232,33 @@ public class LootHandler
 	            addLoot(pool, ModItems.amber, 10);
 	            addLoot(pool, ModItems.upgradeEpic, 1);
 	            addLoot(pool, ModItems.topaz, 1);
+	            
+			     if(AgeOfWeapons.activateDungeonLoot) {	
+			            addLoot(pool, ModItems.handAxStone, 3);
+			            addLoot(pool, ModItems.daggerIron, 3);
+			            addLoot(pool, ModItems.daggerStone, 3);
+			            addLoot(pool, ModItems.kniveWood, 3);
+			            addLoot(pool, ModItems.kniveGold, 3);
+			            addLoot(pool, ModItems.recurveBow, 3);
+			            addLoot(pool, ModItems.skewerDiamond, 3);
+			            addLoot(pool, ModItems.skewerIron, 3);
+			            addLoot(pool, ModItems.battleAxeGold, 3);
+			            addLoot(pool, ModItems.crossbow, 2);
+			            addLoot(pool, ModItems.flailStone, 3);
+			            addLoot(pool, ModItems.halbertGold, 3);
+			            addLoot(pool, ModItems.hammer, 3);
+			            addLoot(pool, ModItems.longswordWood, 3);
+			            addLoot(pool, ModItems.longswordIron, 3);
+			            addLoot(pool, ModItems.spearWood, 3);
+			            addLoot(pool, ModItems.spearIron, 3);
+			            addLoot(pool, ModItems.spearDiamond, 3);
+			            addLoot(pool, ModItems.tridentWood, 3);
+			            addLoot(pool, ModItems.waraxeIron, 3);
+			            addLoot(pool, ModItems.warhammerStone, 3);
+			            addLoot(pool, ModItems.multiToolStone, 2);
+			            addLoot(pool, ModItems.multiToolGold, 2);
+			            addLoot(pool, ModItems.compoundBow, 1);
+				     }
 	        }
 	        
 	        
@@ -112,6 +271,33 @@ public class LootHandler
 	            addLoot(pool, ModItems.amber, 10);
 	            addLoot(pool, ModItems.upgradeEpic, 1);
 	            addLoot(pool, ModItems.topaz, 1);
+	            
+			     if(AgeOfWeapons.activateDungeonLoot) {	
+			            addLoot(pool, ModItems.handAxStone, 3);
+			            addLoot(pool, ModItems.daggerIron, 3);
+			            addLoot(pool, ModItems.daggerStone, 3);
+			            addLoot(pool, ModItems.kniveWood, 3);
+			            addLoot(pool, ModItems.kniveGold, 3);
+			            addLoot(pool, ModItems.recurveBow, 3);
+			            addLoot(pool, ModItems.skewerDiamond, 3);
+			            addLoot(pool, ModItems.skewerIron, 3);
+			            addLoot(pool, ModItems.battleAxeGold, 3);
+			            addLoot(pool, ModItems.crossbow, 2);
+			            addLoot(pool, ModItems.flailStone, 3);
+			            addLoot(pool, ModItems.halbertGold, 3);
+			            addLoot(pool, ModItems.hammer, 3);
+			            addLoot(pool, ModItems.longswordWood, 3);
+			            addLoot(pool, ModItems.longswordIron, 3);
+			            addLoot(pool, ModItems.spearWood, 3);
+			            addLoot(pool, ModItems.spearIron, 3);
+			            addLoot(pool, ModItems.spearDiamond, 3);
+			            addLoot(pool, ModItems.tridentWood, 3);
+			            addLoot(pool, ModItems.waraxeIron, 3);
+			            addLoot(pool, ModItems.warhammerStone, 3);
+			            addLoot(pool, ModItems.multiToolStone, 2);
+			            addLoot(pool, ModItems.multiToolGold, 2);
+			            addLoot(pool, ModItems.compoundBow, 1);
+				     }
 	        }
 	        
 	        
