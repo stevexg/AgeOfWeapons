@@ -94,4 +94,6 @@ public class ShapelessRecipesTableOfAges implements IRecipe {
         return this.recipeItems.size();
     }
 
+    public List<ItemStack> getInput() { return recipeItems; }
+
 }

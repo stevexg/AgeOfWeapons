@@ -12,7 +12,6 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 
-import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 
 import java.util.Collection;
@@ -29,7 +28,7 @@ public class ToACraftingCategory implements IRecipeCategory {
 
         locTitle = "Table Of Ages";
 
-        background = guiHelper.createDrawable(new ResourceLocation(AgeOfWeapons.MODID, "textures/gui/table_of_ages_jei_gui.png"), 0, 0, 166, 122);
+        background = guiHelper.createDrawable(new ResourceLocation(AgeOfWeapons.MODID, "textures/gui/table_of_ages_jei_gui.png"), 0, 60, 116, 54);
 
     }
 
@@ -67,9 +66,11 @@ public class ToACraftingCategory implements IRecipeCategory {
     @Override
     public void setRecipe(IRecipeLayout recipeLayout, IRecipeWrapper recipeWrapper, IIngredients ingredients) {
 
-        if (!(recipeWrapper instanceof ToACraftingWrapper)) return;
+        if (recipeWrapper instanceof ToASlCraftingWrapper) {
 
-        ToACraftingWrapper wrapper = (ToACraftingWrapper) recipeWrapper;
+            recipeLayout.setShapeless();
+        }
+        recipeLayout.setRecipeTransferButton(116, 40);
         IGuiItemStackGroup guiStacks = recipeLayout.getItemStacks();
 
         int slotId = 0;
@@ -80,15 +81,16 @@ public class ToACraftingCategory implements IRecipeCategory {
 
             int y = (int) Math.floor(slotId / 3);
             int x = slotId - (y * 3);
-            guiStacks.init(slotId, true, 42 + x * 18, 28 + y * 18);
+            guiStacks.init(slotId, true, x * 18, y * 18);
             guiStacks.set(slotId, itemList);
             slotId++;
         }
 
 
         // Output Slot
-        guiStacks.init(slotId, false, 136, 46);
+        guiStacks.init(slotId, false, 94, 18);
         guiStacks.set(slotId, ingredients.getOutputs(ItemStack.class).get(0));
+
     }
 
     @Override
