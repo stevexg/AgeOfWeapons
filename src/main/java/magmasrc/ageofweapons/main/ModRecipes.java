@@ -2,7 +2,6 @@ package magmasrc.ageofweapons.main;
 
 import java.util.Iterator;
 
-import sun.management.resources.agent;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;

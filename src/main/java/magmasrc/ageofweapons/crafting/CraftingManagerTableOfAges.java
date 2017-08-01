@@ -20,7 +20,6 @@ import net.minecraftforge.oredict.OreDictionary;
 import java.util.List;
 import java.util.Map;
 
-import sun.management.resources.agent;
 
 public class CraftingManagerTableOfAges {
 
@@ -292,10 +291,10 @@ public class CraftingManagerTableOfAges {
   	this.addRecipeTOA(new ItemStack(ModItems.ax), 1, " oo", " xo", " x ", 'x', Items.STICK, 'o', ModItems.rock);
   	this.addRecipeTOA(new ItemStack(ModItems.throwWood), 1, "  x", " x ", "x  ", 'x', Items.STICK);
   	this.addRecipeTOA(new ItemStack(ModItems.cavemanSpear), 1, "   ", " x ", " x ", 'x', Items.STICK);
-  	this.addRecipeTOA(new ItemStack(ModItems.cavemanBoots), 1, "   ", "x x", "o o", 'x', Items.STRING, 'o', Items.LEATHER);
-  	this.addRecipeTOA(new ItemStack(ModItems.cavemanChestplate), 1, "o  ", "oo ", "ooo", 'o', Items.LEATHER);
-  	this.addRecipeTOA(new ItemStack(ModItems.cavemanLeggings), 1, "ooo", "   ", "   ", 'o', Items.LEATHER);
-  	this.addRecipeTOA(new ItemStack(ModItems.cavemanHelmet), 1, "xox", "o o", "   ", 'x', Items.STRING, 'o', Items.LEATHER);
+  	this.addRecipeTOA(new ItemStack(ModItems.cavemanBoots), 1, "   ", "x x", "o o", 'x', Items.STRING, 'o', ModItems.cloth);
+  	this.addRecipeTOA(new ItemStack(ModItems.cavemanChestplate), 1, "o  ", "oo ", "ooo", 'o', ModItems.cloth);
+  	this.addRecipeTOA(new ItemStack(ModItems.cavemanLeggings), 1, "ooo", "   ", "   ", 'o', ModItems.cloth);
+  	this.addRecipeTOA(new ItemStack(ModItems.cavemanHelmet), 1, "xox", "o o", "   ", 'x', Items.STRING, 'o', ModItems.cloth);
   	
   	/** Antiquity #2 **/
   	this.addRecipeTOA(new ItemStack(ModItems.kniveWood), 2, "   ", " o ", " x ", 'x', Items.STICK, 'o', ModItems.woodShard);
