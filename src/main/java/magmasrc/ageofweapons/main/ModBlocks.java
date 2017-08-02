@@ -1,7 +1,9 @@
 package magmasrc.ageofweapons.main;
 
 import magmasrc.ageofweapons.blocks.*;
+import magmasrc.ageofweapons.tileentitys.TileEntityCrusher;
 import magmasrc.ageofweapons.tileentitys.TileEntityTableOfAges;
+import magmasrc.ageofweapons.util.GuiHandlerCrusher;
 import magmasrc.ageofweapons.util.GuiHandlerRegistry;
 import magmasrc.ageofweapons.util.GuiHandlerTOA;
 import magmasrc.ageofweapons.util.NameUtils;
@@ -147,8 +149,10 @@ public class ModBlocks {
 
 
 			GameRegistry.registerTileEntity(TileEntityTableOfAges.class, AgeOfWeapons.MODID+"tableofages");
+			GameRegistry.registerTileEntity(TileEntityCrusher.class, AgeOfWeapons.MODID+"crusher");
 			NetworkRegistry.INSTANCE.registerGuiHandler(AgeOfWeapons.instance, GuiHandlerRegistry.getInstance());
 			GuiHandlerRegistry.getInstance().registerGuiHandler(new GuiHandlerTOA(), GuiHandlerTOA.getGuiID());
+			GuiHandlerRegistry.getInstance().registerGuiHandler(new GuiHandlerCrusher(), GuiHandlerCrusher.getGuiID());
 		}
 		
 		

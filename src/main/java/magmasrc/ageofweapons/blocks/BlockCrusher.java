@@ -5,9 +5,11 @@ import java.util.Random;
 
 import com.mojang.realmsclient.gui.ChatFormatting;
 
+import magmasrc.ageofweapons.main.AgeOfWeapons;
 import magmasrc.ageofweapons.main.ModBlocks;
 import magmasrc.ageofweapons.main.ModTabs;
 import magmasrc.ageofweapons.tileentitys.TileEntityCrusher;
+import magmasrc.ageofweapons.util.GuiHandlerCrusher;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.BlockDirectional;
 import net.minecraft.block.SoundType;
@@ -76,9 +78,9 @@ public class BlockCrusher extends BlockContainer {
 	        {
 	            TileEntity tileentity = worldIn.getTileEntity(pos);
 
-	            if (tileentity instanceof TileEntityFurnace)
+	            if (tileentity instanceof TileEntityCrusher)
 	            {
-	                playerIn.displayGUIChest((TileEntityFurnace)tileentity);
+	                playerIn.openGui(AgeOfWeapons.instance, GuiHandlerCrusher.getGuiID(), worldIn, pos.getX(), pos.getY(), pos.getZ());
 	                playerIn.addStat(StatList.FURNACE_INTERACTION);
 	            }
 
@@ -130,9 +132,9 @@ public class BlockCrusher extends BlockContainer {
 	        {
 	            TileEntity tileentity = worldIn.getTileEntity(pos);
 
-	            if (tileentity instanceof TileEntityFurnace)
+	            if (tileentity instanceof TileEntityCrusher)
 	            {
-	                ((TileEntityFurnace)tileentity).setCustomInventoryName(stack.getDisplayName());
+	                ((TileEntityCrusher)tileentity).setCustomInventoryName(stack.getDisplayName());
 	            }
 	        }
 	    }

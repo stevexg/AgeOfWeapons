@@ -1,22 +1,19 @@
 package magmasrc.ageofweapons.tileentitys;
 
 import magmasrc.ageofweapons.blocks.BlockCrusher;
+import magmasrc.ageofweapons.containers.ContainerCrusher;
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockFurnace;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.inventory.Container;
-import net.minecraft.inventory.ContainerFurnace;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.ISidedInventory;
 import net.minecraft.inventory.ItemStackHelper;
 import net.minecraft.inventory.SlotFurnaceFuel;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemBoat;
-import net.minecraft.item.ItemDoor;
 import net.minecraft.item.ItemHoe;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
@@ -39,26 +36,26 @@ public class TileEntityCrusher extends TileEntityLockable implements ITickable, 
     private static final int[] SLOTS_TOP = new int[] {0};
     private static final int[] SLOTS_BOTTOM = new int[] {2, 1};
     private static final int[] SLOTS_SIDES = new int[] {1};
-    private NonNullList<ItemStack> furnaceItemStacks = NonNullList.<ItemStack>withSize(3, ItemStack.EMPTY);
-    /** The number of ticks that the furnace will keep burning */
-    private int furnaceBurnTime;
-    /** The number of ticks that a fresh copy of the currently-burning item would keep the furnace burning for */
+    private NonNullList<ItemStack> crusherItemStacks = NonNullList.<ItemStack>withSize(3, ItemStack.EMPTY);
+    /** The number of ticks that the crusher will keep burning */
+    private int crusherBurnTime;
+    /** The number of ticks that a fresh copy of the currently-burning item would keep the crusher burning for */
     private int currentItemBurnTime;
     private int cookTime;
     private int totalCookTime;
-    private String furnaceCustomName;
+    private String crusherCustomName;
 
     /**
      * Returns the number of slots in the inventory.
      */
     public int getSizeInventory()
     {
-        return this.furnaceItemStacks.size();
+        return this.crusherItemStacks.size();
     }
 
     public boolean isEmpty()
     {
-        for (ItemStack itemstack : this.furnaceItemStacks)
+        for (ItemStack itemstack : this.crusherItemStacks)
         {
             if (!itemstack.isEmpty())
             {
@@ -74,7 +71,7 @@ public class TileEntityCrusher extends TileEntityLockable implements ITickable, 
      */
     public ItemStack getStackInSlot(int index)
     {
-        return (ItemStack)this.furnaceItemStacks.get(index);
+        return (ItemStack)this.crusherItemStacks.get(index);
     }
 
     /**
@@ -82,7 +79,7 @@ public class TileEntityCrusher extends TileEntityLockable implements ITickable, 
      */
     public ItemStack decrStackSize(int index, int count)
     {
-        return ItemStackHelper.getAndSplit(this.furnaceItemStacks, index, count);
+        return ItemStackHelper.getAndSplit(this.crusherItemStacks, index, count);
     }
 
     /**
@@ -90,7 +87,7 @@ public class TileEntityCrusher extends TileEntityLockable implements ITickable, 
      */
     public ItemStack removeStackFromSlot(int index)
     {
-        return ItemStackHelper.getAndRemove(this.furnaceItemStacks, index);
+        return ItemStackHelper.getAndRemove(this.crusherItemStacks, index);
     }
 
     /**
@@ -98,9 +95,9 @@ public class TileEntityCrusher extends TileEntityLockable implements ITickable, 
      */
     public void setInventorySlotContents(int index, ItemStack stack)
     {
-        ItemStack itemstack = (ItemStack)this.furnaceItemStacks.get(index);
+        ItemStack itemstack = (ItemStack)this.crusherItemStacks.get(index);
         boolean flag = !stack.isEmpty() && stack.isItemEqual(itemstack) && ItemStack.areItemStackTagsEqual(stack, itemstack);
-        this.furnaceItemStacks.set(index, stack);
+        this.crusherItemStacks.set(index, stack);
 
         if (stack.getCount() > this.getInventoryStackLimit())
         {
@@ -120,7 +117,7 @@ public class TileEntityCrusher extends TileEntityLockable implements ITickable, 
      */
     public String getName()
     {
-        return this.hasCustomName() ? this.furnaceCustomName : "container.crusher";
+        return this.hasCustomName() ? this.crusherCustomName : "container.crusher";
     }
 
     /**
@@ -128,15 +125,15 @@ public class TileEntityCrusher extends TileEntityLockable implements ITickable, 
      */
     public boolean hasCustomName()
     {
-        return this.furnaceCustomName != null && !this.furnaceCustomName.isEmpty();
+        return this.crusherCustomName != null && !this.crusherCustomName.isEmpty();
     }
 
     public void setCustomInventoryName(String p_145951_1_)
     {
-        this.furnaceCustomName = p_145951_1_;
+        this.crusherCustomName = p_145951_1_;
     }
 
-    public static void registerFixesFurnace(DataFixer fixer)
+    public static void registerFixescrusher(DataFixer fixer)
     {
         fixer.registerWalker(FixTypes.BLOCK_ENTITY, new ItemStackDataLists(TileEntityCrusher.class, new String[] {"Items"}));
     }
@@ -144,30 +141,30 @@ public class TileEntityCrusher extends TileEntityLockable implements ITickable, 
     public void readFromNBT(NBTTagCompound compound)
     {
         super.readFromNBT(compound);
-        this.furnaceItemStacks = NonNullList.<ItemStack>withSize(this.getSizeInventory(), ItemStack.EMPTY);
-        ItemStackHelper.loadAllItems(compound, this.furnaceItemStacks);
-        this.furnaceBurnTime = compound.getInteger("BurnTime");
+        this.crusherItemStacks = NonNullList.<ItemStack>withSize(this.getSizeInventory(), ItemStack.EMPTY);
+        ItemStackHelper.loadAllItems(compound, this.crusherItemStacks);
+        this.crusherBurnTime = compound.getInteger("BurnTime");
         this.cookTime = compound.getInteger("CookTime");
         this.totalCookTime = compound.getInteger("CookTimeTotal");
-        this.currentItemBurnTime = getItemBurnTime((ItemStack)this.furnaceItemStacks.get(1));
+        this.currentItemBurnTime = getItemBurnTime(this.crusherItemStacks.get(1));
 
         if (compound.hasKey("CustomName", 8))
         {
-            this.furnaceCustomName = compound.getString("CustomName");
+            this.crusherCustomName = compound.getString("CustomName");
         }
     }
 
     public NBTTagCompound writeToNBT(NBTTagCompound compound)
     {
         super.writeToNBT(compound);
-        compound.setInteger("BurnTime", (short)this.furnaceBurnTime);
+        compound.setInteger("BurnTime", (short)this.crusherBurnTime);
         compound.setInteger("CookTime", (short)this.cookTime);
         compound.setInteger("CookTimeTotal", (short)this.totalCookTime);
-        ItemStackHelper.saveAllItems(compound, this.furnaceItemStacks);
+        ItemStackHelper.saveAllItems(compound, this.crusherItemStacks);
 
         if (this.hasCustomName())
         {
-            compound.setString("CustomName", this.furnaceCustomName);
+            compound.setString("CustomName", this.crusherCustomName);
         }
 
         return compound;
@@ -182,11 +179,11 @@ public class TileEntityCrusher extends TileEntityLockable implements ITickable, 
     }
 
     /**
-     * Furnace isBurning
+     * crusher isBurning
      */
     public boolean isBurning()
     {
-        return this.furnaceBurnTime > 0;
+        return this.crusherBurnTime > 0;
     }
 
     @SideOnly(Side.CLIENT)
@@ -205,19 +202,19 @@ public class TileEntityCrusher extends TileEntityLockable implements ITickable, 
 
         if (this.isBurning())
         {
-            --this.furnaceBurnTime;
+            --this.crusherBurnTime;
         }
 
         if (!this.world.isRemote)
         {
-            ItemStack itemstack = (ItemStack)this.furnaceItemStacks.get(1);
+            ItemStack itemstack = (ItemStack)this.crusherItemStacks.get(1);
 
-            if (this.isBurning() || !itemstack.isEmpty() && !((ItemStack)this.furnaceItemStacks.get(0)).isEmpty())
+            if (this.isBurning() || !itemstack.isEmpty() && !((ItemStack)this.crusherItemStacks.get(0)).isEmpty())
             {
                 if (!this.isBurning() && this.canSmelt())
                 {
-                    this.furnaceBurnTime = getItemBurnTime(itemstack);
-                    this.currentItemBurnTime = this.furnaceBurnTime;
+                    this.crusherBurnTime = getItemBurnTime(itemstack);
+                    this.currentItemBurnTime = this.crusherBurnTime;
 
                     if (this.isBurning())
                     {
@@ -231,7 +228,7 @@ public class TileEntityCrusher extends TileEntityLockable implements ITickable, 
                             if (itemstack.isEmpty())
                             {
                                 ItemStack item1 = item.getContainerItem(itemstack);
-                                this.furnaceItemStacks.set(1, item1);
+                                this.crusherItemStacks.set(1, item1);
                             }
                         }
                     }
@@ -244,7 +241,7 @@ public class TileEntityCrusher extends TileEntityLockable implements ITickable, 
                     if (this.cookTime == this.totalCookTime)
                     {
                         this.cookTime = 0;
-                        this.totalCookTime = this.getCookTime((ItemStack)this.furnaceItemStacks.get(0));
+                        this.totalCookTime = this.getCookTime((ItemStack)this.crusherItemStacks.get(0));
                         this.smeltItem();
                         flag1 = true;
                     }
@@ -278,17 +275,17 @@ public class TileEntityCrusher extends TileEntityLockable implements ITickable, 
     }
 
     /**
-     * Returns true if the furnace can smelt an item, i.e. has a source item, destination stack isn't full, etc.
+     * Returns true if the crusher can smelt an item, i.e. has a source item, destination stack isn't full, etc.
      */
     private boolean canSmelt()
     {
-        if (((ItemStack)this.furnaceItemStacks.get(0)).isEmpty())
+        if (((ItemStack)this.crusherItemStacks.get(0)).isEmpty())
         {
             return false;
         }
         else
         {
-            ItemStack itemstack = FurnaceRecipes.instance().getSmeltingResult((ItemStack)this.furnaceItemStacks.get(0));
+            ItemStack itemstack = FurnaceRecipes.instance().getSmeltingResult((ItemStack)this.crusherItemStacks.get(0));
 
             if (itemstack.isEmpty())
             {
@@ -296,38 +293,38 @@ public class TileEntityCrusher extends TileEntityLockable implements ITickable, 
             }
             else
             {
-                ItemStack itemstack1 = (ItemStack)this.furnaceItemStacks.get(2);
+                ItemStack itemstack1 = (ItemStack)this.crusherItemStacks.get(2);
                 if (itemstack1.isEmpty()) return true;
                 if (!itemstack1.isItemEqual(itemstack)) return false;
                 int result = itemstack1.getCount() + itemstack.getCount();
-                return result <= getInventoryStackLimit() && result <= itemstack1.getMaxStackSize(); // Forge fix: make furnace respect stack sizes in furnace recipes
+                return result <= getInventoryStackLimit() && result <= itemstack1.getMaxStackSize(); // Forge fix: make crusher respect stack sizes in crusher recipes
             }
         }
     }
 
     /**
-     * Turn one item from the furnace source stack into the appropriate smelted item in the furnace result stack
+     * Turn one item from the crusher source stack into the appropriate smelted item in the crusher result stack
      */
     public void smeltItem()
     {
         if (this.canSmelt())
         {
-            ItemStack itemstack = (ItemStack)this.furnaceItemStacks.get(0);
+            ItemStack itemstack = (ItemStack)this.crusherItemStacks.get(0);
             ItemStack itemstack1 = FurnaceRecipes.instance().getSmeltingResult(itemstack);
-            ItemStack itemstack2 = (ItemStack)this.furnaceItemStacks.get(2);
+            ItemStack itemstack2 = (ItemStack)this.crusherItemStacks.get(2);
 
             if (itemstack2.isEmpty())
             {
-                this.furnaceItemStacks.set(2, itemstack1.copy());
+                this.crusherItemStacks.set(2, itemstack1.copy());
             }
             else if (itemstack2.getItem() == itemstack1.getItem())
             {
                 itemstack2.grow(itemstack1.getCount());
             }
 
-            if (itemstack.getItem() == Item.getItemFromBlock(Blocks.SPONGE) && itemstack.getMetadata() == 1 && !((ItemStack)this.furnaceItemStacks.get(1)).isEmpty() && ((ItemStack)this.furnaceItemStacks.get(1)).getItem() == Items.BUCKET)
+            if (itemstack.getItem() == Item.getItemFromBlock(Blocks.SPONGE) && itemstack.getMetadata() == 1 && !((ItemStack)this.crusherItemStacks.get(1)).isEmpty() && ((ItemStack)this.crusherItemStacks.get(1)).getItem() == Items.BUCKET)
             {
-                this.furnaceItemStacks.set(1, new ItemStack(Items.WATER_BUCKET));
+                this.crusherItemStacks.set(1, new ItemStack(Items.WATER_BUCKET));
             }
 
             itemstack.shrink(1);
@@ -335,7 +332,7 @@ public class TileEntityCrusher extends TileEntityLockable implements ITickable, 
     }
 
     /**
-     * Returns the number of ticks that the supplied fuel item will keep the furnace burning, or 0 if the item isn't
+     * Returns the number of ticks that the supplied fuel item will keep the crusher burning, or 0 if the item isn't
      * fuel
      */
     public static int getItemBurnTime(ItemStack stack)
@@ -383,7 +380,7 @@ public class TileEntityCrusher extends TileEntityLockable implements ITickable, 
     public static boolean isItemFuel(ItemStack stack)
     {
         /**
-         * Returns the number of ticks that the supplied fuel item will keep the furnace burning, or 0 if the item isn't
+         * Returns the number of ticks that the supplied fuel item will keep the crusher burning, or 0 if the item isn't
          * fuel
          */
         return getItemBurnTime(stack) > 0;
@@ -421,7 +418,7 @@ public class TileEntityCrusher extends TileEntityLockable implements ITickable, 
         }
         else
         {
-            ItemStack itemstack = (ItemStack)this.furnaceItemStacks.get(1);
+            ItemStack itemstack = (ItemStack)this.crusherItemStacks.get(1);
             return isItemFuel(stack) || SlotFurnaceFuel.isBucket(stack) && itemstack.getItem() != Items.BUCKET;
         }
     }
@@ -464,7 +461,7 @@ public class TileEntityCrusher extends TileEntityLockable implements ITickable, 
 
     public Container createContainer(InventoryPlayer playerInventory, EntityPlayer playerIn)
     {
-        return new ContainerFurnace(playerInventory, this);
+        return new ContainerCrusher(playerInventory, this);
     }
 
     public int getField(int id)
@@ -472,7 +469,7 @@ public class TileEntityCrusher extends TileEntityLockable implements ITickable, 
         switch (id)
         {
             case 0:
-                return this.furnaceBurnTime;
+                return this.crusherBurnTime;
             case 1:
                 return this.currentItemBurnTime;
             case 2:
@@ -489,7 +486,7 @@ public class TileEntityCrusher extends TileEntityLockable implements ITickable, 
         switch (id)
         {
             case 0:
-                this.furnaceBurnTime = value;
+                this.crusherBurnTime = value;
                 break;
             case 1:
                 this.currentItemBurnTime = value;
@@ -509,7 +506,7 @@ public class TileEntityCrusher extends TileEntityLockable implements ITickable, 
 
     public void clear()
     {
-        this.furnaceItemStacks.clear();
+        this.crusherItemStacks.clear();
     }
 
     net.minecraftforge.items.IItemHandler handlerTop = new net.minecraftforge.items.wrapper.SidedInvWrapper(this, net.minecraft.util.EnumFacing.UP);

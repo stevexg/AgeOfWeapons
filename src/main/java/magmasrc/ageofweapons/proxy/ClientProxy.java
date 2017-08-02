@@ -1,6 +1,5 @@
 package magmasrc.ageofweapons.proxy;
- 
-import magmasrc.ageofweapons.entity.EntityCavemanSpear;
+
 import magmasrc.ageofweapons.entity.EntityDynamite;
 import magmasrc.ageofweapons.entity.render.EntityDynamiteRenderer;
 import magmasrc.ageofweapons.main.ModBlocks;
@@ -8,13 +7,8 @@ import magmasrc.ageofweapons.main.ModItems;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
-import net.minecraft.client.renderer.entity.Render;
-import net.minecraft.client.renderer.entity.RenderManager;
-import net.minecraft.client.renderer.entity.RenderSnowball;
 import net.minecraft.item.Item;
-import net.minecraftforge.fml.client.registry.IRenderFactory;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
-import net.minecraftforge.oredict.OreDictionary;
  
 public class ClientProxy extends ServerProxy {
  
