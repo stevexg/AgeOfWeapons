@@ -28,6 +28,8 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.stats.StatList;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.tileentity.TileEntityFurnace;
+import net.minecraft.util.BlockRenderLayer;
+import net.minecraft.util.EnumBlockRenderType;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.EnumParticleTypes;
@@ -35,6 +37,7 @@ import net.minecraft.util.Mirror;
 import net.minecraft.util.Rotation;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -177,10 +180,7 @@ public class BlockCrusher extends BlockContainer {
  
 	        
 	        
-	        
-	        
-	
-	
+
 		// Facing
 	
 		@Override
@@ -261,17 +261,21 @@ public class BlockCrusher extends BlockContainer {
 		        return new BlockStateContainer(this, new IProperty[] {FACING});
 		    }
 	
-		    
+	
 		    
 		    
 		    
 		    // other //
-		    
+
 		    @Override
 		    public void addInformation(ItemStack stack, EntityPlayer playerIn, List addList, boolean advanced) {
 		        addList.add(ChatFormatting.RED + "Work in progress");
 		    }
-	
+
+			@Override
+			public EnumBlockRenderType getRenderType(IBlockState iBlockState) {
+				return EnumBlockRenderType.MODEL;
+			}
 
 
 }

@@ -35,7 +35,7 @@ public class AgeOfWeapons {
     @SidedProxy(clientSide = "magmasrc.ageofweapons.proxy.ClientProxy", serverSide = "magmasrc.ageofweapons.proxy.ServerProxy")
     public static ServerProxy proxy;
 
-    //TODO Steve: JEI Support!!!!, ThrowWood/Caveman Spear, Crusher, Schusswaffen, schauen wegen OreRecipes, Weapon Box, item das einen block setzt...weil ich das ned hinkriege xD ._.
+    //TODO Steve: ThrowWood/Caveman Spear, Crusher, Schusswaffen, schauen wegen OreRecipes, Weapon Box, item das einen block setzt...weil ich das ned hinkriege xD ._.
 
     
     // Items //
