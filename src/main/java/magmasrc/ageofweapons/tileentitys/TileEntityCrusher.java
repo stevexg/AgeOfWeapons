@@ -2,6 +2,7 @@ package magmasrc.ageofweapons.tileentitys;
 
 import magmasrc.ageofweapons.blocks.BlockCrusher;
 import magmasrc.ageofweapons.containers.ContainerCrusher;
+import magmasrc.ageofweapons.crushing.CrusherRecipes;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
@@ -18,7 +19,6 @@ import net.minecraft.item.ItemHoe;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemSword;
 import net.minecraft.item.ItemTool;
-import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.tileentity.TileEntityLockable;
 import net.minecraft.util.EnumFacing;
@@ -252,7 +252,7 @@ public class TileEntityCrusher extends TileEntityLockable implements ITickable, 
         }
         else
         {
-            ItemStack itemstack = FurnaceRecipes.instance().getSmeltingResult((ItemStack)this.crusherItemStacks.get(0));
+            ItemStack itemstack = CrusherRecipes.instance().getSmeltingResult(this.crusherItemStacks.get(0));
 
             if (itemstack.isEmpty())
             {
@@ -274,7 +274,7 @@ public class TileEntityCrusher extends TileEntityLockable implements ITickable, 
         if (this.canSmelt())
         {
             ItemStack itemstack = this.crusherItemStacks.get(0);
-            ItemStack itemstack1 = FurnaceRecipes.instance().getSmeltingResult(itemstack);
+            ItemStack itemstack1 = CrusherRecipes.instance().getSmeltingResult(itemstack);
             ItemStack itemstack2 = this.crusherItemStacks.get(2);
 
             if (itemstack2.isEmpty())
