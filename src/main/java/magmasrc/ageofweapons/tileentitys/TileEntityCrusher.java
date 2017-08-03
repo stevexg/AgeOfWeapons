@@ -45,9 +45,6 @@ public class TileEntityCrusher extends TileEntityLockable implements ITickable, 
     private int totalCookTime;
     private String crusherCustomName;
 
-    /**
-     * Returns the number of slots in the inventory.
-     */
     public int getSizeInventory()
     {
         return this.crusherItemStacks.size();
@@ -66,33 +63,21 @@ public class TileEntityCrusher extends TileEntityLockable implements ITickable, 
         return true;
     }
 
-    /**
-     * Returns the stack in the given slot.
-     */
     public ItemStack getStackInSlot(int index)
     {
         return (ItemStack)this.crusherItemStacks.get(index);
     }
 
-    /**
-     * Removes up to a specified number of items from an inventory slot and returns them in a new stack.
-     */
     public ItemStack decrStackSize(int index, int count)
     {
         return ItemStackHelper.getAndSplit(this.crusherItemStacks, index, count);
     }
 
-    /**
-     * Removes a stack from the given slot and returns it.
-     */
     public ItemStack removeStackFromSlot(int index)
     {
         return ItemStackHelper.getAndRemove(this.crusherItemStacks, index);
     }
 
-    /**
-     * Sets the given item stack to the specified slot in the inventory (can be crafting or armor sections).
-     */
     public void setInventorySlotContents(int index, ItemStack stack)
     {
         ItemStack itemstack = (ItemStack)this.crusherItemStacks.get(index);
@@ -112,17 +97,11 @@ public class TileEntityCrusher extends TileEntityLockable implements ITickable, 
         }
     }
 
-    /**
-     * Get the name of this object. For players this returns their username
-     */
     public String getName()
     {
         return this.hasCustomName() ? this.crusherCustomName : "container.crusher";
     }
 
-    /**
-     * Returns true if this thing is named
-     */
     public boolean hasCustomName()
     {
         return this.crusherCustomName != null && !this.crusherCustomName.isEmpty();
@@ -170,17 +149,11 @@ public class TileEntityCrusher extends TileEntityLockable implements ITickable, 
         return compound;
     }
 
-    /**
-     * Returns the maximum stack size for a inventory slot. Seems to always be 64, possibly will be extended.
-     */
     public int getInventoryStackLimit()
     {
         return 64;
     }
 
-    /**
-     * crusher isBurning
-     */
     public boolean isBurning()
     {
         return this.crusherBurnTime > 0;
@@ -192,9 +165,6 @@ public class TileEntityCrusher extends TileEntityLockable implements ITickable, 
         return inventory.getField(0) > 0;
     }
 
-    /**
-     * Like the old updateEntity(), except more generic.
-     */
     public void update()
     {
         boolean flag = this.isBurning();
@@ -207,9 +177,9 @@ public class TileEntityCrusher extends TileEntityLockable implements ITickable, 
 
         if (!this.world.isRemote)
         {
-            ItemStack itemstack = (ItemStack)this.crusherItemStacks.get(1);
+            ItemStack itemstack = this.crusherItemStacks.get(1);
 
-            if (this.isBurning() || !itemstack.isEmpty() && !((ItemStack)this.crusherItemStacks.get(0)).isEmpty())
+            if (this.isBurning() || !itemstack.isEmpty() && !(this.crusherItemStacks.get(0)).isEmpty())
             {
                 if (!this.isBurning() && this.canSmelt())
                 {
@@ -241,7 +211,7 @@ public class TileEntityCrusher extends TileEntityLockable implements ITickable, 
                     if (this.cookTime == this.totalCookTime)
                     {
                         this.cookTime = 0;
-                        this.totalCookTime = this.getCookTime((ItemStack)this.crusherItemStacks.get(0));
+                        this.totalCookTime = this.getCookTime(this.crusherItemStacks.get(0));
                         this.smeltItem();
                         flag1 = true;
                     }
@@ -274,12 +244,9 @@ public class TileEntityCrusher extends TileEntityLockable implements ITickable, 
         return 200;
     }
 
-    /**
-     * Returns true if the crusher can smelt an item, i.e. has a source item, destination stack isn't full, etc.
-     */
     private boolean canSmelt()
     {
-        if (((ItemStack)this.crusherItemStacks.get(0)).isEmpty())
+        if ((this.crusherItemStacks.get(0)).isEmpty())
         {
             return false;
         }
@@ -293,7 +260,7 @@ public class TileEntityCrusher extends TileEntityLockable implements ITickable, 
             }
             else
             {
-                ItemStack itemstack1 = (ItemStack)this.crusherItemStacks.get(2);
+                ItemStack itemstack1 = this.crusherItemStacks.get(2);
                 if (itemstack1.isEmpty()) return true;
                 if (!itemstack1.isItemEqual(itemstack)) return false;
                 int result = itemstack1.getCount() + itemstack.getCount();
@@ -302,16 +269,13 @@ public class TileEntityCrusher extends TileEntityLockable implements ITickable, 
         }
     }
 
-    /**
-     * Turn one item from the crusher source stack into the appropriate smelted item in the crusher result stack
-     */
     public void smeltItem()
     {
         if (this.canSmelt())
         {
-            ItemStack itemstack = (ItemStack)this.crusherItemStacks.get(0);
+            ItemStack itemstack = this.crusherItemStacks.get(0);
             ItemStack itemstack1 = FurnaceRecipes.instance().getSmeltingResult(itemstack);
-            ItemStack itemstack2 = (ItemStack)this.crusherItemStacks.get(2);
+            ItemStack itemstack2 = this.crusherItemStacks.get(2);
 
             if (itemstack2.isEmpty())
             {
@@ -322,7 +286,8 @@ public class TileEntityCrusher extends TileEntityLockable implements ITickable, 
                 itemstack2.grow(itemstack1.getCount());
             }
 
-            if (itemstack.getItem() == Item.getItemFromBlock(Blocks.SPONGE) && itemstack.getMetadata() == 1 && !((ItemStack)this.crusherItemStacks.get(1)).isEmpty() && ((ItemStack)this.crusherItemStacks.get(1)).getItem() == Items.BUCKET)
+            if (itemstack.getItem() == Item.getItemFromBlock(Blocks.SPONGE) && itemstack.getMetadata() == 1 &&
+                    !(this.crusherItemStacks.get(1)).isEmpty() && (this.crusherItemStacks.get(1)).getItem() == Items.BUCKET)
             {
                 this.crusherItemStacks.set(1, new ItemStack(Items.WATER_BUCKET));
             }
@@ -331,10 +296,6 @@ public class TileEntityCrusher extends TileEntityLockable implements ITickable, 
         }
     }
 
-    /**
-     * Returns the number of ticks that the supplied fuel item will keep the crusher burning, or 0 if the item isn't
-     * fuel
-     */
     public static int getItemBurnTime(ItemStack stack)
     {
         if (stack.isEmpty())
@@ -379,33 +340,18 @@ public class TileEntityCrusher extends TileEntityLockable implements ITickable, 
 
     public static boolean isItemFuel(ItemStack stack)
     {
-        /**
-         * Returns the number of ticks that the supplied fuel item will keep the crusher burning, or 0 if the item isn't
-         * fuel
-         */
         return getItemBurnTime(stack) > 0;
     }
 
-    /**
-     * Don't rename this method to canInteractWith due to conflicts with Container
-     */
     public boolean isUsableByPlayer(EntityPlayer player)
     {
         return this.world.getTileEntity(this.pos) != this ? false : player.getDistanceSq((double)this.pos.getX() + 0.5D, (double)this.pos.getY() + 0.5D, (double)this.pos.getZ() + 0.5D) <= 64.0D;
     }
 
-    public void openInventory(EntityPlayer player)
-    {
-    }
+    public void openInventory(EntityPlayer player) {}
 
-    public void closeInventory(EntityPlayer player)
-    {
-    }
+    public void closeInventory(EntityPlayer player) {}
 
-    /**
-     * Returns true if automation is allowed to insert the given stack (ignoring stack size) into the given slot. For
-     * guis use Slot.isItemValid
-     */
     public boolean isItemValidForSlot(int index, ItemStack stack)
     {
         if (index == 2)
@@ -418,27 +364,20 @@ public class TileEntityCrusher extends TileEntityLockable implements ITickable, 
         }
         else
         {
-            ItemStack itemstack = (ItemStack)this.crusherItemStacks.get(1);
+            ItemStack itemstack = this.crusherItemStacks.get(1);
             return isItemFuel(stack) || SlotFurnaceFuel.isBucket(stack) && itemstack.getItem() != Items.BUCKET;
         }
     }
 
-    public int[] getSlotsForFace(EnumFacing side)
-    {
+    public int[] getSlotsForFace(EnumFacing side) {
         return side == EnumFacing.DOWN ? SLOTS_BOTTOM : (side == EnumFacing.UP ? SLOTS_TOP : SLOTS_SIDES);
     }
 
-    /**
-     * Returns true if automation can insert the given item in the given slot from the given side.
-     */
     public boolean canInsertItem(int index, ItemStack itemStackIn, EnumFacing direction)
     {
         return this.isItemValidForSlot(index, itemStackIn);
     }
 
-    /**
-     * Returns true if automation can extract the given item in the given slot from the given side.
-     */
     public boolean canExtractItem(int index, ItemStack stack, EnumFacing direction)
     {
         if (direction == EnumFacing.DOWN && index == 1)

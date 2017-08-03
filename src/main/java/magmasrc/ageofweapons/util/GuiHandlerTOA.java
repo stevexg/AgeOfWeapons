@@ -13,7 +13,6 @@ public class GuiHandlerTOA implements IGuiHandler {
 
     private static final int GUIID_tableofages = 0;
     public static int getGuiID() {
-        System.out.println("GuiHandlerClass " + GUIID_tableofages);
         return GUIID_tableofages;
     }
 

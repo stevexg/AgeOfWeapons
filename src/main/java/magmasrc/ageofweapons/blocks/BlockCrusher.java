@@ -46,50 +46,37 @@ public class BlockCrusher extends BlockContainer {
 	
 
 	public static final PropertyDirection FACING = PropertyDirection.create("facing", EnumFacing.Plane.HORIZONTAL);
-    //private final boolean isBurning;
+    private final boolean isBurning;
     private static boolean keepInventory;
     
-	public BlockCrusher() {
+	public BlockCrusher(boolean isBurning) {
 		super(Material.ROCK);
 		this.setCreativeTab(ModTabs.generalTab);
 		this.setHardness(2.5F);
 		this.setResistance(5.0F);
 		this.setSoundType(SoundType.STONE);		
 		this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
-        //this.isBurning = isBurning;
+        this.isBurning = isBurning;
 
 
 	}
 
-	
-	
-		// Function
 
+	@Override
+	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand,
+									EnumFacing facing, float hitX, float hitY, float hitZ) {
+		if (worldIn.isRemote) {
+			return true;
+		} else {
+			TileEntity tileentity = worldIn.getTileEntity(pos);
 
-
-	    /**
-	     * Called when the block is right clicked by a player.
-	     */
-	    @Override
-	    public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ)
-	    {
-	        if (worldIn.isRemote)
-	        {
-	            return true;
-	        }
-	        else
-	        {
-	            TileEntity tileentity = worldIn.getTileEntity(pos);
-
-	            if (tileentity instanceof TileEntityCrusher)
-	            {
-	                playerIn.openGui(AgeOfWeapons.instance, GuiHandlerCrusher.getGuiID(), worldIn, pos.getX(), pos.getY(), pos.getZ());
-	                playerIn.addStat(StatList.FURNACE_INTERACTION);
-	            }
-
-	            return true;
-	        }
-	    }
+			if (tileentity instanceof TileEntityCrusher) {
+				playerIn.openGui(AgeOfWeapons.instance, GuiHandlerCrusher.getGuiID(), worldIn, pos.getX(), pos.getY(), pos.getZ());
+				playerIn.addStat(StatList.FURNACE_INTERACTION);
+			}
+			return true;
+		}
+	}
 
 
 
@@ -119,9 +106,7 @@ public class BlockCrusher extends BlockContainer {
 	        }
 	    }
 
-	    /**
-	     * Returns a new instance of a block's tile entity class. Called on placing the block.
-	     */
+
 	    public TileEntity createNewTileEntity(World worldIn, int meta) {
 	        return new TileEntityCrusher();
 	    }    

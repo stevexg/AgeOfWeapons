@@ -14,7 +14,6 @@ public class GuiHandlerCrusher implements IGuiHandler {
 
     private static final int GUIID_crusher = 1;
     public static int getGuiID() {
-        System.out.println("GuiHandlerClass " + GUIID_crusher);
         return GUIID_crusher;
     }
 

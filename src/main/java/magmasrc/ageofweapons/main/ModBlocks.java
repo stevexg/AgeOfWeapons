@@ -50,8 +50,8 @@ public class ModBlocks {
 		public void init() {
 		
 			tableOfAges = new BlockTableOfAges();
-			crusher = new BlockCrusher();
-			//crusherOn = new BlockCrusherOn();
+			crusher = new BlockCrusher(false);
+			crusherOn = new BlockCrusher(true);
 			weaponBox = new BlockWeaponBox();
 			nexus = new BlockNexus();
 			nexus2 = new BlockNexus2();
@@ -83,7 +83,7 @@ public class ModBlocks {
 			
 			NameUtils.setNames(tableOfAges,"table_of_ages");
 			NameUtils.setNames(crusher, "crusher");
-			//NameUtils.setNames(crusherOn, "crusher_on");
+			NameUtils.setNames(crusherOn, "crusher_on");
 			NameUtils.setNames(weaponBox, "weapon_box");
 			NameUtils.setNames(nexus, "nexus");
 			NameUtils.setNames(nexus2, "nexus2");
@@ -118,7 +118,7 @@ public class ModBlocks {
 
 			registerBlock(tableOfAges);
 			registerBlock(crusher);
-			//registerBlock(crusherOn);
+			registerBlock(crusherOn);
 			registerBlock(weaponBox);
 			registerBlock(nexus);
 			registerBlock(nexus2);

@@ -292,7 +292,7 @@ public class ClientProxy extends ServerProxy {
     	
     	registerModel(ModBlocks.tableOfAges, 0, new ModelResourceLocation(ModBlocks.tableOfAges.getRegistryName(), "inventory"));
     	registerModel(ModBlocks.crusher, 0, new ModelResourceLocation(ModBlocks.crusher.getRegistryName(), "inventory"));
-    	//registerModel(ModBlocks.crusherOn, 0, new ModelResourceLocation(ModBlocks.crusherOn.getRegistryName(), "inventory"));
+    	registerModel(ModBlocks.crusherOn, 0, new ModelResourceLocation(ModBlocks.crusherOn.getRegistryName(), "inventory"));
     	registerModel(ModBlocks.nexus, 0, new ModelResourceLocation(ModBlocks.nexus.getRegistryName(), "inventory"));
     	registerModel(ModBlocks.nexus2, 0, new ModelResourceLocation(ModBlocks.nexus2.getRegistryName(), "inventory"));
     	registerModel(ModBlocks.nexus3, 0, new ModelResourceLocation(ModBlocks.nexus3.getRegistryName(), "inventory"));
