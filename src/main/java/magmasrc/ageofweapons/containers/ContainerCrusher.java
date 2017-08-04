@@ -120,7 +120,7 @@ public class ContainerCrusher extends Container {
             }
             else if (index != 1 && index != 0)
             {
-                if (!CrusherRecipes.instance().getSmeltingResult(itemstack1).isEmpty())
+                if (!CrusherRecipes.instance().getCrushingResult(itemstack1).isEmpty())
                 {
                     if (!this.mergeItemStack(itemstack1, 0, 1, false))
                     {

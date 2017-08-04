@@ -252,7 +252,7 @@ public class TileEntityCrusher extends TileEntityLockable implements ITickable, 
         }
         else
         {
-            ItemStack itemstack = CrusherRecipes.instance().getSmeltingResult(this.crusherItemStacks.get(0));
+            ItemStack itemstack = CrusherRecipes.instance().getCrushingResult(this.crusherItemStacks.get(0));
 
             if (itemstack.isEmpty())
             {
@@ -274,7 +274,7 @@ public class TileEntityCrusher extends TileEntityLockable implements ITickable, 
         if (this.canSmelt())
         {
             ItemStack itemstack = this.crusherItemStacks.get(0);
-            ItemStack itemstack1 = CrusherRecipes.instance().getSmeltingResult(itemstack);
+            ItemStack itemstack1 = CrusherRecipes.instance().getCrushingResult(itemstack);
             ItemStack itemstack2 = this.crusherItemStacks.get(2);
 
             if (itemstack2.isEmpty())
