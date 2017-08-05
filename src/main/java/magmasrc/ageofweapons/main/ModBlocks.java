@@ -6,7 +6,7 @@ import magmasrc.ageofweapons.tileentitys.TileEntityTableOfAges;
 import magmasrc.ageofweapons.util.GuiHandlerCrusher;
 import magmasrc.ageofweapons.util.GuiHandlerRegistry;
 import magmasrc.ageofweapons.util.GuiHandlerTOA;
-import magmasrc.ageofweapons.util.NameUtils;
+import magmasrc.ageofweapons.util.NameHandler;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
@@ -81,33 +81,33 @@ public class ModBlocks {
 			
 			
 			
-			NameUtils.setNames(tableOfAges,"table_of_ages");
-			NameUtils.setNames(crusher, "crusher");
-			NameUtils.setNames(crusherOn, "crusher_on");
-			NameUtils.setNames(weaponBox, "weapon_box");
-			NameUtils.setNames(nexus, "nexus");
-			NameUtils.setNames(nexus2, "nexus2");
-			NameUtils.setNames(nexus3, "nexus3");
-			NameUtils.setNames(nexus4, "nexus4");
-			NameUtils.setNames(rubyBlock, "ruby_block");
-			NameUtils.setNames(sapphireBlock, "sapphire_block");
-			NameUtils.setNames(amethystBlock, "amethyst_block");
-			NameUtils.setNames(topazBlock, "topaz_block");
-			NameUtils.setNames(amberBlock, "amber_block");
+			NameHandler.setNames(tableOfAges,"table_of_ages");
+			NameHandler.setNames(crusher, "crusher");
+			NameHandler.setNames(crusherOn, "crusher_on");
+			NameHandler.setNames(weaponBox, "weapon_box");
+			NameHandler.setNames(nexus, "nexus");
+			NameHandler.setNames(nexus2, "nexus2");
+			NameHandler.setNames(nexus3, "nexus3");
+			NameHandler.setNames(nexus4, "nexus4");
+			NameHandler.setNames(rubyBlock, "ruby_block");
+			NameHandler.setNames(sapphireBlock, "sapphire_block");
+			NameHandler.setNames(amethystBlock, "amethyst_block");
+			NameHandler.setNames(topazBlock, "topaz_block");
+			NameHandler.setNames(amberBlock, "amber_block");
 			
-			NameUtils.setNames(barbedWire, "barbed_wire");
-			NameUtils.setNames(nailTrap, "nail_trap");
-			NameUtils.setNames(toxicNailTrap, "toxic_nail_trap");
-			NameUtils.setNames(explosiveMine, "explosive_mine");
-			NameUtils.setNames(toxicMine, "toxic_mine");
-			NameUtils.setNames(razorWire, "razor_wire");
-			NameUtils.setNames(fallTrapDirt, "fall_trap_dirt");
-			NameUtils.setNames(fallTrapPlanks, "fall_trap_planks");
-			NameUtils.setNames(fallTrapStone, "fall_trap_stone");
-			NameUtils.setNames(bearTrap, "bear_trap");
+			NameHandler.setNames(barbedWire, "barbed_wire");
+			NameHandler.setNames(nailTrap, "nail_trap");
+			NameHandler.setNames(toxicNailTrap, "toxic_nail_trap");
+			NameHandler.setNames(explosiveMine, "explosive_mine");
+			NameHandler.setNames(toxicMine, "toxic_mine");
+			NameHandler.setNames(razorWire, "razor_wire");
+			NameHandler.setNames(fallTrapDirt, "fall_trap_dirt");
+			NameHandler.setNames(fallTrapPlanks, "fall_trap_planks");
+			NameHandler.setNames(fallTrapStone, "fall_trap_stone");
+			NameHandler.setNames(bearTrap, "bear_trap");
 			
-			NameUtils.setNames(neutronBomb, "neutron_bomb");
-			NameUtils.setNames(nuclearBomb, "nuclear_bomb");
+			NameHandler.setNames(neutronBomb, "neutron_bomb");
+			NameHandler.setNames(nuclearBomb, "nuclear_bomb");
 
 		}
 		

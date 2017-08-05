@@ -1,11 +1,14 @@
 package magmasrc.ageofweapons.crushing;
 
 import com.google.common.collect.Maps;
+
 import java.util.Map;
 import java.util.Map.Entry;
 
+import magmasrc.ageofweapons.main.ModBlocks;
 import magmasrc.ageofweapons.main.ModItems;
 import net.minecraft.block.Block;
+import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -24,6 +27,35 @@ public class CrusherRecipes
     private CrusherRecipes()
     {
         this.addCrushing(Items.IRON_INGOT, new ItemStack(ModItems.ironShard, 4), 0.0F);
+        this.addCrushing(Items.GOLD_INGOT, new ItemStack(ModItems.goldShard, 4), 0.0F);
+        this.addCrushing(Items.DIAMOND, new ItemStack(ModItems.diamondShard, 4), 0.0F);
+        this.addCrushing(Items.EMERALD, new ItemStack(ModItems.emeraldShard, 4), 0.0F);
+        this.addCrushing(ModItems.rock, new ItemStack(ModItems.stoneShard, 4), 0.0F);
+        this.addCrushing(ModItems.ruby, new ItemStack(ModItems.rubyShard, 4), 0.0F);
+        this.addCrushing(ModItems.sapphireShard, new ItemStack(ModItems.sapphireShard, 4), 0.0F);
+        this.addCrushing(ModItems.amethyst, new ItemStack(ModItems.amethystShard, 4), 0.0F);
+        this.addCrushing(ModItems.topaz, new ItemStack(ModItems.topazShard, 4), 0.0F);
+
+        this.addCrushingRecipeForBlock(Blocks.GLASS, new ItemStack(ModItems.glassShard, 10), 0.0F);
+        this.addCrushingRecipeForBlock(Blocks.GLASS_PANE, new ItemStack(ModItems.glassShard, 4), 0.0F);
+        this.addCrushingRecipeForBlock(Blocks.GRAVEL, new ItemStack(Items.FLINT, 1), 0.0F);
+        this.addCrushingRecipeForBlock(Blocks.STONE, new ItemStack(ModItems.stoneShard, 10), 0.0F);
+        this.addCrushingRecipeForBlock(Blocks.COBBLESTONE, new ItemStack(ModItems.rock, 6), 0.0F);
+        this.addCrushingRecipeForBlock(Blocks.PLANKS, new ItemStack(ModItems.woodShard, 10), 0.0F);
+        this.addCrushingRecipeForBlock(Blocks.LOG, new ItemStack(ModItems.woodShard, 10), 0.0F);
+        this.addCrushingRecipeForBlock(Blocks.LOG2, new ItemStack(ModItems.woodShard, 10), 0.0F);
+        this.addCrushingRecipeForBlock(Blocks.STONEBRICK, new ItemStack(Blocks.STONEBRICK, 4, 2), 0.0F);
+        
+        this.addCrushingRecipeForBlock(Blocks.IRON_BLOCK, new ItemStack(ModItems.ironShard, 36), 0.0F);
+        this.addCrushingRecipeForBlock(Blocks.GOLD_BLOCK, new ItemStack(ModItems.goldShard, 36), 0.0F);
+        this.addCrushingRecipeForBlock(Blocks.DIAMOND_BLOCK, new ItemStack(ModItems.diamondShard, 36), 0.0F);
+        this.addCrushingRecipeForBlock(Blocks.EMERALD_BLOCK, new ItemStack(ModItems.emeraldShard, 36), 0.0F);
+        this.addCrushingRecipeForBlock(ModBlocks.rubyBlock, new ItemStack(ModItems.rubyShard, 36), 0.0F);
+        this.addCrushingRecipeForBlock(ModBlocks.sapphireBlock, new ItemStack(ModItems.sapphireShard, 36), 0.0F);
+        this.addCrushingRecipeForBlock(ModBlocks.amethystBlock, new ItemStack(ModItems.amethystShard, 36), 0.0F);
+        this.addCrushingRecipeForBlock(ModBlocks.topazBlock, new ItemStack(ModItems.topazShard, 36), 0.0F);
+
+
 
 
 

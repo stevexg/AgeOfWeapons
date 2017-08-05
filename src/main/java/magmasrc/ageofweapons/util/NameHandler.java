@@ -3,7 +3,7 @@ package magmasrc.ageofweapons.util;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 
-public class NameUtils {
+public class NameHandler {
 	
 	public static void setNames(Object obj, String name) {
 		if(obj instanceof Item) {
@@ -12,7 +12,6 @@ public class NameUtils {
 			((Block) obj).setRegistryName(name).setUnlocalizedName(name);
 		} else {
 			throw new IllegalArgumentException("Item or Block required!");
-		
 		}
 	}
 

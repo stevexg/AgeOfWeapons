@@ -1,9 +1,6 @@
 package magmasrc.ageofweapons.blocks;
 
-import java.util.List;
 import java.util.Random;
-
-import com.mojang.realmsclient.gui.ChatFormatting;
 
 import magmasrc.ageofweapons.main.AgeOfWeapons;
 import magmasrc.ageofweapons.main.ModBlocks;
@@ -11,7 +8,6 @@ import magmasrc.ageofweapons.main.ModTabs;
 import magmasrc.ageofweapons.tileentitys.TileEntityCrusher;
 import magmasrc.ageofweapons.util.GuiHandlerCrusher;
 import net.minecraft.block.BlockContainer;
-import net.minecraft.block.BlockDirectional;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.properties.IProperty;
@@ -20,15 +16,12 @@ import net.minecraft.block.state.BlockStateContainer;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Blocks;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.InventoryHelper;
 import net.minecraft.item.ItemStack;
 import net.minecraft.stats.StatList;
 import net.minecraft.tileentity.TileEntity;
-import net.minecraft.tileentity.TileEntityFurnace;
-import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumBlockRenderType;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
@@ -37,7 +30,6 @@ import net.minecraft.util.Mirror;
 import net.minecraft.util.Rotation;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -252,15 +244,48 @@ public class BlockCrusher extends BlockContainer {
 		    
 		    // other //
 
-		    @Override
-		    public void addInformation(ItemStack stack, EntityPlayer playerIn, List addList, boolean advanced) {
-		        addList.add(ChatFormatting.RED + "Work in progress");
-		    }
-
 			@Override
 			public EnumBlockRenderType getRenderType(IBlockState iBlockState) {
 				return EnumBlockRenderType.MODEL;
 			}
+			
+			
+			 @SideOnly(Side.CLIENT)
+			    @Override
+			    @SuppressWarnings("incomplete-switch")
+			    public void randomDisplayTick(IBlockState stateIn, World worldIn, BlockPos pos, Random rand)
+			    {
+			        if (this.isBurning)
+			        {
+			            EnumFacing enumfacing = (EnumFacing)stateIn.getValue(FACING);
+			            double d0 = (double)pos.getX() + 0.5D;
+			            double d1 = (double)pos.getY() + rand.nextDouble() * 6.0D / 16.0D;
+			            double d2 = (double)pos.getZ() + 0.5D;
+			            double d3 = 0.52D;
+			            double d4 = rand.nextDouble() * 0.6D - 0.3D;
+
+			            if (rand.nextDouble() < 0.1D)
+			            {
+			                worldIn.playSound((double)pos.getX() + 0.5D, (double)pos.getY(), (double)pos.getZ() + 0.5D, SoundEvents.BLOCK_ANVIL_DESTROY, SoundCategory.BLOCKS, 0.3F, 0.5F, false);
+			            }
+
+			            switch (enumfacing)
+			            {
+			                case WEST:
+			                    worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, d0 - 0.52D, d1, d2 + d4, 0.0D, 0.0D, 0.0D, new int[0]);
+			                    break;
+			                case EAST:
+			                    worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, d0 + 0.52D, d1, d2 + d4, 0.0D, 0.0D, 0.0D, new int[0]);
+			                    break;
+			                case NORTH:
+			                    worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, d0 + d4, d1, d2 - 0.52D, 0.0D, 0.0D, 0.0D, new int[0]);
+			                    break;
+			                case SOUTH:
+			                    worldIn.spawnParticle(EnumParticleTypes.SMOKE_NORMAL, d0 + d4, d1, d2 + 0.52D, 0.0D, 0.0D, 0.0D, new int[0]);
+			            }
+			        }
+			    }
+
 
 
 }

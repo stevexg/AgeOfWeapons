@@ -26,7 +26,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 public class AgeOfWeapons {
    
     public static final String MODID = "ageofweapons";
-    public static final String VERSION = "0.9.2";
+    public static final String VERSION = "0.10.0";
 
    
     @Instance("ageofweapons")
@@ -36,7 +36,7 @@ public class AgeOfWeapons {
     public static ServerProxy proxy;
 
     //TODO Steve: ThrowWood/Caveman Spear, Crusher, Schusswaffen, schauen wegen OreRecipes, Weapon Box, item das einen block setzt...weil ich das ned hinkriege xD ._.
-
+    //TODO Bugs: Crusher GUI - progress bar ist um 1 pixel verschoben, Crusher JEI eigene textur
     
     // Items //
     public ModItems items;
