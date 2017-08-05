@@ -29,6 +29,7 @@ public class ModItems {
 	public static ArmorMaterial assassinAM;
 	public static ArmorMaterial ninjaAM;
 	public static ArmorMaterial nightVisionGogglesAM;
+	public static ArmorMaterial masterAM;
 	
 
 	/** Tool-Materials **/
@@ -152,6 +153,13 @@ public class ModItems {
 	public static ToolMaterial throwingKniveDiamondTM;
 	
 	public static ToolMaterial industrialTM;
+	
+	public static ToolMaterial herobrineSwordTM;
+	public static ToolMaterial epicBattleAxeTM;
+	public static ToolMaterial epicKatanaTM;
+	public static ToolMaterial epicWarAxeTM;
+	public static ToolMaterial legendarySwordTM;
+	public static ToolMaterial masterTM;
 
 	
 
@@ -389,7 +397,6 @@ public class ModItems {
 	
 	// Modern Age 
 	public static Item tankFlame;
-	public static Item tankPoison;
 	public static Item machineCase;
 	public static Item ammoSmall;
 	public static Item ammoBig;
@@ -413,6 +420,22 @@ public class ModItems {
 	// Future
 	public static Item poisonThrower;
 	public static Item industrialMultiTool;
+	public static Item waterThrower;
+	public static Item tankPoison;
+	public static Item tankWater;
+	
+	// Epic
+	public static Item herobrineBow;
+	public static Item herobrineSword;
+	public static Item jsq_battleAxe;
+	public static Item legendarySword;
+	public static Item masterAxe;
+	public static Item masterPickaxe;
+	public static Item masterShovel;
+	public static Item masterSword;
+	public static Item rexKatana;
+	public static Item steveWarAxe;
+
 	
 	
 	
@@ -596,6 +619,7 @@ public class ModItems {
 		 ninjaAM = EnumHelper.addArmorMaterial("ninja", "ageofweapons:ninja", 10, new int[]          {1, 4, 3, 1}, 10, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0);
 		 assassinAM = EnumHelper.addArmorMaterial("assassin", "ageofweapons:assassin", 12, new int[] {2, 4, 3, 1}, 10, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0);
          nightVisionGogglesAM = EnumHelper.addArmorMaterial("nightVisionGoggles", "ageofweapons:night_vision_goggles", 0, new int[]{1, 0, 0, 0}, 10, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0);
+		 masterAM = EnumHelper.addArmorMaterial("master", "ageofweapons:master", 30, new int[]       {3, 7, 5, 3}, 0, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2);
 
 		
 		
@@ -664,6 +688,7 @@ public class ModItems {
 		cloth = new ItemCloth();
 		tankFlame = new ItemTankFlame();
 		tankPoison = new ItemTankPoison();
+		tankWater = new ItemTankWater();
 		machineCase = new ItemMachineCase();
 		ammoSmall = new ItemAmmoSmall();
 		ammoBig = new ItemAmmoBig();
@@ -855,6 +880,7 @@ public class ModItems {
 		// Future
 		poisonThrower = new ItemPoisonGun();
 		industrialMultiTool = new ItemIndustrialMultiTool(industrialTM);
+		waterThrower = new ItemWaterThrower();
 
 		
 /** TEMPLATE		
@@ -939,6 +965,7 @@ public class ModItems {
 		NameHandler.setNames(cloth, "cloth");
 		NameHandler.setNames(tankFlame, "tank_flame");
 		NameHandler.setNames(tankPoison, "tank_poison");
+		NameHandler.setNames(tankWater, "tank_water");
 		NameHandler.setNames(machineCase, "machine_case");
 		NameHandler.setNames(ammoSmall, "ammo_small");
 		NameHandler.setNames(ammoBig, "ammo_big");
@@ -1128,6 +1155,7 @@ public class ModItems {
 		// Future
 		NameHandler.setNames(poisonThrower, "poison_thrower");
 		NameHandler.setNames(industrialMultiTool, "industrial_multi_tool");
+		NameHandler.setNames(waterThrower, "water_thrower");
 
 		
 		
@@ -1204,6 +1232,7 @@ public class ModItems {
 		registerItem(hammer);
 		registerItem(tankFlame);
 		registerItem(tankPoison);
+		registerItem(tankWater);
 		registerItem(machineCase);
 		registerItem(concentratedGunpowder);
 		registerItem(ammoSmall);
@@ -1399,6 +1428,7 @@ public class ModItems {
 		
 		// Future
 		registerItem(poisonThrower);
+		registerItem(waterThrower);
 		registerItem(industrialMultiTool);
 		
 		

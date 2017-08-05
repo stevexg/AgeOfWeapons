@@ -93,6 +93,6 @@ public class ItemPoisonGun extends Item {
 	
 	@Override
 	public boolean getIsRepairable(ItemStack armor, ItemStack stack) {
-	 return stack.getItem() == ModItems.toxin;
+	 return stack.getItem() == ModItems.tankPoison;
 	}  
 }

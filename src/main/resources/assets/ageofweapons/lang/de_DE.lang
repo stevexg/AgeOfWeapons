@@ -304,6 +304,8 @@ item.shotgun_ammo2.name=Blaue Schrot Munition
 item.poison_thrower.name=Giftwerfer
 item.industrial_multi_tool.name=Industrielles Multifunktions Werkzeug
 item.tank_poison.name=Tank (Gift)
+item.tank_water.name=Tank (Wasser)
+item.water_thrower.name=Tragbarer Wasserwerfer
 
 
 

@@ -270,6 +270,8 @@ public class ClientProxy extends ServerProxy {
     	ModelHandler.registerModel(ModItems.tankPoison);
     	ModelHandler.registerModel(ModItems.poisonThrower);
     	ModelHandler.registerModel(ModItems.industrialMultiTool);
+    	ModelHandler.registerModel(ModItems.waterThrower);
+    	ModelHandler.registerModel(ModItems.tankWater);
 
 		
 		

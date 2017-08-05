@@ -488,9 +488,12 @@ public class CraftingManagerTableOfAges {
 
 	/** Future #11 **/
 	this.addRecipeTOA(new ItemStack(ModItems.tankPoison), 11, " x ", "xox", " x ", 'x', Items.IRON_INGOT, 'o', ModItems.toxin); 
+	this.addRecipeTOA(new ItemStack(ModItems.tankWater), 11, " x ", "xox", " x ", 'x', Items.IRON_INGOT, 'o', Items.WATER_BUCKET); 
+
 
 	this.addRecipeTOA(new ItemStack(ModItems.industrialMultiTool), 11, "xyz", " o ", "   ", 'y', Items.IRON_SHOVEL, 'x', Items.IRON_PICKAXE, 'z', Items.IRON_AXE, 'o', ModItems.machineCase); 
 	this.addRecipeTOA(new ItemStack(ModItems.poisonThrower), 11, "  xz", "xxo", " i ", 'i', ModItems.gunHandle, 'x', ModItems.barrel, 'z', ModItems.tankPoison, 'o', ModItems.blankRifle); 
+	this.addRecipeTOA(new ItemStack(ModItems.waterThrower), 11, "  xz", "xxo", " i ", 'i', ModItems.gunHandle, 'x', ModItems.barrel, 'z', ModItems.tankWater, 'o', ModItems.blankRifle); 
 
 	/** Epic #10 **/ 
 	

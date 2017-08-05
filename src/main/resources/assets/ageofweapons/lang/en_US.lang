@@ -303,6 +303,8 @@ item.shotgun_ammo2.name=Blue Shotgun Ammo
 item.poison_thrower.name=Poisonthrower
 item.industrial_multi_tool.name=Industrial Multi Tool
 item.tank_poison.name=Tank (Poison)
+item.tank_water.name=Tank (Water)
+item.water_thrower.name=Portable Waterthrower
 
 
 
