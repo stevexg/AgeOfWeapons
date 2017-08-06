@@ -16,9 +16,8 @@ itemGroup.futureTab=Aow: Future
 
 
 //BLOCKS
-tile.table_of_ages.name=Table of Ages
+tile.table_of_ages.name=Table Of Ages
 tile.crusher.name=Crusher
-tile.crusher_on.name=Crusher
 tile.weapon_box.name=Weapon Box
 tile.nexus.name=§9NEXUS§r
 tile.nexus2.name=§cNEXUS§r

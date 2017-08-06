@@ -54,7 +54,7 @@ public class GuiCrusher extends GuiContainer
         }
 
         int l = this.getCookProgressScaled(24);
-        this.drawTexturedModalRect(i + 79, j + 34, 176, 14, l + 1, 16);
+        this.drawTexturedModalRect(i + 79, j + 34, 176, 14, l, 16);
     }
 
     private int getCookProgressScaled(int pixels)

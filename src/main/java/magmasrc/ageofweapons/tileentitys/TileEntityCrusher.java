@@ -3,6 +3,7 @@ package magmasrc.ageofweapons.tileentitys;
 import magmasrc.ageofweapons.blocks.BlockCrusher;
 import magmasrc.ageofweapons.containers.ContainerCrusher;
 import magmasrc.ageofweapons.crushing.CrusherRecipes;
+import magmasrc.ageofweapons.main.ModBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.EntityPlayer;
@@ -99,7 +100,7 @@ public class TileEntityCrusher extends TileEntityLockable implements ITickable, 
 
     public String getName()
     {
-        return this.hasCustomName() ? this.crusherCustomName : "container.crusher";
+        return this.hasCustomName() ? this.crusherCustomName : ModBlocks.crusher.getLocalizedName();
     }
 
     public boolean hasCustomName()

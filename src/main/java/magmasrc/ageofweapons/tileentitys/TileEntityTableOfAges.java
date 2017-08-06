@@ -1,5 +1,6 @@
 package magmasrc.ageofweapons.tileentitys;
 
+import magmasrc.ageofweapons.main.ModBlocks;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;
@@ -96,7 +97,7 @@ public class TileEntityTableOfAges extends TileEntity implements IInventory {
 
     @Override
     public String getName() {
-        return "container.tableofages.name";
+        return ModBlocks.tableOfAges.getLocalizedName();
     }
 
     @Override
