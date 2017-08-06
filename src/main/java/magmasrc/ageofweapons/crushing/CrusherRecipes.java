@@ -32,7 +32,7 @@ public class CrusherRecipes
         this.addCrushing(Items.EMERALD, new ItemStack(ModItems.emeraldShard, 4), 0.0F);
         this.addCrushing(ModItems.rock, new ItemStack(ModItems.stoneShard, 4), 0.0F);
         this.addCrushing(ModItems.ruby, new ItemStack(ModItems.rubyShard, 4), 0.0F);
-        this.addCrushing(ModItems.sapphireShard, new ItemStack(ModItems.sapphireShard, 4), 0.0F);
+        this.addCrushing(ModItems.sapphire, new ItemStack(ModItems.sapphireShard, 4), 0.0F);
         this.addCrushing(ModItems.amethyst, new ItemStack(ModItems.amethystShard, 4), 0.0F);
         this.addCrushing(ModItems.topaz, new ItemStack(ModItems.topazShard, 4), 0.0F);
 
