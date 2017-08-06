@@ -44,9 +44,6 @@ public class ContainerCrusher extends Container {
         listener.sendAllWindowProperties(this, this.tileCrusher);
     }
 
-    /**
-     * Looks for changes made in the container, sends them to every listener.
-     */
     public void detectAndSendChanges()
     {
         super.detectAndSendChanges();
@@ -88,17 +85,11 @@ public class ContainerCrusher extends Container {
         this.tileCrusher.setField(id, data);
     }
 
-    /**
-     * Determines whether supplied player can use this container
-     */
     public boolean canInteractWith(EntityPlayer playerIn)
     {
         return this.tileCrusher.isUsableByPlayer(playerIn);
     }
 
-    /**
-     * Take a stack from the specified inventory slot.
-     */
     public ItemStack transferStackInSlot(EntityPlayer playerIn, int index)
     {
         ItemStack itemstack = ItemStack.EMPTY;
