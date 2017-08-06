@@ -1,0 +1,6 @@
+{
+    "parent": "item/bow",
+    "textures": {
+        "layer0": "ageofweapons:items/fantasy/light_bow_pulling_1"
+    }
+}

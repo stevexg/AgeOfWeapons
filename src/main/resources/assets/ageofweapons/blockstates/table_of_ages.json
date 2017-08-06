@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "ageofweapons:table_of_ages", "y": 0},
+        "facing=south": { "model": "ageofweapons:table_of_ages", "y": 180},
+        "facing=east": {  "model": "ageofweapons:table_of_ages", "y": 90},
+        "facing=west": {  "model": "ageofweapons:table_of_ages", "y": 270}
+    }
+}

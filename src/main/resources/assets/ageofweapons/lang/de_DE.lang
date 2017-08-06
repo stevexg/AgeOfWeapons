@@ -1,0 +1,321 @@
+ï»¿
+itemGroup.generalTab=Age of Weapons
+itemGroup.stoneAgeTab=AoW: Steinzeit
+itemGroup.antiquityTab=AoW: Antike
+itemGroup.middleAgesTab=AoW: Mittelalter
+itemGroup.earlyModernAgeTab=AoW: Frühe Neuzeit
+itemGroup.modernAgeTab=AoW: Moderne
+itemGroup.piracyTab=AoW: Goldenes Zeitalter der Piraten
+itemGroup.edoTab=AoW: Edo Zeit
+itemGroup.mysticTab=AoW: Mystik
+itemGroup.fantasyTab=AoW: Fantasy
+itemGroup.bbyTab=AoW: VSY
+itemGroup.epicTab=AoW: Episch
+itemGroup.futureTab=Aow: Zukunft
+
+
+
+
+
+//BLOCKS
+tile.table_of_ages.name=Tisch der Zeitalter
+tile.crusher.name=Zerkleinerer
+tile.crusher_on.name=Zerkleinerer
+tile.weapon_box.name=Waffen Box
+tile.nexus.name=§9NEXUS§r
+tile.nexus2.name=§cNEXUS§r
+tile.nexus3.name=§eNEXUS§r
+tile.nexus4.name=§aNEXUS§r
+tile.ruby_block.name=Rubin Block
+tile.sapphire_block.name=Saphir Block
+tile.amethyst_block.name=Amethyst Block
+tile.topaz_block.name=Topas Block
+tile.amber_block.name=Bernstein Block
+
+tile.barbed_wire.name=Stacheldraht
+tile.nail_trap.name=Nagel Falle
+tile.toxic_nail_trap.name=Giftige Nagel Falle
+tile.explosive_mine.name=Explosive Mine
+tile.toxic_mine.name=Gift Mine
+tile.razor_wire.name=Bandstacheldraht
+tile.bear_trap.name=Bären Falle
+tile.fall_trap_dirt.name=Erd Gruben Falle
+tile.fall_trap_planks.name=Brett Gruben Falle
+tile.fall_trap_stone.name=Stein Gruben Falle
+
+tile.neutron_bomb.name=Neutronen Bombe
+tile.nuclear_bomb.name=Nuklear Bombe
+
+
+
+
+//ITEMS
+item.upgrade_creative.name=Kreativ Upgrade
+item.upgrade_stone_age.name=Stein Upgrade
+item.upgrade_antiquity.name=Lapis Upgrade
+item.upgrade_mystic.name=Amethyst Upgrade
+item.upgrade_middle_ages.name=Eisen Upgrade
+item.upgrade_edo_period.name=Bernstein Upgrade
+item.upgrade_piracy.name= Glas Upgrade
+item.upgrade_early_modern_age.name=Gold Upgrade
+item.upgrade_fantasy.name=Rubin Upgrade
+item.upgrade_modern_age.name=Diamant Upgrade
+item.upgrade_epic.name=Topas Upgrade
+item.upgrade_bby.name=Saphir Upgrade
+item.upgrade_future.name=Smaragd Upgrade
+
+item.axe_blade_diamond.name=Diamant Axt Schneide
+item.axe_blade_gold.name=Gold Axt Schneide
+item.axe_blade_iron.name=Eisen Axt Schneide
+item.axe_blade_stone.name=Stein Axt Schneide
+item.axe_blade_wood.name=Holz Axt Schneide
+item.sword_blade_diamond.name=Diamant Schwert Klinge
+item.sword_blade_gold.name=Gold Schwert Klinge
+item.sword_blade_iron.name=Eisen Schwert Klinge
+item.sword_blade_stone.name=Stein Schwert Klinge
+item.sword_blade_wood.name=Holz Schwert Klinge
+item.broad_blade_diamond.name=Diamant Breitklinge
+item.broad_blade_gold.name=Gold Breitklinge
+item.broad_blade_iron.name=Eisen Breitklinge
+item.broad_blade_stone.name=Stein Breitklinge
+item.broad_blade_wood.name=Holz Breitklinge
+item.iron_stick.name=Eisen Stab
+item.iron_longstick.name=Eisen Langstab
+item.wood_longstick.name=Langstab
+item.lumber.name=Holz
+item.radioactive_toxin.name=Radioaktives Gift
+item.toxin.name=Gift
+item.ruby.name=Rubin
+item.sapphire.name=Saphir
+item.sword_handle.name=Schwert Griff
+item.diamond_shard.name=Diamant Scherbe
+item.emerald_shard.name=Smaragd Scherbe
+item.gold_shard.name=Gold Splitter
+item.iron_shard.name=Eisen Splitter
+item.ruby_shard.name=Rubin Scherbe
+item.sapphire_shard.name=Saphir Scherbe
+item.stone_shard.name=Stein Splitter
+item.wood_shard.name=Holz Splitter
+item.barrel.name=Lauf
+item.blank_gun.name=Blankes Pistole
+item.blank_rifle.name=Blankes Gewehr
+item.gun_handle.name=Griff
+item.haft_wood.name=Holz Schaft
+item.haft_iron.name=Eisen Schaft
+item.visor.name=Visir
+item.amethyst.name=Amethyst
+item.topaz.name=Topas
+item.amber.name=Bernstein
+item.amethyst_shard.name=Amethyst Scherbe
+item.topaz_shard.name=Topas Scherbe
+item.glass_shard.name=Glas Scherbe
+item.hammer.name=Hammer
+item.cloth.name=Stoff
+
+
+//StoneAge
+item.rock.name=Stein
+item.hand_ax_stone.name=Hand Axt
+item.caveman_knive_stone.name=Höhlenmensch Stein Messer
+item.caveman_knive_bone.name=Höhlenmensch Knochen Messer
+item.wood_cudgel.name=Knüppel
+item.stone_cudgel.name=Stein Knüppel
+item.ax.name=Beil
+item.throw_wood.name=Wurf Holz
+item.caveman_spear.name=Höhlenmensch Speer
+item.caveman_helmet.name=Höhlenmensch Kopfschutz
+item.caveman_chestplate.name=Höhlenmensch Harnisch
+item.caveman_leggings.name=Höhlenmensch Beinschutz
+item.caveman_boots.name=Höhlenmensch Stiefel
+
+
+//Antiquity
+item.knive_wood.name=Holz Messer
+item.knive_stone.name=Stein Messer
+item.knive_iron.name=Eisen Messer
+item.knive_gold.name=Gold Messer
+item.knive_diamond.name=Diamant Messer
+item.dagger_wood.name=Holz Dolch
+item.dagger_stone.name=Stein Dolch
+item.dagger_iron.name=Eisen Dolch
+item.dagger_gold.name=Gold Dolch
+item.dagger_diamond.name=Diamant Dolch
+item.skewer_wood.name=Holz Spieß
+item.skewer_stone.name=Stein Spieß
+item.skewer_iron.name=Eisen Spieß
+item.skewer_gold.name=Gold Spieß
+item.skewer_diamond.name=Diamant Spieß
+item.recurve_bow.name=Recurve Bogen
+
+
+//MiddleAges
+item.battle_axe_wood.name=Holz Kampf Axt
+item.battle_axe_stone.name=Stein Kampf Axt
+item.battle_axe_iron.name=Eisen Kampf Axt
+item.battle_axe_gold.name=Gold Kampf Axt
+item.battle_axe_diamond.name=Diamant Kampf Axt
+item.flail_stone.name=Stein Morgenstern
+item.flail_iron.name=Eisen Morgenstern
+item.flail_gold.name=Gold Morgenstern
+item.flail_diamond.name=Diamant Morgenstern
+item.halbert_wood.name=Holz Hellebarde
+item.halbert_stone.name=Stein Hellebarde
+item.halbert_iron.name=Eisen Hellebarde
+item.halbert_gold.name=Gold Hellebarde
+item.halbert_diamond.name=Diamant Hellebarde
+item.longsword_wood.name=Holz Langschwert
+item.longsword_stone.name=Stein Langschwert
+item.longsword_iron.name=Eisen Langschwert
+item.longsword_gold.name=Gold Langschwert
+item.longsword_diamond.name=Diamant Langschwert
+item.spear_wood.name=Holz Speer
+item.spear_stone.name=Stein Speer
+item.spear_iron.name=Eisen Speer
+item.spear_gold.name=Gold Speer
+item.spear_diamond.name=Diamant Speer
+item.trident_wood.name=Holz Dreizack
+item.trident_stone.name=Stein Dreizack
+item.trident_iron.name=Eisen Dreizack
+item.trident_gold.name=Gold Dreizack
+item.trident_diamond.name=Diamant Dreizack
+item.war_axe_wood.name=Holz Streitaxt
+item.war_axe_stone.name=Stein Streitaxt
+item.war_axe_iron.name=Eisen Streitaxt
+item.war_axe_gold.name=Gold Streitaxt
+item.war_axe_diamond.name=Diamant Streitaxt
+item.war_hammer_wood.name=Holz Kriegshammer
+item.war_hammer_stone.name=Stein Kriegshammer
+item.war_hammer_iron.name=Eisen Kriegshammer
+item.war_hammer_gold.name=Gold Kriegshammer
+item.war_hammer_diamond.name=Diamant Kriegshammer
+item.longbow.name=Langbogen
+item.crossbow.name=Armbrust
+
+//EarlyModernAge
+item.multi_tool_wood.name=Holz Multifunktions Werkzeug
+item.multi_tool_stone.name=Stein Multifunktions Werkzeug
+item.multi_tool_iron.name=Eisen Multifunktions Werkzeug
+item.multi_tool_gold.name=Gold Multifunktions Werkzeug
+item.multi_tool_diamond.name=Diamant Multifunktions Werkzeug
+item.old_ammo.name=Alte Munition
+item.old_shotgun_ammo.name=Alte Schrot Munition
+item.cannonball.name=Kanonen Kugel
+item.pebble.name=Steinchen
+item.compound_bow.name=Compoundbogen
+item.dynamite.name=Dynamit Stange
+item.nails.name=Nägel
+item.nails_toxic.name=Giftige Nägel
+
+//Mystic
+item.mystic_knive.name=Mystisches Schwert
+item.pufferfish_stick.name=Kugelfisch auf einem Stab
+item.scepter_unholy.name=Unheiliges Zepter
+item.wand_basic.name=Zauberstab
+item.wand_nether.name=Nether Zauberstab
+item.wand_aether.name=Aether Zauberstab
+item.wand_curse.name=Verfluchter Zauberstab
+item.wand_holy.name=Heiliger Zauberstab
+item.wand_maelstrom.name=Malstrom Zauberstab
+item.warhorn_offensive.name=Ofensives Kriegshorn
+item.warhorn_defensive.name=Defensives Kriegshorn
+
+//Fantasy
+item.claw_wood.name=Holz Klaue
+item.claw_stone.name=Stein Klaue
+item.claw_iron.name=Eisen Klaue
+item.claw_gold.name=Gold Klaue
+item.claw_diamond.name=Diamant Klaue
+item.claw_sword_wood.name=Holz Klauenschwert
+item.claw_sword_stone.name=Stein Klauenschwert
+item.claw_sword_iron.name=Eisen Klauenschwert
+item.claw_sword_gold.name=Gold Klauenschwert
+item.claw_sword_diamond.name=Diamant Klauenschwert
+item.claymore_wood.name=Holz Breitschwert
+item.claymore_stone.name=Stein Breitschwert
+item.claymore_iron.name=Eisen Breitschwert
+item.claymore_gold.name=Gold Breitschwert
+item.claymore_diamond.name=Diamant Breitschwert
+item.long_claymore_wood.name=Langes Holz Breitschwert
+item.long_claymore_stone.name=Langes Stein Breitschwert
+item.long_claymore_iron.name=Langes Eisen Breitschwert
+item.long_claymore_gold.name=Langes Gold Breitschwert
+item.long_claymore_diamond.name=Langes Diamant  Breitschwert
+item.fantasy_sword_wood.name=Holz Drachentöter Schwert
+item.fantasy_sword_stone.name=Stein Drachentöter Schwert
+item.fantasy_sword_iron.name=Eisen Drachentöter Schwert
+item.fantasy_sword_gold.name=Gold Drachentöter Schwert
+item.fantasy_sword_diamond.name=Diamant Drachentöter Schwert
+item.light_bow.name=Licht Bogen
+item.shadow_bow.name=Schatten Bogen
+
+//EdoPeriod
+item.katana_wood.name=Holz Katana
+item.katana_stone.name=Stein Katana
+item.katana_iron.name=Eisen Katana
+item.katana_gold.name=Gold Katana
+item.katana_diamond.name=Diamant Katana
+item.ninjato_wood.name=Holz Ninjatō
+item.ninjato_stone.name=Stein Ninjatō
+item.ninjato_iron.name=Eisen Ninjatō
+item.ninjato_gold.name=Gold Ninjatō
+item.ninjato_diamond.name=Diamant Ninjatō
+item.baton_iron.name=Eisen Kampfstab
+item.baton_wood.name=Holz Kampfstab
+item.blowgun.name=Blasrohr
+item.kunai.name=Kunai
+item.lash.name=Peitsche
+item.nunchuck_wood.name=Holz Nunchuck
+item.nunchuck_iron.name=Eisen Nunchuck
+item.throwing_star.name=Wurfstern
+item.throwing_knive_iron.name=Eisen Wurfmesser
+item.throwing_knive_gold.name=Gold Wurfmesser
+item.throwing_knive_diamond.name=Diamant Wurfmesser
+item.assassin_helmet.name=Assassinen Kopfbedekung
+item.assassin_chestplate.name=Assassinen Harnisch
+item.assassin_leggings.name=Assassinen Beinschutz
+item.assassin_boots.name=Assassinen Stiefel
+item.ninja_helmet.name=Ninja Kopfbedekung
+item.ninja_chestplate.name=Ninja Mantel
+item.ninja_leggings.name=Ninja Hose
+item.ninja_boots.name=Ninja Stiefel
+
+//ModernAge
+item.field_glasses.name=Fernglas
+item.night_vision_goggles.name=Nachtsicht Gerät
+item.taser.name=Elektro Schocker
+item.flame_thrower.name=Flammenwerfer
+item.industrial_miner.name=Industrieller Schürfer
+item.industrial_excavator.name=Industrieller Gräber
+item.tank_flame.name=Tank (Feuer)
+item.machine_case.name=Maschinen Gehäuse
+item.ammo_small.name=Kleine Munition
+item.ammo_big.name=Große Munition
+item.ammo_bundle_small.name=Kleiner Munitionsgürtel
+item.ammo_bundle_big.name=Großer Munitionsgürtel
+item.concentrated_gunpowder.name=Konzentriertes Schießpulver
+item.magazine_small.name=Kleines Magazin
+item.magazine_long.name=Langes Magazin
+item.magazine_big.name=Großes Magazin
+item.magazine_drum.name=Magazin Trommel
+item.shotgun_ammo.name=Rote Schrot Munition
+item.shotgun_ammo2.name=Blaue Schrot Munition
+
+//Future
+item.poison_thrower.name=Giftwerfer
+item.industrial_multi_tool.name=Industrielles Multifunktions Werkzeug
+item.tank_poison.name=Tank (Gift)
+item.tank_water.name=Tank (Wasser)
+item.water_thrower.name=Tragbarer Wasserwerfer
+
+
+
+/** TEMPLATE **/
+item._wood.name=
+item._stone.name=
+item._iron.name=
+item._gold.name=
+item._diamond.name=
+//*************//
+
+
+

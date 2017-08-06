@@ -1,0 +1,6 @@
+{
+    "parent": "block/cross",
+    "textures": {
+        "cross": "ageofweapons:items/earlymodernage/barbed_wire"
+    }
+}

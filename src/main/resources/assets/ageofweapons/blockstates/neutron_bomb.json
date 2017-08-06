@@ -1,0 +1,6 @@
+{
+    "variants": {
+        "explode=false": {"model": "ageofweapons:neutron_bomb"},
+        "explode=true": {"model": "ageofweapons:neutron_bomb"}
+    }
+}

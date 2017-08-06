@@ -1,0 +1,6 @@
+{
+    "parent": "item/bow",
+    "textures": {
+        "layer0": "ageofweapons:items/earlymodernage/compound_bow_pulling_2"
+    }
+}

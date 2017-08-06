@@ -1,0 +1,6 @@
+{
+    "parent": "item/handheld",
+    "textures": {
+        "layer0": "ageofweapons:items/antiquity/knive.wood"
+    }
+}
