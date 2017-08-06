@@ -280,7 +280,7 @@ public class ClientProxy extends ServerProxy {
     	
     	ModelHandler.registerModel(ModBlocks.tableOfAges);
     	ModelHandler.registerModel(ModBlocks.crusher);
-        ModelHandler.registerModel(ModBlocks.crusherOn);
+        //ModelHandler.registerModel(ModBlocks.crusherOn);
     	ModelHandler.registerModel(ModBlocks.nexus);
     	ModelHandler.registerModel(ModBlocks.nexus2);
     	ModelHandler.registerModel(ModBlocks.nexus3);

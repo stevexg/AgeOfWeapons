@@ -22,7 +22,7 @@ public class CrusherCrushingCategory extends CrusherRecipeCategory<CrushingRecip
 
     public CrusherCrushingCategory(IGuiHelper guiHelper) {
         super(guiHelper);
-        background = guiHelper.createDrawable(new ResourceLocation(AgeOfWeapons.MODID, "textures/gui/table_of_ages_jei_gui.png"), 0, 114, 82, 54);
+        background = guiHelper.createDrawable(new ResourceLocation(AgeOfWeapons.MODID, "textures/gui/crusher_jei_gui.png"), 0, 0, 82, 54);
         localizedName = "Crusher";
 
     }
@@ -55,7 +55,8 @@ public class CrusherCrushingCategory extends CrusherRecipeCategory<CrushingRecip
 
     @Override
     public void drawExtras(Minecraft minecraft) {
-
+        animatedFlame.draw(minecraft, 1, 20);
+        arrow.draw(minecraft, 24, 18);
     }
 
     @Override

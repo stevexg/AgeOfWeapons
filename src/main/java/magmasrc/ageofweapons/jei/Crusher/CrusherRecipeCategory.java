@@ -21,10 +21,10 @@ public abstract class CrusherRecipeCategory<T extends IRecipeWrapper> implements
 
     public CrusherRecipeCategory(IGuiHelper guiHelper) {
 
-        staticFlame = guiHelper.createDrawable(new ResourceLocation(AgeOfWeapons.MODID, "textures/gui/table_of_ages_jei_gui.png"), 82, 114, 14, 14);
+        staticFlame = guiHelper.createDrawable(new ResourceLocation(AgeOfWeapons.MODID, "textures/gui/crusher_jei_gui.png"), 82, 0, 14, 14);
         animatedFlame = guiHelper.createAnimatedDrawable(staticFlame, 300, IDrawableAnimated.StartDirection.TOP, true);
 
-        IDrawableStatic arrowDrawable = guiHelper.createDrawable(new ResourceLocation(AgeOfWeapons.MODID, "textures/gui/table_of_ages_jei_gui.png"), 82, 128, 24, 17);
+        IDrawableStatic arrowDrawable = guiHelper.createDrawable(new ResourceLocation(AgeOfWeapons.MODID, "textures/gui/crusher_jei_gui.png"), 82, 14, 24, 17);
         this.arrow = guiHelper.createAnimatedDrawable(arrowDrawable, 200, IDrawableAnimated.StartDirection.LEFT, false);
 
     }

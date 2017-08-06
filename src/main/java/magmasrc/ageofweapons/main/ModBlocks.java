@@ -118,7 +118,7 @@ public class ModBlocks {
 
 			registerBlock(tableOfAges);
 			registerBlock(crusher);
-			registerBlock(crusherOn);
+			GameRegistry.register(crusherOn);
 			registerBlock(weaponBox);
 			registerBlock(nexus);
 			registerBlock(nexus2);

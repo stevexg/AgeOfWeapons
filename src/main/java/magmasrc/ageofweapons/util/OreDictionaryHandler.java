@@ -151,7 +151,6 @@ public class OreDictionaryHandler {
 	    	/**Blocks**/
 	    	OreDictionary.registerOre("craftingTableAoW", ModBlocks.tableOfAges);
 	    	OreDictionary.registerOre("crusherAoW", ModBlocks.crusher);
-	      //OreDictionary.registerOre("crusherOnAoW", ModBlocks.crusherOn);
 	    	OreDictionary.registerOre("weaponBoxAoW", ModBlocks.weaponBox);
 	    	OreDictionary.registerOre("nexusAoW", ModBlocks.nexus);
 	    	OreDictionary.registerOre("nexusAoW", ModBlocks.nexus2);
