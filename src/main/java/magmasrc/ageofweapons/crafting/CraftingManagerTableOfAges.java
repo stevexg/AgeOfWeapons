@@ -13,6 +13,8 @@ import net.minecraft.inventory.InventoryCrafting;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.nbt.NBTTagString;
 import net.minecraft.world.World;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.oredict.OreDictionary;
@@ -490,14 +492,38 @@ public class CraftingManagerTableOfAges {
 	this.addRecipeTOA(new ItemStack(ModItems.tankPoison), 11, " x ", "xox", " x ", 'x', Items.IRON_INGOT, 'o', ModItems.toxin); 
 	this.addRecipeTOA(new ItemStack(ModItems.tankWater), 11, " x ", "xox", " x ", 'x', Items.IRON_INGOT, 'o', Items.WATER_BUCKET); 
 
-
 	this.addRecipeTOA(new ItemStack(ModItems.industrialMultiTool), 11, "xyz", " o ", "   ", 'y', Items.IRON_SHOVEL, 'x', Items.IRON_PICKAXE, 'z', Items.IRON_AXE, 'o', ModItems.machineCase); 
 	this.addRecipeTOA(new ItemStack(ModItems.poisonThrower), 11, "  xz", "xxo", " i ", 'i', ModItems.gunHandle, 'x', ModItems.barrel, 'z', ModItems.tankPoison, 'o', ModItems.blankRifle); 
 	this.addRecipeTOA(new ItemStack(ModItems.waterThrower), 11, "  xz", "xxo", " i ", 'i', ModItems.gunHandle, 'x', ModItems.barrel, 'z', ModItems.tankWater, 'o', ModItems.blankRifle); 
 
 	/** Epic #10 **/ 
-	
-	
+	this.addRecipeTOA(new ItemStack(ModItems.masterAxe), 10, "xix", "ioi", "xix", 'o', Items.IRON_AXE, 'x', ModItems.amethyst, 'i', Items.EMERALD); 
+	this.addRecipeTOA(new ItemStack(ModItems.masterPickaxe), 10, "xix", "ioi", "xix", 'o', Items.IRON_PICKAXE, 'x', ModItems.amethyst, 'i', Items.EMERALD); 
+	this.addRecipeTOA(new ItemStack(ModItems.masterShovel), 10, "xix", "ioi", "xix", 'o', Items.IRON_SHOVEL, 'x', ModItems.amethyst, 'i', Items.EMERALD); 
+	this.addRecipeTOA(new ItemStack(ModItems.masterSword), 10, "xix", "ioi", "xix", 'o', Items.IRON_SWORD, 'x', ModItems.amethyst, 'i', Items.EMERALD); 
+	this.addRecipeTOA(new ItemStack(ModItems.masterAxe), 10, "xix", "ioi", "xix", 'o', Items.IRON_AXE, 'x', ModItems.amethyst, 'i', Items.EMERALD); 
+	this.addRecipeTOA(new ItemStack(ModItems.masterHelmet), 10, "xix", "ioi", "xix", 'o', Items.IRON_HELMET, 'x', ModItems.amethyst, 'i', Items.EMERALD); 
+	this.addRecipeTOA(new ItemStack(ModItems.masterChestplate), 10, "xix", "ioi", "xix", 'o', Items.IRON_CHESTPLATE, 'x', ModItems.amethyst, 'i', Items.EMERALD); 
+	this.addRecipeTOA(new ItemStack(ModItems.masterLeggings), 10, "xix", "ioi", "xix", 'o', Items.IRON_LEGGINGS, 'x', ModItems.amethyst, 'i', Items.EMERALD); 
+	this.addRecipeTOA(new ItemStack(ModItems.masterBoots), 10, "xix", "ioi", "xix", 'o', Items.IRON_BOOTS, 'x', ModItems.amethyst, 'i', Items.EMERALD); 
+	this.addRecipeTOA(new ItemStack(ModItems.legendarySword), 10, "xix", "ioi", "xix", 'o', ModItems.fantasySwordIron, 'x', ModItems.amethyst, 'i', Items.EMERALD); 
+	this.addRecipeTOA(new ItemStack(ModItems.epicKatana), 10, "xix", "ioi", "xix", 'o', ModItems.katanaIron, 'x', ModItems.amethyst, 'i', Items.EMERALD); 
+	this.addRecipeTOA(new ItemStack(ModItems.epicWaraxe), 10, "xix", "ioi", "xix", 'o', ModItems.waraxeIron, 'x', ModItems.amethyst, 'i', Items.EMERALD); 
+		NBTTagCompound rex = new NBTTagCompound();
+		rex.setTag("SkullOwner", new NBTTagString("XxRexRaptorxX"));
+		ItemStack skullRex = new ItemStack(Items.SKULL, 1, 3);
+		skullRex.setTagCompound(rex);
+	this.addShapelessRecipeTOA(new ItemStack(ModItems.epicKatana), 10, ModItems.katanaIron, skullRex);
+		NBTTagCompound steve = new NBTTagCompound();
+		steve.setTag("SkullOwner", new NBTTagString("StvxvG"));
+		ItemStack skullSteve = new ItemStack(Items.SKULL, 1, 3);
+		skullSteve.setTagCompound(steve);
+	this.addShapelessRecipeTOA(new ItemStack(ModItems.epicWaraxe), 10, ModItems.waraxeIron, skullSteve);
+		NBTTagCompound jsq = new NBTTagCompound();
+		jsq.setTag("SkullOwner", new NBTTagString("MrJSQ"));
+		ItemStack skullJsq = new ItemStack(Items.SKULL, 1, 3);
+		skullJsq.setTagCompound(jsq);
+	this.addShapelessRecipeTOA(new ItemStack(ModItems.epicBattleAxe), 10, ModItems.battleAxeIron, skullJsq);
     }
     
     

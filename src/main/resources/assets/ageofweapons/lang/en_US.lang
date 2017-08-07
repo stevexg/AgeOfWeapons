@@ -305,6 +305,22 @@ item.tank_poison.name=Tank (Poison)
 item.tank_water.name=Tank (Water)
 item.water_thrower.name=Portable Waterthrower
 
+//Epic
+item.herobrine_bow.name=Herobrine's Bow
+item.herobrine_sword.name=Herobrine's Sword
+item.master_sword.name=Master Sword
+item.master_axe.name=Master Axe
+item.master_pickaxe.name=Master Pickaxe
+item.master_shovel.name=Master Shovel
+item.master_helmet.name=Master Helmet
+item.master_chestplate.name=Master Chestplate
+item.master_leggings.name=Master Leggings
+item.master_boots.name=Master Boots
+item.legendary_sword.name=Legendary Sword
+item.epic_katana.name=Rex's Katana
+item.epic_waraxe.name=Steve's Waraxe
+item.epic_battle_axe.name=JSQ's Battle Axe
+
 
 
 

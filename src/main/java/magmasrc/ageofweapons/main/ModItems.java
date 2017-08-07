@@ -4,6 +4,7 @@ import magmasrc.ageofweapons.items.*;
 import magmasrc.ageofweapons.items.antiquity.*;
 import magmasrc.ageofweapons.items.earlymodernage.*;
 import magmasrc.ageofweapons.items.edoperiod.*;
+import magmasrc.ageofweapons.items.epic.*;
 import magmasrc.ageofweapons.items.fantasy.*;
 import magmasrc.ageofweapons.items.future.*;
 import magmasrc.ageofweapons.items.middleages.*;
@@ -157,7 +158,7 @@ public class ModItems {
 	public static ToolMaterial herobrineSwordTM;
 	public static ToolMaterial epicBattleAxeTM;
 	public static ToolMaterial epicKatanaTM;
-	public static ToolMaterial epicWarAxeTM;
+	public static ToolMaterial epicWaraxeTM;
 	public static ToolMaterial legendarySwordTM;
 	public static ToolMaterial masterTM;
 
@@ -427,14 +428,18 @@ public class ModItems {
 	// Epic
 	public static Item herobrineBow;
 	public static Item herobrineSword;
-	public static Item jsq_battleAxe;
+	public static Item epicBattleAxe;
 	public static Item legendarySword;
 	public static Item masterAxe;
 	public static Item masterPickaxe;
 	public static Item masterShovel;
 	public static Item masterSword;
-	public static Item rexKatana;
-	public static Item steveWarAxe;
+	public static Item epicKatana;
+	public static Item epicWaraxe;
+	public static ItemArmor masterHelmet;
+	public static ItemArmor masterChestplate;
+	public static ItemArmor masterLeggings;
+	public static ItemArmor masterBoots;
 
 	
 	
@@ -578,9 +583,18 @@ public class ModItems {
 		nunchuckWoodTM = EnumHelper.addToolMaterial("nunchuckWood",                0,  100,  8.0F,   2.5F,  8);
 		nunchuckIronTM = EnumHelper.addToolMaterial("nunchuckIron",                0,  300,  8.0F,   3.3F, 10);
 
-		industrialTM = EnumHelper.addToolMaterial("industrial",                    3,  800,  12.0F,   5.0F, 10);
+		industrialTM = EnumHelper.addToolMaterial("industrial",                    3,  800, 12.0F,   5.0F, 10);
+		masterTM = EnumHelper.addToolMaterial("master",                            3, 1500, 10.0F,   4.0F,  8);
+		herobrineSwordTM = EnumHelper.addToolMaterial("herobrine",                 3, 3000, 10.0F,   8.0F,  0);
+		legendarySwordTM = EnumHelper.addToolMaterial("legendarySword",            3, 2000,  8.0F,  12.0F, 20);
+		epicBattleAxeTM = EnumHelper.addToolMaterial("epicBattleAxe",              3, 2000,  8.0F,   8.5F, 15);
+		epicKatanaTM = EnumHelper.addToolMaterial("epicKatana",                    3, 2500,  8.0F,   9.0F, 20);
+		epicWaraxeTM = EnumHelper.addToolMaterial("epicWaraxe",                    3, 2500,  8.0F,  10.0F, 15);
 
-		
+
+
+
+
 		
 /** TEMPLATE		
 		WoodTM = EnumHelper.addToolMaterial("Wood",                  0,  x,  2.0F,   xF, 15);
@@ -881,6 +895,22 @@ public class ModItems {
 		poisonThrower = new ItemPoisonGun();
 		industrialMultiTool = new ItemIndustrialMultiTool(industrialTM);
 		waterThrower = new ItemWaterThrower();
+		
+		// Epic
+		herobrineBow = new ItemHerobrineBow();
+		herobrineSword = new ItemHerobrineSword(herobrineSwordTM);
+		epicBattleAxe = new ItemEpicBattleAxe(epicBattleAxeTM);
+		legendarySword = new ItemLegendarySword(legendarySwordTM);
+		epicKatana = new ItemEpicKatana(epicKatanaTM);
+		epicWaraxe = new ItemEpicWaraxe(epicWaraxeTM);
+		masterAxe = new ItemMasterAxe(masterTM);
+		masterPickaxe = new ItemMasterPickaxe(masterTM);
+		masterShovel = new ItemMasterShovel(masterTM);
+		masterSword = new ItemMasterSword(masterTM);
+		masterHelmet = new ItemArmorMaster(masterAM, 1, EntityEquipmentSlot.HEAD); 
+		masterChestplate = new ItemArmorMaster(masterAM, 1, EntityEquipmentSlot.CHEST);
+		masterLeggings = new ItemArmorMaster(masterAM, 2, EntityEquipmentSlot.LEGS); 
+		masterBoots = new ItemArmorMaster(masterAM, 1, EntityEquipmentSlot.FEET);
 
 		
 /** TEMPLATE		
@@ -1156,15 +1186,31 @@ public class ModItems {
 		NameHandler.setNames(poisonThrower, "poison_thrower");
 		NameHandler.setNames(industrialMultiTool, "industrial_multi_tool");
 		NameHandler.setNames(waterThrower, "water_thrower");
+		
+		// Epic
+		NameHandler.setNames(herobrineBow, "herobrine_bow");
+		NameHandler.setNames(herobrineSword, "herobrine_sword");
+		NameHandler.setNames(epicBattleAxe, "epic_battle_axe");
+		NameHandler.setNames(epicKatana, "epic_katana");
+		NameHandler.setNames(epicWaraxe, "epic_waraxe");
+		NameHandler.setNames(legendarySword, "legendary_sword");
+		NameHandler.setNames(masterAxe, "master_axe");
+		NameHandler.setNames(masterPickaxe, "master_pickaxe");
+		NameHandler.setNames(masterShovel, "master_shovel");
+		NameHandler.setNames(masterSword, "master_sword");
+		NameHandler.setNames(masterHelmet, "master_helmet");
+		NameHandler.setNames(masterChestplate, "master_chestplate");
+		NameHandler.setNames(masterLeggings, "master_leggings");
+		NameHandler.setNames(masterBoots, "master_boots");
 
 		
 		
 /**		
-		NameUtils.setNames(Wood, "_wood");
-		NameUtils.setNames(Stone, "_stone");
-		NameUtils.setNames(Iron, "_iron");
-		NameUtils.setNames(Gold, "_gold");
-		NameUtils.setNames(Diamond, "_diamond");
+		NameUtils.setHandler(Wood, "_wood");
+		NameUtils.setHandler(Stone, "_stone");
+		NameUtils.setHandler(Iron, "_iron");
+		NameUtils.setHandler(Gold, "_gold");
+		NameUtils.setHandler(Diamond, "_diamond");
 **/
 		
    	    
@@ -1430,6 +1476,22 @@ public class ModItems {
 		registerItem(poisonThrower);
 		registerItem(waterThrower);
 		registerItem(industrialMultiTool);
+		
+		// Epic
+		registerItem(masterHelmet);
+		registerItem(masterChestplate);
+		registerItem(masterLeggings);
+		registerItem(masterBoots);
+		registerItem(masterAxe);
+		registerItem(masterPickaxe);
+		registerItem(masterShovel);
+		registerItem(masterSword);
+		registerItem(legendarySword);
+		registerItem(epicKatana);
+		registerItem(epicWaraxe);
+		registerItem(epicBattleAxe);
+		registerItem(herobrineBow);
+		registerItem(herobrineSword);
 		
 		
 		

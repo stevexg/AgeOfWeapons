@@ -1,9 +1,8 @@
 /**
  * 
  * @author Stvxv.g (Steve), XxRexRaptorxX (RexRaptor)
- * @homepage www.WoM-Company.jimdo.com
- * @forumThread 
- * @projectPage 
+ * @forumThread https://www.planetminecraft.com/mod/age-of-weapons/
+ * @projectPage https://minecraft.curseforge.com/projects/age-of-weapons
  *
  */
 package magmasrc.ageofweapons.main;

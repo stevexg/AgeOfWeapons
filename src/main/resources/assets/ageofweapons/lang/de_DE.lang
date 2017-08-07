@@ -307,6 +307,22 @@ item.tank_poison.name=Tank (Gift)
 item.tank_water.name=Tank (Wasser)
 item.water_thrower.name=Tragbarer Wasserwerfer
 
+//Epic
+item.herobrine_bow.name=Herobrine's Bogen
+item.herobrine_sword.name=Herobrine's Sword
+item.master_sword.name=Meister Schwert
+item.master_axe.name=Meister Axt
+item.master_pickaxe.name=Meister Spitzhacke
+item.master_shovel.name=Meister Axt
+item.master_helmet.name=Meister Helm
+item.master_chestplate.name=Meister Brustpanzer
+item.master_leggings.name=Meister Beinschutz
+item.master_boots.name=Meister Stiefel
+item.legendary_sword.name=Legendäres Schwert
+item.epic_katana.name=Rex's Katana
+item.epic_waraxe.name=Steve's Kriegsaxt
+item.epic_battle_axe.name=JSQ's Kampfaxt
+
 
 
 /** TEMPLATE **/

@@ -17,7 +17,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 /**---------------------------------------------------------------------------------*
  * @author MagmaSrc Team (Stvxv.g & XxRexRaptorxX (RexRaptor))
- * @forumThread 
+ * @forumThread https://www.planetminecraft.com/mod/age-of-weapons/
  * @projectPage https://minecraft.curseforge.com/projects/age-of-weapons
  **---------------------------------------------------------------------------------*/
 
@@ -26,7 +26,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 public class AgeOfWeapons {
    
     public static final String MODID = "ageofweapons";
-    public static final String VERSION = "0.10.0";
+    public static final String VERSION = "0.11.0";
 
    
     @Instance("ageofweapons")
