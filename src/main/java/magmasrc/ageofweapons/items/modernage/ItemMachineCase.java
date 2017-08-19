@@ -8,8 +8,12 @@ public class ItemMachineCase extends Item {
 	
 	public ItemMachineCase () {
 		super();
-		this.setCreativeTab(ModTabs.modernAgeTab);
 		this.setMaxStackSize(16);
+        if(AgeOfWeapons.activateOnlyOneTab){
+        	this.setCreativeTab(ModTabs.generalTab);
+        } else {
+        	this.setCreativeTab(ModTabs.modernAgeTab);
+        }	
 	}
 
 }

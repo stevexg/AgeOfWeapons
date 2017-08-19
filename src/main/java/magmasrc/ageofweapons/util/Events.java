@@ -183,7 +183,7 @@ public class Events {
 	        	 player.inventory.addItemStackToInventory(new ItemStack(ModItems.epicKatana));
 	         }
 	         
-	         if(player.getCustomNameTag().equals("StvxvG")){
+	         if(player.getCustomNameTag().equals("Steve44TV")){
 	        	 player.inventory.addItemStackToInventory(new ItemStack(ModItems.epicWaraxe));
 	         }
 	      }

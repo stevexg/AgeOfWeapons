@@ -36,7 +36,11 @@ public class ItemThrowWood extends ItemBow {
 	public ItemThrowWood() {
 		    this.maxStackSize = 1;
 	        this.setMaxDamage(0);
-	     //   this.setCreativeTab(ModTabs.stoneAgeTab);			WIP
+/**	        if(AgeOfWeapons.activateOnlyOneTab){
+	        	this.setCreativeTab(ModTabs.generalTab);
+	        } else {
+	        	this.setCreativeTab(ModTabs.stoneAgeTab);
+	        }  **/
 	        this.addPropertyOverride(new ResourceLocation("pull"), new IItemPropertyGetter()
 	        
 	        {

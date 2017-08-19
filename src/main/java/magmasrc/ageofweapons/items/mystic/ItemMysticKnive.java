@@ -23,8 +23,12 @@ public class ItemMysticKnive extends ItemCustomWeapon {
     public ItemMysticKnive(ToolMaterial material) {
         super(material, 3.5F);
 
-        this.setCreativeTab(ModTabs.mysticTab);
         this.setMaxStackSize(1);
+        if(AgeOfWeapons.activateOnlyOneTab){
+        	this.setCreativeTab(ModTabs.generalTab);
+        } else {
+        	this.setCreativeTab(ModTabs.mysticTab);
+        }	
     }
 
     

@@ -31,6 +31,7 @@ tile.sapphire_block.name=Saphir Block
 tile.amethyst_block.name=Amethyst Block
 tile.topaz_block.name=Topas Block
 tile.amber_block.name=Bernstein Block
+tile.withered_iron_block.name=Verdorrter Eisen Block
 
 tile.barbed_wire.name=Stacheldraht
 tile.nail_trap.name=Nagel Falle
@@ -45,6 +46,8 @@ tile.fall_trap_stone.name=Stein Gruben Falle
 
 tile.neutron_bomb.name=Neutronen Bombe
 tile.nuclear_bomb.name=Nuklear Bombe
+tile.spikes.name=Spitzen
+tile.spikes_on.name=Spitzen
 
 
 
@@ -111,6 +114,12 @@ item.topaz_shard.name=Topas Scherbe
 item.glass_shard.name=Glas Scherbe
 item.hammer.name=Hammer
 item.cloth.name=Stoff
+item.wither_dust.name=Wither Straub
+item.withered_iron_ingot.name=Verdorrter Eisen Barren
+item.withered_iron_shard.name=Verdorrter Eisen Splitter
+item.axe_blade_withered.name=Verdorrte Axt Schneide
+item.sword_blade_withered.name=Verdorrte Schwert Klinge
+item.broad_blade_withered.name=Verdorrte Breitklinge
 
 
 //StoneAge

@@ -2,6 +2,7 @@ package magmasrc.ageofweapons.items.antiquity;
 
 import javax.annotation.Nullable;
 
+import magmasrc.ageofweapons.main.AgeOfWeapons;
 import magmasrc.ageofweapons.main.ModItems;
 import magmasrc.ageofweapons.main.ModTabs;
 import net.minecraft.creativetab.CreativeTabs;
@@ -30,9 +31,14 @@ public class ItemRecurveBow extends ItemBow {
 	
 	public ItemRecurveBow() {
 		    this.maxStackSize = 1;
-	        this.setMaxDamage(400);          
-	        this.setCreativeTab(ModTabs.antiquityTab);
+	        this.setMaxDamage(400);    
+	        if(AgeOfWeapons.activateOnlyOneTab){
+	        	this.setCreativeTab(ModTabs.generalTab);
+	        } else {
+	        	this.setCreativeTab(ModTabs.antiquityTab);
+	        };
 	        this.addPropertyOverride(new ResourceLocation("pull"), new IItemPropertyGetter()
+	        
 
 	        {
 	            @SideOnly(Side.CLIENT)

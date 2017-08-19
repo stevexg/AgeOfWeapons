@@ -26,8 +26,12 @@ public class ItemKunai extends ItemCustomWeapon {
     public ItemKunai(ToolMaterial material) {
         super(material, 3.8F);
 
-        this.setCreativeTab(ModTabs.edoTab);
         this.setMaxStackSize(64);
+        if(AgeOfWeapons.activateOnlyOneTab){
+        	this.setCreativeTab(ModTabs.generalTab);
+        } else {
+        	this.setCreativeTab(ModTabs.edoTab);
+        }	
     }
 
     

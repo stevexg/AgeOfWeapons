@@ -18,8 +18,12 @@ public class ItemBatonIron extends ItemCustomWeapon {
     public ItemBatonIron(ToolMaterial material) {
         super(material, 2.0F);
 
-        this.setCreativeTab(ModTabs.edoTab);
         this.setMaxStackSize(1);
+        if(AgeOfWeapons.activateOnlyOneTab){
+        	this.setCreativeTab(ModTabs.generalTab);
+        } else {
+        	this.setCreativeTab(ModTabs.edoTab);
+        }	
     }
 
     

@@ -3,6 +3,7 @@ package magmasrc.ageofweapons.items.epic;
 import java.util.List;
 
 import magmasrc.ageofweapons.main.AgeOfWeapons;
+import magmasrc.ageofweapons.main.ModItems;
 import magmasrc.ageofweapons.main.ModTabs;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
@@ -16,8 +17,12 @@ public class ItemMasterPickaxe extends ItemPickaxe {
     public ItemMasterPickaxe(ToolMaterial material) {
         super(material);
 
-        this.setCreativeTab(ModTabs.epicTab);       
         this.setMaxStackSize(1);
+        if(AgeOfWeapons.activateOnlyOneTab){
+        	this.setCreativeTab(ModTabs.generalTab);
+        } else {
+        	this.setCreativeTab(ModTabs.epicTab);
+        }
     }
 
     
@@ -32,7 +37,7 @@ public class ItemMasterPickaxe extends ItemPickaxe {
 	
 	@Override
 	public boolean getIsRepairable(ItemStack armor, ItemStack stack) {
-	 return stack.getItem() == Items.EMERALD;
+	 return stack.getItem() == ModItems.witheredIronIngot;
 	}  
 
 }

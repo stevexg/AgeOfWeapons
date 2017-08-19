@@ -3,6 +3,7 @@ package magmasrc.ageofweapons.items.epic;
 import com.mojang.realmsclient.gui.ChatFormatting;
 
 import magmasrc.ageofweapons.main.AgeOfWeapons;
+import magmasrc.ageofweapons.main.ModItems;
 import magmasrc.ageofweapons.main.ModTabs;
 import magmasrc.ageofweapons.util.ItemCustomWeapon;
 import net.minecraft.entity.Entity;
@@ -36,8 +37,12 @@ public class ItemHerobrineSword extends ItemCustomWeapon {
     public ItemHerobrineSword(ToolMaterial material) {
         super(material, 2.5F);
 
-        this.setCreativeTab(ModTabs.epicTab);
         this.setMaxStackSize(1);
+        if(AgeOfWeapons.activateOnlyOneTab){
+        	this.setCreativeTab(ModTabs.generalTab);
+        } else {
+        	this.setCreativeTab(ModTabs.epicTab);
+        }
     }
 
     
@@ -70,7 +75,7 @@ public class ItemHerobrineSword extends ItemCustomWeapon {
 	
 	@Override
 	public boolean getIsRepairable(ItemStack armor, ItemStack stack) {
-	 return stack.getItem() == Items.SKULL;
+	 return stack.getItem() == ModItems.witheredIronIngot;
 	}  
 	
 	@Override

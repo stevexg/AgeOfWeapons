@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.mojang.realmsclient.gui.ChatFormatting;
 
+import magmasrc.ageofweapons.main.AgeOfWeapons;
 import magmasrc.ageofweapons.main.ModTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
@@ -19,9 +20,13 @@ public class ItemTaser extends Item {
 
     public ItemTaser() {
         super();
-     //   this.setCreativeTab(ModTabs.modernAgeTab);  TODO
         this.setMaxStackSize(1);
         this.setMaxDamage(300);
+      /**  if(AgeOfWeapons.activateOnlyOneTab){
+        	this.setCreativeTab(ModTabs.generalTab);
+        } else {
+        	this.setCreativeTab(ModTabs.modernAgeTab);
+        }	**/
     }
     
     

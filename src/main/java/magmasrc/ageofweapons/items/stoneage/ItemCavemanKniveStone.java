@@ -17,8 +17,12 @@ public class ItemCavemanKniveStone extends ItemCustomWeapon {
     public ItemCavemanKniveStone(ToolMaterial material) {
         super(material, 5);
 
-        this.setCreativeTab(ModTabs.stoneAgeTab);
         this.setMaxStackSize(16);
+        if(AgeOfWeapons.activateOnlyOneTab){
+        	this.setCreativeTab(ModTabs.generalTab);
+        } else {
+        	this.setCreativeTab(ModTabs.stoneAgeTab);
+        }	
     }
 
     

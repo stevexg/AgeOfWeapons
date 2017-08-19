@@ -179,6 +179,10 @@ public class CraftingManagerTableOfAges {
     }   
 
 
+    
+    
+    
+    
 
     /** Age of Weapons **/
     //blocks
@@ -187,11 +191,13 @@ public class CraftingManagerTableOfAges {
     this.addRecipeTOA(new ItemStack(ModBlocks.amethystBlock), 0, "xxx", "xxx", "xxx", 'x', ModItems.amethyst);
     this.addRecipeTOA(new ItemStack(ModBlocks.topazBlock), 0, "xxx", "xxx", "xxx", 'x', ModItems.topaz);
     this.addRecipeTOA(new ItemStack(ModBlocks.amberBlock), 0, "xxx", "xxx", "xxx", 'x', ModItems.amber);
+    this.addRecipeTOA(new ItemStack(ModBlocks.witheredIronBlock), 0, "xxx", "xxx", "xxx", 'x', ModItems.witheredIronIngot);
     this.addShapelessRecipeTOA(new ItemStack(ModItems.ruby, 9), 0, ModBlocks.rubyBlock);
     this.addShapelessRecipeTOA(new ItemStack(ModItems.sapphire, 9), 0, ModBlocks.sapphireBlock);
     this.addShapelessRecipeTOA(new ItemStack(ModItems.amethyst, 9), 0, ModBlocks.amethystBlock);
     this.addShapelessRecipeTOA(new ItemStack(ModItems.topaz, 9), 0, ModBlocks.topazBlock);
     this.addShapelessRecipeTOA(new ItemStack(ModItems.amber, 9), 0, ModBlocks.amberBlock);
+    this.addShapelessRecipeTOA(new ItemStack(ModItems.witheredIronIngot, 9), 0, ModBlocks.witheredIronBlock);
     this.addRecipeTOA(new ItemStack(ModBlocks.crusher), 7, "xxx", "xzx", "xox", 'x', Blocks.COBBLESTONE, 'o', Blocks.FURNACE, 'z', Items.FLINT);
     this.addRecipeTOA(new ItemStack(ModBlocks.crusher), 7, "xxx", "xzx", "xox", 'x', Blocks.COBBLESTONE, 'o', Blocks.FURNACE, 'z', ModItems.ironShard);
     this.addRecipeTOA(new ItemStack(ModBlocks.tableOfAges), 0, "xxx", "ozo", "oyo", 'x', Blocks.STONE_SLAB, 'o', Blocks.STONE, 'z', Blocks.CRAFTING_TABLE, 'y', Blocks.CHEST);
@@ -211,17 +217,20 @@ public class CraftingManagerTableOfAges {
 	this.addRecipeTOA(new ItemStack(ModItems.axeBladeDiamond), 0, "xx ", "xo ", "   ", 'x', ModItems.diamondShard, 'o', Items.DIAMOND);
   	this.addRecipeTOA(new ItemStack(ModItems.axeBladeGold), 0, "xx ", "xo ", "   ", 'x', ModItems.goldShard, 'o', Items.GOLD_INGOT);
   	this.addRecipeTOA(new ItemStack(ModItems.axeBladeIron), 0, "xx ", "xo ", "   ", 'x', ModItems.ironShard, 'o', Items.IRON_INGOT);
+  	this.addRecipeTOA(new ItemStack(ModItems.axeBladeWithered), 0, "xx ", "xo ", "   ", 'x', ModItems.witheredIronShard, 'o', ModItems.witheredIronIngot);
   	this.addRecipeTOA(new ItemStack(ModItems.axeBladeStone), 0, "xx ", "xo ", "   ", 'x', ModItems.stoneShard, 'o', Blocks.COBBLESTONE);
   	this.addRecipeTOA(new ItemStack(ModItems.axeBladeStone), 0, "xx ", "xo ", "   ", 'x', Items.FLINT, 'o', Blocks.COBBLESTONE);
   	this.addRecipeTOA(new ItemStack(ModItems.axeBladeWood), 0, "xx ", "xo ", "   ", 'x', ModItems.woodShard, 'o', new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE));
   	this.addRecipeTOA(new ItemStack(ModItems.swordBladeDiamond), 0, " x ", " x ", "   ", 'x', Items.DIAMOND);
   	this.addRecipeTOA(new ItemStack(ModItems.swordBladeGold), 0, " x ", " x ", "   ", 'x', Items.GOLD_INGOT);
   	this.addRecipeTOA(new ItemStack(ModItems.swordBladeIron), 0, " x ", " x ", "   ", 'x', Items.IRON_INGOT);
+  	this.addRecipeTOA(new ItemStack(ModItems.swordBladeWithered), 0, " x ", " x ", "   ", 'x', ModItems.witheredIronIngot);
   	this.addRecipeTOA(new ItemStack(ModItems.swordBladeStone), 0, " x ", " x ", "   ", 'x', Blocks.COBBLESTONE);
   	this.addRecipeTOA(new ItemStack(ModItems.swordBladeWood), 0, " x ", " x ", "   ", 'x', new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE));
   	this.addRecipeTOA(new ItemStack(ModItems.broadBladeDiamond), 0, "xx ", "xx ", "   ", 'x', ModItems.swordBladeDiamond);
   	this.addRecipeTOA(new ItemStack(ModItems.broadBladeGold), 0, "xx ", "xx ", "   ", 'x', ModItems.swordBladeGold);
   	this.addRecipeTOA(new ItemStack(ModItems.broadBladeIron), 0, "xx ", "xx ", "   ", 'x', ModItems.swordBladeIron);
+  	this.addRecipeTOA(new ItemStack(ModItems.broadBladeWithered), 0, "xx ", "xx ", "   ", 'x', ModItems.swordBladeWithered);
   	this.addRecipeTOA(new ItemStack(ModItems.broadBladeStone), 0, "xx ", "xx ", "   ", 'x', ModItems.swordBladeStone);
   	this.addRecipeTOA(new ItemStack(ModItems.broadBladeWood), 0, "xx ", "xx ", "   ", 'x', ModItems.swordBladeWood);
   	this.addShapelessRecipeTOA(new ItemStack(ModItems.lumber, 3), 0, new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE));
@@ -233,6 +242,9 @@ public class CraftingManagerTableOfAges {
   	this.addRecipeTOA(new ItemStack(ModItems.radioactiveToxin), 0, "xxx", "xox", "xxx", 'x', new ItemStack(Items.FISH, 1, 3), 'o', ModItems.toxin);
   	this.addShapelessRecipeTOA(new ItemStack(ModItems.glassShard, 4), 0, new ItemStack(Blocks.GLASS, 1, OreDictionary.WILDCARD_VALUE));
   	this.addShapelessRecipeTOA(new ItemStack(ModItems.glassShard, 4), 0, new ItemStack(Blocks.GLASS_PANE, 1, OreDictionary.WILDCARD_VALUE));
+  	this.addRecipeTOA(new ItemStack(ModItems.witheredIronIngot), 0, " x ", "xox", " x ", 'x', ModItems.witherDust, 'o', Items.IRON_INGOT);
+  	this.addRecipeTOA(new ItemStack(ModItems.witheredIronShard), 0, " x ", "xox", " x ", 'x', ModItems.witherDust, 'o', ModItems.ironShard);
+
 /**       schauen was rumbuggt  (wegen Hammer)
   	this.addRecipeTOA(new ItemStack(ModItems.woodShard, 3), 0, new ItemStack(ModItems.hammer, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE));
   	this.addRecipeTOA(new ItemStack(ModItems.stoneShard, 3), 0, new ItemStack(ModItems.hammer, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.COBBLESTONE, 1, OreDictionary.WILDCARD_VALUE));
@@ -247,6 +259,9 @@ public class CraftingManagerTableOfAges {
   	this.addRecipeTOA(new ItemStack(ModItems.rubyShard, 3), 0, new ItemStack(ModItems.hammer, 1, OreDictionary.WILDCARD_VALUE), ModItems.ruby);
   	this.addRecipeTOA(new ItemStack(ModItems.sapphireShard, 3), 0, new ItemStack(ModItems.hammer, 1, OreDictionary.WILDCARD_VALUE), ModItems.sapphire);
   	this.addRecipeTOA(new ItemStack(ModItems.topazShard, 3), 0, new ItemStack(ModItems.hammer, 1, OreDictionary.WILDCARD_VALUE), ModItems.topaz);
+  	this.addRecipeTOA(new ItemStack(ModItems.witheredIronShard, 3), 0, new ItemStack(ModItems.hammer, 1, OreDictionary.WILDCARD_VALUE), ModItems.witheredIronIngot);
+	this.addRecipeTOA(new ItemStack(ModItems.witherDust, 8), new ItemStack(ModItems.hammer, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Items.SKULL, 1, 1));
+
  **/ 	
   	this.addRecipeTOA(new ItemStack(ModItems.hammer), 0, " x ", " o ", " ", 'x', Blocks.STONE, 'o', Items.STICK);
 
@@ -265,8 +280,9 @@ public class CraftingManagerTableOfAges {
   	this.addRecipeTOA(new ItemStack(ModItems.upgradeAtiquity), 1, "xxx", "xox", "xxx", 'x', new ItemStack(Items.DYE, 1, 4), 'o', Blocks.LAPIS_BLOCK);
   	this.addRecipeTOA(new ItemStack(ModItems.upgradeMiddleAges), 2, "xxx", "xox", "xxx", 'x', ModItems.ironShard, 'o', Blocks.IRON_BLOCK);
     this.addRecipeTOA(new ItemStack(ModItems.upgradeEarlyModernAge), 4, "xxx", "xox", "xxx", 'x', ModItems.goldShard, 'o', Blocks.GOLD_BLOCK);
+  if(AgeOfWeapons.activateModern){  
   	this.addRecipeTOA(new ItemStack(ModItems.upgradeModernAge), 7, "xxx", "xox", "xxx", 'x', ModItems.diamondShard, 'o', Blocks.DIAMOND_BLOCK);
-  if(AgeOfWeapons.activateMystic) {	
+ }if(AgeOfWeapons.activateMystic) {	
     this.addRecipeTOA(new ItemStack(ModItems.upgradeMystic), 2, "xxx", "xox", "xxx", 'x', ModItems.amethystShard, 'o', ModBlocks.amethystBlock);               	
  }if(AgeOfWeapons.activatePiracy) { 
     this.addRecipeTOA(new ItemStack(ModItems.upgradePiracy), 4, "xxx", "xox", "xxx", 'x', ModItems.glassShard, 'o', new ItemStack(Blocks.GLASS, 1, 9));         
@@ -275,7 +291,7 @@ public class CraftingManagerTableOfAges {
  }if(AgeOfWeapons.activateFantasy) { 
     this.addRecipeTOA(new ItemStack(ModItems.upgradeFantasy), 7, "xxx", "xox", "xxx", 'x', ModItems.rubyShard, 'o', ModBlocks.rubyBlock);        
  }if(AgeOfWeapons.activateEpic) { 
-    this.addRecipeTOA(new ItemStack(ModItems.upgradeEpic), 9, "xxx", "xox", "xxx", 'x', ModItems.topazShard, 'o', ModBlocks.topazBlock);
+	    this.addRecipeTOA(new ItemStack(ModItems.upgradeEpic), 9, "xxx", "xox", "xxx", 'x', ModItems.topazShard, 'o', ModBlocks.topazBlock);
  }if(AgeOfWeapons.activateBBY) { 
     this.addRecipeTOA(new ItemStack(ModItems.upgradeBBY), 11, "xxx", "xox", "xxx", 'x', ModItems.sapphireShard, 'o', ModBlocks.sapphireBlock);   
  }if(AgeOfWeapons.activateFuture) { 
@@ -497,25 +513,25 @@ public class CraftingManagerTableOfAges {
 	this.addRecipeTOA(new ItemStack(ModItems.waterThrower), 11, "  xz", "xxo", " i ", 'i', ModItems.gunHandle, 'x', ModItems.barrel, 'z', ModItems.tankWater, 'o', ModItems.blankRifle); 
 
 	/** Epic #10 **/ 
-	this.addRecipeTOA(new ItemStack(ModItems.masterAxe), 10, "xix", "ioi", "xix", 'o', Items.IRON_AXE, 'x', ModItems.amethyst, 'i', Items.EMERALD); 
-	this.addRecipeTOA(new ItemStack(ModItems.masterPickaxe), 10, "xix", "ioi", "xix", 'o', Items.IRON_PICKAXE, 'x', ModItems.amethyst, 'i', Items.EMERALD); 
-	this.addRecipeTOA(new ItemStack(ModItems.masterShovel), 10, "xix", "ioi", "xix", 'o', Items.IRON_SHOVEL, 'x', ModItems.amethyst, 'i', Items.EMERALD); 
-	this.addRecipeTOA(new ItemStack(ModItems.masterSword), 10, "xix", "ioi", "xix", 'o', Items.IRON_SWORD, 'x', ModItems.amethyst, 'i', Items.EMERALD); 
-	this.addRecipeTOA(new ItemStack(ModItems.masterAxe), 10, "xix", "ioi", "xix", 'o', Items.IRON_AXE, 'x', ModItems.amethyst, 'i', Items.EMERALD); 
-	this.addRecipeTOA(new ItemStack(ModItems.masterHelmet), 10, "xix", "ioi", "xix", 'o', Items.IRON_HELMET, 'x', ModItems.amethyst, 'i', Items.EMERALD); 
-	this.addRecipeTOA(new ItemStack(ModItems.masterChestplate), 10, "xix", "ioi", "xix", 'o', Items.IRON_CHESTPLATE, 'x', ModItems.amethyst, 'i', Items.EMERALD); 
-	this.addRecipeTOA(new ItemStack(ModItems.masterLeggings), 10, "xix", "ioi", "xix", 'o', Items.IRON_LEGGINGS, 'x', ModItems.amethyst, 'i', Items.EMERALD); 
-	this.addRecipeTOA(new ItemStack(ModItems.masterBoots), 10, "xix", "ioi", "xix", 'o', Items.IRON_BOOTS, 'x', ModItems.amethyst, 'i', Items.EMERALD); 
-	this.addRecipeTOA(new ItemStack(ModItems.legendarySword), 10, "xix", "ioi", "xix", 'o', ModItems.fantasySwordIron, 'x', ModItems.amethyst, 'i', Items.EMERALD); 
-	this.addRecipeTOA(new ItemStack(ModItems.epicKatana), 10, "xix", "ioi", "xix", 'o', ModItems.katanaIron, 'x', ModItems.amethyst, 'i', Items.EMERALD); 
-	this.addRecipeTOA(new ItemStack(ModItems.epicWaraxe), 10, "xix", "ioi", "xix", 'o', ModItems.waraxeIron, 'x', ModItems.amethyst, 'i', Items.EMERALD); 
+	this.addRecipeTOA(new ItemStack(ModItems.masterAxe), 10, "oo ", "ox ", " x ", 'o', ModItems.witheredIronIngot, 'x', Items.STICK); 
+	this.addRecipeTOA(new ItemStack(ModItems.masterPickaxe), 10, "ooo", " x ", " x ", 'o', ModItems.witheredIronIngot, 'x', Items.STICK); 
+	this.addRecipeTOA(new ItemStack(ModItems.masterShovel), 10, " o ", " x ", " x ", 'o', ModItems.witheredIronIngot, 'x', Items.STICK); 
+	this.addRecipeTOA(new ItemStack(ModItems.masterSword), 10, " o ", " o ", " x ", 'o', ModItems.witheredIronIngot, 'x', Items.STICK); 
+	this.addRecipeTOA(new ItemStack(ModItems.masterHelmet), 10, "xxx", "x x", "   ", 'x', ModItems.witheredIronIngot); 
+	this.addRecipeTOA(new ItemStack(ModItems.masterChestplate), 10, "x x", "xxx", "xxx", 'x', ModItems.witheredIronIngot); 
+	this.addRecipeTOA(new ItemStack(ModItems.masterLeggings), 10, "xxx", "x x", "x x", 'x', ModItems.witheredIronIngot); 
+	this.addRecipeTOA(new ItemStack(ModItems.masterBoots), 10, "   ", "x x", "x x", 'x', ModItems.witheredIronIngot); 
+  	this.addRecipeTOA(new ItemStack(ModItems.legendarySword), 10, " xi", "ixi", " o ", 'x', ModItems.broadBladeWithered, 'o', ModItems.swordHandle, 'i', ModItems.witheredIronShard); 
+  	this.addRecipeTOA(new ItemStack(ModItems.epicKatana), 10, "  o", " o ", "x  ", 'x', ModItems.swordHandle, 'o', ModItems.swordBladeWithered); 
+  	this.addRecipeTOA(new ItemStack(ModItems.epicWaraxe), 10, "oco", " x ", " x ", 'x', Items.STICK, 'o', ModItems.axeBladeWithered, 'c', ModItems.witheredIronIngot);
+	
 		NBTTagCompound rex = new NBTTagCompound();
 		rex.setTag("SkullOwner", new NBTTagString("XxRexRaptorxX"));
 		ItemStack skullRex = new ItemStack(Items.SKULL, 1, 3);
 		skullRex.setTagCompound(rex);
 	this.addShapelessRecipeTOA(new ItemStack(ModItems.epicKatana), 10, ModItems.katanaIron, skullRex);
 		NBTTagCompound steve = new NBTTagCompound();
-		steve.setTag("SkullOwner", new NBTTagString("StvxvG"));
+		steve.setTag("SkullOwner", new NBTTagString("Steve44TV"));
 		ItemStack skullSteve = new ItemStack(Items.SKULL, 1, 3);
 		skullSteve.setTagCompound(steve);
 	this.addShapelessRecipeTOA(new ItemStack(ModItems.epicWaraxe), 10, ModItems.waraxeIron, skullSteve);

@@ -17,8 +17,12 @@ public class ItemRock extends ItemCustomWeapon {
     public ItemRock(ToolMaterial material) {
         super(material, 0.5F);
         
-        this.setCreativeTab(ModTabs.stoneAgeTab);
         this.setMaxStackSize(64);
+        if(AgeOfWeapons.activateOnlyOneTab){
+        	this.setCreativeTab(ModTabs.generalTab);
+        } else {
+        	this.setCreativeTab(ModTabs.stoneAgeTab);
+        }	
     }
     
     

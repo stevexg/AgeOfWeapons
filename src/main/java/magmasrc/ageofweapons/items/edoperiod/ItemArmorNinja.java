@@ -1,5 +1,6 @@
 package magmasrc.ageofweapons.items.edoperiod;
 
+import magmasrc.ageofweapons.main.AgeOfWeapons;
 import magmasrc.ageofweapons.main.ModItems;
 import magmasrc.ageofweapons.main.ModTabs;
 import net.minecraft.entity.player.EntityPlayer;
@@ -16,8 +17,11 @@ public class ItemArmorNinja extends ItemArmor {
 
 	public ItemArmorNinja(ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn) {
 		super(materialIn, renderIndexIn, equipmentSlotIn);
-		this.setCreativeTab(ModTabs.edoTab);
-	}
+        if(AgeOfWeapons.activateOnlyOneTab){
+        	this.setCreativeTab(ModTabs.generalTab);
+        } else {
+        	this.setCreativeTab(ModTabs.edoTab);
+        }		}
 	
 	@Override
 	public boolean getIsRepairable(ItemStack armor, ItemStack stack) {

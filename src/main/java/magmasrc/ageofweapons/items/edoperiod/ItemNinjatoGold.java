@@ -18,8 +18,12 @@ public class ItemNinjatoGold extends ItemCustomWeapon {
     public ItemNinjatoGold(ToolMaterial material) {
         super(material, 2.8F);
 
-        this.setCreativeTab(ModTabs.edoTab);
         this.setMaxStackSize(1);
+        if(AgeOfWeapons.activateOnlyOneTab){
+        	this.setCreativeTab(ModTabs.generalTab);
+        } else {
+        	this.setCreativeTab(ModTabs.edoTab);
+        }	
     }
 
     

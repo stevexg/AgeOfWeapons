@@ -35,8 +35,8 @@ public class AgeOfWeapons {
     @SidedProxy(clientSide = "magmasrc.ageofweapons.proxy.ClientProxy", serverSide = "magmasrc.ageofweapons.proxy.ServerProxy")
     public static ServerProxy proxy;
 
-    //TODO Steve: ThrowWood/Caveman Spear, Crusher, Schusswaffen, schauen wegen OreRecipes, Weapon Box, item das einen block setzt...weil ich das ned hinkriege xD ._.
-    //TODO Bugs: Crusher GUI - progress bar ist um 1 pixel verschoben, Crusher JEI eigene textur
+    //TODO Steve: ThrowWood/Caveman Spear, Schusswaffen, schauen wegen OreRecipes, Weapon Box, item das einen block setzt...weil ich das ned hinkriege xD ._.
+    
     
     // Items //
     public ModItems items;
@@ -55,7 +55,7 @@ public class AgeOfWeapons {
     
     // Config //
     public static boolean activateUpdateChecker;
-    public static boolean activateOnlyOneTab;     			// TODO later
+    public static boolean activateOnlyOneTab;
     public static boolean activateChainArmorCrafting;
     public static boolean activateBasicRecipesOnWorkbench;
     public static boolean activateWeaponBoxRecipe;
@@ -72,6 +72,7 @@ public class AgeOfWeapons {
     public static boolean activateFantasy;
     public static boolean activateEpic;
     public static boolean activateFuture;
+    public static boolean activateModern;
     
     public static float daggerModifier;					//TODO later (for all weapon types)
     public static float kniveModifier;
@@ -128,7 +129,7 @@ public class AgeOfWeapons {
     	config.load();
         
     		activateUpdateChecker = config.get("EVENTS", "Activate Update-Checker", true, "[true/false]").getBoolean();
-          //activateOnlyOneTab = config.get("GENERAL", "Activate only one creative tab", false, "[true/false]").getBoolean();
+          //activateOnlyOneTab = config.get("GENERAL", "Activate only one creative tab", false, "[true/false]").getBoolean();    TODO later
     		activateChainArmorCrafting = config.get("CRAFTING", "Activate the crafting recipe for the chain armor (Table of Ages)", true, "[true/false]").getBoolean();
     		activateBasicRecipesOnWorkbench = config.get("CRAFTING", "Activate basic AoW recipes on the normal crafting table", true, "[true/false]").getBoolean();
     		activateWeaponBoxRecipe = config.get("CRAFTING", "Activate the crafting recipe for the Weapon Box", true, "[true/false]").getBoolean();
@@ -146,6 +147,8 @@ public class AgeOfWeapons {
     		activateFuture = config.get("AGES", "Activate the recipe for the Future Upgrade", true, "[true/false]").getBoolean();
     		activateMystic = config.get("AGES", "Activate the recipe for the Mystic Upgrade", true, "[true/false]").getBoolean();
     		activatePiracy = config.get("AGES", "Activate the recipe for the Piracy Upgrade", true, "[true/false]").getBoolean();
+    		activateModern = config.get("AGES", "Activate the recipe for the Modern Age Upgrade", true, "[true/false]").getBoolean();
+
     		
     	config.save();	
 
@@ -190,8 +193,8 @@ public class AgeOfWeapons {
     	recipes.register();
     	
         // Creative Tabs //
-      	tabs = new ModTabs();
-    	
+    	tabs = new ModTabs();
+   
     	
     	// proxy //
         proxy.registerClientStuff();

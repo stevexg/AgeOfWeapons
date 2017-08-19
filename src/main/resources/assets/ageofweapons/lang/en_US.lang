@@ -1,4 +1,4 @@
-ï»¿
+Ã¯Â»Â¿
 itemGroup.generalTab=Age of Weapons
 itemGroup.stoneAgeTab=AoW: Stone Age
 itemGroup.antiquityTab=AoW: Antiquity
@@ -28,6 +28,7 @@ tile.sapphire_block.name=Sapphire Block
 tile.amethyst_block.name=Amethyst Block
 tile.topaz_block.name=Topaz Block
 tile.amber_block.name=Amber Block
+tile.withered_iron_block.name=Withered Iron Block
 
 tile.barbed_wire.name=Barbed Wire
 tile.nail_trap.name=Nail Trap
@@ -39,9 +40,12 @@ tile.bear_trap.name=Bear Trap
 tile.fall_trap_dirt.name=Dirt Fall Trap
 tile.fall_trap_planks.name=Planks Fall Trap
 tile.fall_trap_stone.name=Stone Fall Trap
+tile.barbed_wire_fence.name=Barbed Wire Fence
 
 tile.neutron_bomb.name=Neutron Bomb
 tile.nuclear_bomb.name=Nuclear Bomb
+tile.spikes.name=Spikes
+tile.spikes_on.name=Spikes
 
 
 
@@ -106,6 +110,12 @@ item.amethyst_shard.name=Amethyst Shard
 item.topaz_shard.name=Topaz Shard
 item.glass_shard.name=Glass Shard
 item.cloth.name=Cloth
+item.wither_dust.name=Wither Dust
+item.withered_iron_ingot.name=Withered Iron Ingot
+item.withered_iron_shard.name=Withered Iron Shard
+item.axe_blade_withered.name=Withered Axe Blade
+item.sword_blade_withered.name=Withered Sword Blade
+item.broad_blade_withered.name=Withered Broad Blade
 
 
 //StoneAge
@@ -251,11 +261,11 @@ item.katana_stone.name=Stone Katana
 item.katana_iron.name=Iron Katana
 item.katana_gold.name=Golden Katana
 item.katana_diamond.name=Diamond Katana
-item.ninjato_wood.name=Wooden Ninjatō
-item.ninjato_stone.name=Stone Ninjatō
-item.ninjato_iron.name=Iron Ninjatō
-item.ninjato_gold.name=Golden Ninjatō
-item.ninjato_diamond.name=Diamond Ninjatō
+item.ninjato_wood.name=Wooden NinjatÅ�
+item.ninjato_stone.name=Stone NinjatÅ�
+item.ninjato_iron.name=Iron NinjatÅ�
+item.ninjato_gold.name=Golden NinjatÅ�
+item.ninjato_diamond.name=Diamond NinjatÅ�
 item.baton_iron.name=Iron Baton
 item.baton_wood.name=Wooden Baton
 item.blowgun.name=Blowgun

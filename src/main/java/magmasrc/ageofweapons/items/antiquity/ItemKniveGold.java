@@ -18,8 +18,12 @@ public class ItemKniveGold extends ItemCustomWeapon {
     public ItemKniveGold(ToolMaterial material) {
         super(material, 3.5F);
 
-        this.setCreativeTab(ModTabs.antiquityTab);
         this.setMaxStackSize(1);
+        if(AgeOfWeapons.activateOnlyOneTab){
+        	this.setCreativeTab(ModTabs.generalTab);
+        } else {
+        	this.setCreativeTab(ModTabs.antiquityTab);
+        }
     }
 
     

@@ -8,7 +8,11 @@ public class ItemAmmoBundleBig extends Item {
 	
 	public ItemAmmoBundleBig () {
 		super();
-		this.setCreativeTab(ModTabs.modernAgeTab);
-	}
+        if(AgeOfWeapons.activateOnlyOneTab){
+        	this.setCreativeTab(ModTabs.generalTab);
+        } else {
+        	this.setCreativeTab(ModTabs.modernAgeTab);
+        }	
+        }
 
 }

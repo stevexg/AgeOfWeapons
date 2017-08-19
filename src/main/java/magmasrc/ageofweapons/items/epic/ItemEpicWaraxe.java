@@ -3,6 +3,7 @@ package magmasrc.ageofweapons.items.epic;
 import com.mojang.realmsclient.gui.ChatFormatting;
 
 import magmasrc.ageofweapons.main.AgeOfWeapons;
+import magmasrc.ageofweapons.main.ModItems;
 import magmasrc.ageofweapons.main.ModTabs;
 import magmasrc.ageofweapons.util.ItemCustomAxe;
 import magmasrc.ageofweapons.util.ItemCustomWeapon;
@@ -22,7 +23,6 @@ public class ItemEpicWaraxe extends ItemCustomAxe {
     public ItemEpicWaraxe(ToolMaterial material) {
         super(material, 0.9F);
 
-        this.setCreativeTab(ModTabs.epicTab);
         this.setMaxStackSize(1);
     }
 
@@ -43,7 +43,7 @@ public class ItemEpicWaraxe extends ItemCustomAxe {
 	
 	@Override
 	public boolean getIsRepairable(ItemStack armor, ItemStack stack) {
-	 return stack.getItem() == Items.EMERALD;
+	 return stack.getItem() == ModItems.witheredIronIngot;
 	}  
 	
 	@Override

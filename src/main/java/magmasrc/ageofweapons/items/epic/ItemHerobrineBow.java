@@ -2,6 +2,7 @@ package magmasrc.ageofweapons.items.epic;
 
 import javax.annotation.Nullable;
 
+import magmasrc.ageofweapons.main.AgeOfWeapons;
 import magmasrc.ageofweapons.main.ModItems;
 import magmasrc.ageofweapons.main.ModTabs;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -30,7 +31,11 @@ public class ItemHerobrineBow extends ItemBow {
 	public ItemHerobrineBow() {
 		    this.maxStackSize = 1;
 	        this.setMaxDamage(1000);          
-	        this.setCreativeTab(ModTabs.epicTab);
+	        if(AgeOfWeapons.activateOnlyOneTab){
+	        	this.setCreativeTab(ModTabs.generalTab);
+	        } else {
+	        	this.setCreativeTab(ModTabs.epicTab);
+	        }
 	        this.addPropertyOverride(new ResourceLocation("pull"), new IItemPropertyGetter()
 
 	        {
@@ -192,7 +197,7 @@ public class ItemHerobrineBow extends ItemBow {
 	
 	@Override
 	public boolean getIsRepairable(ItemStack armor, ItemStack stack) {
-	 return stack.getItem() == Items.SKULL;
+	 return stack.getItem() == ModItems.witheredIronIngot;
 	}  
 	
 	@Override

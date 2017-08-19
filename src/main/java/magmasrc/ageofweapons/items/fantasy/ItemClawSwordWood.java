@@ -27,8 +27,12 @@ public class ItemClawSwordWood extends ItemCustomWeapon {
     public ItemClawSwordWood(ToolMaterial material) {
         super(material, 1.4F);
 
-        this.setCreativeTab(ModTabs.fantasyTab);
         this.setMaxStackSize(1);
+        if(AgeOfWeapons.activateOnlyOneTab){
+        	this.setCreativeTab(ModTabs.generalTab);
+        } else {
+        	this.setCreativeTab(ModTabs.fantasyTab);
+        }
     }
 
     

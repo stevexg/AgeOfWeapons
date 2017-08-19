@@ -8,7 +8,10 @@ public class ItemTankWater extends Item {
 	
 	public ItemTankWater () {
 		super();
-		this.setCreativeTab(ModTabs.futureTab);
-	}
+        if(AgeOfWeapons.activateOnlyOneTab){
+        	this.setCreativeTab(ModTabs.generalTab);
+        } else {
+        	this.setCreativeTab(ModTabs.futureTab);
+        }	}
 
 }

@@ -3,6 +3,7 @@ package magmasrc.ageofweapons.items.epic;
 import java.util.List;
 
 import magmasrc.ageofweapons.main.AgeOfWeapons;
+import magmasrc.ageofweapons.main.ModItems;
 import magmasrc.ageofweapons.main.ModTabs;
 import magmasrc.ageofweapons.util.ItemCustomAxe;
 import net.minecraft.entity.player.EntityPlayer;
@@ -16,8 +17,12 @@ public class ItemMasterAxe extends ItemCustomAxe {
     public ItemMasterAxe(ToolMaterial material) {
         super(material, 0.9F);
 
-        this.setCreativeTab(ModTabs.epicTab);       
         this.setMaxStackSize(1);
+        if(AgeOfWeapons.activateOnlyOneTab){
+        	this.setCreativeTab(ModTabs.generalTab);
+        } else {
+        	this.setCreativeTab(ModTabs.epicTab);
+        }
     }
 
     
@@ -32,7 +37,7 @@ public class ItemMasterAxe extends ItemCustomAxe {
 	
 	@Override
 	public boolean getIsRepairable(ItemStack armor, ItemStack stack) {
-	 return stack.getItem() == Items.EMERALD;
+	 return stack.getItem() == ModItems.witheredIronIngot;
 	}  
 
 }

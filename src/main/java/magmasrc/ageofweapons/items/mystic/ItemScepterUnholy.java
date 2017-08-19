@@ -31,9 +31,13 @@ public class ItemScepterUnholy extends Item {
 	
 	public ItemScepterUnholy () {
 		super();
-		this.setCreativeTab(ModTabs.mysticTab);
 		this.setMaxStackSize(1);
         this.setMaxDamage(64);
+        if(AgeOfWeapons.activateOnlyOneTab){
+        	this.setCreativeTab(ModTabs.generalTab);
+        } else {
+        	this.setCreativeTab(ModTabs.mysticTab);
+        }	
 	}
 	
 	

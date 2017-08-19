@@ -18,8 +18,12 @@ public class ItemLash extends ItemCustomWeapon {
     public ItemLash(ToolMaterial material) {
         super(material, 3.0F);
 
-        this.setCreativeTab(ModTabs.edoTab);
         this.setMaxStackSize(1);
+        if(AgeOfWeapons.activateOnlyOneTab){
+        	this.setCreativeTab(ModTabs.generalTab);
+        } else {
+        	this.setCreativeTab(ModTabs.edoTab);
+        }	
     }
 
     

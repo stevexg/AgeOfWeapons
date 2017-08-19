@@ -28,6 +28,7 @@ public class ModBlocks {
 	public static Block amethystBlock;
 	public static Block topazBlock;
 	public static Block amberBlock;
+	public static Block witheredIronBlock;
 	
 	public static Block barbedWire;
 	public static Block nailTrap;
@@ -39,9 +40,12 @@ public class ModBlocks {
 	public static Block fallTrapDirt;
 	public static Block fallTrapPlanks;
 	public static Block bearTrap;
+	public static Block barbedWireFence;
 	
 	public static Block neutronBomb;
 	public static Block nuclearBomb;
+	public static Block spikes;
+	public static Block spikesOn;
 	
 	
 	
@@ -62,6 +66,7 @@ public class ModBlocks {
 			amethystBlock = new BlockAmethyst();
 			topazBlock = new BlockTopaz();
 			amberBlock = new BlockAmber();
+			witheredIronBlock = new BlockWitheredIron();
 			
 			barbedWire = new BlockBarbedWire();
 			nailTrap = new BlockNailTrap();
@@ -73,9 +78,13 @@ public class ModBlocks {
 			fallTrapPlanks = new BlockFallTrapPlanks();
 			fallTrapStone = new BlockFallTrapStone();
 			bearTrap = new BlockBearTrap();
+			barbedWireFence = new BlockBarbedWireFence();
 			
 			neutronBomb = new BlockNeutronBomb();
 			nuclearBomb = new BlockNuclearBomb();
+			spikes = new BlockSpikes(false);
+			spikesOn = new BlockSpikes(true);
+
 			
 			
 			
@@ -94,6 +103,7 @@ public class ModBlocks {
 			NameHandler.setNames(amethystBlock, "amethyst_block");
 			NameHandler.setNames(topazBlock, "topaz_block");
 			NameHandler.setNames(amberBlock, "amber_block");
+			NameHandler.setNames(witheredIronBlock, "withered_iron_block");
 			
 			NameHandler.setNames(barbedWire, "barbed_wire");
 			NameHandler.setNames(nailTrap, "nail_trap");
@@ -105,9 +115,13 @@ public class ModBlocks {
 			NameHandler.setNames(fallTrapPlanks, "fall_trap_planks");
 			NameHandler.setNames(fallTrapStone, "fall_trap_stone");
 			NameHandler.setNames(bearTrap, "bear_trap");
+			NameHandler.setNames(barbedWireFence, "barbed_wire_fence");
 			
 			NameHandler.setNames(neutronBomb, "neutron_bomb");
 			NameHandler.setNames(nuclearBomb, "nuclear_bomb");
+			NameHandler.setNames(spikesOn, "spikes_on");
+			NameHandler.setNames(spikes, "spikes");
+			
 
 		}
 		
@@ -129,6 +143,7 @@ public class ModBlocks {
 			registerBlock(amethystBlock);
 			registerBlock(topazBlock);
 			registerBlock(amberBlock);
+			registerBlock(witheredIronBlock);
 			
 			registerBlock(barbedWire);
 			registerBlock(razorWire);
@@ -140,9 +155,13 @@ public class ModBlocks {
 			registerBlock(fallTrapDirt);
 			registerBlock(fallTrapPlanks);
 			registerBlock(fallTrapStone);
+			registerBlock(barbedWireFence);
 			
 			registerBlock(neutronBomb);
 			registerBlock(nuclearBomb);
+			registerBlock(spikes);
+			GameRegistry.register(spikesOn);
+
 			
 			
 

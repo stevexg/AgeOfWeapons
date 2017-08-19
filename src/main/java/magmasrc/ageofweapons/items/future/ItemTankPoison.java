@@ -8,7 +8,10 @@ public class ItemTankPoison extends Item {
 	
 	public ItemTankPoison () {
 		super();
-		this.setCreativeTab(ModTabs.futureTab);
-	}
+        if(AgeOfWeapons.activateOnlyOneTab){
+        	this.setCreativeTab(ModTabs.generalTab);
+        } else {
+        	this.setCreativeTab(ModTabs.futureTab);
+        }	}
 
 }

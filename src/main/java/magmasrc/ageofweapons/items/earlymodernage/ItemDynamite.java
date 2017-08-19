@@ -22,8 +22,12 @@ public class ItemDynamite extends Item {
 	
 	public ItemDynamite () {
 		super();
-		this.setCreativeTab(ModTabs.earlyModernAgeTab);    
 		this.setMaxStackSize(16);
+        if(AgeOfWeapons.activateOnlyOneTab){
+        	this.setCreativeTab(ModTabs.generalTab);
+        } else {
+        	this.setCreativeTab(ModTabs.earlyModernAgeTab);
+        }
 	}
 	
 	

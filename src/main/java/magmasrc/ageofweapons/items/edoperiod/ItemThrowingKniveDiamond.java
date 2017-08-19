@@ -26,8 +26,12 @@ public class ItemThrowingKniveDiamond extends ItemCustomWeapon {
     public ItemThrowingKniveDiamond(ToolMaterial material) {
         super(material, 3.5F);
 
-        this.setCreativeTab(ModTabs.edoTab);
         this.setMaxStackSize(16);
+        if(AgeOfWeapons.activateOnlyOneTab){
+        	this.setCreativeTab(ModTabs.generalTab);
+        } else {
+        	this.setCreativeTab(ModTabs.edoTab);
+        }	
     }
 
     

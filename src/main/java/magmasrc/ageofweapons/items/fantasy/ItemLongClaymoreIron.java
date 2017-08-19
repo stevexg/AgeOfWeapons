@@ -16,8 +16,12 @@ public class ItemLongClaymoreIron extends ItemCustomWeapon {
     public ItemLongClaymoreIron(ToolMaterial material) {
         super(material, 0.8F);
 
-        this.setCreativeTab(ModTabs.fantasyTab);
         this.setMaxStackSize(1);
+        if(AgeOfWeapons.activateOnlyOneTab){
+        	this.setCreativeTab(ModTabs.generalTab);
+        } else {
+        	this.setCreativeTab(ModTabs.fantasyTab);
+        }
     }
 
     

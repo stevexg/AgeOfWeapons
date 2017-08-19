@@ -30,9 +30,13 @@ public class ItemWandAether extends Item {
 	
 	public ItemWandAether () {
 		super();
-		this.setCreativeTab(ModTabs.mysticTab);
 		this.setMaxStackSize(1);
         this.setMaxDamage(200);
+        if(AgeOfWeapons.activateOnlyOneTab){
+        	this.setCreativeTab(ModTabs.generalTab);
+        } else {
+        	this.setCreativeTab(ModTabs.mysticTab);
+        }	
 	}
 	
 	

@@ -231,6 +231,12 @@ public class ModItems {
 	public static Item hammer;
 	public static Item cloth;
 	public static Item blankRifle;
+	public static Item witherDust;
+	public static Item witheredIronIngot;
+	public static Item witheredIronShard;
+	public static Item broadBladeWithered;
+	public static Item swordBladeWithered;
+	public static Item axeBladeWithered;
 	
 	// Stone Age
 	public static Item rock;
@@ -716,6 +722,12 @@ public class ModItems {
 		shotgunAmmo = new ItemShotgunAmmo();
 		shotgunAmmo2 = new ItemShotgunAmmo2();
 		blankRifle = new ItemBlankRifle();
+		witherDust = new ItemWitherDust();
+		witheredIronIngot = new ItemWitheredIronIngot();
+		witheredIronShard = new ItemWitheredIronShard();
+		broadBladeWithered = new ItemBroadBladeWithered();
+		swordBladeWithered = new ItemSwordBladeWithered();
+		axeBladeWithered = new ItemAxeBladeWithered();
 		
 		
 		
@@ -1009,7 +1021,13 @@ public class ModItems {
 		NameHandler.setNames(shotgunAmmo, "shotgun_ammo");
 		NameHandler.setNames(shotgunAmmo2, "shotgun_ammo2");
 		NameHandler.setNames(blankRifle, "blank_rifle");
-
+		NameHandler.setNames(witherDust, "wither_dust");
+		NameHandler.setNames(witheredIronIngot, "withered_iron_ingot");
+		NameHandler.setNames(witheredIronShard, "withered_iron_shard");
+		NameHandler.setNames(broadBladeWithered, "broad_blade_withered");
+		NameHandler.setNames(swordBladeWithered, "sword_blade_withered");
+		NameHandler.setNames(axeBladeWithered, "axe_blade_withered");
+		
 		// Stone Age
 		NameHandler.setNames(rock, "rock");
 		NameHandler.setNames(handAxStone, "hand_ax_stone");
@@ -1237,16 +1255,19 @@ public class ModItems {
 		registerItem(upgradeFuture);
 		registerItem(upgradeBBY);
 		
+		registerItem(axeBladeWithered);
 		registerItem(axeBladeDiamond);
 		registerItem(axeBladeGold);
 		registerItem(axeBladeIron);
 		registerItem(axeBladeStone);
 		registerItem(axeBladeWood);
+		registerItem(swordBladeWithered);
 		registerItem(swordBladeDiamond);
 		registerItem(swordBladeGold);
 		registerItem(swordBladeIron);
 		registerItem(swordBladeStone);
 		registerItem(swordBladeWood);
+		registerItem(broadBladeWithered);
 		registerItem(broadBladeDiamond);
 		registerItem(broadBladeGold);
 		registerItem(broadBladeIron);
@@ -1262,6 +1283,7 @@ public class ModItems {
 		registerItem(amethyst);
 		registerItem(topaz);
 		registerItem(amber);
+		registerItem(witheredIronIngot);
 		registerItem(toxin);
 		registerItem(radioactiveToxin);
 		registerItem(diamondShard);
@@ -1273,8 +1295,10 @@ public class ModItems {
 		registerItem(goldShard);
 		registerItem(ironShard);
 		registerItem(stoneShard);
+		registerItem(witheredIronShard);
 		registerItem(glassShard);
 		registerItem(cloth);
+		registerItem(witherDust);
 		registerItem(hammer);
 		registerItem(tankFlame);
 		registerItem(tankPoison);

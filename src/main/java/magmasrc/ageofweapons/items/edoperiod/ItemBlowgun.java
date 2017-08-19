@@ -37,7 +37,11 @@ public class ItemBlowgun extends ItemBow {
 	public ItemBlowgun() {
 		    this.maxStackSize = 1;
 	        this.setMaxDamage(500);          
-	        this.setCreativeTab(ModTabs.edoTab);
+	        if(AgeOfWeapons.activateOnlyOneTab){
+	        	this.setCreativeTab(ModTabs.generalTab);
+	        } else {
+	        	this.setCreativeTab(ModTabs.edoTab);
+	        }	
 	        this.addPropertyOverride(new ResourceLocation("pull"), new IItemPropertyGetter()
 
 	        {

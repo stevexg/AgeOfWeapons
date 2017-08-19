@@ -78,6 +78,12 @@ public class ClientProxy extends ServerProxy {
     	ModelHandler.registerModel(ModItems.glassShard);
     	ModelHandler.registerModel(ModItems.hammer);
     	ModelHandler.registerModel(ModItems.cloth);
+    	ModelHandler.registerModel(ModItems.witherDust);
+    	ModelHandler.registerModel(ModItems.witheredIronIngot);
+    	ModelHandler.registerModel(ModItems.witheredIronShard);
+    	ModelHandler.registerModel(ModItems.broadBladeWithered);
+    	ModelHandler.registerModel(ModItems.axeBladeWithered);
+    	ModelHandler.registerModel(ModItems.swordBladeWithered);
 
 		// StoneAge
     	ModelHandler.registerModel(ModItems.rock);
@@ -298,7 +304,7 @@ public class ClientProxy extends ServerProxy {
     	
     	ModelHandler.registerModel(ModBlocks.tableOfAges);
     	ModelHandler.registerModel(ModBlocks.crusher);
-        //ModelHandler.registerModel(ModBlocks.crusherOn);
+      //ModelHandler.registerModel(ModBlocks.crusherOn);
     	ModelHandler.registerModel(ModBlocks.nexus);
     	ModelHandler.registerModel(ModBlocks.nexus2);
     	ModelHandler.registerModel(ModBlocks.nexus3);
@@ -309,6 +315,7 @@ public class ClientProxy extends ServerProxy {
     	ModelHandler.registerModel(ModBlocks.amethystBlock);
     	ModelHandler.registerModel(ModBlocks.amberBlock);
     	ModelHandler.registerModel(ModBlocks.topazBlock);
+    	ModelHandler.registerModel(ModBlocks.witheredIronBlock);
     	
     	ModelHandler.registerModel(ModBlocks.barbedWire);
     	ModelHandler.registerModel(ModBlocks.nailTrap);
@@ -320,9 +327,12 @@ public class ClientProxy extends ServerProxy {
     	ModelHandler.registerModel(ModBlocks.fallTrapDirt);
     	ModelHandler.registerModel(ModBlocks.fallTrapPlanks);
     	ModelHandler.registerModel(ModBlocks.fallTrapStone);
+    	ModelHandler.registerModel(ModBlocks.barbedWireFence);
     	
     	ModelHandler.registerModel(ModBlocks.neutronBomb);
     	ModelHandler.registerModel(ModBlocks.nuclearBomb);
+    	ModelHandler.registerModel(ModBlocks.spikes);
+        //ModelHandler.registerModel(ModBlocks.spikesOn);
   
     }
 

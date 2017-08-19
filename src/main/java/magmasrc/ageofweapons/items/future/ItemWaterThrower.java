@@ -5,6 +5,7 @@ import java.util.Random;
 
 import com.mojang.realmsclient.gui.ChatFormatting;
 
+import magmasrc.ageofweapons.main.AgeOfWeapons;
 import magmasrc.ageofweapons.main.ModItems;
 import magmasrc.ageofweapons.main.ModTabs;
 import net.minecraft.entity.EntityLiving;
@@ -31,9 +32,13 @@ public class ItemWaterThrower extends Item {
 
     public ItemWaterThrower() {
         super();
-        this.setCreativeTab(ModTabs.futureTab);
         this.setMaxStackSize(1);
         this.setMaxDamage(100);
+        if(AgeOfWeapons.activateOnlyOneTab){
+        	this.setCreativeTab(ModTabs.generalTab);
+        } else {
+        	this.setCreativeTab(ModTabs.futureTab);
+        }
     }
     
     

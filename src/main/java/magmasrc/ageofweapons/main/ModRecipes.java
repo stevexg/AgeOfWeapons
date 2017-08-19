@@ -28,17 +28,18 @@ public class ModRecipes {
 			//alternative rezepte
 		if(AgeOfWeapons.activateBasicRecipesOnWorkbench) {
 			
-			
 			GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.rubyBlock), "xxx", "xxx", "xxx", 'x', ModItems.ruby);
 			GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.sapphireBlock), "xxx", "xxx", "xxx", 'x', ModItems.sapphire);
 			GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.amethystBlock), "xxx", "xxx", "xxx", 'x', ModItems.amethyst);
 			GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.topazBlock), "xxx", "xxx", "xxx", 'x', ModItems.topaz);
 			GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.amberBlock), "xxx", "xxx", "xxx", 'x', ModItems.amber);
+			GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.witheredIronBlock), "xxx", "xxx", "xxx", 'x', ModItems.witheredIronIngot);
 			GameRegistry.addShapelessRecipe(new ItemStack(ModItems.ruby, 9), ModBlocks.rubyBlock);
 			GameRegistry.addShapelessRecipe(new ItemStack(ModItems.sapphire, 9), ModBlocks.sapphireBlock);
 			GameRegistry.addShapelessRecipe(new ItemStack(ModItems.amethyst, 9), ModBlocks.amethystBlock);
 			GameRegistry.addShapelessRecipe(new ItemStack(ModItems.topaz, 9), ModBlocks.topazBlock);
 			GameRegistry.addShapelessRecipe(new ItemStack(ModItems.amber, 9), ModBlocks.amberBlock);
+			GameRegistry.addShapelessRecipe(new ItemStack(ModItems.witheredIronIngot, 9), ModBlocks.witheredIronBlock);
 			GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.crusher), "xxx", "xzx", "xox", 'x', Blocks.COBBLESTONE, 'o', Blocks.FURNACE, 'z', Items.FLINT);
 			GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.crusher), "xxx", "xzx", "xox", 'x', Blocks.COBBLESTONE, 'o', Blocks.FURNACE, 'z', ModItems.ironShard);
 			GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.tableOfAges), "xxx", "ozo", "oyo", 'x', Blocks.STONE_SLAB, 'o', Blocks.STONE, 'z', Blocks.CRAFTING_TABLE, 'y', Blocks.CHEST);
@@ -59,17 +60,20 @@ public class ModRecipes {
 		  GameRegistry.addShapedRecipe(new ItemStack(ModItems.axeBladeDiamond), "xx ", "xo ", "   ", 'x', ModItems.diamondShard, 'o', Items.DIAMOND);
 		  GameRegistry.addShapedRecipe(new ItemStack(ModItems.axeBladeGold), "xx ", "xo ", "   ", 'x', ModItems.goldShard, 'o', Items.GOLD_INGOT);
 		  GameRegistry.addShapedRecipe(new ItemStack(ModItems.axeBladeIron), "xx ", "xo ", "   ", 'x', ModItems.ironShard, 'o', Items.IRON_INGOT);
+		  GameRegistry.addShapedRecipe(new ItemStack(ModItems.axeBladeWithered), "xx ", "xo ", "   ", 'x', ModItems.witheredIronShard, 'o', ModItems.witheredIronIngot);
 		  GameRegistry.addShapedRecipe(new ItemStack(ModItems.axeBladeStone), "xx ", "xo ", "   ", 'x', ModItems.stoneShard, 'o', Blocks.COBBLESTONE);
 		  GameRegistry.addShapedRecipe(new ItemStack(ModItems.axeBladeStone), "xx ", "xo ", "   ", 'x', Items.FLINT, 'o', Blocks.COBBLESTONE);
 		  GameRegistry.addShapedRecipe(new ItemStack(ModItems.axeBladeWood), "xx ", "xo ", "   ", 'x', ModItems.woodShard, 'o', new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE));
 		  GameRegistry.addShapedRecipe(new ItemStack(ModItems.swordBladeDiamond), " x ", " x ", "   ", 'x', Items.DIAMOND);
 		  GameRegistry.addShapedRecipe(new ItemStack(ModItems.swordBladeGold), " x ", " x ", "   ", 'x', Items.GOLD_INGOT);
 		  GameRegistry.addShapedRecipe(new ItemStack(ModItems.swordBladeIron), " x ", " x ", "   ", 'x', Items.IRON_INGOT);
+		  GameRegistry.addShapedRecipe(new ItemStack(ModItems.swordBladeWithered), " x ", " x ", "   ", 'x', ModItems.witheredIronIngot);
 		  GameRegistry.addShapedRecipe(new ItemStack(ModItems.swordBladeStone), " x ", " x ", "   ", 'x', Blocks.COBBLESTONE);
 		  GameRegistry.addShapedRecipe(new ItemStack(ModItems.swordBladeWood), " x ", " x ", "   ", 'x', new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE));
 		  GameRegistry.addShapedRecipe(new ItemStack(ModItems.broadBladeDiamond), "xx ", "xx ", "   ", 'x', ModItems.swordBladeDiamond);
 		  GameRegistry.addShapedRecipe(new ItemStack(ModItems.broadBladeGold), "xx ", "xx ", "   ", 'x', ModItems.swordBladeGold);
 		  GameRegistry.addShapedRecipe(new ItemStack(ModItems.broadBladeIron), "xx ", "xx ", "   ", 'x', ModItems.swordBladeIron);
+		  GameRegistry.addShapedRecipe(new ItemStack(ModItems.broadBladeWithered), "xx ", "xx ", "   ", 'x', ModItems.swordBladeWithered);
 		  GameRegistry.addShapedRecipe(new ItemStack(ModItems.broadBladeStone), "xx ", "xx ", "   ", 'x', ModItems.swordBladeStone);
 		  GameRegistry.addShapedRecipe(new ItemStack(ModItems.broadBladeWood), "xx ", "xx ", "   ", 'x', ModItems.swordBladeWood);
 		  GameRegistry.addShapelessRecipe(new ItemStack(ModItems.lumber, 3), new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE));
@@ -110,7 +114,9 @@ public class ModRecipes {
 		  GameRegistry.addShapelessRecipe(new ItemStack(ModItems.rubyShard, 3), new ItemStack(ModItems.hammer, 1, OreDictionary.WILDCARD_VALUE), ModItems.ruby);
 		  GameRegistry.addShapelessRecipe(new ItemStack(ModItems.sapphireShard, 3), new ItemStack(ModItems.hammer, 1, OreDictionary.WILDCARD_VALUE), ModItems.sapphire);
 		  GameRegistry.addShapelessRecipe(new ItemStack(ModItems.topazShard, 3), new ItemStack(ModItems.hammer, 1, OreDictionary.WILDCARD_VALUE), ModItems.topaz);
-	
+		  GameRegistry.addShapelessRecipe(new ItemStack(ModItems.witheredIronShard, 3), new ItemStack(ModItems.hammer, 1, OreDictionary.WILDCARD_VALUE), ModItems.witheredIronIngot);
+		  GameRegistry.addShapelessRecipe(new ItemStack(ModItems.witherDust, 8), new ItemStack(ModItems.hammer, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Items.SKULL, 1, 1));
+		  
 		  GameRegistry.addShapedRecipe(new ItemStack(ModItems.hammer), " x ", " o ", " ", 'x', Blocks.STONE, 'o', Items.STICK);
 		  
 		  

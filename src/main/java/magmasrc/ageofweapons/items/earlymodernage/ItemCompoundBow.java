@@ -35,8 +35,12 @@ public class ItemCompoundBow extends ItemBow {
 	
 	public ItemCompoundBow() {
 		    this.maxStackSize = 1;
-	        this.setMaxDamage(500);          
-	        this.setCreativeTab(ModTabs.earlyModernAgeTab);
+	        this.setMaxDamage(500);        
+	        if(AgeOfWeapons.activateOnlyOneTab){
+	        	this.setCreativeTab(ModTabs.generalTab);
+	        } else {
+	        	this.setCreativeTab(ModTabs.earlyModernAgeTab);
+	        }
 	        this.addPropertyOverride(new ResourceLocation("pull"), new IItemPropertyGetter()
 
 	        {

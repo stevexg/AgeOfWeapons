@@ -17,8 +17,12 @@ public class ItemClawStone extends ItemCustomWeapon {
     public ItemClawStone(ToolMaterial material) {
         super(material, 3.5F);
 
-        this.setCreativeTab(ModTabs.fantasyTab);
         this.setMaxStackSize(1);
+        if(AgeOfWeapons.activateOnlyOneTab){
+        	this.setCreativeTab(ModTabs.generalTab);
+        } else {
+        	this.setCreativeTab(ModTabs.fantasyTab);
+        }
     }
 
     
