@@ -5,12 +5,11 @@ import net.minecraft.item.ItemStack;
 
 public class ModTabs {
 	
-	
 	public static CreativeTabs generalTab = new CreativeTabs("generalTab") {
 		
 		@Override
 		public ItemStack getTabIconItem() {    	
-			return new ItemStack(ModBlocks.tableOfAges);		   //TODO   	
+			return new ItemStack(ModBlocks.tableOfAges);	
 		}
 	};
 	

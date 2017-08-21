@@ -38,7 +38,12 @@ public class ItemCavemanSpear extends ItemBow {
 	public ItemCavemanSpear() {
 		    this.maxStackSize = 1;
 	        this.setMaxDamage(0);
-	    //    this.setCreativeTab(ModTabs.stoneAgeTab);		WIP
+	        /**
+	        if(AgeOfWeapons.activateOnlyOneTab){
+	        	this.setCreativeTab(ModTabs.generalTab);
+	        } else {
+	        	this.setCreativeTab(ModTabs.stoneAgeTab); 
+	        }		 **/       
 	        this.addPropertyOverride(new ResourceLocation("pull"), new IItemPropertyGetter()
 
 	        {

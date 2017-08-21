@@ -22,7 +22,11 @@ public class ItemThrowingStar extends Item {
 	
 	public ItemThrowingStar () {
 		super();
-	//	this.setCreativeTab(ModTabs.edoTab);			WIP
+/**	if(AgeOfWeapons.activateOnlyOneTab){
+    	this.setCreativeTab(ModTabs.generalTab);
+    } else {
+    	this.setCreativeTab(ModTabs.edoTab);
+    }	**/
 	}
 	
 	

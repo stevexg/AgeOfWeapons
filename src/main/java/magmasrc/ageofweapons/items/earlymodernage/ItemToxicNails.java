@@ -8,7 +8,10 @@ public class ItemToxicNails extends Item {
 	
 	public ItemToxicNails () {
 		super();
-		// 	this.setCreativeTab(ModTabs.earlyModernAgeTab);     erst wenns geht
-	}
-
+/**     if(AgeOfWeapons.activateOnlyOneTab){
+        	this.setCreativeTab(ModTabs.generalTab);
+        } else {
+        	this.setCreativeTab(ModTabs.edoTab);
+        }**/		
+        }
 }

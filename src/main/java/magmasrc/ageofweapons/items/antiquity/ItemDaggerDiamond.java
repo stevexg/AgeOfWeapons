@@ -17,9 +17,13 @@ public class ItemDaggerDiamond extends ItemCustomWeapon {
 
     public ItemDaggerDiamond(ToolMaterial material) {
         super(material, 3);
-
-        this.setCreativeTab(ModTabs.antiquityTab);
+       
         this.setMaxStackSize(1);
+        if(AgeOfWeapons.activateOnlyOneTab){
+        	this.setCreativeTab(ModTabs.generalTab);
+        } else {
+        	this.setCreativeTab(ModTabs.antiquityTab);
+        }
     }
 
     

@@ -35,6 +35,7 @@ public class CrusherRecipes
         this.addCrushing(ModItems.sapphire, new ItemStack(ModItems.sapphireShard, 4), 0.0F);
         this.addCrushing(ModItems.amethyst, new ItemStack(ModItems.amethystShard, 4), 0.0F);
         this.addCrushing(ModItems.topaz, new ItemStack(ModItems.topazShard, 4), 0.0F);
+        this.addCrushing(ModItems.witheredIronIngot, new ItemStack(ModItems.witheredIronShard, 4), 0.0F);
 
         this.addCrushingRecipeForBlock(Blocks.GLASS, new ItemStack(ModItems.glassShard, 10), 0.0F);
         this.addCrushingRecipeForBlock(Blocks.GLASS_PANE, new ItemStack(ModItems.glassShard, 4), 0.0F);
@@ -54,6 +55,7 @@ public class CrusherRecipes
         this.addCrushingRecipeForBlock(ModBlocks.sapphireBlock, new ItemStack(ModItems.sapphireShard, 36), 0.0F);
         this.addCrushingRecipeForBlock(ModBlocks.amethystBlock, new ItemStack(ModItems.amethystShard, 36), 0.0F);
         this.addCrushingRecipeForBlock(ModBlocks.topazBlock, new ItemStack(ModItems.topazShard, 36), 0.0F);
+        this.addCrushingRecipeForBlock(ModBlocks.witheredIronBlock, new ItemStack(ModItems.witheredIronShard, 36), 0.0F);
 
 
 

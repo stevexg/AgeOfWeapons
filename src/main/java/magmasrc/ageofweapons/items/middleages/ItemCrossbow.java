@@ -36,7 +36,11 @@ public class ItemCrossbow extends ItemBow {
 	public ItemCrossbow() {
 		    this.maxStackSize = 1;
 	        this.setMaxDamage(450);          
-	        this.setCreativeTab(ModTabs.middleAgesTab);
+	        if(AgeOfWeapons.activateOnlyOneTab){
+	        	this.setCreativeTab(ModTabs.generalTab);
+	        } else {
+	        	this.setCreativeTab(ModTabs.middleAgesTab);
+	        }	        
 	        this.addPropertyOverride(new ResourceLocation("pull"), new IItemPropertyGetter()
 
 	        {

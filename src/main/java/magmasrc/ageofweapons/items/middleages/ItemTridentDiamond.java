@@ -18,8 +18,12 @@ public class ItemTridentDiamond extends ItemCustomWeapon {
     public ItemTridentDiamond(ToolMaterial material) {
         super(material, 2.0F);
 
-        this.setCreativeTab(ModTabs.middleAgesTab);
         this.setMaxStackSize(1);
+        if(AgeOfWeapons.activateOnlyOneTab){
+        	this.setCreativeTab(ModTabs.generalTab);
+        } else {
+        	this.setCreativeTab(ModTabs.middleAgesTab);
+        }
     }
 
     

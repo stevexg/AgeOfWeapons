@@ -8,7 +8,10 @@ public class ItemMagazineDrum extends Item {
 	
 	public ItemMagazineDrum () {
 		super();
-		this.setCreativeTab(ModTabs.modernAgeTab);
-	}
+        if(AgeOfWeapons.activateOnlyOneTab){
+        	this.setCreativeTab(ModTabs.generalTab);
+        } else {
+        	this.setCreativeTab(ModTabs.modernAgeTab);
+        }		}
 
 }

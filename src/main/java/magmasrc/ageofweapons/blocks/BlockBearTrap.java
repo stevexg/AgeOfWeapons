@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
+import magmasrc.ageofweapons.main.AgeOfWeapons;
 import magmasrc.ageofweapons.main.ModTabs;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
@@ -36,12 +37,16 @@ public class BlockBearTrap extends Block {
 
 	public BlockBearTrap() {
 		super(Material.CORAL);
-		this.setCreativeTab(ModTabs.earlyModernAgeTab);
 		this.setHardness(5.0F);
 		this.setResistance(10.0F);
 		this.setSoundType(SoundType.METAL);	
 		this.setHarvestLevel("pickaxe", 0);
 		this.setLightOpacity(1);
+        if(AgeOfWeapons.activateOnlyOneTab){
+        	this.setCreativeTab(ModTabs.generalTab);
+        } else {
+        	this.setCreativeTab(ModTabs.earlyModernAgeTab);
+        }
 	}
 	
 	

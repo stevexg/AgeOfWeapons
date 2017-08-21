@@ -28,9 +28,13 @@ public class ItemMultiToolWood extends ItemTool {
 
     public ItemMultiToolWood(ToolMaterial material) {
         super(-1.0F, -3.0F, ModItems.multiToolWoodTM, Sets.newHashSet(Block.REGISTRY));
-        this.setCreativeTab(ModTabs.earlyModernAgeTab);
         this.setHarvestLevel("pickaxe", ModItems.multiToolWoodTM.getHarvestLevel());
         this.setMaxStackSize(1);
+        if(AgeOfWeapons.activateOnlyOneTab){
+        	this.setCreativeTab(ModTabs.generalTab);
+        } else {
+        	this.setCreativeTab(ModTabs.earlyModernAgeTab);
+        }
     }
 
     

@@ -8,7 +8,11 @@ public class ItemOldAmmo extends Item {
 	
 	public ItemOldAmmo () {
 		super();
-		this.setCreativeTab(ModTabs.earlyModernAgeTab);
+        if(AgeOfWeapons.activateOnlyOneTab){
+        	this.setCreativeTab(ModTabs.generalTab);
+        } else {
+        	this.setCreativeTab(ModTabs.earlyModernAgeTab);
+        }
 	}
 
 }

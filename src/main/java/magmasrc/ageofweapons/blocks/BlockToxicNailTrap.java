@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
+import magmasrc.ageofweapons.main.AgeOfWeapons;
 import magmasrc.ageofweapons.main.ModTabs;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
@@ -34,12 +35,16 @@ public class BlockToxicNailTrap extends Block {
 
 	public BlockToxicNailTrap() {
 		super(Material.CORAL);
-		this.setCreativeTab(ModTabs.earlyModernAgeTab);
 		this.setHardness(1.0F);
 		this.setResistance(10.0F);
 		this.setSoundType(SoundType.METAL);	
 		this.setHarvestLevel("shovel", 0);
 		this.setLightOpacity(1);
+        if(AgeOfWeapons.activateOnlyOneTab){
+        	this.setCreativeTab(ModTabs.generalTab);
+        } else {
+        	this.setCreativeTab(ModTabs.earlyModernAgeTab);
+        }
 	}
 	
 	

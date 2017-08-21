@@ -2,6 +2,7 @@ package magmasrc.ageofweapons.blocks;
 
 import javax.annotation.Nullable;
 
+import magmasrc.ageofweapons.main.AgeOfWeapons;
 import magmasrc.ageofweapons.main.ModTabs;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
@@ -23,11 +24,15 @@ public class BlockFallTrapStone extends Block {
 
 	public BlockFallTrapStone() {
 		super(Material.CORAL);
-		this.setCreativeTab(ModTabs.earlyModernAgeTab);
 		this.setHardness(3.0F);
 		this.setResistance(3.0F);
 		this.setSoundType(SoundType.STONE);	
 		this.setLightOpacity(1);
+        if(AgeOfWeapons.activateOnlyOneTab){
+        	this.setCreativeTab(ModTabs.generalTab);
+        } else {
+        	this.setCreativeTab(ModTabs.earlyModernAgeTab);
+        }
 	}
 	
 	

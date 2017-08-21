@@ -18,8 +18,12 @@ public class ItemSpearGold extends ItemCustomWeapon {
     public ItemSpearGold(ToolMaterial material) {
         super(material, 2.3F);
 
-        this.setCreativeTab(ModTabs.middleAgesTab);
         this.setMaxStackSize(1);
+        if(AgeOfWeapons.activateOnlyOneTab){
+        	this.setCreativeTab(ModTabs.generalTab);
+        } else {
+        	this.setCreativeTab(ModTabs.middleAgesTab);
+        }
     }
 
     

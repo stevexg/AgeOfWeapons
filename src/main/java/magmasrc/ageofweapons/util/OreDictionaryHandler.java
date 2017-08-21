@@ -30,16 +30,19 @@ public class OreDictionaryHandler {
 			OreDictionary.registerOre("upgradeBBYAoW", ModItems.upgradeBBY);
 			
 			OreDictionary.registerOre("bladeAxeDiamond", ModItems.axeBladeDiamond);
+			OreDictionary.registerOre("bladeAxeWithered", ModItems.axeBladeWithered);
 			OreDictionary.registerOre("bladeAxeGold", ModItems.axeBladeGold);
 			OreDictionary.registerOre("bladeAxeIron", ModItems.axeBladeIron);
 			OreDictionary.registerOre("bladeAxeStone", ModItems.axeBladeStone);
 			OreDictionary.registerOre("bladeAxeWood", ModItems.axeBladeWood);
 			OreDictionary.registerOre("bladeSwordDiamond", ModItems.swordBladeDiamond);
+			OreDictionary.registerOre("bladeSwordWithered", ModItems.swordBladeWithered);
 			OreDictionary.registerOre("bladeSwordGold", ModItems.swordBladeGold);
 			OreDictionary.registerOre("bladeSwordIron", ModItems.swordBladeIron);
 			OreDictionary.registerOre("bladeSwordStone", ModItems.swordBladeStone);
 			OreDictionary.registerOre("bladeSwordWood", ModItems.swordBladeWood);
 			OreDictionary.registerOre("broadbladeDiamond", ModItems.broadBladeDiamond);
+			OreDictionary.registerOre("broadbladeWithered", ModItems.broadBladeWithered);
 			OreDictionary.registerOre("broadbladeGold", ModItems.broadBladeGold);
 			OreDictionary.registerOre("broadbladeIron", ModItems.broadBladeIron);
 			OreDictionary.registerOre("broadbladeStone", ModItems.broadBladeStone);
@@ -76,6 +79,9 @@ public class OreDictionaryHandler {
 			OreDictionary.registerOre("partHaftIron", ModItems.haftIron);
 			OreDictionary.registerOre("partVisor", ModItems.visor);
 			OreDictionary.registerOre("toolHammer", ModItems.hammer);
+			OreDictionary.registerOre("dustWither", ModItems.witherDust);
+			OreDictionary.registerOre("ingotIronWithered", ModItems.witheredIronIngot);
+			OreDictionary.registerOre("ingotShardWithered", ModItems.witheredIronShard);
 			
 			//Stone Age
 			OreDictionary.registerOre("weaponRock", ModItems.rock);
@@ -160,6 +166,7 @@ public class OreDictionaryHandler {
 	    	OreDictionary.registerOre("blockSapphire", ModBlocks.sapphireBlock);
 	    	OreDictionary.registerOre("blockAmethyst", ModBlocks.amethystBlock);
 	    	OreDictionary.registerOre("blockTopaz", ModBlocks.topazBlock);
+	    	OreDictionary.registerOre("blockIronWithered", ModBlocks.witheredIronBlock);
 	    	OreDictionary.registerOre("blockAmber", ModBlocks.amberBlock);
 	    	OreDictionary.registerOre("tntNuclear", ModBlocks.nuclearBomb);
 	    	OreDictionary.registerOre("tntNeutron", ModBlocks.neutronBomb);

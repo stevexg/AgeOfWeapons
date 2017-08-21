@@ -2,6 +2,7 @@ package magmasrc.ageofweapons.items.fantasy;
 
 import javax.annotation.Nullable;
 
+import magmasrc.ageofweapons.main.AgeOfWeapons;
 import magmasrc.ageofweapons.main.ModItems;
 import magmasrc.ageofweapons.main.ModTabs;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -28,7 +29,11 @@ public class ItemShadowBow extends ItemBow {
 	public ItemShadowBow() {
 		    this.maxStackSize = 1;
 	        this.setMaxDamage(500);          
-	        this.setCreativeTab(ModTabs.fantasyTab);
+	        if(AgeOfWeapons.activateOnlyOneTab){
+	        	this.setCreativeTab(ModTabs.generalTab);
+	        } else {
+	        	this.setCreativeTab(ModTabs.fantasyTab);
+	        }
 	        this.addPropertyOverride(new ResourceLocation("pull"), new IItemPropertyGetter()
 
 	        {

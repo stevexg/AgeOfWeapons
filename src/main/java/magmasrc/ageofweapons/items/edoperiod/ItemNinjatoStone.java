@@ -18,8 +18,12 @@ public class ItemNinjatoStone extends ItemCustomWeapon {
     public ItemNinjatoStone(ToolMaterial material) {
         super(material, 2.8F);
 
-        this.setCreativeTab(ModTabs.edoTab);
         this.setMaxStackSize(1);
+        if(AgeOfWeapons.activateOnlyOneTab){
+        	this.setCreativeTab(ModTabs.generalTab);
+        } else {
+        	this.setCreativeTab(ModTabs.edoTab);
+        }	
     }
 
     

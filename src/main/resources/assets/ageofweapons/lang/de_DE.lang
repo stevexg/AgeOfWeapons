@@ -31,6 +31,7 @@ tile.sapphire_block.name=Saphir Block
 tile.amethyst_block.name=Amethyst Block
 tile.topaz_block.name=Topas Block
 tile.amber_block.name=Bernstein Block
+tile.withered_iron_block.name=Verdorrter Eisen Block
 
 tile.barbed_wire.name=Stacheldraht
 tile.nail_trap.name=Nagel Falle
@@ -45,6 +46,8 @@ tile.fall_trap_stone.name=Stein Gruben Falle
 
 tile.neutron_bomb.name=Neutronen Bombe
 tile.nuclear_bomb.name=Nuklear Bombe
+tile.spikes.name=Spitzen
+tile.spikes_on.name=Spitzen
 
 
 
@@ -111,6 +114,12 @@ item.topaz_shard.name=Topas Scherbe
 item.glass_shard.name=Glas Scherbe
 item.hammer.name=Hammer
 item.cloth.name=Stoff
+item.wither_dust.name=Wither Straub
+item.withered_iron_ingot.name=Verdorrter Eisen Barren
+item.withered_iron_shard.name=Verdorrter Eisen Splitter
+item.axe_blade_withered.name=Verdorrte Axt Schneide
+item.sword_blade_withered.name=Verdorrte Schwert Klinge
+item.broad_blade_withered.name=Verdorrte Breitklinge
 
 
 //StoneAge
@@ -306,6 +315,22 @@ item.industrial_multi_tool.name=Industrielles Multifunktions Werkzeug
 item.tank_poison.name=Tank (Gift)
 item.tank_water.name=Tank (Wasser)
 item.water_thrower.name=Tragbarer Wasserwerfer
+
+//Epic
+item.herobrine_bow.name=Herobrine's Bogen
+item.herobrine_sword.name=Herobrine's Sword
+item.master_sword.name=Meister Schwert
+item.master_axe.name=Meister Axt
+item.master_pickaxe.name=Meister Spitzhacke
+item.master_shovel.name=Meister Axt
+item.master_helmet.name=Meister Helm
+item.master_chestplate.name=Meister Brustpanzer
+item.master_leggings.name=Meister Beinschutz
+item.master_boots.name=Meister Stiefel
+item.legendary_sword.name=Legendäres Schwert
+item.epic_katana.name=Rex's Katana
+item.epic_waraxe.name=Steve's Kriegsaxt
+item.epic_battle_axe.name=JSQ's Kampfaxt
 
 
 

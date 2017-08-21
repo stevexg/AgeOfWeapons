@@ -19,8 +19,12 @@ public class ItemWarAxeDiamond extends ItemCustomAxe {
     public ItemWarAxeDiamond(ToolMaterial material) {
         super(material, 0.7F);
 
-        this.setCreativeTab(ModTabs.middleAgesTab);
         this.setMaxStackSize(1);
+        if(AgeOfWeapons.activateOnlyOneTab){
+        	this.setCreativeTab(ModTabs.generalTab);
+        } else {
+        	this.setCreativeTab(ModTabs.middleAgesTab);
+        }
     }
 
     

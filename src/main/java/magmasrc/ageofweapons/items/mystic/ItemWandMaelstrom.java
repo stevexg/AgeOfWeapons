@@ -30,9 +30,13 @@ public class ItemWandMaelstrom extends Item {
 	
 	public ItemWandMaelstrom () {
 		super();
-		this.setCreativeTab(ModTabs.mysticTab);
 		this.setMaxStackSize(1);
         this.setMaxDamage(200);
+        if(AgeOfWeapons.activateOnlyOneTab){
+        	this.setCreativeTab(ModTabs.generalTab);
+        } else {
+        	this.setCreativeTab(ModTabs.mysticTab);
+        }
 	}
 	
 	
@@ -136,14 +140,14 @@ public class ItemWandMaelstrom extends Item {
 			EntityPlayer entityIn = (EntityPlayer) entity ;
 
 			entityIn.addPotionEffect(new PotionEffect(MobEffects.WITHER, 200, 0));
-			entityIn.attackEntityFrom(DamageSource.GENERIC, 1.0F);
+			entityIn.attackEntityFrom(DamageSource.MAGIC, 1.0F);
             stack.damageItem(1, player);
 			return true;
 		}	
 		if (entity instanceof EntityLiving) {
 			EntityLiving entityIn = (EntityLiving) entity ;
 			entityIn.addPotionEffect(new PotionEffect(MobEffects.WITHER, 200, 0));
-			entityIn.attackEntityFrom(DamageSource.GENERIC, 1.0F);
+			entityIn.attackEntityFrom(DamageSource.MAGIC, 1.0F);
             stack.damageItem(1, player);
 			return true;
 		}	

@@ -78,6 +78,12 @@ public class ClientProxy extends ServerProxy {
     	ModelHandler.registerModel(ModItems.glassShard);
     	ModelHandler.registerModel(ModItems.hammer);
     	ModelHandler.registerModel(ModItems.cloth);
+    	ModelHandler.registerModel(ModItems.witherDust);
+    	ModelHandler.registerModel(ModItems.witheredIronIngot);
+    	ModelHandler.registerModel(ModItems.witheredIronShard);
+    	ModelHandler.registerModel(ModItems.broadBladeWithered);
+    	ModelHandler.registerModel(ModItems.axeBladeWithered);
+    	ModelHandler.registerModel(ModItems.swordBladeWithered);
 
 		// StoneAge
     	ModelHandler.registerModel(ModItems.rock);
@@ -272,6 +278,24 @@ public class ClientProxy extends ServerProxy {
     	ModelHandler.registerModel(ModItems.industrialMultiTool);
     	ModelHandler.registerModel(ModItems.waterThrower);
     	ModelHandler.registerModel(ModItems.tankWater);
+    	
+    	//Epic
+    	ModelHandler.registerModel(ModItems.herobrineBow);
+    	ModelHandler.registerModel(ModItems.herobrineSword);
+    	ModelHandler.registerModel(ModItems.masterAxe);
+    	ModelHandler.registerModel(ModItems.masterBoots);
+    	ModelHandler.registerModel(ModItems.masterChestplate);
+    	ModelHandler.registerModel(ModItems.masterHelmet);
+    	ModelHandler.registerModel(ModItems.masterLeggings);
+    	ModelHandler.registerModel(ModItems.masterPickaxe);
+    	ModelHandler.registerModel(ModItems.masterShovel);
+    	ModelHandler.registerModel(ModItems.masterSword);
+    	ModelHandler.registerModel(ModItems.epicBattleAxe);
+    	ModelHandler.registerModel(ModItems.epicKatana);
+    	ModelHandler.registerModel(ModItems.epicWaraxe);
+    	ModelHandler.registerModel(ModItems.legendarySword);
+
+
 
 		
 		
@@ -280,7 +304,7 @@ public class ClientProxy extends ServerProxy {
     	
     	ModelHandler.registerModel(ModBlocks.tableOfAges);
     	ModelHandler.registerModel(ModBlocks.crusher);
-        //ModelHandler.registerModel(ModBlocks.crusherOn);
+      //ModelHandler.registerModel(ModBlocks.crusherOn);
     	ModelHandler.registerModel(ModBlocks.nexus);
     	ModelHandler.registerModel(ModBlocks.nexus2);
     	ModelHandler.registerModel(ModBlocks.nexus3);
@@ -291,6 +315,7 @@ public class ClientProxy extends ServerProxy {
     	ModelHandler.registerModel(ModBlocks.amethystBlock);
     	ModelHandler.registerModel(ModBlocks.amberBlock);
     	ModelHandler.registerModel(ModBlocks.topazBlock);
+    	ModelHandler.registerModel(ModBlocks.witheredIronBlock);
     	
     	ModelHandler.registerModel(ModBlocks.barbedWire);
     	ModelHandler.registerModel(ModBlocks.nailTrap);
@@ -302,9 +327,12 @@ public class ClientProxy extends ServerProxy {
     	ModelHandler.registerModel(ModBlocks.fallTrapDirt);
     	ModelHandler.registerModel(ModBlocks.fallTrapPlanks);
     	ModelHandler.registerModel(ModBlocks.fallTrapStone);
+    	ModelHandler.registerModel(ModBlocks.barbedWireFence);
     	
     	ModelHandler.registerModel(ModBlocks.neutronBomb);
     	ModelHandler.registerModel(ModBlocks.nuclearBomb);
+    	ModelHandler.registerModel(ModBlocks.spikes);
+        //ModelHandler.registerModel(ModBlocks.spikesOn);
   
     }
 

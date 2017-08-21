@@ -5,6 +5,7 @@ import java.util.Random;
 
 import javax.annotation.Nullable;
 
+import magmasrc.ageofweapons.main.AgeOfWeapons;
 import magmasrc.ageofweapons.main.ModTabs;
 import net.minecraft.block.Block;
 import net.minecraft.block.SoundType;
@@ -30,11 +31,15 @@ public class BlockBarbedWire extends Block {
 
 	public BlockBarbedWire() {
 		super(Material.IRON);
-		this.setCreativeTab(ModTabs.earlyModernAgeTab);
 		this.setHardness(15.0F);
 		this.setResistance(20.0F);
 		this.setSoundType(SoundType.METAL);	
 		this.setLightOpacity(1);
+        if(AgeOfWeapons.activateOnlyOneTab){
+        	this.setCreativeTab(ModTabs.generalTab);
+        } else {
+        	this.setCreativeTab(ModTabs.earlyModernAgeTab);
+        }
 		}
 	
 	
