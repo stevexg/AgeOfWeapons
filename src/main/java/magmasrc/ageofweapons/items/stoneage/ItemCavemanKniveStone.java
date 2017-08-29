@@ -15,7 +15,7 @@ import java.util.List;
 public class ItemCavemanKniveStone extends ItemCustomWeapon {
 
     public ItemCavemanKniveStone(ToolMaterial material) {
-        super(material, 5);
+        super(material, 3);
 
         this.setMaxStackSize(16);
         if(AgeOfWeapons.activateOnlyOneTab){

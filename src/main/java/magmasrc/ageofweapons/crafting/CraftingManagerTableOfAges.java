@@ -203,7 +203,7 @@ public class CraftingManagerTableOfAges {
     this.addRecipeTOA(new ItemStack(ModBlocks.tableOfAges), 0, "xxx", "ozo", "oyo", 'x', Blocks.STONE_SLAB, 'o', Blocks.STONE, 'z', Blocks.CRAFTING_TABLE, 'y', Blocks.CHEST);
 
     if(AgeOfWeapons.activateWeaponBoxRecipe) {
-        this.addRecipeTOA(new ItemStack(ModBlocks.weaponBox), 7, "xxx", "xox", "xxx", 'x', new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE), 'o', Items.EMERALD);
+        this.addRecipeTOA(new ItemStack(ModBlocks.weaponBox), 7, "xxx", "xox", "xxx", 'x', new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE), 'o', Blocks.EMERALD_BLOCK);
     }
     if(AgeOfWeapons.activateNexusRecipe) {
         this.addRecipeTOA(new ItemStack(ModBlocks.nexus), 11, "v v", "vzv", "xox", 'x', new ItemStack(Blocks.IRON_BLOCK), 'o', new ItemStack(Blocks.WOOL, 1, 11), 'v', Items.IRON_INGOT, 'z', Items.NETHER_STAR );
@@ -402,8 +402,11 @@ public class CraftingManagerTableOfAges {
   	this.addRecipeTOA(new ItemStack(ModItems.oldShotgunAmmo, 3), 7, "xox", "xox", "xox", 'x', Items.IRON_INGOT, 'o', ModItems.oldAmmo); 
   	this.addRecipeTOA(new ItemStack(ModItems.cannonball), 7, " x ", "xxx", " x ", 'x', Items.IRON_INGOT); 
   	this.addShapelessRecipeTOA(new ItemStack(ModItems.pebble, 8), 7, Blocks.GRAVEL);
-  	this.addShapelessRecipeTOA(new ItemStack(ModItems.dynamite, 9), 7, Blocks.TNT);
-  	this.addRecipeTOA(new ItemStack(Blocks.TNT), 7, "xxx", "xxx", "xxx", 'x', ModItems.dynamite); 
+  	this.addShapelessRecipeTOA(new ItemStack(ModItems.dynamite, 4), 7, Blocks.TNT);
+  	this.addRecipeTOA(new ItemStack(Blocks.TNT), 7, "   ", "xx ", "xx ", 'x', ModItems.dynamite); 
+  	this.addRecipeTOA(new ItemStack(ModBlocks.barbedWireFence, 4), 7, "   ", "xox", "   ", 'x', ModItems.ironStick, 'o', ModBlocks.barbedWire); 
+  	this.addRecipeTOA(new ItemStack(ModBlocks.obstacle), 7, "x x", " x ", "x x", 'x', ModItems.ironStick); 
+
   	
   	/** Mystic #3 **/
   	this.addRecipeTOA(new ItemStack(ModItems.mysticKnive), 3, "xxx", "xox", "xxx", 'x', new ItemStack(Items.DYE, 1, 4), 'o', ModItems.kniveDiamond); 
@@ -502,8 +505,11 @@ public class CraftingManagerTableOfAges {
 	this.addRecipeTOA(new ItemStack(ModItems.industrialMiner), 9, "xxx", " o ", "   ", 'x', Items.IRON_PICKAXE, 'o', ModItems.machineCase); 
 	this.addRecipeTOA(new ItemStack(ModItems.industrialExcavator), 9, "xxx", " o ", "   ", 'x', Items.IRON_SHOVEL, 'o', ModItems.machineCase); 
 	this.addRecipeTOA(new ItemStack(ModItems.flameThrower), 9, " xz", "xxo", " i ", 'i', ModItems.gunHandle, 'x', ModItems.barrel, 'z', ModItems.tankFlame, 'o', ModItems.blankRifle); 
-
-
+	this.addRecipeTOA(new ItemStack(ModBlocks.spikes), 9, "   ", "xxx", "o#o", 'x', ModItems.ironShard, 'o', Items.REDSTONE, '#', Blocks.PISTON); 	
+	this.addRecipeTOA(new ItemStack(ModBlocks.spikesToxic), 9, " i ", "xxx", "o#o", 'x', ModItems.ironShard, 'o', Items.REDSTONE, '#', Blocks.PISTON, 'i', ModItems.toxin); 	
+  	this.addShapelessRecipeTOA(new ItemStack(ModBlocks.spikesToxic), 9, ModItems.toxin, ModBlocks.spikes);
+	this.addRecipeTOA(new ItemStack(ModBlocks.timeBomb), 9, "izi", "xxx", "o#o", 'x', Blocks.TNT, 'o', Items.REDSTONE, '#', Items.CLOCK, 'i', Items.IRON_INGOT, 'z', Blocks.STONE_BUTTON); 	
+  	
 	/** Future #11 **/
 	this.addRecipeTOA(new ItemStack(ModItems.tankPoison), 11, " x ", "xox", " x ", 'x', Items.IRON_INGOT, 'o', ModItems.toxin); 
 	this.addRecipeTOA(new ItemStack(ModItems.tankWater), 11, " x ", "xox", " x ", 'x', Items.IRON_INGOT, 'o', Items.WATER_BUCKET); 

@@ -43,11 +43,15 @@ tile.bear_trap.name=Bären Falle
 tile.fall_trap_dirt.name=Erd Gruben Falle
 tile.fall_trap_planks.name=Brett Gruben Falle
 tile.fall_trap_stone.name=Stein Gruben Falle
+tile.obstacle.name=Barrikade
 
 tile.neutron_bomb.name=Neutronen Bombe
 tile.nuclear_bomb.name=Nuklear Bombe
 tile.spikes.name=Spitzen
 tile.spikes_on.name=Spitzen
+tile.spikes_toxic.name=Giftige Spitzen
+tile.spikes_toxic_on.name=Giftige Spitzen
+tile.time_bomb.name=Zeitbombe
 
 
 

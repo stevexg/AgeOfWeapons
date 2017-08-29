@@ -1,7 +1,7 @@
 package magmasrc.ageofweapons.proxy;
 
 import magmasrc.ageofweapons.entity.EntityDynamite;
-import magmasrc.ageofweapons.entity.render.EntityDynamiteRenderer;
+import magmasrc.ageofweapons.entity.render.RenderDynamite;
 import magmasrc.ageofweapons.main.ModBlocks;
 import magmasrc.ageofweapons.main.ModItems;
 import magmasrc.ageofweapons.util.ModelHandler;
@@ -304,7 +304,6 @@ public class ClientProxy extends ServerProxy {
     	
     	ModelHandler.registerModel(ModBlocks.tableOfAges);
     	ModelHandler.registerModel(ModBlocks.crusher);
-      //ModelHandler.registerModel(ModBlocks.crusherOn);
     	ModelHandler.registerModel(ModBlocks.nexus);
     	ModelHandler.registerModel(ModBlocks.nexus2);
     	ModelHandler.registerModel(ModBlocks.nexus3);
@@ -328,42 +327,15 @@ public class ClientProxy extends ServerProxy {
     	ModelHandler.registerModel(ModBlocks.fallTrapPlanks);
     	ModelHandler.registerModel(ModBlocks.fallTrapStone);
     	ModelHandler.registerModel(ModBlocks.barbedWireFence);
+    	ModelHandler.registerModel(ModBlocks.obstacle);
     	
     	ModelHandler.registerModel(ModBlocks.neutronBomb);
     	ModelHandler.registerModel(ModBlocks.nuclearBomb);
     	ModelHandler.registerModel(ModBlocks.spikes);
-        //ModelHandler.registerModel(ModBlocks.spikesOn);
+    	ModelHandler.registerModel(ModBlocks.spikesToxic);
+    	ModelHandler.registerModel(ModBlocks.timeBomb);
   
     }
-
-    
-    
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-	/** Entitys **/
-	
-	public void registerRenderer() {
-
-		
-	/**
-		RenderingRegistry.registerEntityRenderingHandler(EntityDynamite.class, new IRenderFactory() {
-
-			@Override
-			public Render createRenderFor(RenderManager manager) {
-				return new RenderSnowball<EntityDynamite>(manager, ModItems.dynamite, Minecraft.getMinecraft().getRenderItem());
-			}
-		}); **/
-		 RenderingRegistry.registerEntityRenderingHandler(EntityDynamite.class, EntityDynamiteRenderer.FACTORY);
-
-	}
 
 }
    

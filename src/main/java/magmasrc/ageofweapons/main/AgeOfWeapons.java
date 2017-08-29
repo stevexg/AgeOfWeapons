@@ -1,5 +1,6 @@
 package magmasrc.ageofweapons.main;
 
+import magmasrc.ageofweapons.entity.render.RenderRegistry;
 import magmasrc.ageofweapons.proxy.ServerProxy;
 import magmasrc.ageofweapons.util.Events;
 import magmasrc.ageofweapons.util.LootHandler;
@@ -26,7 +27,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 public class AgeOfWeapons {
    
     public static final String MODID = "ageofweapons";
-    public static final String VERSION = "0.11.0";
+    public static final String VERSION = "0.11.1";
 
    
     @Instance("ageofweapons")
@@ -35,7 +36,7 @@ public class AgeOfWeapons {
     @SidedProxy(clientSide = "magmasrc.ageofweapons.proxy.ClientProxy", serverSide = "magmasrc.ageofweapons.proxy.ServerProxy")
     public static ServerProxy proxy;
 
-    //TODO Steve: ThrowWood/Caveman Spear, Schusswaffen, schauen wegen OreRecipes, Weapon Box, item das einen block setzt...weil ich das ned hinkriege xD ._.
+    //TODO Steve: ThrowWood/Caveman Spear, Schusswaffen, schauen wegen OreRecipes, item das einen block setzt...weil ich das ned hinkriege xD ._.
     
     
     // Items //
@@ -161,7 +162,7 @@ public class AgeOfWeapons {
     MinecraftForge.EVENT_BUS.register(new Events());  
     
     // Entity Renderer //
-    proxy.registerRenderer();
+    RenderRegistry.registerEntityRenderers();
     }
   
     
@@ -185,7 +186,7 @@ public class AgeOfWeapons {
     	items.register();
     	
     	// Entitys //
-    	entitys = new ModEntitys();
+    	ModEntitys.registerEntities();
     	
     	// Recipes //
     	recipes = new ModRecipes();

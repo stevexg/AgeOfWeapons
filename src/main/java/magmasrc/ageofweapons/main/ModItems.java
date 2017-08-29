@@ -409,7 +409,7 @@ public class ModItems {
 	public static Item ammoBig;
 	public static Item ammoBundleSmall;
 	public static Item ammoBundleBig;
-	public static Item concentratedGunpowder;      // all TODO
+	public static Item concentratedGunpowder;    
 	public static Item magazineSmall;
 	public static Item magazineBig;
 	public static Item magazineLong;
@@ -472,12 +472,12 @@ public class ModItems {
 																	DIAMOND       (3, 1561,  8.0F,  3.0F,  10);			7.0F  	 **/															
 		                                                             //     harv.lvl, uses, efficy., dmg., enchant.,
    	    rockTM = EnumHelper.addToolMaterial ("rock",                               0,  500,  0.0F,  4.0F,  0);
-		handAxStoneTM = EnumHelper.addToolMaterial("handAxStone",                  0,  400,  1.0F,  4.5F,  0);
-		cavemanKniveStoneTM = EnumHelper.addToolMaterial("cavemanKniveStone",      0,  100,  1.0F,  5.0F,  0);
-		cavemanKniveBoneTM = EnumHelper.addToolMaterial("cavemanKniveBone",        0,   80,  1.0F,  5.0F,  0);
+		handAxStoneTM = EnumHelper.addToolMaterial("handAxStone",                  0,  400,  1.0F,  4.3F,  0);
+		cavemanKniveStoneTM = EnumHelper.addToolMaterial("cavemanKniveStone",      0,  100,  1.0F,  3.5F,  0);
+		cavemanKniveBoneTM = EnumHelper.addToolMaterial("cavemanKniveBone",        0,   80,  1.0F,  3.5F,  0);
 		woodCudgelTM = EnumHelper.addToolMaterial("woodCudgel",                    0,  150,  1.0F,  5.0F,  0);
-		stoneCudgelTM = EnumHelper.addToolMaterial("stoneCudgel",                  1,  200,  1.0F,  6.0F,  0);
-		axTM = EnumHelper.addToolMaterial("ax",                                    1,  500,  3.0F, 5.10F,  3);
+		stoneCudgelTM = EnumHelper.addToolMaterial("stoneCudgel",                  1,  200,  1.0F,  5.5F,  0);
+		axTM = EnumHelper.addToolMaterial("ax",                                    1,  500,  3.0F,  5.2F,  3);
 		
 		kniveWoodTM = EnumHelper.addToolMaterial("kniveWood",                      0,   50,  1.0F,  4.5F,  15);
 		kniveStoneTM = EnumHelper.addToolMaterial("kniveStone",                    1,   80,  1.0F,  5.0F,  5);

@@ -41,11 +41,15 @@ tile.fall_trap_dirt.name=Dirt Fall Trap
 tile.fall_trap_planks.name=Planks Fall Trap
 tile.fall_trap_stone.name=Stone Fall Trap
 tile.barbed_wire_fence.name=Barbed Wire Fence
+tile.obstacle.name=Barricade
 
 tile.neutron_bomb.name=Neutron Bomb
 tile.nuclear_bomb.name=Nuclear Bomb
 tile.spikes.name=Spikes
 tile.spikes_on.name=Spikes
+tile.spikes_toxic.name=Toxic Spikes
+tile.spikes_toxic_on.name=Toxic Spikes
+tile.time_bomb.name=Time Bomb
 
 
 

@@ -16,21 +16,21 @@ import net.minecraftforge.fml.client.registry.IRenderFactory;
 
 import javax.annotation.Nullable;
 
-public class EntityDynamiteRenderer extends Render<EntitySnowball>{
+public class RenderDynamite extends Render<EntitySnowball>{
 
-    public static Factory FACTORY = new Factory();
+    //public static Factory FACTORY = new Factory();
 
-    protected EntityDynamiteRenderer(RenderManager renderManager) {
+    protected RenderDynamite(RenderManager renderManager) {
         super(renderManager);
     }
 
 
-	@Nullable
+	///@Nullable
     @Override
     protected ResourceLocation getEntityTexture(EntitySnowball entity) {
-        return new ResourceLocation(AgeOfWeapons.MODID, "textures/items/earlymodernage/dynamite.png");
+        return new ResourceLocation(AgeOfWeapons.MODID, ":textures/items/earlymodernage/dynamite.png");
     }
-
+/**
     public static class Factory implements IRenderFactory<EntityDynamite>{
 
 /**        @Override
@@ -38,11 +38,11 @@ public class EntityDynamiteRenderer extends Render<EntitySnowball>{
             return new EntityDynamiteRenderer(manager);
         }
 **/
-
+/**
 		@Override
 		public Render createRenderFor(RenderManager manager) {
 			return new RenderSnowball<EntityDynamite>(manager, ModItems.dynamite, Minecraft.getMinecraft().getRenderItem());
 		}
 	};
-    	
+    	**/
 }

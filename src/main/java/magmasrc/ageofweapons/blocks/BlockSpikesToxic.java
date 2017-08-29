@@ -16,11 +16,14 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
+import net.minecraft.init.MobEffects;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundCategory;
@@ -31,14 +34,14 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class BlockSpikes extends Block {
+public class BlockSpikesToxic extends Block {
 
     private final boolean isOn;
     protected static final AxisAlignedBB ON_AABB = new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 0.50D, 1.0D);
     protected static final AxisAlignedBB OFF_AABB = new AxisAlignedBB(0.0D, 0.0D, 0.0D, 1.0D, 0.10D, 1.0D);
 
 
-	public BlockSpikes(boolean isOn) {
+	public BlockSpikesToxic(boolean isOn) {
 		super(Material.IRON);
 		this.setHardness(5.0F);
 		this.setResistance(10.0F);
@@ -63,10 +66,10 @@ public class BlockSpikes extends Block {
 
     	if (!worldIn.isRemote){
             if (this.isOn && !worldIn.isBlockPowered(pos)) {
-    	        	worldIn.setBlockState(pos, ModBlocks.spikes.getDefaultState(), 2);
+    	        	worldIn.setBlockState(pos, ModBlocks.spikesToxic.getDefaultState(), 2);
             }	
             else if (!this.isOn && worldIn.isBlockPowered(pos)) {    	        
-    	        	worldIn.setBlockState(pos, ModBlocks.spikesOn.getDefaultState(), 2);
+    	        	worldIn.setBlockState(pos, ModBlocks.spikesToxicOn.getDefaultState(), 2);
            }
     	}
     }
@@ -81,7 +84,7 @@ public class BlockSpikes extends Block {
                 worldIn.scheduleUpdate(pos, this, 4);
             }
             else if (!this.isOn && worldIn.isBlockPowered(pos)) {
-    	    	worldIn.setBlockState(pos, ModBlocks.spikesOn.getDefaultState(), 2);
+    	    	worldIn.setBlockState(pos, ModBlocks.spikesToxicOn.getDefaultState(), 2);
            }	
     	}
         if (!this.canBePlacedOn(worldIn, pos.down()))
@@ -98,7 +101,7 @@ public class BlockSpikes extends Block {
     	    	worldIn.playSound((double)pos.getX() + 0.5D, (double)pos.getY() + 0.5D, (double)pos.getZ() + 0.5D, SoundEvents.BLOCK_ANVIL_BREAK, SoundCategory.BLOCKS, 1, 0, false);
 
     	    	if (!worldIn.isRemote){
-    	    	worldIn.setBlockState(pos, ModBlocks.spikes.getDefaultState(), 2);
+    	    	worldIn.setBlockState(pos, ModBlocks.spikesToxic.getDefaultState(), 2);
     	    	}
             }	
     }
@@ -107,10 +110,18 @@ public class BlockSpikes extends Block {
 	
 	@Override
 	public void onEntityCollidedWithBlock(World worldIn, BlockPos pos, IBlockState state, Entity entityIn) {
-		if (!worldIn.isRemote && this.isOn) {
-			entityIn.attackEntityFrom(DamageSource.GENERIC, 4.0F);
+		if (entityIn instanceof EntityPlayer && !worldIn.isRemote && this.isOn) {
+			EntityPlayer player = (EntityPlayer) entityIn;
+			player.addPotionEffect(new PotionEffect(MobEffects.POISON, 250, 0));
+			player.attackEntityFrom(DamageSource.GENERIC, 4.0F);
+		}
+		if (entityIn instanceof EntityLiving && !worldIn.isRemote && this.isOn) {
+			EntityLiving entity = (EntityLiving) entityIn;
+			entity.addPotionEffect(new PotionEffect(MobEffects.POISON, 250, 0));
+			entity.attackEntityFrom(DamageSource.GENERIC, 4.0F);
 		}
     }
+	
     
     
 	
@@ -118,17 +129,17 @@ public class BlockSpikes extends Block {
 
     @Override
     public Item getItemDropped(IBlockState state, Random rand, int fortune) {
-        return Item.getItemFromBlock(ModBlocks.spikes);
+        return Item.getItemFromBlock(ModBlocks.spikesToxic);
     }
 
     @Override
     public ItemStack getItem(World worldIn, BlockPos pos, IBlockState state) {
-        return new ItemStack(ModBlocks.spikes);
+        return new ItemStack(ModBlocks.spikesToxic);
     }
 
     @Override
     protected ItemStack getSilkTouchDrop(IBlockState state){
-        return new ItemStack(ModBlocks.spikes);
+        return new ItemStack(ModBlocks.spikesToxic);
     }
 	
     @Override
@@ -137,11 +148,13 @@ public class BlockSpikes extends Block {
     }
     
     
+    
     @Override
     public boolean canPlaceBlockAt(World worldIn, BlockPos pos){
         return this.canBePlacedOn(worldIn, pos.down());
     }
 
+    
     private boolean canBePlacedOn(World worldIn, BlockPos pos){
         return worldIn.getBlockState(pos).isFullyOpaque() || worldIn.getBlockState(pos).getBlock() instanceof BlockFence;
     }

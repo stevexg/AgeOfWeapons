@@ -22,11 +22,12 @@ public class EntityKunai extends EntityThrowable{
 	
 	@Override
 	public void onImpact(RayTraceResult result) {
-	
+		EntityLivingBase thrower = this.getThrower();
+		
 		     if (result.entityHit instanceof Entity) {
 		            int i = 1;
 
-		            result.entityHit.attackEntityFrom(DamageSource.GENERIC, 1.0F);
+		            result.entityHit.attackEntityFrom(DamageSource.causeThrownDamage(this, thrower), 1.0F);
 		        }
 
 		        if (!this.world.isRemote) {
