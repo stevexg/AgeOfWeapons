@@ -27,7 +27,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 public class AgeOfWeapons {
    
     public static final String MODID = "ageofweapons";
-    public static final String VERSION = "0.11.1";
+    public static final String VERSION = "0.12.0";
 
    
     @Instance("ageofweapons")
@@ -36,7 +36,7 @@ public class AgeOfWeapons {
     @SidedProxy(clientSide = "magmasrc.ageofweapons.proxy.ClientProxy", serverSide = "magmasrc.ageofweapons.proxy.ServerProxy")
     public static ServerProxy proxy;
 
-    //TODO Steve: ThrowWood/Caveman Spear, Schusswaffen, schauen wegen OreRecipes, item das einen block setzt...weil ich das ned hinkriege xD ._.
+    //TODO Steve: Schusswaffen, schauen wegen OreRecipes, item das einen block setzt...weil ich das ned hinkriege xD ._.
     
     
     // Items //

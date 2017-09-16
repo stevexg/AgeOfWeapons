@@ -294,6 +294,24 @@ public class ClientProxy extends ServerProxy {
     	ModelHandler.registerModel(ModItems.epicKatana);
     	ModelHandler.registerModel(ModItems.epicWaraxe);
     	ModelHandler.registerModel(ModItems.legendarySword);
+    	
+    	//Piracy
+    	ModelHandler.registerModel(ModItems.castNet);
+    	ModelHandler.registerModel(ModItems.grapplingIron);
+    	ModelHandler.registerModel(ModItems.grapplingHook);
+    	ModelHandler.registerModel(ModItems.harpoon);
+    	ModelHandler.registerModel(ModItems.macheteWood);
+    	ModelHandler.registerModel(ModItems.macheteStone);
+    	ModelHandler.registerModel(ModItems.macheteIron);
+    	ModelHandler.registerModel(ModItems.macheteGold);
+    	ModelHandler.registerModel(ModItems.macheteDiamond);
+    	ModelHandler.registerModel(ModItems.saberWood);
+    	ModelHandler.registerModel(ModItems.saberStone);
+    	ModelHandler.registerModel(ModItems.saberIron);
+    	ModelHandler.registerModel(ModItems.saberGold);
+    	ModelHandler.registerModel(ModItems.saberDiamond);
+    	ModelHandler.registerModel(ModItems.telescope);
+
 
 
 

@@ -11,7 +11,7 @@ import net.minecraft.world.World;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
-public class EntityDynamite extends EntityThrowable{
+public class EntityDynamite extends EntityThrowable {
 
 	public EntityDynamite(World worldIn) {
 		super(worldIn);
@@ -48,8 +48,7 @@ public class EntityDynamite extends EntityThrowable{
 	@Override
 	public void onUpdate() {
 		super.onUpdate();
-		// ohne ! oder mit !
-		if (this.world.isRemote && !this.inGround) {
+		if (this.world.isRemote && !this.inGround) { // z +1 
 			this.world.spawnParticle(EnumParticleTypes.LAVA, this.posX, this.posY, this.posZ, 0.0D, 0.0D, 0.0D, new int[0]);
     		}
 	}

@@ -1,48 +1,35 @@
 package magmasrc.ageofweapons.entity.render;
 
+import org.lwjgl.opengl.GL11;
+
 import magmasrc.ageofweapons.entity.EntityDynamite;
+import magmasrc.ageofweapons.entity.model.ModelDynamite;
 import magmasrc.ageofweapons.main.AgeOfWeapons;
-import magmasrc.ageofweapons.main.ModItems;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.RenderItem;
 import net.minecraft.client.renderer.entity.Render;
 import net.minecraft.client.renderer.entity.RenderManager;
-import net.minecraft.client.renderer.entity.RenderSnowball;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.projectile.EntitySnowball;
-import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.fml.client.registry.IRenderFactory;
 
-import javax.annotation.Nullable;
+public class RenderDynamite extends Render<EntityDynamite> {
 
-public class RenderDynamite extends Render<EntitySnowball>{
-
-    //public static Factory FACTORY = new Factory();
-
-    protected RenderDynamite(RenderManager renderManager) {
-        super(renderManager);
-    }
-
-
-	///@Nullable
-    @Override
-    protected ResourceLocation getEntityTexture(EntitySnowball entity) {
-        return new ResourceLocation(AgeOfWeapons.MODID, ":textures/items/earlymodernage/dynamite.png");
-    }
-/**
-    public static class Factory implements IRenderFactory<EntityDynamite>{
-
-/**        @Override
-        public Render<? super EntityDynamite> createRenderFor(RenderManager manager) {
-            return new EntityDynamiteRenderer(manager);
-        }
-**/
-/**
-		@Override
-		public Render createRenderFor(RenderManager manager) {
-			return new RenderSnowball<EntityDynamite>(manager, ModItems.dynamite, Minecraft.getMinecraft().getRenderItem());
-		}
-	};
-    	**/
+	private static final ResourceLocation DYNAMITE = new ResourceLocation(AgeOfWeapons.MODID + ":textures/entity/dynamite.png");
+	private ModelDynamite model = new ModelDynamite();		
+	
+	protected RenderDynamite(RenderManager renderManager) {
+		super(renderManager);
+	}
+	
+	@Override
+	protected ResourceLocation getEntityTexture(EntityDynamite entity) {
+		return DYNAMITE;
+	}
+	
+	@Override
+	public void doRender(EntityDynamite entity, double x, double y, double z, float entityYaw, float partialTicks) {
+		GL11.glPushMatrix();
+		bindTexture(DYNAMITE);
+		GL11.glTranslated(x, y, z);
+		GL11.glRotatef(180, 0, 0, 1);
+		model.render(entity, 0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.0625F);
+		GL11.glPopMatrix();
+	}
 }

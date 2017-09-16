@@ -336,6 +336,24 @@ item.epic_katana.name=Rex's Katana
 item.epic_waraxe.name=Steve's Kriegsaxt
 item.epic_battle_axe.name=JSQ's Kampfaxt
 
+//Piracy
+item.cast_net.name=Fangnetz
+item.grappling_hook.name=Greifhaken
+item.grappling_iron.name=Enterhaken
+item.harpoon.name=Harpone
+item.machete_diamond.name=Diamant Machete
+item.machete_gold.name=Gold Machete
+item.machete_iron.name=Eisen Machete
+item.machete_stone.name=Stein Machete
+item.machete_wood.name=Holz Machete
+item.telescope.name=Teleskop
+item.saber_diamond.name=Diamant Säbel
+item.saber_gold.name=Gold Säbel
+item.saber_iron.name=Eisen Säbel
+item.saber_stone.name=Stein Säbel
+item.saber_wood.name=Holz Säbel
+
+
 
 
 /** TEMPLATE **/

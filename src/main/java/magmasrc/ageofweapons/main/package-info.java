@@ -8,12 +8,5 @@
 package magmasrc.ageofweapons.main;
 /**  Dev Change Log
 *
-* - Blancing
-* - new trap
-* - bugfixes
-* - block
-* - recipe changes
-* - improvements
-* - weapon box functions
 *
 **/

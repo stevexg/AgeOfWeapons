@@ -37,7 +37,9 @@ public class ItemNightVisionGoggles extends ItemArmor {
 	
 	@Override
 	public void addInformation(ItemStack  stack, EntityPlayer playerIn, List addList, boolean advanced) {
+		if(AgeOfWeapons.activateShowAges) {	
 			addList.add(ChatFormatting.GRAY + "Modern Age");
+		}
 	}
 	
 	

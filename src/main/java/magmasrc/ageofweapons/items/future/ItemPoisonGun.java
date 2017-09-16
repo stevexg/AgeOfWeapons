@@ -44,7 +44,9 @@ public class ItemPoisonGun extends Item {
     
 	@Override
 	public void addInformation(ItemStack  stack, EntityPlayer playerIn, List addList, boolean advanced) {
+		if(AgeOfWeapons.activateShowAges) {	
 			addList.add(ChatFormatting.GRAY + "Future");
+		}
 	}
 	
 	

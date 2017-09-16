@@ -32,7 +32,11 @@ public class ItemTaser extends Item {
     
 	@Override
 	public void addInformation(ItemStack  stack, EntityPlayer playerIn, List addList, boolean advanced) {
+		if(AgeOfWeapons.activateShowAges) {	
 			addList.add(ChatFormatting.GRAY + "Modern Age");
+		}
+			addList.add(ChatFormatting.RED + "Work in progress");
+
 	}
 	
 	
