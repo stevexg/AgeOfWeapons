@@ -15,6 +15,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 
 /**---------------------------------------------------------------------------------*
  * @author MagmaSrc Team (Stvxv.g & XxRexRaptorxX (RexRaptor))
@@ -27,7 +28,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 public class AgeOfWeapons {
    
     public static final String MODID = "ageofweapons";
-    public static final String VERSION = "0.12.0";
+    public static final String VERSION = "0.13.0";
 
    
     @Instance("ageofweapons")
@@ -53,7 +54,7 @@ public class AgeOfWeapons {
     
     // Creative-Tab //
     public ModTabs tabs;
-    
+
     // Config //
     public static boolean activateUpdateChecker;
     public static boolean activateOnlyOneTab;
@@ -161,8 +162,9 @@ public class AgeOfWeapons {
     // Events //
     MinecraftForge.EVENT_BUS.register(new Events());  
     
-    // Entity Renderer //
-    RenderRegistry.registerEntityRenderers();
+	// proxy //
+    proxy.registerPreInit();
+    
     }
   
     
@@ -185,9 +187,6 @@ public class AgeOfWeapons {
        	items.init();
     	items.register();
     	
-    	// Entitys //
-    	ModEntitys.registerEntities();
-    	
     	// Recipes //
     	recipes = new ModRecipes();
     	recipes.unregister();
@@ -195,10 +194,12 @@ public class AgeOfWeapons {
     	
         // Creative Tabs //
     	tabs = new ModTabs();
-   
+    	
+    	// Entitys //
+    	ModEntitys.registerEntities();
     	
     	// proxy //
-        proxy.registerClientStuff();
+        proxy.registerInit();
         
 
          

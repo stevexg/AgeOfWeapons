@@ -58,9 +58,8 @@ public class ItemArmorMaster extends ItemArmor {
 	
 
 	private void effectPlayer(EntityPlayer player, Potion potion, int amplifier) {
-	    //Always effect for 8 seconds, then refresh
 	    if (player.getActivePotionEffect(potion) == null || player.getActivePotionEffect(potion).getDuration() <= 1)
-	        player.addPotionEffect(new PotionEffect(MobEffects.LUCK, 159, amplifier, true, true));
+	        player.addPotionEffect(new PotionEffect(MobEffects.LUCK, 10, amplifier, true, true));
 	}
 
 }

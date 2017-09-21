@@ -201,7 +201,6 @@ item.longbow.name=Longbow
 item.crossbow.name=Crossbow
 item.hammer.name=Hammer
 
-
 //EarlyModernAge
 item.multi_tool_wood.name=Wooden Multi Tool
 item.multi_tool_stone.name=Stone Multi Tool
@@ -216,6 +215,10 @@ item.compound_bow.name=Compound Bow
 item.dynamite.name=Dynamite
 item.nails.name=Nails
 item.nails_toxic.name=Toxic Nails
+item.soldier_helmet.name=Soldier Helmet
+item.soldier_chestplate.name=Soldier Chestplate
+item.soldier_leggings.name=Soldier Leggings
+item.soldier_boots.name=Soldier Boots
 
 //Mystic
 item.mystic_knive.name=Mystic Knive
@@ -298,6 +301,15 @@ item.flame_thrower.name=Flamethrower
 item.industrial_miner.name=Industrial Miner
 item.industrial_excavator.name=Industrial Excavator
 item.tank_flame.name=Tank (Fire)
+item.grenade.name=Grenade
+item.grenade_frag.name=Frag Grenade
+item.grenade_poison.name=Poison Grenade
+item.grenade_smoke.name=Smoke Grenade
+item.molotov_cocktail.name=Molotov cocktail
+item.modern_soldier_helmet.name=Spec Ops Helmet
+item.modern_soldier_chestplate.name=Spec Ops Chestplate
+item.modern_soldier_leggings.name=Spec Ops Leggings
+item.modern_soldier_boots.name=Spec Ops Boots
 
 item.machine_case.name=Machine Case
 item.ammo_small.name=Small Ammo
@@ -318,6 +330,11 @@ item.industrial_multi_tool.name=Industrial Multi Tool
 item.tank_poison.name=Tank (Poison)
 item.tank_water.name=Tank (Water)
 item.water_thrower.name=Portable Waterthrower
+item.imploder.name=Imploder
+item.future_soldier_helmet.name=Robot Soldier Helmet
+item.future_soldier_chestplate.name=Robot Soldier Chestplate
+item.future_soldier_leggings.name=Robot Soldier Leggings
+item.future_soldier_boots.name=Robot Soldier Boots
 
 //Epic
 item.herobrine_bow.name=Herobrine's Bow

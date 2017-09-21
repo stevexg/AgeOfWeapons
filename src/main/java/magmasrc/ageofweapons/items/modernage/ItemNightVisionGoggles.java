@@ -56,7 +56,6 @@ public class ItemNightVisionGoggles extends ItemArmor {
 	
 
 	private void effectPlayer(EntityPlayer player, Potion potion, int amplifier) {
-	    //Always effect for 8 seconds, then refresh
 	    if (player.getActivePotionEffect(potion) == null || player.getActivePotionEffect(potion).getDuration() <= 200)
 	        player.addPotionEffect(new PotionEffect(MobEffects.NIGHT_VISION, 210, amplifier, true, true));
 	}

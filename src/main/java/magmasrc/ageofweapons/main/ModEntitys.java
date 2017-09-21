@@ -23,6 +23,12 @@ public class ModEntitys {
 		EntityRegistry.registerModEntity(new ModelResourceLocation(AgeOfWeapons.MODID + ":spear_gold"), EntitySpearGold.class, "SpearGold", 12, AgeOfWeapons.instance, 64, 1, true);
 		EntityRegistry.registerModEntity(new ModelResourceLocation(AgeOfWeapons.MODID + ":spear_diamond"), EntitySpearDiamond.class, "SpearDiamond", 13, AgeOfWeapons.instance, 64, 1, true);
 		EntityRegistry.registerModEntity(new ModelResourceLocation(AgeOfWeapons.MODID + ":harpoon"), EntityHarpoon.class, "SpearHarpoon", 14, AgeOfWeapons.instance, 64, 1, true);
+		EntityRegistry.registerModEntity(new ModelResourceLocation(AgeOfWeapons.MODID + ":grenade"), EntityGrenade.class, "Grenade", 15, AgeOfWeapons.instance, 64, 1, true);
+		EntityRegistry.registerModEntity(new ModelResourceLocation(AgeOfWeapons.MODID + ":grenade_frag"), EntityGrenadeFrag.class, "GrenadeFrag", 16, AgeOfWeapons.instance, 64, 1, true);
+		EntityRegistry.registerModEntity(new ModelResourceLocation(AgeOfWeapons.MODID + ":grenade_smoke"), EntityGrenadeSmoke.class, "GrenadeSmoke", 17, AgeOfWeapons.instance, 64, 1, true);
+		EntityRegistry.registerModEntity(new ModelResourceLocation(AgeOfWeapons.MODID + ":grenade_poison"), EntityGrenadePoison.class, "GrenadePoison", 18, AgeOfWeapons.instance, 64, 1, true);
+		EntityRegistry.registerModEntity(new ModelResourceLocation(AgeOfWeapons.MODID + ":imploder"), EntityImploder.class, "Imploder", 19, AgeOfWeapons.instance, 64, 1, true);
+		EntityRegistry.registerModEntity(new ModelResourceLocation(AgeOfWeapons.MODID + ":molotov_cocktail"), EntityMolotovCocktail.class, "MolotovCocktail", 20, AgeOfWeapons.instance, 64, 1, true);
 
 	}
 	

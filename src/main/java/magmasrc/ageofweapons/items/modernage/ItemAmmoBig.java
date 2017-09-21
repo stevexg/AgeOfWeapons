@@ -11,7 +11,7 @@ public class ItemAmmoBig extends Item {
         if(AgeOfWeapons.activateOnlyOneTab){
         	this.setCreativeTab(ModTabs.generalTab);
         } else {
-        	this.setCreativeTab(ModTabs.futureTab);
+        	this.setCreativeTab(ModTabs.modernAgeTab);
         }	}
 
 }

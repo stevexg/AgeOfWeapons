@@ -1,20 +1,26 @@
 package magmasrc.ageofweapons.proxy;
 
-import magmasrc.ageofweapons.entity.EntityDynamite;
-import magmasrc.ageofweapons.entity.render.RenderDynamite;
+import magmasrc.ageofweapons.entity.render.RenderRegistry;
 import magmasrc.ageofweapons.main.ModBlocks;
 import magmasrc.ageofweapons.main.ModItems;
 import magmasrc.ageofweapons.util.ModelHandler;
-import net.minecraft.block.Block;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.block.model.ModelResourceLocation;
-import net.minecraft.item.Item;
-import net.minecraftforge.fml.client.registry.RenderingRegistry;
  
 public class ClientProxy extends ServerProxy {
- 
+	
+	
     @Override
-    public void registerClientStuff() {
+    public void registerPreInit() {
+    	
+    /** Renderers **/
+    	
+    RenderRegistry.registerEntityRenderers();
+    }
+    
+    
+    
+    
+    @Override
+    public void registerInit() {
     	
  	/** Items **/
     	
@@ -177,6 +183,10 @@ public class ClientProxy extends ServerProxy {
     	ModelHandler.registerModel(ModItems.nails);
     	ModelHandler.registerModel(ModItems.nailsToxic);
     	ModelHandler.registerModel(ModItems.blankRifle);
+    	ModelHandler.registerModel(ModItems.soldierBoots);
+    	ModelHandler.registerModel(ModItems.soldierChestplate);
+    	ModelHandler.registerModel(ModItems.soldierHelmet);
+    	ModelHandler.registerModel(ModItems.soldierLeggings);
     	
 		//Mystic
     	ModelHandler.registerModel(ModItems.mysticKnive);
@@ -271,6 +281,15 @@ public class ClientProxy extends ServerProxy {
     	ModelHandler.registerModel(ModItems.magazineDrum);
     	ModelHandler.registerModel(ModItems.shotgunAmmo);
     	ModelHandler.registerModel(ModItems.shotgunAmmo2);
+    	ModelHandler.registerModel(ModItems.grenade);
+    	ModelHandler.registerModel(ModItems.grenadeFrag);
+    	ModelHandler.registerModel(ModItems.grenadePoison);
+    	ModelHandler.registerModel(ModItems.grenadeSmoke);
+    	ModelHandler.registerModel(ModItems.molotovCocktail);
+    	ModelHandler.registerModel(ModItems.modernSoldierBoots);
+    	ModelHandler.registerModel(ModItems.modernSoldierChestplate);
+    	ModelHandler.registerModel(ModItems.modernSoldierHelmet);
+    	ModelHandler.registerModel(ModItems.modernSoldierLeggings);
 
     	//Future
     	ModelHandler.registerModel(ModItems.tankPoison);
@@ -278,6 +297,11 @@ public class ClientProxy extends ServerProxy {
     	ModelHandler.registerModel(ModItems.industrialMultiTool);
     	ModelHandler.registerModel(ModItems.waterThrower);
     	ModelHandler.registerModel(ModItems.tankWater);
+    	ModelHandler.registerModel(ModItems.imploder);
+    	ModelHandler.registerModel(ModItems.futureSoldierBoots);
+    	ModelHandler.registerModel(ModItems.futureSoldierChestplate);
+    	ModelHandler.registerModel(ModItems.futureSoldierHelmet);
+    	ModelHandler.registerModel(ModItems.futureSoldierLeggings);
     	
     	//Epic
     	ModelHandler.registerModel(ModItems.herobrineBow);
@@ -352,9 +376,8 @@ public class ClientProxy extends ServerProxy {
     	ModelHandler.registerModel(ModBlocks.spikes);
     	ModelHandler.registerModel(ModBlocks.spikesToxic);
     	ModelHandler.registerModel(ModBlocks.timeBomb);
-  
-    }
-
+ 
+    	}
 }
    
 

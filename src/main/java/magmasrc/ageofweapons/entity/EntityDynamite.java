@@ -48,7 +48,7 @@ public class EntityDynamite extends EntityThrowable {
 	@Override
 	public void onUpdate() {
 		super.onUpdate();
-		if (this.world.isRemote && !this.inGround) { // z +1 
+		if (this.world.isRemote && !this.inGround) {
 			this.world.spawnParticle(EnumParticleTypes.LAVA, this.posX, this.posY, this.posZ, 0.0D, 0.0D, 0.0D, new int[0]);
     		}
 	}

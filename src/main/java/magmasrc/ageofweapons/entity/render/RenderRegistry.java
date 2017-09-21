@@ -139,5 +139,59 @@ public class RenderRegistry {
 				return new RenderHarpoon(manager);
 			}
 		});
+		
+		
+		
+		RenderingRegistry.registerEntityRenderingHandler(EntityGrenade.class, new IRenderFactory<EntityGrenade>() {
+
+			public Render<? super EntityGrenade> createRenderFor(RenderManager manager) {
+				return new RenderGrenade(manager);
+			}
+		});
+		
+		
+		
+		RenderingRegistry.registerEntityRenderingHandler(EntityGrenadeFrag.class, new IRenderFactory<EntityGrenadeFrag>() {
+
+			public Render<? super EntityGrenadeFrag> createRenderFor(RenderManager manager) {
+				return new RenderGrenadeFrag(manager);
+			}
+		});
+		
+		
+		
+		RenderingRegistry.registerEntityRenderingHandler(EntityGrenadeSmoke.class, new IRenderFactory<EntityGrenadeSmoke>() {
+
+			public Render<? super EntityGrenadeSmoke> createRenderFor(RenderManager manager) {
+				return new RenderGrenadeSmoke(manager);
+			}
+		});
+		
+		
+		
+		RenderingRegistry.registerEntityRenderingHandler(EntityGrenadePoison.class, new IRenderFactory<EntityGrenadePoison>() {
+
+			public Render<? super EntityGrenadePoison> createRenderFor(RenderManager manager) {
+				return new RenderGrenadePoison(manager);
+			}
+		});
+		
+		
+		
+		RenderingRegistry.registerEntityRenderingHandler(EntityImploder.class, new IRenderFactory<EntityImploder>() {
+
+			public Render<? super EntityImploder> createRenderFor(RenderManager manager) {
+				return new RenderImploder(manager);
+			}
+		});
+		
+		
+		
+		RenderingRegistry.registerEntityRenderingHandler(EntityMolotovCocktail.class, new IRenderFactory<EntityMolotovCocktail>() {
+
+			public Render<? super EntityMolotovCocktail> createRenderFor(RenderManager manager) {
+				return new RenderMolotovCocktail(manager);
+			}
+		});
 	}
 }

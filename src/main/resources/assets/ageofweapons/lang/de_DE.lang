@@ -218,6 +218,10 @@ item.compound_bow.name=Compoundbogen
 item.dynamite.name=Dynamit Stange
 item.nails.name=Nägel
 item.nails_toxic.name=Giftige Nägel
+item.soldier_helmet.name=Soldaten Helm
+item.soldier_chestplate.name=Soldaten Brustpanzer
+item.soldier_leggings.name=Soldaten Beinschutz
+item.soldier_boots.name=Soldaten Stiefel
 
 //Mystic
 item.mystic_knive.name=Mystisches Schwert
@@ -312,6 +316,15 @@ item.magazine_big.name=Großes Magazin
 item.magazine_drum.name=Magazin Trommel
 item.shotgun_ammo.name=Rote Schrot Munition
 item.shotgun_ammo2.name=Blaue Schrot Munition
+item.grenade.name=Granate
+item.grenade_frag.name=Splitter Granate
+item.grenade_poison.name=Giftgas Granate
+item.grenade_smoke.name=Rauchgranate
+item.molotov_cocktail.name=Molotowcocktail
+item.modern_soldier_helmet.name=Spec Ops Helm
+item.modern_soldier_chestplate.name=Spec Ops Brustpanzer
+item.modern_soldier_leggings.name=Spec Ops Beinschutz
+item.modern_soldier_boots.name=Spec Ops Stiefel
 
 //Future
 item.poison_thrower.name=Giftwerfer
@@ -319,6 +332,12 @@ item.industrial_multi_tool.name=Industrielles Multifunktions Werkzeug
 item.tank_poison.name=Tank (Gift)
 item.tank_water.name=Tank (Wasser)
 item.water_thrower.name=Tragbarer Wasserwerfer
+item.imploder.name=Implodierer
+item.future_soldier_helmet.name=Roboter Soldaten Helm
+item.future_soldier_chestplate.name=Roboter Soldaten Brustpanzer
+item.future_soldier_leggings.name=Roboter Soldaten Beinschutz
+item.future_soldier_boots.name=Roboter Soldaten Stiefel
+
 
 //Epic
 item.herobrine_bow.name=Herobrine's Bogen
