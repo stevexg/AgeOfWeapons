@@ -33,6 +33,7 @@ public class ItemEpicBattleAxe extends ItemCustomAxe {
     		addList.add(ChatFormatting.DARK_GRAY + "Epic");
     	}	
     }
+
     
     
     @SideOnly(Side.CLIENT)

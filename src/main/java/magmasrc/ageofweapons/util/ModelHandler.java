@@ -18,4 +18,5 @@ public class ModelHandler {
 			throw new IllegalArgumentException("Item or Block required!");	
 		}
 	}
+
 }

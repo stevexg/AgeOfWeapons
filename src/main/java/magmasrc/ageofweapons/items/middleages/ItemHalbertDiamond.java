@@ -1,17 +1,15 @@
 package magmasrc.ageofweapons.items.middleages;
 
-import com.mojang.realmsclient.gui.ChatFormatting;
+import java.util.List;
 
 import magmasrc.ageofweapons.main.AgeOfWeapons;
 import magmasrc.ageofweapons.main.ModTabs;
 import magmasrc.ageofweapons.util.ItemCustomWeapon;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
-import java.util.List;
+import com.mojang.realmsclient.gui.ChatFormatting;
 
 public class ItemHalbertDiamond extends ItemCustomWeapon {
 
@@ -34,10 +32,8 @@ public class ItemHalbertDiamond extends ItemCustomWeapon {
     	}	
     }
     
-    
 	@Override
 	public boolean getIsRepairable(ItemStack armor, ItemStack stack) {
 	 return stack.getItem() == Items.DIAMOND;
 	}  
-
 }

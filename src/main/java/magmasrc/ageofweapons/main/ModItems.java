@@ -10,6 +10,7 @@ import magmasrc.ageofweapons.items.future.*;
 import magmasrc.ageofweapons.items.middleages.*;
 import magmasrc.ageofweapons.items.modernage.*;
 import magmasrc.ageofweapons.items.mystic.*;
+import magmasrc.ageofweapons.items.piracy.*;
 import magmasrc.ageofweapons.items.stoneage.*;
 import magmasrc.ageofweapons.util.NameHandler;
 import net.minecraft.init.SoundEvents;
@@ -31,6 +32,9 @@ public class ModItems {
 	public static ArmorMaterial ninjaAM;
 	public static ArmorMaterial nightVisionGogglesAM;
 	public static ArmorMaterial masterAM;
+	public static ArmorMaterial soldierAM;
+	public static ArmorMaterial modernSoldierAM;
+	public static ArmorMaterial futureSoldierAM;
 	
 
 	/** Tool-Materials **/
@@ -39,6 +43,7 @@ public class ModItems {
 	public static ToolMaterial handAxStoneTM;
 	public static ToolMaterial cavemanKniveStoneTM;
 	public static ToolMaterial cavemanKniveBoneTM;
+	public static ToolMaterial cavemanSpearTM;
 	public static ToolMaterial woodCudgelTM;
 	public static ToolMaterial stoneCudgelTM;
 	public static ToolMaterial axTM;
@@ -161,6 +166,19 @@ public class ModItems {
 	public static ToolMaterial epicWaraxeTM;
 	public static ToolMaterial legendarySwordTM;
 	public static ToolMaterial masterTM;
+	
+	public static ToolMaterial macheteWoodTM;
+	public static ToolMaterial macheteStoneTM;
+	public static ToolMaterial macheteIronTM;
+	public static ToolMaterial macheteGoldTM;
+	public static ToolMaterial macheteDiamondTM;
+	public static ToolMaterial saberWoodTM;
+	public static ToolMaterial saberStoneTM;
+	public static ToolMaterial saberIronTM;
+	public static ToolMaterial saberGoldTM;
+	public static ToolMaterial saberDiamondTM;
+	public static ToolMaterial grapplingIronTM;
+	public static ToolMaterial harpoonTM;
 
 	
 
@@ -328,6 +346,10 @@ public class ModItems {
 	public static Item pebble;
 	public static Item nails;
 	public static Item nailsToxic;
+	public static ItemArmor soldierHelmet;
+	public static ItemArmor soldierChestplate;
+	public static ItemArmor soldierLeggings;
+	public static ItemArmor soldierBoots;
 	
 	// Mystic
 	public static Item mysticKnive;
@@ -409,13 +431,17 @@ public class ModItems {
 	public static Item ammoBig;
 	public static Item ammoBundleSmall;
 	public static Item ammoBundleBig;
-	public static Item concentratedGunpowder;      // all TODO
+	public static Item concentratedGunpowder;    
 	public static Item magazineSmall;
 	public static Item magazineBig;
 	public static Item magazineLong;
 	public static Item magazineDrum;
 	public static Item shotgunAmmo;
 	public static Item shotgunAmmo2;   
+	public static ItemArmor modernSoldierHelmet;
+	public static ItemArmor modernSoldierChestplate;
+	public static ItemArmor modernSoldierLeggings;
+	public static ItemArmor modernSoldierBoots;
 	
 	public static Item fieldGlasses;
 	public static Item nightVisionGoggles;
@@ -423,6 +449,11 @@ public class ModItems {
 	public static Item flameThrower;
 	public static Item industrialMiner;
 	public static Item industrialExcavator;
+	public static Item grenade;
+	public static Item grenadeFrag;
+	public static Item grenadeSmoke;
+	public static Item grenadePoison;
+	public static Item molotovCocktail;
 	
 	// Future
 	public static Item poisonThrower;
@@ -430,6 +461,11 @@ public class ModItems {
 	public static Item waterThrower;
 	public static Item tankPoison;
 	public static Item tankWater;
+	public static Item imploder;
+	public static ItemArmor futureSoldierHelmet;
+	public static ItemArmor futureSoldierChestplate;
+	public static ItemArmor futureSoldierLeggings;
+	public static ItemArmor futureSoldierBoots;
 	
 	// Epic
 	public static Item herobrineBow;
@@ -446,10 +482,24 @@ public class ModItems {
 	public static ItemArmor masterChestplate;
 	public static ItemArmor masterLeggings;
 	public static ItemArmor masterBoots;
+	
+	// Piracy
+	public static Item castNet;
+	public static Item grapplingHook;
+	public static Item grapplingIron;
+	public static Item harpoon;
+	public static Item macheteWood;
+	public static Item macheteStone;
+	public static Item macheteIron;
+	public static Item macheteGold;
+	public static Item macheteDiamond;
+	public static Item saberWood;
+	public static Item saberStone;
+	public static Item saberIron;
+	public static Item saberGold;
+	public static Item saberDiamond;
+	public static Item telescope;
 
-	
-	
-	
 	  //Items so formatieren:     <GEGENSTAND><MATERIAL>     (example: swordIron, "sword_iron")
 
 	
@@ -472,12 +522,13 @@ public class ModItems {
 																	DIAMOND       (3, 1561,  8.0F,  3.0F,  10);			7.0F  	 **/															
 		                                                             //     harv.lvl, uses, efficy., dmg., enchant.,
    	    rockTM = EnumHelper.addToolMaterial ("rock",                               0,  500,  0.0F,  4.0F,  0);
-		handAxStoneTM = EnumHelper.addToolMaterial("handAxStone",                  0,  400,  1.0F,  4.5F,  0);
-		cavemanKniveStoneTM = EnumHelper.addToolMaterial("cavemanKniveStone",      0,  100,  1.0F,  5.0F,  0);
-		cavemanKniveBoneTM = EnumHelper.addToolMaterial("cavemanKniveBone",        0,   80,  1.0F,  5.0F,  0);
+		handAxStoneTM = EnumHelper.addToolMaterial("handAxStone",                  0,  400,  1.0F,  4.3F,  0);
+		cavemanKniveStoneTM = EnumHelper.addToolMaterial("cavemanKniveStone",      0,  100,  1.0F,  3.5F,  0);
+		cavemanKniveBoneTM = EnumHelper.addToolMaterial("cavemanKniveBone",        0,   80,  1.0F,  3.5F,  0);
 		woodCudgelTM = EnumHelper.addToolMaterial("woodCudgel",                    0,  150,  1.0F,  5.0F,  0);
-		stoneCudgelTM = EnumHelper.addToolMaterial("stoneCudgel",                  1,  200,  1.0F,  6.0F,  0);
-		axTM = EnumHelper.addToolMaterial("ax",                                    1,  500,  3.0F, 5.10F,  3);
+		stoneCudgelTM = EnumHelper.addToolMaterial("stoneCudgel",                  1,  200,  1.0F,  5.5F,  0);
+		axTM = EnumHelper.addToolMaterial("ax",                                    1,  500,  3.0F,  5.2F,  3);
+		cavemanSpearTM = EnumHelper.addToolMaterial("cavemanSpear",                0,   30,  0.5F,  1.0F,  0);
 		
 		kniveWoodTM = EnumHelper.addToolMaterial("kniveWood",                      0,   50,  1.0F,  4.5F,  15);
 		kniveStoneTM = EnumHelper.addToolMaterial("kniveStone",                    1,   80,  1.0F,  5.0F,  5);
@@ -588,7 +639,7 @@ public class ModItems {
 		batonIronTM = EnumHelper.addToolMaterial("batonIron",                      0,  300,  1.0F,   2.8F, 10);
 		nunchuckWoodTM = EnumHelper.addToolMaterial("nunchuckWood",                0,  100,  8.0F,   2.5F,  8);
 		nunchuckIronTM = EnumHelper.addToolMaterial("nunchuckIron",                0,  300,  8.0F,   3.3F, 10);
-
+																	//     harv.lvl, uses, efficy., dmg., enchant.,
 		industrialTM = EnumHelper.addToolMaterial("industrial",                    3,  800, 12.0F,   5.0F, 10);
 		masterTM = EnumHelper.addToolMaterial("master",                            3, 1500, 10.0F,   4.0F,  8);
 		herobrineSwordTM = EnumHelper.addToolMaterial("herobrine",                 3, 3000, 10.0F,   8.0F,  0);
@@ -596,7 +647,19 @@ public class ModItems {
 		epicBattleAxeTM = EnumHelper.addToolMaterial("epicBattleAxe",              3, 2000,  8.0F,   8.5F, 15);
 		epicKatanaTM = EnumHelper.addToolMaterial("epicKatana",                    3, 2500,  8.0F,   9.0F, 20);
 		epicWaraxeTM = EnumHelper.addToolMaterial("epicWaraxe",                    3, 2500,  8.0F,  10.0F, 15);
-
+																	//     harv.lvl, uses, efficy., dmg., enchant.,
+		grapplingIronTM = EnumHelper.addToolMaterial("grapplingIron",              0,   90,  1.0F,   1.0F,  3);
+		harpoonTM = EnumHelper.addToolMaterial("harpoon",                          0,  200,  8.0F,   6.0F,  0);
+		macheteWoodTM = EnumHelper.addToolMaterial("macheteWood",                  0,  100,  2.0F,   4.5F, 15);
+		macheteStoneTM = EnumHelper.addToolMaterial("macheteStone",                1,  150,  4.0F,   5.0F,  5);
+		macheteIronTM = EnumHelper.addToolMaterial("macheteIron",                  2,  300,  6.0F,   5.5F, 14);
+		macheteGoldTM = EnumHelper.addToolMaterial("macheteGold",                  0,   50, 12.0F,   4.8F, 22);
+		macheteDiamondTM = EnumHelper.addToolMaterial("macheteDiamond",            3, 1600,  8.0F,   6.0F, 10);
+		saberWoodTM = EnumHelper.addToolMaterial("saberWood",                      0,  150,  2.0F,   4.5F, 20);
+		saberStoneTM = EnumHelper.addToolMaterial("saberStone",                    1,  200,  4.0F,   5.0F, 10);
+		saberIronTM = EnumHelper.addToolMaterial("saberIron",                      2,  350,  6.0F,   5.5F, 19);
+		saberGoldTM = EnumHelper.addToolMaterial("saberGold",                      0,  100, 12.0F,   4.8F, 27);
+		saberDiamondTM = EnumHelper.addToolMaterial("saberDiamond",                3, 1700,  8.0F,   6.0F, 15);
 
 
 
@@ -628,18 +691,21 @@ public class ModItems {
 		
 		
 		/** Armor-Materials **/
-																																						/**
-		    																		5                {1, 3, 2, 1} for leather armor (7 at all)
-		    																		15    			 {2, 5, 4, 1} for chain armor   (12 at all)
-		    																		15    			 {2, 6, 5, 2} for iron armor    (15 at all)
-		    																		7    			 {2, 5, 3, 1} for gold armor    (11 at all)
-		    														   				32               {3, 8, 6, 3} for diamond armor (20 at all - do not use more!)
-		 																																				**/
-		 cavemanAM = EnumHelper.addArmorMaterial("caveman", "ageofweapons:caveman", 3, new int[]     {1, 2, 1, 1}, 0, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0);
-		 ninjaAM = EnumHelper.addArmorMaterial("ninja", "ageofweapons:ninja", 10, new int[]          {1, 4, 3, 1}, 10, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0);
-		 assassinAM = EnumHelper.addArmorMaterial("assassin", "ageofweapons:assassin", 12, new int[] {2, 4, 3, 1}, 10, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0);
-         nightVisionGogglesAM = EnumHelper.addArmorMaterial("nightVisionGoggles", "ageofweapons:night_vision_goggles", 0, new int[]{1, 0, 0, 0}, 10, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0);
-		 masterAM = EnumHelper.addArmorMaterial("master", "ageofweapons:master", 30, new int[]       {3, 7, 5, 3}, 0, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2);
+																																	                      		     		/**
+		    																                       		 5               {1, 3, 2, 1} for leather armor (7 at all)
+		    																                    		15    			 {2, 5, 4, 1} for chain armor   (12 at all)
+		    																                    		15    			 {2, 6, 5, 2} for iron armor    (15 at all)
+		    																	                      	 7    			 {2, 5, 3, 1} for gold armor    (11 at all)
+		    														   			                     	32               {3, 8, 6, 3} for diamond armor (20 at all - do not use more!)
+		 																																	                       			**/
+		 cavemanAM = EnumHelper.addArmorMaterial("caveman", "ageofweapons:caveman",					     3, new int[] {1, 2, 1, 1},  0, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0);
+		 ninjaAM = EnumHelper.addArmorMaterial("ninja", "ageofweapons:ninja", 							10, new int[] {1, 4, 3, 1}, 10, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0);
+		 assassinAM = EnumHelper.addArmorMaterial("assassin", "ageofweapons:assassin", 					12, new int[] {2, 4, 3, 1}, 10, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0);
+         nightVisionGogglesAM = EnumHelper.addArmorMaterial("nightVisionGoggles", "ageofweapons:night_vision_goggles", 10, new int[]{1, 0, 0, 0}, 10, SoundEvents.ITEM_ARMOR_EQUIP_GENERIC, 0);
+		 masterAM = EnumHelper.addArmorMaterial("master", "ageofweapons:master", 						30, new int[] {3, 7, 5, 3},  5, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, 2);
+		 soldierAM = EnumHelper.addArmorMaterial("soldier", "ageofweapons:soldier", 					20, new int[] {2, 5, 5, 2}, 10, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0);
+		 modernSoldierAM = EnumHelper.addArmorMaterial("modern_soldier", "ageofweapons:modern_soldier", 20, new int[] {2, 7, 6, 2}, 10, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, 0);
+		 futureSoldierAM = EnumHelper.addArmorMaterial("future_soldier", "ageofweapons:future_soldier", 20, new int[] {3, 8, 6, 3}, 10, SoundEvents.ITEM_ARMOR_EQUIP_IRON,    1);
 
 		
 		
@@ -740,7 +806,7 @@ public class ModItems {
 		stoneCudgel = new ItemStoneCudgel(stoneCudgelTM);
 		ax = new ItemAx(axTM);
 		throwWood = new ItemThrowWood();
-		cavemanSpear = new ItemCavemanSpear();
+		cavemanSpear = new ItemCavemanSpear(cavemanSpearTM);
 		cavemanHelmet = new ItemArmorCaveman(cavemanAM, 1, EntityEquipmentSlot.HEAD); 
 		cavemanChestplate = new ItemArmorCaveman(cavemanAM, 1, EntityEquipmentSlot.CHEST);
 		cavemanLeggings = new ItemArmorCaveman(cavemanAM, 2, EntityEquipmentSlot.LEGS); 
@@ -821,6 +887,10 @@ public class ModItems {
 		compoundBow = new ItemCompoundBow();
 		nails = new ItemNails();
 		nailsToxic = new ItemToxicNails();
+		soldierHelmet = new ItemArmorSoldier(soldierAM, 1, EntityEquipmentSlot.HEAD); 
+		soldierChestplate = new ItemArmorSoldier(soldierAM, 1, EntityEquipmentSlot.CHEST);
+		soldierLeggings = new ItemArmorSoldier(soldierAM, 2, EntityEquipmentSlot.LEGS); 
+		soldierBoots = new ItemArmorSoldier(soldierAM, 1, EntityEquipmentSlot.FEET); 
 		
 		// Mystic
 		mysticKnive = new ItemMysticKnive(mysticKniveTM);
@@ -902,11 +972,25 @@ public class ModItems {
 		industrialMiner = new ItemIndustrialMiner(industrialTM);
 		industrialExcavator = new ItemIndustrialExcavator(industrialTM);
 		nightVisionGoggles = new ItemNightVisionGoggles(nightVisionGogglesAM, 1, EntityEquipmentSlot.HEAD); 
+		grenade = new ItemGrenade();
+		grenadeFrag = new ItemGrenadeFrag();
+		grenadeSmoke = new ItemGrenadeSmoke();
+		grenadePoison = new ItemGrenadePoison();
+		molotovCocktail = new ItemMolotovCocktail();
+		modernSoldierHelmet = new ItemArmorModernSoldier(modernSoldierAM, 1, EntityEquipmentSlot.HEAD); 
+		modernSoldierChestplate = new ItemArmorModernSoldier(modernSoldierAM, 1, EntityEquipmentSlot.CHEST);
+		modernSoldierLeggings = new ItemArmorModernSoldier(modernSoldierAM, 2, EntityEquipmentSlot.LEGS); 
+		modernSoldierBoots = new ItemArmorModernSoldier(modernSoldierAM, 1, EntityEquipmentSlot.FEET); 
 		
 		// Future
 		poisonThrower = new ItemPoisonGun();
 		industrialMultiTool = new ItemIndustrialMultiTool(industrialTM);
 		waterThrower = new ItemWaterThrower();
+		imploder = new ItemImploder();
+		futureSoldierHelmet = new ItemArmorFutureSoldier(futureSoldierAM, 1, EntityEquipmentSlot.HEAD); 
+		futureSoldierChestplate = new ItemArmorFutureSoldier(futureSoldierAM, 1, EntityEquipmentSlot.CHEST);
+		futureSoldierLeggings = new ItemArmorFutureSoldier(futureSoldierAM, 2, EntityEquipmentSlot.LEGS); 
+		futureSoldierBoots = new ItemArmorFutureSoldier(futureSoldierAM, 1, EntityEquipmentSlot.FEET); 
 		
 		// Epic
 		herobrineBow = new ItemHerobrineBow();
@@ -923,6 +1007,23 @@ public class ModItems {
 		masterChestplate = new ItemArmorMaster(masterAM, 1, EntityEquipmentSlot.CHEST);
 		masterLeggings = new ItemArmorMaster(masterAM, 2, EntityEquipmentSlot.LEGS); 
 		masterBoots = new ItemArmorMaster(masterAM, 1, EntityEquipmentSlot.FEET);
+		
+		// Piracy
+		castNet = new ItemCastNet();
+		grapplingHook = new ItemGrapplingHook();
+		grapplingIron = new ItemGrapplingIron(grapplingIronTM);
+		harpoon = new ItemHarpoon();
+		telescope = new ItemTelescope();
+		macheteWood = new ItemMacheteWood(macheteWoodTM);
+		macheteStone = new ItemMacheteStone(macheteStoneTM);
+		macheteIron = new ItemMacheteIron(macheteIronTM);
+		macheteGold = new ItemMacheteGold(macheteGoldTM);
+		macheteDiamond = new ItemMacheteDiamond(macheteDiamondTM);
+		saberWood = new ItemSaberWood(saberWoodTM);
+		saberStone = new ItemSaberStone(saberStoneTM);
+		saberIron = new ItemSaberIron(saberIronTM);
+		saberGold = new ItemSaberGold(saberGoldTM);
+		saberDiamond = new ItemSaberDiamond(saberDiamondTM);
 
 		
 /** TEMPLATE		
@@ -1118,6 +1219,10 @@ public class ModItems {
 		NameHandler.setNames(compoundBow, "compound_bow");
 		NameHandler.setNames(nails, "nails");
 		NameHandler.setNames(nailsToxic, "nails_toxic");
+		NameHandler.setNames(soldierHelmet, "soldier_helmet");
+		NameHandler.setNames(soldierChestplate, "soldier_chestplate");
+		NameHandler.setNames(soldierLeggings, "soldier_leggings");
+		NameHandler.setNames(soldierBoots, "soldier_boots");
 		
 		// Mystic
 		NameHandler.setNames(mysticKnive, "mystic_knive");
@@ -1199,11 +1304,25 @@ public class ModItems {
 		NameHandler.setNames(flameThrower, "flame_thrower");
 		NameHandler.setNames(industrialMiner, "industrial_miner");
 		NameHandler.setNames(industrialExcavator, "industrial_excavator");
+		NameHandler.setNames(grenade, "grenade");
+		NameHandler.setNames(grenadeFrag, "grenade_frag");
+		NameHandler.setNames(grenadePoison, "grenade_poison");
+		NameHandler.setNames(grenadeSmoke, "grenade_smoke");
+		NameHandler.setNames(molotovCocktail, "molotov_cocktail");
+		NameHandler.setNames(modernSoldierHelmet, "modern_soldier_helmet");
+		NameHandler.setNames(modernSoldierChestplate, "modern_soldier_chestplate");
+		NameHandler.setNames(modernSoldierLeggings, "modern_soldier_leggings");
+		NameHandler.setNames(modernSoldierBoots, "modern_soldier_boots");
 		
 		// Future
 		NameHandler.setNames(poisonThrower, "poison_thrower");
 		NameHandler.setNames(industrialMultiTool, "industrial_multi_tool");
 		NameHandler.setNames(waterThrower, "water_thrower");
+		NameHandler.setNames(imploder, "imploder");
+		NameHandler.setNames(futureSoldierHelmet, "future_soldier_helmet");
+		NameHandler.setNames(futureSoldierChestplate, "future_soldier_chestplate");
+		NameHandler.setNames(futureSoldierLeggings, "future_soldier_leggings");
+		NameHandler.setNames(futureSoldierBoots, "future_soldier_boots");
 		
 		// Epic
 		NameHandler.setNames(herobrineBow, "herobrine_bow");
@@ -1221,7 +1340,22 @@ public class ModItems {
 		NameHandler.setNames(masterLeggings, "master_leggings");
 		NameHandler.setNames(masterBoots, "master_boots");
 
-		
+		// Piracy
+		NameHandler.setNames(castNet, "cast_net");
+		NameHandler.setNames(grapplingHook, "grappling_hook");
+		NameHandler.setNames(grapplingIron, "grappling_iron");
+		NameHandler.setNames(harpoon, "harpoon");
+		NameHandler.setNames(telescope, "telescope");
+		NameHandler.setNames(macheteWood, "machete_wood");
+		NameHandler.setNames(macheteStone, "machete_stone");
+		NameHandler.setNames(macheteIron, "machete_iron");
+		NameHandler.setNames(macheteGold, "machete_gold");
+		NameHandler.setNames(macheteDiamond, "machete_diamond");
+		NameHandler.setNames(saberWood, "saber_wood");
+		NameHandler.setNames(saberStone, "saber_stone");
+		NameHandler.setNames(saberIron, "saber_iron");
+		NameHandler.setNames(saberGold, "saber_gold");
+		NameHandler.setNames(saberDiamond, "saber_diamond");
 		
 /**		
 		NameUtils.setHandler(Wood, "_wood");
@@ -1414,6 +1548,10 @@ public class ModItems {
 		registerItem(visor);
 		registerItem(nails);
 		registerItem(nailsToxic);
+		registerItem(soldierHelmet);
+		registerItem(soldierChestplate);
+		registerItem(soldierLeggings);
+		registerItem(soldierBoots);
 		
 		// Mystic
 		registerItem(mysticKnive);
@@ -1495,11 +1633,25 @@ public class ModItems {
 		registerItem(flameThrower);
 		registerItem(industrialMiner);
 		registerItem(industrialExcavator);
+		registerItem(grenade);
+		registerItem(grenadeFrag);
+		registerItem(grenadePoison);
+		registerItem(grenadeSmoke);
+		registerItem(molotovCocktail);
+		registerItem(modernSoldierHelmet);
+		registerItem(modernSoldierChestplate);
+		registerItem(modernSoldierLeggings);
+		registerItem(modernSoldierBoots);
 		
 		// Future
 		registerItem(poisonThrower);
 		registerItem(waterThrower);
 		registerItem(industrialMultiTool);
+		registerItem(imploder);
+		registerItem(futureSoldierHelmet);
+		registerItem(futureSoldierChestplate);
+		registerItem(futureSoldierLeggings);
+		registerItem(futureSoldierBoots);
 		
 		// Epic
 		registerItem(masterHelmet);
@@ -1517,7 +1669,21 @@ public class ModItems {
 		registerItem(herobrineBow);
 		registerItem(herobrineSword);
 		
-		
+		registerItem(castNet);
+		registerItem(grapplingIron);
+		registerItem(grapplingHook);
+		registerItem(harpoon);
+		registerItem(telescope);
+		registerItem(macheteWood);
+		registerItem(macheteStone);
+		registerItem(macheteIron);
+		registerItem(macheteGold);
+		registerItem(macheteDiamond);
+		registerItem(saberWood);
+		registerItem(saberStone);
+		registerItem(saberIron);
+		registerItem(saberGold);
+		registerItem(saberDiamond);
 		
 /** TEMPLATE		
 		registerItem(Wood);
@@ -1526,9 +1692,7 @@ public class ModItems {
 		registerItem(Gold);
 		registerItem(Diamond);
 **/		
-		
-		
-	
+
 	}
 	
 	

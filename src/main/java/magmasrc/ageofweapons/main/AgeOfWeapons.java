@@ -1,5 +1,6 @@
 package magmasrc.ageofweapons.main;
 
+import magmasrc.ageofweapons.entity.render.RenderRegistry;
 import magmasrc.ageofweapons.proxy.ServerProxy;
 import magmasrc.ageofweapons.util.Events;
 import magmasrc.ageofweapons.util.LootHandler;
@@ -14,6 +15,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 
 /**---------------------------------------------------------------------------------*
  * @author MagmaSrc Team (Stvxv.g & XxRexRaptorxX (RexRaptor))
@@ -26,7 +28,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 public class AgeOfWeapons {
    
     public static final String MODID = "ageofweapons";
-    public static final String VERSION = "0.11.0";
+    public static final String VERSION = "0.13.0";
 
    
     @Instance("ageofweapons")
@@ -35,7 +37,7 @@ public class AgeOfWeapons {
     @SidedProxy(clientSide = "magmasrc.ageofweapons.proxy.ClientProxy", serverSide = "magmasrc.ageofweapons.proxy.ServerProxy")
     public static ServerProxy proxy;
 
-    //TODO Steve: ThrowWood/Caveman Spear, Schusswaffen, schauen wegen OreRecipes, Weapon Box, item das einen block setzt...weil ich das ned hinkriege xD ._.
+    //TODO Steve: Schusswaffen, schauen wegen OreRecipes, item das einen block setzt...weil ich das ned hinkriege xD ._.
     
     
     // Items //
@@ -52,7 +54,7 @@ public class AgeOfWeapons {
     
     // Creative-Tab //
     public ModTabs tabs;
-    
+
     // Config //
     public static boolean activateUpdateChecker;
     public static boolean activateOnlyOneTab;
@@ -160,8 +162,9 @@ public class AgeOfWeapons {
     // Events //
     MinecraftForge.EVENT_BUS.register(new Events());  
     
-    // Entity Renderer //
-    proxy.registerRenderer();
+	// proxy //
+    proxy.registerPreInit();
+    
     }
   
     
@@ -184,9 +187,6 @@ public class AgeOfWeapons {
        	items.init();
     	items.register();
     	
-    	// Entitys //
-    	entitys = new ModEntitys();
-    	
     	// Recipes //
     	recipes = new ModRecipes();
     	recipes.unregister();
@@ -194,10 +194,12 @@ public class AgeOfWeapons {
     	
         // Creative Tabs //
     	tabs = new ModTabs();
-   
+    	
+    	// Entitys //
+    	ModEntitys.registerEntities();
     	
     	// proxy //
-        proxy.registerClientStuff();
+        proxy.registerInit();
         
 
          
