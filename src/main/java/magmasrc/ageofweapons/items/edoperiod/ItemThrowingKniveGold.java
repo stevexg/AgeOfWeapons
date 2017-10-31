@@ -26,8 +26,12 @@ public class ItemThrowingKniveGold extends ItemCustomWeapon {
     public ItemThrowingKniveGold(ToolMaterial material) {
         super(material, 3.5F);
 
-        this.setCreativeTab(ModTabs.edoTab);
         this.setMaxStackSize(16);
+        if(AgeOfWeapons.activateOnlyOneTab){
+        	this.setCreativeTab(ModTabs.generalTab);
+        } else {
+        	this.setCreativeTab(ModTabs.edoTab);
+        }	
     }
 
     
@@ -36,8 +40,6 @@ public class ItemThrowingKniveGold extends ItemCustomWeapon {
     	if(AgeOfWeapons.activateShowAges) {
     		addList.add(ChatFormatting.DARK_GRAY + "Edo Period");
     	}	
-    	
-		addList.add(ChatFormatting.RED + "Work in progress");
     }
     
     
@@ -61,7 +63,7 @@ public class ItemThrowingKniveGold extends ItemCustomWeapon {
         
         if (!worldIn.isRemote){
             EntityThrowingGoldKnive obj = new EntityThrowingGoldKnive(worldIn, playerIn);
-            obj.setHeadingFromThrower(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 0.3F, 1.0F);
+            obj.setHeadingFromThrower(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 1.0F, 1.0F);
             worldIn.spawnEntity(obj);
         }
 

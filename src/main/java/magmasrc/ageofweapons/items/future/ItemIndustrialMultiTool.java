@@ -3,6 +3,7 @@ package magmasrc.ageofweapons.items.future;
 import java.util.List;
 import java.util.Set;
 
+import magmasrc.ageofweapons.main.AgeOfWeapons;
 import magmasrc.ageofweapons.main.ModItems;
 import magmasrc.ageofweapons.main.ModTabs;
 import magmasrc.ageofweapons.util.ItemCustomIndustrialMulti;
@@ -30,15 +31,21 @@ public class ItemIndustrialMultiTool extends ItemCustomIndustrialMulti {
 	
     public ItemIndustrialMultiTool(ToolMaterial material) {
     	super(1, 0, 0F, material, EFFECTIVE_ON, "pickaxe", ModItems.industrialTM.getHarvestLevel(), 0.5F);
-        this.setCreativeTab(ModTabs.futureTab);
         this.setMaxStackSize(1);
+        if(AgeOfWeapons.activateOnlyOneTab){
+        	this.setCreativeTab(ModTabs.generalTab);
+        } else {
+        	this.setCreativeTab(ModTabs.futureTab);
+        }
     }
     
     
 
 	@Override
 	public void addInformation(ItemStack  stack, EntityPlayer playerIn, List addList, boolean advanced) {
+		if(AgeOfWeapons.activateShowAges) {	
 			addList.add(ChatFormatting.GRAY + "Future");
+		}
 	}
 	
 	

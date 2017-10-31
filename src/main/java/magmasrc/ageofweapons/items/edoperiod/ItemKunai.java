@@ -26,8 +26,12 @@ public class ItemKunai extends ItemCustomWeapon {
     public ItemKunai(ToolMaterial material) {
         super(material, 3.8F);
 
-        this.setCreativeTab(ModTabs.edoTab);
         this.setMaxStackSize(64);
+        if(AgeOfWeapons.activateOnlyOneTab){
+        	this.setCreativeTab(ModTabs.generalTab);
+        } else {
+        	this.setCreativeTab(ModTabs.edoTab);
+        }	
     }
 
     
@@ -36,9 +40,6 @@ public class ItemKunai extends ItemCustomWeapon {
     	if(AgeOfWeapons.activateShowAges) {
     		addList.add(ChatFormatting.DARK_GRAY + "Edo Period");
     	}	
-    	
-		addList.add(ChatFormatting.RED + "Work in progress");
-
     }
     
     
@@ -60,11 +61,11 @@ public class ItemKunai extends ItemCustomWeapon {
         }
 
         worldIn.playSound((EntityPlayer)null, playerIn.posX, playerIn.posY, playerIn.posZ, SoundEvents.ENTITY_SNOWBALL_THROW, SoundCategory.NEUTRAL, 0.5F, 0.4F / (itemRand.nextFloat() * 0.4F + 0.8F));
-        playerIn.getCooldownTracker().setCooldown(this, 10);
+        playerIn.getCooldownTracker().setCooldown(this, 5);
         
         if (!worldIn.isRemote){
             EntityKunai obj = new EntityKunai(worldIn, playerIn);
-            obj.setHeadingFromThrower(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 0.3F + (float) Math.random(), 1.0F);
+            obj.setHeadingFromThrower(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 1.3F + (float) Math.random(), 1.0F);
             worldIn.spawnEntity(obj);
         }
 

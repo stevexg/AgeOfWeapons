@@ -4,14 +4,17 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
+import magmasrc.ageofweapons.main.AgeOfWeapons;
 import magmasrc.ageofweapons.main.ModTabs;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockFence;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityAreaEffectCloud;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
 import net.minecraft.init.MobEffects;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
@@ -35,12 +38,15 @@ public class BlockToxicMine extends Block {
 
 	public BlockToxicMine() {
 		super(Material.CORAL);
-		this.setCreativeTab(ModTabs.earlyModernAgeTab);
 		this.setHardness(1.0F);
-		this.setResistance(1.0F);
 		this.setSoundType(SoundType.METAL);	
 		this.setHarvestLevel("shovel", 0);
 		this.setLightOpacity(1);
+        if(AgeOfWeapons.activateOnlyOneTab){
+        	this.setCreativeTab(ModTabs.generalTab);
+        } else {
+        	this.setCreativeTab(ModTabs.earlyModernAgeTab);
+        }
 	}
 	
 	
@@ -48,6 +54,7 @@ public class BlockToxicMine extends Block {
 	public void onEntityCollidedWithBlock(World worldIn, BlockPos pos, IBlockState state, Entity entityIn) {
 		if (!worldIn.isRemote) {
 			entityIn.attackEntityFrom(DamageSource.GENERIC, 2.0F);
+            worldIn.setBlockState(pos, Blocks.AIR.getDefaultState(), 11);
 			worldIn.createExplosion(entityIn, pos.getX(), pos.getY(), pos.getZ(), 2, true);
 			
 	    	EntityAreaEffectCloud cloud = new EntityAreaEffectCloud(worldIn, pos.getX(), pos.getY()+ 0.5F, pos.getZ());
@@ -89,6 +96,28 @@ public class BlockToxicMine extends Block {
     @SideOnly(Side.CLIENT)
     public BlockRenderLayer getBlockLayer() {
         return BlockRenderLayer.CUTOUT;
+    }
+    
+    
+    
+    @Override
+    public boolean canPlaceBlockAt(World worldIn, BlockPos pos){
+        return this.canBePlacedOn(worldIn, pos.down());
+    }
+
+ 
+    @Override
+    public void neighborChanged(IBlockState state, World worldIn, BlockPos pos, Block blockIn, BlockPos fromPos){
+        if (!this.canBePlacedOn(worldIn, pos.down()))
+        {
+            this.dropBlockAsItem(worldIn, pos, state, 0);
+            worldIn.setBlockToAir(pos);
+        }
+    }
+
+    
+    private boolean canBePlacedOn(World worldIn, BlockPos pos){
+        return worldIn.getBlockState(pos).isFullyOpaque() || worldIn.getBlockState(pos).getBlock() instanceof BlockFence;
     }
 	
 }

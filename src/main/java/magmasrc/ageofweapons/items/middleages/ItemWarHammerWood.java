@@ -28,8 +28,12 @@ public class ItemWarHammerWood extends ItemCustomWeapon {
     public ItemWarHammerWood(ToolMaterial material) {
         super(material, 0.3F);
 
-        this.setCreativeTab(ModTabs.middleAgesTab);
         this.setMaxStackSize(1);
+        if(AgeOfWeapons.activateOnlyOneTab){
+        	this.setCreativeTab(ModTabs.generalTab);
+        } else {
+        	this.setCreativeTab(ModTabs.middleAgesTab);
+        }
     }
 
     

@@ -3,6 +3,7 @@ package magmasrc.ageofweapons.items.modernage;
 import java.util.List;
 import java.util.Set;
 
+import magmasrc.ageofweapons.main.AgeOfWeapons;
 import magmasrc.ageofweapons.main.ModTabs;
 import magmasrc.ageofweapons.util.ItemCustomIndustrial;
 import net.minecraft.block.Block;
@@ -21,14 +22,20 @@ public class ItemIndustrialExcavator extends ItemCustomIndustrial {
 	
     public ItemIndustrialExcavator(ToolMaterial material) {
     	super(1, 0, 0F, material, EFFECTIVE_ON, "shovel", 3, 0.5F);
-        this.setCreativeTab(ModTabs.modernAgeTab);
         this.setMaxStackSize(1);
+        if(AgeOfWeapons.activateOnlyOneTab){
+        	this.setCreativeTab(ModTabs.generalTab);
+        } else {
+        	this.setCreativeTab(ModTabs.modernAgeTab);
+        }	
     }
     
     
 	@Override
 	public void addInformation(ItemStack  stack, EntityPlayer playerIn, List addList, boolean advanced) {
+		if(AgeOfWeapons.activateShowAges) {	
 			addList.add(ChatFormatting.GRAY + "Modern Age");
+		}
 	}
 	
 	

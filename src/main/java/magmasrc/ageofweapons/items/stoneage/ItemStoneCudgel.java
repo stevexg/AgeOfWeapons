@@ -17,8 +17,12 @@ public class ItemStoneCudgel extends ItemCustomWeapon {
     public ItemStoneCudgel(ToolMaterial material) {
         super(material, 1.2F);
         
-        this.setCreativeTab(ModTabs.stoneAgeTab);
         this.setMaxStackSize(1);
+        if(AgeOfWeapons.activateOnlyOneTab){
+        	this.setCreativeTab(ModTabs.generalTab);
+        } else {
+        	this.setCreativeTab(ModTabs.stoneAgeTab);
+        }	
     }
     
     

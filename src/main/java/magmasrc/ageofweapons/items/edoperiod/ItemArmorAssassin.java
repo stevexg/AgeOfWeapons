@@ -1,5 +1,6 @@
 package magmasrc.ageofweapons.items.edoperiod;
 
+import magmasrc.ageofweapons.main.AgeOfWeapons;
 import magmasrc.ageofweapons.main.ModItems;
 import magmasrc.ageofweapons.main.ModTabs;
 import net.minecraft.entity.player.EntityPlayer;
@@ -16,8 +17,12 @@ public class ItemArmorAssassin extends ItemArmor {
 
 	public ItemArmorAssassin(ArmorMaterial materialIn, int renderIndexIn, EntityEquipmentSlot equipmentSlotIn) {
 		super(materialIn, renderIndexIn, equipmentSlotIn);
-		this.setCreativeTab(ModTabs.edoTab);
-	}
+        if(AgeOfWeapons.activateOnlyOneTab){
+        	this.setCreativeTab(ModTabs.generalTab);
+        } else {
+        	this.setCreativeTab(ModTabs.edoTab);
+        }	
+        }
 	
 	@Override
 	public boolean getIsRepairable(ItemStack armor, ItemStack stack) {
@@ -43,9 +48,8 @@ public class ItemArmorAssassin extends ItemArmor {
 	
 
 	private void effectPlayer(EntityPlayer player, Potion potion, int amplifier) {
-	    //Always effect for 8 seconds, then refresh
 	    if (player.getActivePotionEffect(potion) == null || player.getActivePotionEffect(potion).getDuration() <= 1)
-	        player.addPotionEffect(new PotionEffect(MobEffects.JUMP_BOOST, 159, amplifier, true, true));
+	        player.addPotionEffect(new PotionEffect(MobEffects.JUMP_BOOST, 10, amplifier, true, true));
 	}
 
 }

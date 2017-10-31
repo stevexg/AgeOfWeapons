@@ -26,8 +26,12 @@ public class ItemThrowingKniveDiamond extends ItemCustomWeapon {
     public ItemThrowingKniveDiamond(ToolMaterial material) {
         super(material, 3.5F);
 
-        this.setCreativeTab(ModTabs.edoTab);
         this.setMaxStackSize(16);
+        if(AgeOfWeapons.activateOnlyOneTab){
+        	this.setCreativeTab(ModTabs.generalTab);
+        } else {
+        	this.setCreativeTab(ModTabs.edoTab);
+        }	
     }
 
     
@@ -35,9 +39,7 @@ public class ItemThrowingKniveDiamond extends ItemCustomWeapon {
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List addList, boolean advanced) {
     	if(AgeOfWeapons.activateShowAges) {
     		addList.add(ChatFormatting.DARK_GRAY + "Edo Period");
-    	}	
-    	
-		addList.add(ChatFormatting.RED + "Work in progress");
+    	}	    
     }
     
     
@@ -62,7 +64,7 @@ public class ItemThrowingKniveDiamond extends ItemCustomWeapon {
         
         if (!worldIn.isRemote){
             EntityThrowingDiamondKnive obj = new EntityThrowingDiamondKnive(worldIn, playerIn);
-            obj.setHeadingFromThrower(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 0.3F, 1.0F);
+            obj.setHeadingFromThrower(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 1.0F, 1.0F);
             worldIn.spawnEntity(obj);
         }
 

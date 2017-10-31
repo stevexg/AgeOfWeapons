@@ -16,8 +16,12 @@ public class ItemClaymoreGold extends ItemCustomWeapon {
     public ItemClaymoreGold(ToolMaterial material) {
         super(material, 1.1F);
 
-        this.setCreativeTab(ModTabs.fantasyTab);
         this.setMaxStackSize(1);
+        if(AgeOfWeapons.activateOnlyOneTab){
+        	this.setCreativeTab(ModTabs.generalTab);
+        } else {
+        	this.setCreativeTab(ModTabs.fantasyTab);
+        }
     }
 
     

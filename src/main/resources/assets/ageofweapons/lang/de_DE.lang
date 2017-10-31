@@ -31,6 +31,7 @@ tile.sapphire_block.name=Saphir Block
 tile.amethyst_block.name=Amethyst Block
 tile.topaz_block.name=Topas Block
 tile.amber_block.name=Bernstein Block
+tile.withered_iron_block.name=Verdorrter Eisen Block
 
 tile.barbed_wire.name=Stacheldraht
 tile.nail_trap.name=Nagel Falle
@@ -42,9 +43,15 @@ tile.bear_trap.name=Bären Falle
 tile.fall_trap_dirt.name=Erd Gruben Falle
 tile.fall_trap_planks.name=Brett Gruben Falle
 tile.fall_trap_stone.name=Stein Gruben Falle
+tile.obstacle.name=Barrikade
 
 tile.neutron_bomb.name=Neutronen Bombe
 tile.nuclear_bomb.name=Nuklear Bombe
+tile.spikes.name=Spitzen
+tile.spikes_on.name=Spitzen
+tile.spikes_toxic.name=Giftige Spitzen
+tile.spikes_toxic_on.name=Giftige Spitzen
+tile.time_bomb.name=Zeitbombe
 
 
 
@@ -111,6 +118,12 @@ item.topaz_shard.name=Topas Scherbe
 item.glass_shard.name=Glas Scherbe
 item.hammer.name=Hammer
 item.cloth.name=Stoff
+item.wither_dust.name=Wither Straub
+item.withered_iron_ingot.name=Verdorrter Eisen Barren
+item.withered_iron_shard.name=Verdorrter Eisen Splitter
+item.axe_blade_withered.name=Verdorrte Axt Schneide
+item.sword_blade_withered.name=Verdorrte Schwert Klinge
+item.broad_blade_withered.name=Verdorrte Breitklinge
 
 
 //StoneAge
@@ -205,6 +218,10 @@ item.compound_bow.name=Compoundbogen
 item.dynamite.name=Dynamit Stange
 item.nails.name=Nägel
 item.nails_toxic.name=Giftige Nägel
+item.soldier_helmet.name=Soldaten Helm
+item.soldier_chestplate.name=Soldaten Brustpanzer
+item.soldier_leggings.name=Soldaten Beinschutz
+item.soldier_boots.name=Soldaten Stiefel
 
 //Mystic
 item.mystic_knive.name=Mystisches Schwert
@@ -299,6 +316,15 @@ item.magazine_big.name=Großes Magazin
 item.magazine_drum.name=Magazin Trommel
 item.shotgun_ammo.name=Rote Schrot Munition
 item.shotgun_ammo2.name=Blaue Schrot Munition
+item.grenade.name=Granate
+item.grenade_frag.name=Splitter Granate
+item.grenade_poison.name=Giftgas Granate
+item.grenade_smoke.name=Rauchgranate
+item.molotov_cocktail.name=Molotowcocktail
+item.modern_soldier_helmet.name=Spec Ops Helm
+item.modern_soldier_chestplate.name=Spec Ops Brustpanzer
+item.modern_soldier_leggings.name=Spec Ops Beinschutz
+item.modern_soldier_boots.name=Spec Ops Stiefel
 
 //Future
 item.poison_thrower.name=Giftwerfer
@@ -306,6 +332,46 @@ item.industrial_multi_tool.name=Industrielles Multifunktions Werkzeug
 item.tank_poison.name=Tank (Gift)
 item.tank_water.name=Tank (Wasser)
 item.water_thrower.name=Tragbarer Wasserwerfer
+item.imploder.name=Implodierer
+item.future_soldier_helmet.name=Roboter Soldaten Helm
+item.future_soldier_chestplate.name=Roboter Soldaten Brustpanzer
+item.future_soldier_leggings.name=Roboter Soldaten Beinschutz
+item.future_soldier_boots.name=Roboter Soldaten Stiefel
+
+
+//Epic
+item.herobrine_bow.name=Herobrine's Bogen
+item.herobrine_sword.name=Herobrine's Sword
+item.master_sword.name=Meister Schwert
+item.master_axe.name=Meister Axt
+item.master_pickaxe.name=Meister Spitzhacke
+item.master_shovel.name=Meister Axt
+item.master_helmet.name=Meister Helm
+item.master_chestplate.name=Meister Brustpanzer
+item.master_leggings.name=Meister Beinschutz
+item.master_boots.name=Meister Stiefel
+item.legendary_sword.name=Legendäres Schwert
+item.epic_katana.name=Rex's Katana
+item.epic_waraxe.name=Steve's Kriegsaxt
+item.epic_battle_axe.name=JSQ's Kampfaxt
+
+//Piracy
+item.cast_net.name=Fangnetz
+item.grappling_hook.name=Greifhaken
+item.grappling_iron.name=Enterhaken
+item.harpoon.name=Harpone
+item.machete_diamond.name=Diamant Machete
+item.machete_gold.name=Gold Machete
+item.machete_iron.name=Eisen Machete
+item.machete_stone.name=Stein Machete
+item.machete_wood.name=Holz Machete
+item.telescope.name=Teleskop
+item.saber_diamond.name=Diamant Säbel
+item.saber_gold.name=Gold Säbel
+item.saber_iron.name=Eisen Säbel
+item.saber_stone.name=Stein Säbel
+item.saber_wood.name=Holz Säbel
+
 
 
 

@@ -27,9 +27,13 @@ public class ItemWarhornDefensive extends Item {
 	
 	public ItemWarhornDefensive () {
 		super();
-		this.setCreativeTab(ModTabs.mysticTab);
 		this.setMaxStackSize(1);
         this.setMaxDamage(100);
+        if(AgeOfWeapons.activateOnlyOneTab){
+        	this.setCreativeTab(ModTabs.generalTab);
+        } else {
+        	this.setCreativeTab(ModTabs.mysticTab);
+        }
 	}
 	
 	

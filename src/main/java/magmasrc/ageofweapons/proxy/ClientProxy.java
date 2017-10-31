@@ -1,20 +1,26 @@
 package magmasrc.ageofweapons.proxy;
 
-import magmasrc.ageofweapons.entity.EntityDynamite;
-import magmasrc.ageofweapons.entity.render.EntityDynamiteRenderer;
+import magmasrc.ageofweapons.entity.render.RenderRegistry;
 import magmasrc.ageofweapons.main.ModBlocks;
 import magmasrc.ageofweapons.main.ModItems;
 import magmasrc.ageofweapons.util.ModelHandler;
-import net.minecraft.block.Block;
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.block.model.ModelResourceLocation;
-import net.minecraft.item.Item;
-import net.minecraftforge.fml.client.registry.RenderingRegistry;
  
 public class ClientProxy extends ServerProxy {
- 
+	
+	
     @Override
-    public void registerClientStuff() {
+    public void registerPreInit() {
+    	
+    /** Renderers **/
+    	
+    RenderRegistry.registerEntityRenderers();
+    }
+    
+    
+    
+    
+    @Override
+    public void registerInit() {
     	
  	/** Items **/
     	
@@ -78,6 +84,12 @@ public class ClientProxy extends ServerProxy {
     	ModelHandler.registerModel(ModItems.glassShard);
     	ModelHandler.registerModel(ModItems.hammer);
     	ModelHandler.registerModel(ModItems.cloth);
+    	ModelHandler.registerModel(ModItems.witherDust);
+    	ModelHandler.registerModel(ModItems.witheredIronIngot);
+    	ModelHandler.registerModel(ModItems.witheredIronShard);
+    	ModelHandler.registerModel(ModItems.broadBladeWithered);
+    	ModelHandler.registerModel(ModItems.axeBladeWithered);
+    	ModelHandler.registerModel(ModItems.swordBladeWithered);
 
 		// StoneAge
     	ModelHandler.registerModel(ModItems.rock);
@@ -171,6 +183,10 @@ public class ClientProxy extends ServerProxy {
     	ModelHandler.registerModel(ModItems.nails);
     	ModelHandler.registerModel(ModItems.nailsToxic);
     	ModelHandler.registerModel(ModItems.blankRifle);
+    	ModelHandler.registerModel(ModItems.soldierBoots);
+    	ModelHandler.registerModel(ModItems.soldierChestplate);
+    	ModelHandler.registerModel(ModItems.soldierHelmet);
+    	ModelHandler.registerModel(ModItems.soldierLeggings);
     	
 		//Mystic
     	ModelHandler.registerModel(ModItems.mysticKnive);
@@ -265,6 +281,15 @@ public class ClientProxy extends ServerProxy {
     	ModelHandler.registerModel(ModItems.magazineDrum);
     	ModelHandler.registerModel(ModItems.shotgunAmmo);
     	ModelHandler.registerModel(ModItems.shotgunAmmo2);
+    	ModelHandler.registerModel(ModItems.grenade);
+    	ModelHandler.registerModel(ModItems.grenadeFrag);
+    	ModelHandler.registerModel(ModItems.grenadePoison);
+    	ModelHandler.registerModel(ModItems.grenadeSmoke);
+    	ModelHandler.registerModel(ModItems.molotovCocktail);
+    	ModelHandler.registerModel(ModItems.modernSoldierBoots);
+    	ModelHandler.registerModel(ModItems.modernSoldierChestplate);
+    	ModelHandler.registerModel(ModItems.modernSoldierHelmet);
+    	ModelHandler.registerModel(ModItems.modernSoldierLeggings);
 
     	//Future
     	ModelHandler.registerModel(ModItems.tankPoison);
@@ -272,6 +297,47 @@ public class ClientProxy extends ServerProxy {
     	ModelHandler.registerModel(ModItems.industrialMultiTool);
     	ModelHandler.registerModel(ModItems.waterThrower);
     	ModelHandler.registerModel(ModItems.tankWater);
+    	ModelHandler.registerModel(ModItems.imploder);
+    	ModelHandler.registerModel(ModItems.futureSoldierBoots);
+    	ModelHandler.registerModel(ModItems.futureSoldierChestplate);
+    	ModelHandler.registerModel(ModItems.futureSoldierHelmet);
+    	ModelHandler.registerModel(ModItems.futureSoldierLeggings);
+    	
+    	//Epic
+    	ModelHandler.registerModel(ModItems.herobrineBow);
+    	ModelHandler.registerModel(ModItems.herobrineSword);
+    	ModelHandler.registerModel(ModItems.masterAxe);
+    	ModelHandler.registerModel(ModItems.masterBoots);
+    	ModelHandler.registerModel(ModItems.masterChestplate);
+    	ModelHandler.registerModel(ModItems.masterHelmet);
+    	ModelHandler.registerModel(ModItems.masterLeggings);
+    	ModelHandler.registerModel(ModItems.masterPickaxe);
+    	ModelHandler.registerModel(ModItems.masterShovel);
+    	ModelHandler.registerModel(ModItems.masterSword);
+    	ModelHandler.registerModel(ModItems.epicBattleAxe);
+    	ModelHandler.registerModel(ModItems.epicKatana);
+    	ModelHandler.registerModel(ModItems.epicWaraxe);
+    	ModelHandler.registerModel(ModItems.legendarySword);
+    	
+    	//Piracy
+    	ModelHandler.registerModel(ModItems.castNet);
+    	ModelHandler.registerModel(ModItems.grapplingIron);
+    	ModelHandler.registerModel(ModItems.grapplingHook);
+    	ModelHandler.registerModel(ModItems.harpoon);
+    	ModelHandler.registerModel(ModItems.macheteWood);
+    	ModelHandler.registerModel(ModItems.macheteStone);
+    	ModelHandler.registerModel(ModItems.macheteIron);
+    	ModelHandler.registerModel(ModItems.macheteGold);
+    	ModelHandler.registerModel(ModItems.macheteDiamond);
+    	ModelHandler.registerModel(ModItems.saberWood);
+    	ModelHandler.registerModel(ModItems.saberStone);
+    	ModelHandler.registerModel(ModItems.saberIron);
+    	ModelHandler.registerModel(ModItems.saberGold);
+    	ModelHandler.registerModel(ModItems.saberDiamond);
+    	ModelHandler.registerModel(ModItems.telescope);
+
+
+
 
 		
 		
@@ -280,7 +346,6 @@ public class ClientProxy extends ServerProxy {
     	
     	ModelHandler.registerModel(ModBlocks.tableOfAges);
     	ModelHandler.registerModel(ModBlocks.crusher);
-        //ModelHandler.registerModel(ModBlocks.crusherOn);
     	ModelHandler.registerModel(ModBlocks.nexus);
     	ModelHandler.registerModel(ModBlocks.nexus2);
     	ModelHandler.registerModel(ModBlocks.nexus3);
@@ -291,6 +356,7 @@ public class ClientProxy extends ServerProxy {
     	ModelHandler.registerModel(ModBlocks.amethystBlock);
     	ModelHandler.registerModel(ModBlocks.amberBlock);
     	ModelHandler.registerModel(ModBlocks.topazBlock);
+    	ModelHandler.registerModel(ModBlocks.witheredIronBlock);
     	
     	ModelHandler.registerModel(ModBlocks.barbedWire);
     	ModelHandler.registerModel(ModBlocks.nailTrap);
@@ -302,41 +368,16 @@ public class ClientProxy extends ServerProxy {
     	ModelHandler.registerModel(ModBlocks.fallTrapDirt);
     	ModelHandler.registerModel(ModBlocks.fallTrapPlanks);
     	ModelHandler.registerModel(ModBlocks.fallTrapStone);
+    	ModelHandler.registerModel(ModBlocks.barbedWireFence);
+    	ModelHandler.registerModel(ModBlocks.obstacle);
     	
     	ModelHandler.registerModel(ModBlocks.neutronBomb);
     	ModelHandler.registerModel(ModBlocks.nuclearBomb);
-  
-    }
-
-    
-    
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-	/** Entitys **/
-	
-	public void registerRenderer() {
-
-		
-	/**
-		RenderingRegistry.registerEntityRenderingHandler(EntityDynamite.class, new IRenderFactory() {
-
-			@Override
-			public Render createRenderFor(RenderManager manager) {
-				return new RenderSnowball<EntityDynamite>(manager, ModItems.dynamite, Minecraft.getMinecraft().getRenderItem());
-			}
-		}); **/
-		 RenderingRegistry.registerEntityRenderingHandler(EntityDynamite.class, EntityDynamiteRenderer.FACTORY);
-
-	}
-
+    	ModelHandler.registerModel(ModBlocks.spikes);
+    	ModelHandler.registerModel(ModBlocks.spikesToxic);
+    	ModelHandler.registerModel(ModBlocks.timeBomb);
+ 
+    	}
 }
    
 

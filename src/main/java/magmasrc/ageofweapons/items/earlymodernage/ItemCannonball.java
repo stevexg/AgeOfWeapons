@@ -8,8 +8,12 @@ public class ItemCannonball extends Item {
 	
 	public ItemCannonball () {
 		super();
-		this.setCreativeTab(ModTabs.earlyModernAgeTab);
 		this.setMaxStackSize(32);
+        if(AgeOfWeapons.activateOnlyOneTab){
+        	this.setCreativeTab(ModTabs.generalTab);
+        } else {
+        	this.setCreativeTab(ModTabs.earlyModernAgeTab);
+        }
 	}
 
 }

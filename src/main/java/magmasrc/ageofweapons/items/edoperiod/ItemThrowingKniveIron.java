@@ -26,8 +26,12 @@ public class ItemThrowingKniveIron extends ItemCustomWeapon {
     public ItemThrowingKniveIron(ToolMaterial material) {
         super(material, 3.5F);
 
-        this.setCreativeTab(ModTabs.edoTab);
         this.setMaxStackSize(16);
+        if(AgeOfWeapons.activateOnlyOneTab){
+        	this.setCreativeTab(ModTabs.generalTab);
+        } else {
+        	this.setCreativeTab(ModTabs.edoTab);
+        }	
     }
 
     
@@ -36,8 +40,6 @@ public class ItemThrowingKniveIron extends ItemCustomWeapon {
     	if(AgeOfWeapons.activateShowAges) {
     		addList.add(ChatFormatting.DARK_GRAY + "Edo Period");
     	}	
-    	
-		addList.add(ChatFormatting.RED + "Work in progress");
     }
     
     
@@ -61,11 +63,10 @@ public class ItemThrowingKniveIron extends ItemCustomWeapon {
         
         if (!worldIn.isRemote){
             EntityThrowingIronKnive obj = new EntityThrowingIronKnive(worldIn, playerIn);
-            obj.setHeadingFromThrower(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 0.3F, 1.0F);
+            obj.setHeadingFromThrower(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 1.0F, 1.0F);
             worldIn.spawnEntity(obj);
         }
 
-        
         playerIn.addStat(StatList.getObjectUseStats(this));
         return new ActionResult(EnumActionResult.SUCCESS, itemstack);
     }

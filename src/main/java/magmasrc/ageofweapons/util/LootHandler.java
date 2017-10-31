@@ -193,6 +193,7 @@ public class LootHandler
 	            addLoot(pool, ModItems.amber, 10);
 	            addLoot(pool, ModItems.upgradeEpic, 1);
 	            addLoot(pool, ModItems.topaz, 1);
+	            addLoot(pool, ModItems.witherDust, 5);
 	            
 		     if(AgeOfWeapons.activateDungeonLoot) {	
 	            addLoot(pool, ModItems.handAxStone, 3);
@@ -232,6 +233,8 @@ public class LootHandler
 	            addLoot(pool, ModItems.amber, 10);
 	            addLoot(pool, ModItems.upgradeEpic, 1);
 	            addLoot(pool, ModItems.topaz, 1);
+	            addLoot(pool, ModItems.witherDust, 1);
+
 	            
 			     if(AgeOfWeapons.activateDungeonLoot) {	
 			            addLoot(pool, ModItems.handAxStone, 3);
@@ -271,6 +274,8 @@ public class LootHandler
 	            addLoot(pool, ModItems.amber, 10);
 	            addLoot(pool, ModItems.upgradeEpic, 1);
 	            addLoot(pool, ModItems.topaz, 1);
+	            addLoot(pool, ModItems.witherDust, 5);
+	            addLoot(pool, ModItems.witheredIronIngot, 1);
 	            
 			     if(AgeOfWeapons.activateDungeonLoot) {	
 			            addLoot(pool, ModItems.handAxStone, 3);
@@ -310,7 +315,18 @@ public class LootHandler
 	            addLoot(pool, ModItems.amber, 10);
 	            addLoot(pool, ModItems.upgradeEpic, 1);
 	            addLoot(pool, ModItems.topaz, 5);
+	            addLoot(pool, ModItems.witherDust, 5);
+	            addLoot(pool, ModItems.witheredIronIngot, 5);
 	        }
 	        
+	        
+	        
+	        
+	        if(event.getName().equals(LootTableList.ENTITIES_WITHER_SKELETON))
+	        {
+	            LootPool pool = event.getTable().getPool("main");
+	            addLoot(pool, ModItems.witherDust, 30);
+	        }
+
 	    }
 	}

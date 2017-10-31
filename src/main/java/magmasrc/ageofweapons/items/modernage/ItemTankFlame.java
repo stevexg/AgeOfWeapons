@@ -8,7 +8,10 @@ public class ItemTankFlame extends Item {
 	
 	public ItemTankFlame () {
 		super();
-		this.setCreativeTab(ModTabs.modernAgeTab);
-	}
+        if(AgeOfWeapons.activateOnlyOneTab){
+        	this.setCreativeTab(ModTabs.generalTab);
+        } else {
+        	this.setCreativeTab(ModTabs.modernAgeTab);
+        }		}
 
 }

@@ -8,7 +8,10 @@ public class ItemConcentratedGunpowder extends Item {
 	
 	public ItemConcentratedGunpowder () {
 		super();
-		this.setCreativeTab(ModTabs.modernAgeTab);
-	}
+        if(AgeOfWeapons.activateOnlyOneTab){
+        	this.setCreativeTab(ModTabs.generalTab);
+        } else {
+        	this.setCreativeTab(ModTabs.modernAgeTab);
+        }		}
 
 }

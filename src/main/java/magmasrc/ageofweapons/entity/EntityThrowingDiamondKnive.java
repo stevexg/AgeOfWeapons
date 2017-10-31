@@ -6,8 +6,11 @@ import net.minecraft.entity.projectile.EntityThrowable;
 import net.minecraft.entity.projectile.EntityArrow;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumParticleTypes;
+import net.minecraft.util.datafix.DataFixer;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class EntityThrowingDiamondKnive extends EntityThrowable{
 
@@ -23,7 +26,6 @@ public class EntityThrowingDiamondKnive extends EntityThrowable{
 	
 	@Override
 	public void onImpact(RayTraceResult result) {
-	
 		     if (result.entityHit instanceof Entity) {
 		            int i = 1;
 
@@ -37,15 +39,12 @@ public class EntityThrowingDiamondKnive extends EntityThrowable{
 		    }
 
 	
-	
-	@Override
-	public void onUpdate() {
-		super.onUpdate();
-		
-		if (!this.world.isRemote && !this.inGround) {
-			this.world.spawnParticle(EnumParticleTypes.CRIT, this.posX, this.posY, this.posZ, 0.0D, 0.0D, 0.0D, new int[0]);
-		}
+	@SideOnly(Side.CLIENT)
+	public EntityThrowingDiamondKnive(World worldIn, double x, double y, double z) {
+		super(worldIn, x, y, z);
 	}
 	
-	
+	public static void registerFix(DataFixer fixer) {
+		EntityThrowable.registerFixesThrowable(fixer, "ThrowingDiamondKnive");
+	}
 }

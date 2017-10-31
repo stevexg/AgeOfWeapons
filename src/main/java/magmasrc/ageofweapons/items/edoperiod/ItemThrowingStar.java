@@ -22,7 +22,11 @@ public class ItemThrowingStar extends Item {
 	
 	public ItemThrowingStar () {
 		super();
-	//	this.setCreativeTab(ModTabs.edoTab);			WIP
+	if(AgeOfWeapons.activateOnlyOneTab){
+    	this.setCreativeTab(ModTabs.generalTab);
+    } else {
+    	this.setCreativeTab(ModTabs.edoTab);
+    }	
 	}
 	
 	
@@ -31,9 +35,7 @@ public class ItemThrowingStar extends Item {
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List addList, boolean advanced) {
     	if(AgeOfWeapons.activateShowAges) {
     		addList.add(ChatFormatting.DARK_GRAY + "Edo Period");
-    	}	
-    	
-		addList.add(ChatFormatting.RED + "Work in progress");
+    	}	    
     }
     
     
@@ -50,11 +52,11 @@ public class ItemThrowingStar extends Item {
         }
 
         worldIn.playSound((EntityPlayer)null, playerIn.posX, playerIn.posY, playerIn.posZ, SoundEvents.ENTITY_SNOWBALL_THROW, SoundCategory.NEUTRAL, 0.5F, 0.4F / (itemRand.nextFloat() * 0.4F + 0.8F));
-        playerIn.getCooldownTracker().setCooldown(this, 5);
+        playerIn.getCooldownTracker().setCooldown(this, 3);
         
         if (!worldIn.isRemote){
             EntityThrowingStar obj = new EntityThrowingStar(worldIn, playerIn);
-            obj.setHeadingFromThrower(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 0.3F, 1.0F);
+            obj.setHeadingFromThrower(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 1.0F, 1.0F);
             worldIn.spawnEntity(obj);
         }
 

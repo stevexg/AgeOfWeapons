@@ -8,7 +8,10 @@ public class ItemMagazineLong extends Item {
 	
 	public ItemMagazineLong () {
 		super();
-		this.setCreativeTab(ModTabs.modernAgeTab);
-	}
+        if(AgeOfWeapons.activateOnlyOneTab){
+        	this.setCreativeTab(ModTabs.generalTab);
+        } else {
+        	this.setCreativeTab(ModTabs.modernAgeTab);
+        }		}
 
 }

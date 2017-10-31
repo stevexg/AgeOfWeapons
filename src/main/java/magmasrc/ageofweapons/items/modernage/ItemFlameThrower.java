@@ -5,6 +5,7 @@ import java.util.Random;
 
 import com.mojang.realmsclient.gui.ChatFormatting;
 
+import magmasrc.ageofweapons.main.AgeOfWeapons;
 import magmasrc.ageofweapons.main.ModItems;
 import magmasrc.ageofweapons.main.ModTabs;
 import net.minecraft.entity.EntityLiving;
@@ -29,15 +30,21 @@ public class ItemFlameThrower extends Item {
 
     public ItemFlameThrower() {
         super();
-        this.setCreativeTab(ModTabs.modernAgeTab);
         this.setMaxStackSize(1);
         this.setMaxDamage(300);
+        if(AgeOfWeapons.activateOnlyOneTab){
+        	this.setCreativeTab(ModTabs.generalTab);
+        } else {
+        	this.setCreativeTab(ModTabs.modernAgeTab);
+        }	
     }
     
     
 	@Override
 	public void addInformation(ItemStack  stack, EntityPlayer playerIn, List addList, boolean advanced) {
+		if(AgeOfWeapons.activateShowAges) {	
 			addList.add(ChatFormatting.GRAY + "Modern Age");
+		}	
 	}
 	
 	

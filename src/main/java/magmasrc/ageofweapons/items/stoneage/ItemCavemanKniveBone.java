@@ -16,10 +16,14 @@ import java.util.List;
 public class ItemCavemanKniveBone extends ItemCustomWeapon {
 
     public ItemCavemanKniveBone(ToolMaterial material) {
-        super(material, 4);
+        super(material, 2.5F);
 
-        this.setCreativeTab(ModTabs.stoneAgeTab);
         this.setMaxStackSize(16);
+        if(AgeOfWeapons.activateOnlyOneTab){
+        	this.setCreativeTab(ModTabs.generalTab);
+        } else {
+        	this.setCreativeTab(ModTabs.stoneAgeTab);
+        }	
     }
 
     
