@@ -24,6 +24,11 @@ public class ItemEpicWaraxe extends ItemCustomAxe {
         super(material, 0.9F);
 
         this.setMaxStackSize(1);
+        if(AgeOfWeapons.activateOnlyOneTab){
+        	this.setCreativeTab(ModTabs.generalTab);
+        } else {
+        	this.setCreativeTab(ModTabs.epicTab);
+        }
     }
 
     

@@ -7,11 +7,13 @@ import javax.annotation.Nullable;
 import magmasrc.ageofweapons.main.AgeOfWeapons;
 import magmasrc.ageofweapons.main.ModTabs;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockFence;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.DamageSource;
@@ -33,7 +35,6 @@ public class BlockExplosiveMine extends Block {
 	public BlockExplosiveMine() {
 		super(Material.CORAL);
 		this.setHardness(1.0F);
-		this.setResistance(1.0F);
 		this.setSoundType(SoundType.METAL);	
 		this.setHarvestLevel("shovel", 0);
 		this.setLightOpacity(1);
@@ -49,6 +50,7 @@ public class BlockExplosiveMine extends Block {
 	public void onEntityCollidedWithBlock(World worldIn, BlockPos pos, IBlockState state, Entity entityIn) {
 		if (!worldIn.isRemote) {
 			entityIn.attackEntityFrom(DamageSource.GENERIC, 10.0F);
+            worldIn.setBlockState(pos, Blocks.AIR.getDefaultState(), 11);
 			worldIn.createExplosion(entityIn, pos.getX(), pos.getY(), pos.getZ(), 5, true);
 		}
     }
@@ -83,6 +85,28 @@ public class BlockExplosiveMine extends Block {
     @SideOnly(Side.CLIENT)
     public BlockRenderLayer getBlockLayer() {
         return BlockRenderLayer.CUTOUT;
+    }
+    
+    
+    
+    @Override
+    public boolean canPlaceBlockAt(World worldIn, BlockPos pos){
+        return this.canBePlacedOn(worldIn, pos.down());
+    }
+
+ 
+    @Override
+    public void neighborChanged(IBlockState state, World worldIn, BlockPos pos, Block blockIn, BlockPos fromPos){
+        if (!this.canBePlacedOn(worldIn, pos.down()))
+        {
+            this.dropBlockAsItem(worldIn, pos, state, 0);
+            worldIn.setBlockToAir(pos);
+        }
+    }
+
+    
+    private boolean canBePlacedOn(World worldIn, BlockPos pos){
+        return worldIn.getBlockState(pos).isFullyOpaque() || worldIn.getBlockState(pos).getBlock() instanceof BlockFence;
     }
 	
 }

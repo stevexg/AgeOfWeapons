@@ -40,8 +40,6 @@ public class ItemThrowingKniveGold extends ItemCustomWeapon {
     	if(AgeOfWeapons.activateShowAges) {
     		addList.add(ChatFormatting.DARK_GRAY + "Edo Period");
     	}	
-    	
-		addList.add(ChatFormatting.RED + "Work in progress");
     }
     
     
@@ -65,7 +63,7 @@ public class ItemThrowingKniveGold extends ItemCustomWeapon {
         
         if (!worldIn.isRemote){
             EntityThrowingGoldKnive obj = new EntityThrowingGoldKnive(worldIn, playerIn);
-            obj.setHeadingFromThrower(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 0.3F, 1.0F);
+            obj.setHeadingFromThrower(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 1.0F, 1.0F);
             worldIn.spawnEntity(obj);
         }
 

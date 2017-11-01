@@ -89,17 +89,12 @@ public class ModRecipes {
 		  GameRegistry.addShapelessRecipe(new ItemStack(ModItems.glassShard, 4), new ItemStack(Blocks.GLASS_PANE, 1, OreDictionary.WILDCARD_VALUE));
 		  GameRegistry.addShapedRecipe(new ItemStack(ModItems.cloth), "   ", "xxx", "xxx", 'x', Items.STRING);
 
-		  
-		  
-		  
 		  GameRegistry.addShapedRecipe(new ItemStack(ModItems.blankGun), "xxx", "  x", "  x", 'x', Items.IRON_INGOT);
 		  GameRegistry.addShapedRecipe(new ItemStack(ModItems.barrel), "   ", "xxx", "   ", 'x', Items.IRON_INGOT);
 		  GameRegistry.addShapedRecipe(new ItemStack(ModItems.gunHandle), "   ", " x ", "x  ", 'x', Items.IRON_INGOT);
 		  GameRegistry.addShapedRecipe(new ItemStack(ModItems.haftIron), " x ", " xx", " xx", 'x', Items.IRON_INGOT);
 		  GameRegistry.addShapedRecipe(new ItemStack(ModItems.haftWood), " x ", " xx", " xx", 'x', new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE));
 		  GameRegistry.addShapedRecipe(new ItemStack(ModItems.visor), "xxx", "o o", "xxx", 'x', Items.IRON_INGOT, 'o', new ItemStack(Blocks.GLASS_PANE, 1, 3));
-
-		  
 		  
 		  GameRegistry.addShapelessRecipe(new ItemStack(ModItems.woodShard, 3), new ItemStack(ModItems.hammer, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE));
 		  GameRegistry.addShapelessRecipe(new ItemStack(ModItems.stoneShard, 3), new ItemStack(ModItems.hammer, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Blocks.COBBLESTONE, 1, OreDictionary.WILDCARD_VALUE));
@@ -118,8 +113,6 @@ public class ModRecipes {
 		  GameRegistry.addShapelessRecipe(new ItemStack(ModItems.witherDust, 8), new ItemStack(ModItems.hammer, 1, OreDictionary.WILDCARD_VALUE), new ItemStack(Items.SKULL, 1, 1));
 		  
 		  GameRegistry.addShapedRecipe(new ItemStack(ModItems.hammer), " x ", " o ", " ", 'x', Blocks.STONE, 'o', Items.STICK);
-		  
-		  
 		}
 	}	
 	 
@@ -204,7 +197,6 @@ public class ModRecipes {
 						it.remove();
 					}
 					
-					
 					if(output.isItemEqual(new ItemStack(Items.DIAMOND_BOOTS))) {
 						it.remove();
 					}
@@ -266,7 +258,6 @@ public class ModRecipes {
 						it.remove();
 					}
 					
-					
 					if(output.isItemEqual(new ItemStack(Items.BOW))) {
 						it.remove();
 					}
@@ -282,8 +273,6 @@ public class ModRecipes {
 					if(output.isItemEqual(new ItemStack(Items.SHEARS))) {
 						it.remove();
 					}
-					
-					
 					
 				}
 			 }

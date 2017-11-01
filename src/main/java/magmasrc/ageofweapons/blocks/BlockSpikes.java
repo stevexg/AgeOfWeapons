@@ -11,6 +11,7 @@ import magmasrc.ageofweapons.main.AgeOfWeapons;
 import magmasrc.ageofweapons.main.ModBlocks;
 import magmasrc.ageofweapons.main.ModTabs;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockFence;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -82,7 +83,12 @@ public class BlockSpikes extends Block {
             else if (!this.isOn && worldIn.isBlockPowered(pos)) {
     	    	worldIn.setBlockState(pos, ModBlocks.spikesOn.getDefaultState(), 2);
            }	
-    	}     
+    	}
+        if (!this.canBePlacedOn(worldIn, pos.down()))
+        {
+            this.dropBlockAsItem(worldIn, pos, state, 0);
+            worldIn.setBlockToAir(pos);
+        }
     }
     
     
@@ -128,6 +134,16 @@ public class BlockSpikes extends Block {
     @Override
     public void addInformation(ItemStack stack, EntityPlayer playerIn, List addList, boolean advanced) {
     		addList.add(ChatFormatting.GRAY + "Needs redstone power");
+    }
+    
+    
+    @Override
+    public boolean canPlaceBlockAt(World worldIn, BlockPos pos){
+        return this.canBePlacedOn(worldIn, pos.down());
+    }
+
+    private boolean canBePlacedOn(World worldIn, BlockPos pos){
+        return worldIn.getBlockState(pos).isFullyOpaque() || worldIn.getBlockState(pos).getBlock() instanceof BlockFence;
     }
 	
 	

@@ -7,6 +7,7 @@ import javax.annotation.Nullable;
 import magmasrc.ageofweapons.main.AgeOfWeapons;
 import magmasrc.ageofweapons.main.ModTabs;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockFence;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
@@ -82,6 +83,28 @@ public class BlockNailTrap extends Block {
     @SideOnly(Side.CLIENT)
     public BlockRenderLayer getBlockLayer() {
         return BlockRenderLayer.CUTOUT;
+    }
+    
+    
+    
+    @Override
+    public boolean canPlaceBlockAt(World worldIn, BlockPos pos){
+        return this.canBePlacedOn(worldIn, pos.down());
+    }
+
+ 
+    @Override
+    public void neighborChanged(IBlockState state, World worldIn, BlockPos pos, Block blockIn, BlockPos fromPos){
+        if (!this.canBePlacedOn(worldIn, pos.down()))
+        {
+            this.dropBlockAsItem(worldIn, pos, state, 0);
+            worldIn.setBlockToAir(pos);
+        }
+    }
+
+    
+    private boolean canBePlacedOn(World worldIn, BlockPos pos){
+        return worldIn.getBlockState(pos).isFullyOpaque() || worldIn.getBlockState(pos).getBlock() instanceof BlockFence;
     }
 	
 }
