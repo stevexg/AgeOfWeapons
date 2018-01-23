@@ -38,9 +38,7 @@ public class TileEntityCrusher extends TileEntityLockable implements ITickable, 
     private static final int[] SLOTS_BOTTOM = new int[] {2, 1};
     private static final int[] SLOTS_SIDES = new int[] {1};
     private NonNullList<ItemStack> crusherItemStacks = NonNullList.<ItemStack>withSize(3, ItemStack.EMPTY);
-    /** The number of ticks that the crusher will keep burning */
     private int crusherBurnTime;
-    /** The number of ticks that a fresh copy of the currently-burning item would keep the crusher burning for */
     private int currentItemBurnTime;
     private int cookTime;
     private int totalCookTime;

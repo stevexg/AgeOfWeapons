@@ -18,6 +18,7 @@ import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.inventory.InventoryHelper;
+import net.minecraft.stats.StatList;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.util.EnumBlockRenderType;
@@ -65,10 +66,20 @@ public class BlockTableOfAges extends BlockContainer  {
 	}
 
 	@Override
-	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand, EnumFacing side, float hitX, float hitY, float hitZ) {
-		if (worldIn.isRemote) return true;
-		playerIn.openGui(AgeOfWeapons.instance, GuiHandlerTOA.getGuiID(), worldIn, pos.getX(), pos.getY(), pos.getZ());
-		return true;
+	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand,
+									EnumFacing side, float hitX, float hitY, float hitZ) {
+		if (worldIn.isRemote) {
+			return true;
+		} else {
+			TileEntity tileentity = worldIn.getTileEntity(pos);
+
+			if (tileentity instanceof TileEntityTableOfAges) {
+				playerIn.openGui(AgeOfWeapons.instance, GuiHandlerTOA.getGuiID(), worldIn, pos.getX(), pos.getY(), pos.getZ());
+				playerIn.addStat(StatList.CRAFTING_TABLE_INTERACTION);
+			}
+
+			return true;
+		}
 	}
 	
 
@@ -95,11 +106,8 @@ public class BlockTableOfAges extends BlockContainer  {
 
 	// Custom Model
 	
-	@Override
-	public boolean isOpaqueCube(IBlockState state) {
-		return false;
-	}
-	
+
+
     @Override
     public boolean isPassable(IBlockAccess worldIn, BlockPos pos){
         return true;
@@ -110,27 +118,28 @@ public class BlockTableOfAges extends BlockContainer  {
 	public BlockRenderLayer getBlockLayer(){
 		return BlockRenderLayer.CUTOUT;
 	}
-	
+
 
 	@Override
 	public boolean isFullCube(IBlockState state){
 		return true;
-	} 
+	}
 
 	@Override
 	public EnumBlockRenderType getRenderType(IBlockState iBlockState) {
 		return EnumBlockRenderType.MODEL;
 	}
-	
+
+	@SideOnly(Side.CLIENT)
 	@Override
 	public AxisAlignedBB getCollisionBoundingBox(IBlockState blockState, IBlockAccess worldIn, BlockPos pos) {
 		return FULL_BLOCK_AABB;
 	}
 
-	
-	
-	
-	
+
+
+
+
 		// Facing
 	
 		@Override
@@ -169,8 +178,8 @@ public class BlockTableOfAges extends BlockContainer  {
 		            worldIn.setBlockState(pos, state.withProperty(FACING, enumfacing), 2);
 		        }
 		    }
-		    
-		    
+
+
 		    @Override
 		    public IBlockState getStateForPlacement(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta, EntityLivingBase placer)
 		    {
