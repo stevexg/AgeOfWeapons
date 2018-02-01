@@ -81,7 +81,7 @@ public class BlockTableOfAges extends BlockContainer  {
 			return true;
 		}
 	}
-	
+
 
 	@Override
 	public void breakBlock(World worldIn, BlockPos pos, IBlockState state) {
@@ -99,9 +99,9 @@ public class BlockTableOfAges extends BlockContainer  {
 		super.breakBlock(worldIn, pos, state);
 
 	}
-	
 
-	
+
+
 
 
 	// Custom Model
