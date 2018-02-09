@@ -47,7 +47,22 @@ public class BlockTableOfAges extends BlockContainer  {
 
 	}
 
-	// Function
+	@Override
+	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand,
+									EnumFacing side, float hitX, float hitY, float hitZ) {
+		if (worldIn.isRemote) {
+			return true;
+		} else {
+			TileEntity tileentity = worldIn.getTileEntity(pos);
+
+			if (tileentity instanceof TileEntityTableOfAges) {
+				playerIn.openGui(AgeOfWeapons.instance, 0, worldIn, pos.getX(), pos.getY(), pos.getZ());
+				playerIn.addStat(StatList.CRAFTING_TABLE_INTERACTION);
+			}
+
+			return true;
+		}
+	}
 
 	@Override
 	public boolean isOpaqueCube(IBlockState state) {
@@ -63,24 +78,6 @@ public class BlockTableOfAges extends BlockContainer  {
 	public boolean hasTileEntity(IBlockState state){
 		return true;
 	}
-
-	@Override
-	public boolean onBlockActivated(World worldIn, BlockPos pos, IBlockState state, EntityPlayer playerIn, EnumHand hand,
-									EnumFacing side, float hitX, float hitY, float hitZ) {
-		if (worldIn.isRemote) {
-			return true;
-		} else {
-			TileEntity tileentity = worldIn.getTileEntity(pos);
-
-			if (tileentity instanceof TileEntityTableOfAges) {
-				playerIn.openGui(AgeOfWeapons.instance, GuiHandlerTOA.getGuiID(), worldIn, pos.getX(), pos.getY(), pos.getZ());
-				playerIn.addStat(StatList.CRAFTING_TABLE_INTERACTION);
-			}
-
-			return true;
-		}
-	}
-
 
 	@Override
 	public void breakBlock(World worldIn, BlockPos pos, IBlockState state) {

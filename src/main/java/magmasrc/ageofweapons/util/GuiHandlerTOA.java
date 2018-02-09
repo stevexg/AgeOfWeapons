@@ -23,7 +23,7 @@ public class GuiHandlerTOA implements IGuiHandler {
         }
 
         BlockPos xyz = new BlockPos(x, y, z);
-        TileEntity tileEntity = world.getTileEntity(xyz);
+        TileEntity tileEntity = world.getTileEntity(new BlockPos(x,y,z));
         if (tileEntity instanceof TileEntityTableOfAges) {
             TileEntityTableOfAges tileEntityTableOfAges = (TileEntityTableOfAges) tileEntity;
             return new ContainerTableOfAges(player.inventory, tileEntityTableOfAges);

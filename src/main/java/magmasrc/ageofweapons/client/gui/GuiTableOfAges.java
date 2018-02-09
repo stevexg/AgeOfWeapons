@@ -8,10 +8,13 @@ import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 import java.awt.*;
 import java.io.IOException;
 
+@SideOnly(Side.CLIENT)
 public class GuiTableOfAges extends GuiContainer {
 
     final ResourceLocation texture = new ResourceLocation(AgeOfWeapons.MODID, "textures/gui/table_of_ages_gui.png");
