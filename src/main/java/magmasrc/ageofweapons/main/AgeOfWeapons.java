@@ -1,6 +1,5 @@
 package magmasrc.ageofweapons.main;
 
-import magmasrc.ageofweapons.entity.render.RenderRegistry;
 import magmasrc.ageofweapons.proxy.ServerProxy;
 import magmasrc.ageofweapons.util.Events;
 import magmasrc.ageofweapons.util.LootHandler;
@@ -18,7 +17,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 
 /**---------------------------------------------------------------------------------*
- * @author MagmaSrc Team (Stvxv.g & XxRexRaptorxX (RexRaptor))
+ * @author Stvxv.g & XxRexRaptorxX (RexRaptor)
  * @forumThread https://www.planetminecraft.com/mod/age-of-weapons/
  * @projectPage https://minecraft.curseforge.com/projects/age-of-weapons
  **---------------------------------------------------------------------------------*/
