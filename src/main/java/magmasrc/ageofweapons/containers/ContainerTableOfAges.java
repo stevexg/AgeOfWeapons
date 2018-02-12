@@ -8,6 +8,8 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.InventoryPlayer;
 import net.minecraft.inventory.*;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ContainerTableOfAges extends Container {
 
@@ -97,7 +99,7 @@ public class ContainerTableOfAges extends Container {
     public void onCraftMatrixChanged(IInventory inventoryIn)
     {
 
-        this.craftResult.setInventorySlotContents(0, CraftingManagerTableOfAges.getInstance().findMatchingRecipe(this.craftMatrix, Minecraft.getMinecraft().world, getModules()));
+        this.craftResult.setInventorySlotContents(0, CraftingManagerTableOfAges.getInstance().findMatchingRecipe(this.craftMatrix, tileEntityTableOfAges.getWorld(), getModules()));
     }
 
     @Override
