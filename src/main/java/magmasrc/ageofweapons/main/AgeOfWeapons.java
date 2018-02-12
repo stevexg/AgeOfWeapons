@@ -22,6 +22,7 @@ import net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper;
  * @projectPage https://minecraft.curseforge.com/projects/age-of-weapons
  **---------------------------------------------------------------------------------*/
 
+// TODO Update to Minecraft Version 1.12.2
 
 @Mod(modid = AgeOfWeapons.MODID, version = AgeOfWeapons.VERSION)
 public class AgeOfWeapons {
