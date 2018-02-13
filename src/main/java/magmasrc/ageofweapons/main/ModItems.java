@@ -20,6 +20,7 @@ import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraftforge.common.util.EnumHelper;
+import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 
@@ -1698,9 +1699,10 @@ public class ModItems {
 	
 	
 	
-	private void registerItem(Item item) {
-		GameRegistry.register(item);
+	private static void registerItem(Item item) {
+		ForgeRegistries.ITEMS.register(item);
 	}
+
 
 	
 }

@@ -9,6 +9,7 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.EntityAreaEffectCloud;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
@@ -161,9 +162,9 @@ public class BlockNexus4 extends Block {
 	
 		// other //
 		    
-		@Override
-		 public void addInformation(ItemStack stack, EntityPlayer playerIn, List addList, boolean advanced) {
-			addList.add(ChatFormatting.RED + "Work in progress");
-		    }
+	@Override
+	public void addInformation(ItemStack stack, World player, List<String> addList, ITooltipFlag advanced) {
+		addList.add(ChatFormatting.RED + "Work in progress");
+	}
 
 	}

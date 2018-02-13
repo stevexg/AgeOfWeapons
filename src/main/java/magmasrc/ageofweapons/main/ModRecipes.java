@@ -19,7 +19,7 @@ public class ModRecipes {
 		public void register() {
 
 			//wichtige rezepte
-			
+			/**
 			GameRegistry.addShapedRecipe(new ItemStack(ModBlocks.tableOfAges), "zzz", "xyx", "xox", 'x', Blocks.COBBLESTONE, 'o', Blocks.CHEST, 'y', Blocks.CRAFTING_TABLE, 'z', Blocks.STONE_SLAB);
 			
 			
@@ -114,11 +114,9 @@ public class ModRecipes {
 		  
 		  GameRegistry.addShapedRecipe(new ItemStack(ModItems.hammer), " x ", " o ", " ", 'x', Blocks.STONE, 'o', Items.STICK);
 		}
+		**/
 	}	
 	 
-
-		
-		
 		
 		
 		
@@ -126,7 +124,7 @@ public class ModRecipes {
 		
 		
 		public void unregister() {
-			
+		/**	
 		  if (AgeOfWeapons.activateHardcoreMode) {
 			Iterator<IRecipe> it = CraftingManager.getInstance().getRecipeList().iterator();
 			
@@ -277,6 +275,7 @@ public class ModRecipes {
 				}
 			 }
 		   }
+		   **/
 		}
 		
 }

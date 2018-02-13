@@ -8,6 +8,7 @@ import magmasrc.ageofweapons.util.ItemCustomWeapon;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
@@ -33,12 +34,12 @@ public class ItemMacheteGold extends ItemCustomWeapon {
     }
 
     
-    @Override
-    public void addInformation(ItemStack stack, EntityPlayer playerIn, List addList, boolean advanced) {
-    	if(AgeOfWeapons.activateShowAges) {
-    		addList.add(ChatFormatting.DARK_GRAY + "Golden age of piracy");
-    	}	
-    }
+	@Override
+	public void addInformation(ItemStack stack, World player, List<String> addList, ITooltipFlag advanced) {
+		if(AgeOfWeapons.activateShowAges) {
+			addList.add(ChatFormatting.DARK_GRAY + "Golden age of Piracy");
+		}	
+	}
     
     
 	@Override
@@ -66,10 +67,13 @@ public class ItemMacheteGold extends ItemCustomWeapon {
         return block == Blocks.WEB || block == Blocks.REDSTONE_WIRE || block == Blocks.TRIPWIRE;
     }
 
-	@Override
-    public float getStrVsBlock(ItemStack stack, IBlockState state){
-        Block block = state.getBlock();
-        return block != Blocks.WEB && state.getMaterial() != Material.LEAVES ? (block == Blocks.WOOL ? 5.0F : super.getStrVsBlock(stack, state)) : 15.0F;
+    @Override
+    public boolean canHarvestBlock(IBlockState state, ItemStack stack) {
+        if (!(state.getMaterial() == Material.LEAVES) && !(state.getMaterial() == Material.WEB) && !(state.getMaterial() == Material.PLANTS) && !(state.getMaterial() == Material.VINE)) {
+            return true;
+        } else {
+            return false;
+        }
     }
     
 

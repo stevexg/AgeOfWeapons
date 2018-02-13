@@ -10,6 +10,7 @@ import magmasrc.ageofweapons.util.NameHandler;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
+import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModBlocks {
@@ -144,7 +145,7 @@ public class ModBlocks {
 
 			registerBlock(tableOfAges);
 			registerBlock(crusher);
-			GameRegistry.register(crusherOn);
+			ForgeRegistries.BLOCKS.register(crusherOn);
 			registerBlock(weaponBox);
 			registerBlock(nexus);
 			registerBlock(nexus2);
@@ -173,9 +174,9 @@ public class ModBlocks {
 			registerBlock(neutronBomb);
 			registerBlock(nuclearBomb);
 			registerBlock(spikes);
-			GameRegistry.register(spikesOn);
+			ForgeRegistries.BLOCKS.register(spikesOn);
 			registerBlock(spikesToxic);
-			GameRegistry.register(spikesToxicOn);
+			ForgeRegistries.BLOCKS.register(spikesToxicOn);
 			registerBlock(timeBomb);
 
 			
@@ -193,10 +194,11 @@ public class ModBlocks {
 		
 		
 		
-		private void registerBlock(Block block) {
-			GameRegistry.register(block);
+		
+		private static void registerBlock(Block block) {
+			ForgeRegistries.BLOCKS.register(block);
 			ItemBlock itemblock = new ItemBlock(block);
-			itemblock.setUnlocalizedName(block.getUnlocalizedName()).setRegistryName(block.getRegistryName());
-			GameRegistry.register(itemblock);
+			itemblock.setRegistryName(block.getRegistryName());
+			ForgeRegistries.ITEMS.register(itemblock);
 		}
 }

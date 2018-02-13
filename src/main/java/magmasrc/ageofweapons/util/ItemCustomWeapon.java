@@ -15,7 +15,7 @@ import net.minecraft.item.ItemSword;
 		public ItemCustomWeapon(ToolMaterial material, float attackSpeed) {
 			super(material);
 			this.attackSpeed = attackSpeed - 4.0F;
-			this.attackDamage = material.getDamageVsEntity() - 1.0F;
+			this.attackDamage = material.getAttackDamage() - 1.0F;
 		}
 
 

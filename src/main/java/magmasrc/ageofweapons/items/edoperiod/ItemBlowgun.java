@@ -9,6 +9,7 @@ import com.mojang.realmsclient.gui.ChatFormatting;
 import magmasrc.ageofweapons.main.AgeOfWeapons;
 import magmasrc.ageofweapons.main.ModItems;
 import magmasrc.ageofweapons.main.ModTabs;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.EntityLivingBase;
@@ -119,7 +120,7 @@ public class ItemBlowgun extends ItemBow {
                   {
                       ItemArrow itemarrow = (ItemArrow)((ItemArrow)(itemstack.getItem() instanceof ItemArrow ? itemstack.getItem() : Items.ARROW));
                       EntityArrow entityarrow = itemarrow.createArrow(worldIn, itemstack, entityplayer);
-                      entityarrow.setAim(entityplayer, entityplayer.rotationPitch, entityplayer.rotationYaw, 0.0F, f * 2.0F, 1.0F);
+                      entityarrow.shoot(entityplayer, entityplayer.rotationPitch, entityplayer.rotationYaw, 0.0F, f * 2.0F, 1.0F);
 
                       if (f == 1.0F)
                       {
@@ -186,10 +187,10 @@ public class ItemBlowgun extends ItemBow {
 	} 
 	
 	
-    @Override
-    public void addInformation(ItemStack stack, EntityPlayer playerIn, List addList, boolean advanced) {
-    	if(AgeOfWeapons.activateShowAges) {
-    		addList.add(ChatFormatting.DARK_GRAY + "Edo Period");
-    	}	
-    }
+	@Override
+	public void addInformation(ItemStack stack, World player, List<String> addList, ITooltipFlag advanced) {
+		if(AgeOfWeapons.activateShowAges) {
+			addList.add(ChatFormatting.DARK_GRAY + "Edo Period");
+		}	
+	}
 }

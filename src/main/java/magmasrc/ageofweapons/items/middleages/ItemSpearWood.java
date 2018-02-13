@@ -6,6 +6,7 @@ import magmasrc.ageofweapons.entity.EntitySpearWood;
 import magmasrc.ageofweapons.main.AgeOfWeapons;
 import magmasrc.ageofweapons.main.ModTabs;
 import magmasrc.ageofweapons.util.ItemCustomWeapon;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -35,12 +36,12 @@ public class ItemSpearWood extends ItemCustomWeapon {
     }
 
     
-    @Override
-    public void addInformation(ItemStack stack, EntityPlayer playerIn, List addList, boolean advanced) {
-    	if(AgeOfWeapons.activateShowAges) {
-    		addList.add(ChatFormatting.DARK_GRAY + "Middle Ages");
-    	}	
-    }
+	@Override
+	public void addInformation(ItemStack stack, World player, List<String> addList, ITooltipFlag advanced) {
+		if(AgeOfWeapons.activateShowAges) {
+			addList.add(ChatFormatting.DARK_GRAY + "Middle Ages");
+		}	
+	}
     
     
 	@Override
@@ -63,7 +64,7 @@ public class ItemSpearWood extends ItemCustomWeapon {
         
         if (!worldIn.isRemote){
             EntitySpearWood obj = new EntitySpearWood(worldIn, playerIn);
-            obj.setHeadingFromThrower(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 1.0F, 1.0F);
+            //obj.setHeadingFromThrower(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 1.0F, 1.0F);
             worldIn.spawnEntity(obj);
         }
 

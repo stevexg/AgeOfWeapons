@@ -1,8 +1,13 @@
 package magmasrc.ageofweapons.items.future;
 
+import java.util.List;
+
+import com.mojang.realmsclient.gui.ChatFormatting;
+
 import magmasrc.ageofweapons.main.AgeOfWeapons;
 import magmasrc.ageofweapons.main.ModItems;
 import magmasrc.ageofweapons.main.ModTabs;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.init.MobEffects;
@@ -43,6 +48,14 @@ public class ItemArmorFutureSoldier extends ItemArmor {
 	private void effectPlayer(EntityPlayer player, Potion potion, int amplifier) {
 	    if (player.getActivePotionEffect(potion) == null || player.getActivePotionEffect(potion).getDuration() <= 1)
 	        player.addPotionEffect(new PotionEffect(MobEffects.STRENGTH, 10, amplifier, true, true));
+	}
+	
+	
+	@Override
+	public void addInformation(ItemStack stack, World player, List<String> addList, ITooltipFlag advanced) {
+		if(AgeOfWeapons.activateShowAges) {
+			addList.add(ChatFormatting.DARK_GRAY + "Future");
+		}	
 	}
 
 

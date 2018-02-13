@@ -6,6 +6,7 @@ import magmasrc.ageofweapons.entity.EntityThrowingDiamondKnive;
 import magmasrc.ageofweapons.main.AgeOfWeapons;
 import magmasrc.ageofweapons.main.ModTabs;
 import magmasrc.ageofweapons.util.ItemCustomWeapon;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -35,12 +36,12 @@ public class ItemThrowingKniveDiamond extends ItemCustomWeapon {
     }
 
     
-    @Override
-    public void addInformation(ItemStack stack, EntityPlayer playerIn, List addList, boolean advanced) {
-    	if(AgeOfWeapons.activateShowAges) {
-    		addList.add(ChatFormatting.DARK_GRAY + "Edo Period");
-    	}	    
-    }
+	@Override
+	public void addInformation(ItemStack stack, World player, List<String> addList, ITooltipFlag advanced) {
+		if(AgeOfWeapons.activateShowAges) {
+			addList.add(ChatFormatting.DARK_GRAY + "Edo Period");
+		}	
+	}
     
     
 	@Override
@@ -64,7 +65,7 @@ public class ItemThrowingKniveDiamond extends ItemCustomWeapon {
         
         if (!worldIn.isRemote){
             EntityThrowingDiamondKnive obj = new EntityThrowingDiamondKnive(worldIn, playerIn);
-            obj.setHeadingFromThrower(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 1.0F, 1.0F);
+            //obj.setHeadingFromThrower(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 1.0F, 1.0F);
             worldIn.spawnEntity(obj);
         }
 

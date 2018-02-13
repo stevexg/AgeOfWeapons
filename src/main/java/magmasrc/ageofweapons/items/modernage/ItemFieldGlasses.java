@@ -7,6 +7,7 @@ import javax.annotation.Nullable;
 import magmasrc.ageofweapons.main.AgeOfWeapons;
 import magmasrc.ageofweapons.main.ModItems;
 import magmasrc.ageofweapons.main.ModTabs;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.IItemPropertyGetter;
@@ -46,9 +47,9 @@ public class ItemFieldGlasses extends Item {
 
    
 	@Override
-	public void addInformation(ItemStack  stack, EntityPlayer playerIn, List addList, boolean advanced) {
-		if(AgeOfWeapons.activateShowAges) {	
-			addList.add(ChatFormatting.GRAY + "Modern Age");
-		}
+	public void addInformation(ItemStack stack, World player, List<String> addList, ITooltipFlag advanced) {
+		if(AgeOfWeapons.activateShowAges) {
+			addList.add(ChatFormatting.DARK_GRAY + "Modern Age");
+		}	
 	}
 }

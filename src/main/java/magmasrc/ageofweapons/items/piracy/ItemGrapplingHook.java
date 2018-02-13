@@ -4,10 +4,12 @@ import java.util.List;
 
 import magmasrc.ageofweapons.main.AgeOfWeapons;
 import magmasrc.ageofweapons.main.ModTabs;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.world.World;
 
 import com.mojang.realmsclient.gui.ChatFormatting;
 
@@ -24,13 +26,13 @@ public class ItemGrapplingHook extends Item {
     }
 	
 	
-    @Override
-    public void addInformation(ItemStack stack, EntityPlayer playerIn, List addList, boolean advanced) {
-    	if(AgeOfWeapons.activateShowAges) {
-    		addList.add(ChatFormatting.DARK_GRAY + "Golden age of piracy");
-    	}	
+	@Override
+	public void addInformation(ItemStack stack, World player, List<String> addList, ITooltipFlag advanced) {
+		if(AgeOfWeapons.activateShowAges) {
+			addList.add(ChatFormatting.DARK_GRAY + "Golden age of Piracy");
+		}	
 		addList.add(ChatFormatting.RED + "Work in progress");
-    }
+	}
     
     
 	@Override

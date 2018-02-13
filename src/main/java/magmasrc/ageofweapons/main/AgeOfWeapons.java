@@ -37,7 +37,8 @@ public class AgeOfWeapons {
     @SidedProxy(clientSide = "magmasrc.ageofweapons.proxy.ClientProxy", serverSide = "magmasrc.ageofweapons.proxy.ServerProxy")
     public static ServerProxy proxy;
 
-    //TODO Steve: Schusswaffen, schauen wegen OreRecipes, item das einen block setzt...weil ich das ned hinkriege xD ._.
+    //TODO Steve: Schusswaffen, schauen wegen OreRecipes, item das einen block setzt
+    //TODO Rex: Entity rotation updaten, rezepte auf json umschreiben, hardcore mode updaten
     
     
     // Items //
