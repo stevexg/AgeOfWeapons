@@ -58,6 +58,7 @@ public class OreDictionaryHandler {
 			OreDictionary.registerOre("gemTopaz", ModItems.topaz);
 			OreDictionary.registerOre("gemAmber", ModItems.amber);
 			OreDictionary.registerOre("shardWood", ModItems.woodShard);
+			OreDictionary.registerOre("shardIronWithered", ModItems.witheredIronShard);
 			OreDictionary.registerOre("shardIron", ModItems.ironShard);
 			OreDictionary.registerOre("shardStone", ModItems.stoneShard);
 			OreDictionary.registerOre("shardGold", ModItems.goldShard);
@@ -81,7 +82,6 @@ public class OreDictionaryHandler {
 			OreDictionary.registerOre("toolHammer", ModItems.hammer);
 			OreDictionary.registerOre("dustWither", ModItems.witherDust);
 			OreDictionary.registerOre("ingotIronWithered", ModItems.witheredIronIngot);
-			OreDictionary.registerOre("ingotShardWithered", ModItems.witheredIronShard);
 			
 			//Stone Age
 			OreDictionary.registerOre("weaponRock", ModItems.rock);

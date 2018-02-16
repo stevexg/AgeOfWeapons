@@ -1,0 +1,24 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+  
+    "XX ",
+    "X# ",
+    "   "
+  ],
+  
+  "key": {
+    "X": {
+     "type": "forge:ore_dict",
+      "ore": "shardIronWithered"
+    },
+    "#": {
+      "item": "ageofweapons:withered_iron_ingot"
+    }
+  },
+  
+  
+  "result": {
+    "item": "ageofweapons:axe_blade_withered"
+  }
+}

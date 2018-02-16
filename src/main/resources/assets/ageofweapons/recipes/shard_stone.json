@@ -1,0 +1,25 @@
+{
+  "type": "forge:ore_shapeless",
+  "ingredients": [
+  
+    [
+        {  
+        "type": "forge:ore_dict",
+        "ore": "stone"
+        },
+        {  
+        "type": "forge:ore_dict",
+        "ore": "cobblestone"
+        }
+    ],    
+    {
+      "item": "ageofweapons:hammer",
+      "data": 32767
+    }
+    
+  ],
+  "result": {
+    "item": "ageofweapons:stone_shard",
+    "count": 3
+  }
+}

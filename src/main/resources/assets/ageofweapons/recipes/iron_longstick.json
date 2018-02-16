@@ -1,0 +1,22 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+  
+    "   ",
+    " X ",
+    " X "
+    
+  ],
+  
+  "key": {
+    "#": {
+      "type": "forge:ore_dict",
+      "ore": "stickIron"
+    }    
+  },
+  
+  
+  "result": {
+    "item": "ageofweapons:iron_longstick"
+  }
+}

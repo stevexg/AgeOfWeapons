@@ -1,0 +1,27 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+  
+    "O#O",
+    "#X#",
+    "O#O"
+  ],
+  
+  "key": {
+    "#": {
+     "type": "forge:ore_dict",
+      "ore": "plankWood"
+    },
+    "X": {
+      "item": "minecraft:emerald"
+    },
+    "O": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  
+  
+  "result": {
+    "item": "ageofweapons:weapon_box"
+  }
+}

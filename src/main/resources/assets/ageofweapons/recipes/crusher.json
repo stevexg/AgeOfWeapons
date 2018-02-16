@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "XOX",
+    "X#X"
+  ],
+  
+  "key": {
+    "X": {
+      "item": "minecraft:cobblestone"
+    },
+    "O": {
+      "item": "minecraft:furnace"
+    },
+    
+    "#": [
+      {
+        "item": "minecraft:flint"
+      },
+      {
+        "item": "ageofweapons:iron_shard"
+      }
+    ]    
+  },
+  
+  
+  "result": {
+    "item": "ageofweapons:crusher"
+  }
+}

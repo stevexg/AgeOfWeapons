@@ -37,8 +37,8 @@ public class AgeOfWeapons {
     @SidedProxy(clientSide = "magmasrc.ageofweapons.proxy.ClientProxy", serverSide = "magmasrc.ageofweapons.proxy.ServerProxy")
     public static ServerProxy proxy;
 
-    //TODO Steve: Schusswaffen, schauen wegen OreRecipes, item das einen block setzt
-    //TODO Rex: Entity rotation updaten, rezepte auf json umschreiben, hardcore mode updaten
+    //TODO Steve: Schusswaffen, schauen wegen OreRecipes am ToA, waffen mit höherer reichweite
+    //TODO Rex: Entity rotation updaten, rezepte auf json umschreiben, hardcore mode updaten, tool recycling, weapon modifier => cfg., new weapons
     
     
     // Items //
@@ -209,8 +209,8 @@ public class AgeOfWeapons {
      	// OreDictionary //
      	OreDictionaryHandler.registerOreDictionary();
        
-      	 // Loot Gen //
-     	 MinecraftForge.EVENT_BUS.register(new LootHandler());
+      	// Loot Gen //
+     	MinecraftForge.EVENT_BUS.register(new LootHandler());
 
     }
    

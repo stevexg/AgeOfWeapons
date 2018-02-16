@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+  
+    " X ",
+    " I ",
+    "   "
+    
+  ],
+  
+  "key": {
+    "X": {
+      "item": "minecraft:stone"
+    },
+    "I": {
+      "item": "minecraft:stick"
+    }     
+  },
+  
+  
+  "result": {
+    "item": "ageofweapons:hammer"
+  }
+}

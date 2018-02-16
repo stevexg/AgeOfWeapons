@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+
+    {  
+      "item": "ageofweapons:amethyst_block"
+    }
+    
+  ],
+  "result": {
+    "item": "ageofweapons:amethyst",
+    "data": 9
+  }
+}

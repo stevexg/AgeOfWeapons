@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+  
+    "###",
+    "###",
+    "###"
+    
+  ],
+  
+  "key": {
+    "#": {
+      "item": "ageofweapons:ruby"
+    }    
+  },
+  
+  
+  "result": {
+    "item": "ageofweapons:ruby_block"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "forge:ore_shapeless",
+  "ingredients": [
+    {  
+      "type": "forge:ore_dict",
+      "ore": "blockGlass"
+    }
+  ],
+  "result": {
+    "item": "ageofweapons:glass_shard",
+    "count": 4
+  }
+}

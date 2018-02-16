@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+  
+    "V V",
+    "VZV",
+    "XOX"
+    
+  ],
+  
+  "key": {
+    "X": {
+      "item": "minecraft:iron_block"
+    },
+    "O": {
+      "item": "minecraft:wool",
+      "data": 13
+    },
+    "V": {
+      "item": "minecraft:iron_ingot"
+    },
+    "Z": {
+      "item": "minecraft:nether_star"
+    } 
+  },
+  
+  
+  "result": {
+    "item": "ageofweapons:nexus4"
+  }
+}

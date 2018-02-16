@@ -1,0 +1,20 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+  
+    "XX ",
+    "XX ",
+    "   "
+  ],
+  
+  "key": {
+    "X": {
+      "item": "ageofweapons:sword_blade_diamond"
+    }
+  },
+  
+  
+  "result": {
+    "item": "ageofweapons:broad_blade_diamond"
+  }
+}

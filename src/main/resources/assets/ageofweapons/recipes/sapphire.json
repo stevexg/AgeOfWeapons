@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+
+    {  
+      "item": "ageofweapons:sapphire_block"
+    }
+    
+  ],
+  "result": {
+    "item": "ageofweapons:sapphire",
+    "data": 9
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+  
+    "###",
+    "###",
+    "###"
+    
+  ],
+  
+  "key": {
+    "#": {
+      "item": "ageofweapons:amber"
+    }    
+  },
+  
+  
+  "result": {
+    "item": "ageofweapons:amber_block"
+  }
+}

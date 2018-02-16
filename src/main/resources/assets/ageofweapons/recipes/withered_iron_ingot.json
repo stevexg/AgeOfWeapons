@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+
+    {  
+      "item": "ageofweapons:withered_iron_block"
+    }
+    
+  ],
+  "result": {
+    "item": "ageofweapons:withered_iron_ingot",
+    "data": 9
+  }
+}
