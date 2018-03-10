@@ -9,7 +9,7 @@
   ],
   
   "key": {
-    "#": {
+    "X": {
       "type": "forge:ore_dict",
       "ore": "stickIron"
     }    

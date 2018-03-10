@@ -8,7 +8,4 @@
 package magmasrc.ageofweapons.main;
 /**  Dev Change Log
 *
-*	shotgun ammo texture fixed
-*	withered iron shard ordict. fix
-*	recipe changes
 **/

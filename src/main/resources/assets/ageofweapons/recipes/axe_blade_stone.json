@@ -13,7 +13,8 @@
       "ore": "shardStone"
     },
     "#": {
-      "item": "minecraft:stone"
+      "item": "minecraft:stone",
+      "data": 0
     }
   },
   

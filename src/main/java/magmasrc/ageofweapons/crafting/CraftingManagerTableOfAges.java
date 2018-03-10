@@ -203,7 +203,7 @@ public class CraftingManagerTableOfAges {
     this.addRecipeTOA(new ItemStack(ModBlocks.tableOfAges), 0, "xxx", "ozo", "oyo", 'x', Blocks.STONE_SLAB, 'o', Blocks.STONE, 'z', Blocks.CRAFTING_TABLE, 'y', Blocks.CHEST);
 
     if(AgeOfWeapons.activateWeaponBoxRecipe) {
-        this.addRecipeTOA(new ItemStack(ModBlocks.weaponBox), 7, "xxx", "xox", "xxx", 'x', new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE), 'o', Blocks.EMERALD_BLOCK);
+        this.addRecipeTOA(new ItemStack(ModBlocks.weaponBox), 7, "ixi", "xox", "ixi", 'x', new ItemStack(Blocks.PLANKS, 1, OreDictionary.WILDCARD_VALUE), 'o', Blocks.EMERALD_BLOCK, 'i', Items.GOLD_INGOT);
     }
     if(AgeOfWeapons.activateNexusRecipe) {
         this.addRecipeTOA(new ItemStack(ModBlocks.nexus), 11, "v v", "vzv", "xox", 'x', new ItemStack(Blocks.IRON_BLOCK), 'o', new ItemStack(Blocks.WOOL, 1, 11), 'v', Items.IRON_INGOT, 'z', Items.NETHER_STAR );

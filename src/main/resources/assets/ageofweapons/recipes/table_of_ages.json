@@ -13,7 +13,8 @@
       "data": 0
     },
     "#": {
-      "item": "minecraft:stone"
+      "item": "minecraft:stone",
+      "data": 0
     },
     "O": {
       "item": "minecraft:crafting_table"

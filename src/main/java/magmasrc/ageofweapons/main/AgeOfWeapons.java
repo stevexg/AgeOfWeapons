@@ -1,6 +1,7 @@
 package magmasrc.ageofweapons.main;
 
 import magmasrc.ageofweapons.proxy.ServerProxy;
+import magmasrc.ageofweapons.util.ChiselHelper;
 import magmasrc.ageofweapons.util.Events;
 import magmasrc.ageofweapons.util.LootHandler;
 import magmasrc.ageofweapons.util.OreDictionaryHandler;
@@ -17,18 +18,17 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 
 /**---------------------------------------------------------------------------------*
- * @author Stvxv.g & XxRexRaptorxX (RexRaptor)
+ * @author XxRexRaptorxX (RexRaptor) & Stvxv.g
  * @forumThread https://www.planetminecraft.com/mod/age-of-weapons/
  * @projectPage https://minecraft.curseforge.com/projects/age-of-weapons
  **---------------------------------------------------------------------------------*/
 
-// TODO Update to Minecraft Version 1.12.2
 
 @Mod(modid = AgeOfWeapons.MODID, version = AgeOfWeapons.VERSION)
 public class AgeOfWeapons {
    
     public static final String MODID = "ageofweapons";
-    public static final String VERSION = "0.13.1";
+    public static final String VERSION = "0.13.2_pre2";
 
    
     @Instance("ageofweapons")
@@ -38,7 +38,7 @@ public class AgeOfWeapons {
     public static ServerProxy proxy;
 
     //TODO Steve: Schusswaffen, schauen wegen OreRecipes am ToA, waffen mit höherer reichweite
-    //TODO Rex: Entity rotation updaten, rezepte auf json umschreiben, hardcore mode updaten, tool recycling, weapon modifier => cfg., new weapons
+    //TODO Rex: Entity rotation updaten, tool recycling, weapon modifier => cfg., new weapons
     
     
     // Items //
@@ -166,6 +166,19 @@ public class AgeOfWeapons {
 	// proxy //
     proxy.registerPreInit();
     
+    
+	// Blocks //
+	blocks = new ModBlocks();
+   	blocks.init();
+	blocks.register();
+	
+	// Items //
+	items = new ModItems();
+   	items.init();
+	items.register();
+	
+ 	// OreDictionary //
+ 	OreDictionaryHandler.registerOreDictionary();
     }
   
     
@@ -176,21 +189,8 @@ public class AgeOfWeapons {
     @EventHandler
     public void Init(FMLInitializationEvent event) {
     	
-    	
-   
-    	// Blocks //
-    	blocks = new ModBlocks();
-       	blocks.init();
-    	blocks.register();
-    	
-    	// Items //
-    	items = new ModItems();
-       	items.init();
-    	items.register();
-    	
     	// Recipes //
     	recipes = new ModRecipes();
-    	recipes.unregister();
     	recipes.register();
     	
         // Creative Tabs //
@@ -199,24 +199,22 @@ public class AgeOfWeapons {
     	// Entitys //
     	ModEntitys.registerEntities();
     	
-    	// proxy //
+    	// Proxy //
         proxy.registerInit();
         
 
          
          /** Handler **/
-        
-     	// OreDictionary //
-     	OreDictionaryHandler.registerOreDictionary();
+
+        // Mod Support //
+        ChiselHelper.chisel();
        
-      	// Loot Gen //
+      	// Loot gen //
      	MinecraftForge.EVENT_BUS.register(new LootHandler());
 
     }
    
    
-    
-    
     
     
     

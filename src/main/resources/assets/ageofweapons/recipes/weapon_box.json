@@ -13,7 +13,7 @@
       "ore": "plankWood"
     },
     "X": {
-      "item": "minecraft:emerald"
+      "item": "minecraft:emerald_block"
     },
     "O": {
       "item": "minecraft:gold_ingot"
