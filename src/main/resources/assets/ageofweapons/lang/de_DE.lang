@@ -1,4 +1,4 @@
-ï»¿
+Ã¯Â»Â¿
 itemGroup.generalTab=Age of Weapons
 itemGroup.stoneAgeTab=AoW: Steinzeit
 itemGroup.antiquityTab=AoW: Antike
@@ -32,6 +32,11 @@ tile.amethyst_block.name=Amethyst Block
 tile.topaz_block.name=Topas Block
 tile.amber_block.name=Bernstein Block
 tile.withered_iron_block.name=Verdorrter Eisen Block
+tile.ruby_ore.name=Rubin Erz
+tile.sapphire_ore.name=Saphir Erz
+tile.amethyst_ore.name=Amethyst Erz
+tile.topaz_ore.name=Topas Erz
+tile.amber_ore.name=Bernstein Erz
 
 tile.barbed_wire.name=Stacheldraht
 tile.nail_trap.name=Nagel Falle
@@ -109,7 +114,7 @@ item.blank_rifle.name=Blankes Gewehr
 item.gun_handle.name=Griff
 item.haft_wood.name=Holz Schaft
 item.haft_iron.name=Eisen Schaft
-item.visor.name=Visir
+item.visor.name=Visier
 item.amethyst.name=Amethyst
 item.topaz.name=Topas
 item.amber.name=Bernstein
@@ -203,6 +208,11 @@ item.war_hammer_gold.name=Gold Kriegshammer
 item.war_hammer_diamond.name=Diamant Kriegshammer
 item.longbow.name=Langbogen
 item.crossbow.name=Armbrust
+item.scythe_wood.name=Holz Sense
+item.scythe_stone.name=Stein Sense
+item.scythe_iron.name=Eisen Sense
+item.scythe_gold.name=Gold Sense
+item.scythe_diamond.name=Diamant Sense
 
 //EarlyModernAge
 item.multi_tool_wood.name=Holz Multifunktions Werkzeug
@@ -216,8 +226,8 @@ item.cannonball.name=Kanonen Kugel
 item.pebble.name=Steinchen
 item.compound_bow.name=Compoundbogen
 item.dynamite.name=Dynamit Stange
-item.nails.name=Nägel
-item.nails_toxic.name=Giftige Nägel
+item.nails.name=NÃ¤gel
+item.nails_toxic.name=Giftige NÃ¤gel
 item.soldier_helmet.name=Soldaten Helm
 item.soldier_chestplate.name=Soldaten Brustpanzer
 item.soldier_leggings.name=Soldaten Beinschutz
@@ -257,11 +267,11 @@ item.long_claymore_stone.name=Langes Stein Breitschwert
 item.long_claymore_iron.name=Langes Eisen Breitschwert
 item.long_claymore_gold.name=Langes Gold Breitschwert
 item.long_claymore_diamond.name=Langes Diamant  Breitschwert
-item.fantasy_sword_wood.name=Holz Drachentöter Schwert
-item.fantasy_sword_stone.name=Stein Drachentöter Schwert
-item.fantasy_sword_iron.name=Eisen Drachentöter Schwert
-item.fantasy_sword_gold.name=Gold Drachentöter Schwert
-item.fantasy_sword_diamond.name=Diamant Drachentöter Schwert
+item.fantasy_sword_wood.name=Holz Drachentöter
+item.fantasy_sword_stone.name=Stein Drachentöter
+item.fantasy_sword_iron.name=Eisen Drachentöter
+item.fantasy_sword_gold.name=Gold Drachentöter
+item.fantasy_sword_diamond.name=Diamant Drachentöter
 item.light_bow.name=Licht Bogen
 item.shadow_bow.name=Schatten Bogen
 
@@ -302,7 +312,7 @@ item.night_vision_goggles.name=Nachtsicht Gerät
 item.taser.name=Elektro Schocker
 item.flame_thrower.name=Flammenwerfer
 item.industrial_miner.name=Industrieller Schürfer
-item.industrial_excavator.name=Industrieller Gräber
+item.industrial_excavator.name=Industrieller Graber
 item.tank_flame.name=Tank (Feuer)
 item.machine_case.name=Maschinen Gehäuse
 item.ammo_small.name=Kleine Munition
@@ -354,6 +364,8 @@ item.legendary_sword.name=Legendäres Schwert
 item.epic_katana.name=Rex's Katana
 item.epic_waraxe.name=Steve's Kriegsaxt
 item.epic_battle_axe.name=JSQ's Kampfaxt
+item.paradox_staff.name=Paradox Stab
+item.sentinel_glave.name=Wächter Glave
 
 //Piracy
 item.cast_net.name=Fangnetz

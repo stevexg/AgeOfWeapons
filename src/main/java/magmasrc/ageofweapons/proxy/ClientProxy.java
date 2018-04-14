@@ -167,6 +167,11 @@ public class ClientProxy extends ServerProxy {
     	ModelHandler.registerModel(ModItems.warhammerIron);
     	ModelHandler.registerModel(ModItems.warhammerStone);
     	ModelHandler.registerModel(ModItems.warhammerWood);
+    	ModelHandler.registerModel(ModItems.scytheDiamond);
+    	ModelHandler.registerModel(ModItems.scytheGold);
+    	ModelHandler.registerModel(ModItems.scytheIron);
+    	ModelHandler.registerModel(ModItems.scytheStone);
+    	ModelHandler.registerModel(ModItems.scytheWood);
 
 		//Early Modern Age
     	ModelHandler.registerModel(ModItems.multiToolDiamond);
@@ -318,6 +323,8 @@ public class ClientProxy extends ServerProxy {
     	ModelHandler.registerModel(ModItems.epicKatana);
     	ModelHandler.registerModel(ModItems.epicWaraxe);
     	ModelHandler.registerModel(ModItems.legendarySword);
+    	ModelHandler.registerModel(ModItems.paradoxStaff);
+    	ModelHandler.registerModel(ModItems.sentinelGlave);
     	
     	//Piracy
     	ModelHandler.registerModel(ModItems.castNet);
@@ -357,6 +364,11 @@ public class ClientProxy extends ServerProxy {
     	ModelHandler.registerModel(ModBlocks.amberBlock);
     	ModelHandler.registerModel(ModBlocks.topazBlock);
     	ModelHandler.registerModel(ModBlocks.witheredIronBlock);
+    	ModelHandler.registerModel(ModBlocks.rubyOre);
+    	ModelHandler.registerModel(ModBlocks.sapphireOre);
+    	ModelHandler.registerModel(ModBlocks.amethystOre);
+    	ModelHandler.registerModel(ModBlocks.amberOre);
+    	ModelHandler.registerModel(ModBlocks.topazOre);
     	
     	ModelHandler.registerModel(ModBlocks.barbedWire);
     	ModelHandler.registerModel(ModBlocks.nailTrap);

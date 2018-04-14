@@ -56,7 +56,7 @@ public class ItemMolotovCocktail extends Item {
         
         if (!worldIn.isRemote){
             EntityMolotovCocktail grenade = new EntityMolotovCocktail(worldIn, playerIn);
-            //grenade.setHeadingFromThrower(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 1.0F, 1.0F);
+            grenade.shoot(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 1.0F, 1.0F);
             worldIn.spawnEntity(grenade);
         }
 

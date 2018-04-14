@@ -163,13 +163,18 @@ public class OreDictionaryHandler {
 	    	OreDictionary.registerOre("nexusAoW", ModBlocks.nexus3);
 	    	OreDictionary.registerOre("nexusAoW", ModBlocks.nexus4);
 	    	OreDictionary.registerOre("blockRuby", ModBlocks.rubyBlock);
+	    	OreDictionary.registerOre("blockAmber", ModBlocks.rubyBlock);
 	    	OreDictionary.registerOre("blockSapphire", ModBlocks.sapphireBlock);
 	    	OreDictionary.registerOre("blockAmethyst", ModBlocks.amethystBlock);
 	    	OreDictionary.registerOre("blockTopaz", ModBlocks.topazBlock);
 	    	OreDictionary.registerOre("blockIronWithered", ModBlocks.witheredIronBlock);
-	    	OreDictionary.registerOre("blockAmber", ModBlocks.amberBlock);
 	    	OreDictionary.registerOre("tntNuclear", ModBlocks.nuclearBomb);
 	    	OreDictionary.registerOre("tntNeutron", ModBlocks.neutronBomb);
+	    	OreDictionary.registerOre("oreRuby", ModBlocks.rubyOre);
+	    	OreDictionary.registerOre("oreAmber", ModBlocks.rubyOre);
+	    	OreDictionary.registerOre("oreSapphire", ModBlocks.sapphireOre);
+	    	OreDictionary.registerOre("oreAmethyst", ModBlocks.amethystOre);
+	    	OreDictionary.registerOre("oreTopaz", ModBlocks.topazOre);
 
 
 

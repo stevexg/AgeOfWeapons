@@ -3,9 +3,10 @@ package magmasrc.ageofweapons.main;
 import magmasrc.ageofweapons.proxy.ServerProxy;
 import magmasrc.ageofweapons.util.ChiselHelper;
 import magmasrc.ageofweapons.util.Events;
-import magmasrc.ageofweapons.util.LootHandler;
 import magmasrc.ageofweapons.util.OreDictionaryHandler;
 import magmasrc.ageofweapons.util.UpdateChecker;
+import magmasrc.ageofweapons.worldgen.LootHandler;
+import magmasrc.ageofweapons.worldgen.WorldGenOre;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.Mod;
@@ -16,6 +17,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 /**---------------------------------------------------------------------------------*
  * @author XxRexRaptorxX (RexRaptor) & Stvxv.g
@@ -28,7 +30,7 @@ import net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 public class AgeOfWeapons {
    
     public static final String MODID = "ageofweapons";
-    public static final String VERSION = "0.13.2_pre2";
+    public static final String VERSION = "0.13.4";
 
    
     @Instance("ageofweapons")
@@ -38,7 +40,7 @@ public class AgeOfWeapons {
     public static ServerProxy proxy;
 
     //TODO Steve: Schusswaffen, schauen wegen OreRecipes am ToA, waffen mit höherer reichweite
-    //TODO Rex: Entity rotation updaten, tool recycling, weapon modifier => cfg., new weapons
+    //TODO Rex: weapon modifier => cfg., new weapons
     
     
     // Items //
@@ -66,7 +68,8 @@ public class AgeOfWeapons {
     public static boolean activateShowAges;
     public static boolean activateDungeonLoot;
     public static boolean activateHardcoreMode;	
-    public static boolean activateBombs;         
+    public static boolean activateBombs;
+    public static boolean activateWorldGeneration;
     
     public static boolean activatePiracy;
     public static boolean activateEdoPeriod;
@@ -134,15 +137,15 @@ public class AgeOfWeapons {
     		activateUpdateChecker = config.get("EVENTS", "Activate Update-Checker", true, "[true/false]").getBoolean();
           //activateOnlyOneTab = config.get("GENERAL", "Activate only one creative tab", false, "[true/false]").getBoolean();    TODO later
     		activateChainArmorCrafting = config.get("CRAFTING", "Activate the crafting recipe for the chain armor (Table of Ages)", true, "[true/false]").getBoolean();
-    		activateBasicRecipesOnWorkbench = config.get("CRAFTING", "Activate basic AoW recipes on the normal crafting table", true, "[true/false]").getBoolean();
+    		activateBasicRecipesOnWorkbench = config.get("CRAFTING", "Activate some basic AoW recipes on the normal crafting table", true, "[true/false]").getBoolean();
     		activateWeaponBoxRecipe = config.get("CRAFTING", "Activate the crafting recipe for the Weapon Box", true, "[true/false]").getBoolean();
     		activateNexusRecipe = config.get("CRAFTING", "Activate the crafting recipe for the Nexus", false, "[true/false]").getBoolean();
     		activateShowAges = config.get("GENERAL", "Show the age under the item name", true, "[true/false]").getBoolean();
     		activateDungeonLoot = config.get("GENERATION", "Generate dungeon loot (means only the not important items for the mod)", true, "[true/false]").getBoolean();
     		activateHardcoreMode = config.get("GENERAL", "You can only craft vanilla tools/weapons/armor in the Table of Ages and in the right age", false, "[true/false]").getBoolean();
     		activateBombs = config.get("CRAFTING", "Activate the crafting recipes for the bombs", true, "[true/false]").getBoolean();
+    		activateWorldGeneration = config.get("GENERATION", "Activate the ore generation of the mod", true, "[true/false").getBoolean();
 
-    		
     		activateBBY = config.get("AGES", "Activate the recipe for the BBY Upgrade", true, "[true/false]").getBoolean();
     		activateEdoPeriod = config.get("AGES", "Activate the recipe for the Edo Period Upgrade", true, "[true/false]").getBoolean();
     		activateEpic = config.get("AGES", "Activate the recipe for the Epic Upgrade", true, "[true/false]").getBoolean();
@@ -151,7 +154,6 @@ public class AgeOfWeapons {
     		activateMystic = config.get("AGES", "Activate the recipe for the Mystic Upgrade", true, "[true/false]").getBoolean();
     		activatePiracy = config.get("AGES", "Activate the recipe for the Piracy Upgrade", true, "[true/false]").getBoolean();
     		activateModern = config.get("AGES", "Activate the recipe for the Modern Age Upgrade", true, "[true/false]").getBoolean();
-
     		
     	config.save();	
 
@@ -209,8 +211,9 @@ public class AgeOfWeapons {
         // Mod Support //
         ChiselHelper.chisel();
        
-      	// Loot gen //
+        // Generation //
      	MinecraftForge.EVENT_BUS.register(new LootHandler());
+        GameRegistry.registerWorldGenerator(new WorldGenOre(), 0);
 
     }
    

@@ -8,6 +8,7 @@ import magmasrc.ageofweapons.main.ModTabs;
 import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
+import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemPickaxe;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
@@ -35,7 +36,10 @@ public class ItemMasterPickaxe extends ItemPickaxe {
 		}	
 	}
     
-    
+	@Override
+    public EnumRarity getRarity(ItemStack stack) {
+        return EnumRarity.EPIC;
+    }
 	
 	@Override
 	public boolean getIsRepairable(ItemStack armor, ItemStack stack) {

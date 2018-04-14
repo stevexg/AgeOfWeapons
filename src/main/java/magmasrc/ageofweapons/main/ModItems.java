@@ -104,6 +104,11 @@ public class ModItems {
 	public static ToolMaterial warhammerIronTM;
 	public static ToolMaterial warhammerGoldTM;
 	public static ToolMaterial warhammerDiamondTM;
+	public static ToolMaterial scytheWoodTM;
+	public static ToolMaterial scytheStoneTM;
+	public static ToolMaterial scytheIronTM;
+	public static ToolMaterial scytheGoldTM;
+	public static ToolMaterial scytheDiamondTM;
 	
 	public static ToolMaterial multiToolWoodTM;
 	public static ToolMaterial multiToolStoneTM;
@@ -167,6 +172,8 @@ public class ModItems {
 	public static ToolMaterial epicWaraxeTM;
 	public static ToolMaterial legendarySwordTM;
 	public static ToolMaterial masterTM;
+	public static ToolMaterial paradoxStaffTM;
+	public static ToolMaterial sentinelGlaveTM;
 	
 	public static ToolMaterial macheteWoodTM;
 	public static ToolMaterial macheteStoneTM;
@@ -332,6 +339,11 @@ public class ModItems {
 	public static Item warhammerDiamond;
 	public static Item longbow;
 	public static Item crossbow;
+	public static Item scytheWood;
+	public static Item scytheStone;
+	public static Item scytheIron;
+	public static Item scytheGold;
+	public static Item scytheDiamond;
 	
 	// Early Modern Age
 	public static Item multiToolWood;
@@ -479,6 +491,8 @@ public class ModItems {
 	public static Item masterSword;
 	public static Item epicKatana;
 	public static Item epicWaraxe;
+	public static Item paradoxStaff;
+	public static Item sentinelGlave;
 	public static ItemArmor masterHelmet;
 	public static ItemArmor masterChestplate;
 	public static ItemArmor masterLeggings;
@@ -586,6 +600,11 @@ public class ModItems {
 		warhammerIronTM = EnumHelper.addToolMaterial("warhammerIron",              2,  800,  6.0F,   8.6F, 14);
 		warhammerGoldTM = EnumHelper.addToolMaterial("warhammerGold",              0,  280, 12.0F,   7.8F, 22);
 		warhammerDiamondTM = EnumHelper.addToolMaterial("warhammerDiamond",        3, 5000,  8.0F,   9.0F, 10);
+		scytheWoodTM = EnumHelper.addToolMaterial("scytheWood",                    0,  135,  2.5F,   4.0F, 15);
+		scytheStoneTM = EnumHelper.addToolMaterial("scytheStone",                  1,  180,  4.5F,   4.5F,  5);
+		scytheIronTM = EnumHelper.addToolMaterial("scytheIron",                    2,  230,  6.5F,   5.0F, 14);
+		scytheGoldTM = EnumHelper.addToolMaterial("scytheGold",                    0,  140, 12.5F,   4.3F, 22);
+		scytheDiamondTM = EnumHelper.addToolMaterial("scytheDiamond",              3,  500,  8.5F,   6.0F, 10);
                                                                      //     harv.lvl, uses, efficy., dmg., enchant.,
 		multiToolWoodTM = EnumHelper.addToolMaterial("multiToolWood",              0,  120,  2.0F,   5.0F, 15);
 		multiToolStoneTM = EnumHelper.addToolMaterial("multiToolStone",            1,  160,  4.0F,   5.5F,  5);
@@ -648,6 +667,8 @@ public class ModItems {
 		epicBattleAxeTM = EnumHelper.addToolMaterial("epicBattleAxe",              3, 2000,  8.0F,   8.5F, 15);
 		epicKatanaTM = EnumHelper.addToolMaterial("epicKatana",                    3, 2500,  8.0F,   9.0F, 20);
 		epicWaraxeTM = EnumHelper.addToolMaterial("epicWaraxe",                    3, 2500,  8.0F,  10.0F, 15);
+		paradoxStaffTM = EnumHelper.addToolMaterial("paradoxStaff",                3, 2000,  9.0F,  10.0F,  5);
+		sentinelGlaveTM = EnumHelper.addToolMaterial("sentinelGlave",              3, 2000,  9.0F,  10.0F, 10);
 																	//     harv.lvl, uses, efficy., dmg., enchant.,
 		grapplingIronTM = EnumHelper.addToolMaterial("grapplingIron",              0,   90,  1.0F,   1.0F,  3);
 		harpoonTM = EnumHelper.addToolMaterial("harpoon",                          0,  200,  8.0F,   6.0F,  0);
@@ -873,6 +894,11 @@ public class ModItems {
 		warhammerDiamond = new ItemWarHammerDiamond(warhammerDiamondTM);
 		longbow = new ItemLongbow();
 		crossbow = new ItemCrossbow();
+		scytheWood = new ItemScytheWood(scytheWoodTM);
+		scytheStone = new ItemScytheStone(scytheStoneTM);
+		scytheIron = new ItemScytheIron(scytheIronTM);
+		scytheGold = new ItemScytheGold(scytheGoldTM);
+		scytheDiamond = new ItemScytheDiamond(scytheDiamondTM);
 		
 		// Early Modern Age
 		multiToolWood = new ItemMultiToolWood(multiToolWoodTM);
@@ -1004,6 +1030,8 @@ public class ModItems {
 		masterPickaxe = new ItemMasterPickaxe(masterTM);
 		masterShovel = new ItemMasterShovel(masterTM);
 		masterSword = new ItemMasterSword(masterTM);
+		paradoxStaff = new ItemParadoxStaff(paradoxStaffTM);
+		sentinelGlave = new ItemSentinelGlave(sentinelGlaveTM);
 		masterHelmet = new ItemArmorMaster(masterAM, 1, EntityEquipmentSlot.HEAD); 
 		masterChestplate = new ItemArmorMaster(masterAM, 1, EntityEquipmentSlot.CHEST);
 		masterLeggings = new ItemArmorMaster(masterAM, 2, EntityEquipmentSlot.LEGS); 
@@ -1205,6 +1233,11 @@ public class ModItems {
 		NameHandler.setNames(warhammerDiamond, "war_hammer_diamond");
 		NameHandler.setNames(longbow, "longbow");
 		NameHandler.setNames(crossbow, "crossbow");
+		NameHandler.setNames(scytheWood, "scythe_wood");
+		NameHandler.setNames(scytheStone, "scythe_stone");
+		NameHandler.setNames(scytheIron, "scythe_iron");
+		NameHandler.setNames(scytheGold, "scythe_gold");
+		NameHandler.setNames(scytheDiamond, "scythe_diamond");
 		
 		// Early Modern Age
 		NameHandler.setNames(multiToolWood, "multi_tool_wood");
@@ -1340,6 +1373,8 @@ public class ModItems {
 		NameHandler.setNames(masterChestplate, "master_chestplate");
 		NameHandler.setNames(masterLeggings, "master_leggings");
 		NameHandler.setNames(masterBoots, "master_boots");
+		NameHandler.setNames(paradoxStaff, "paradox_staff");
+		NameHandler.setNames(sentinelGlave, "sentinel_glave");
 
 		// Piracy
 		NameHandler.setNames(castNet, "cast_net");
@@ -1359,11 +1394,11 @@ public class ModItems {
 		NameHandler.setNames(saberDiamond, "saber_diamond");
 		
 /**		
-		NameUtils.setHandler(Wood, "_wood");
-		NameUtils.setHandler(Stone, "_stone");
-		NameUtils.setHandler(Iron, "_iron");
-		NameUtils.setHandler(Gold, "_gold");
-		NameUtils.setHandler(Diamond, "_diamond");
+		NameHandler.setNames(Wood, "_wood");
+		NameHandler.setNames(Stone, "_stone");
+		NameHandler.setNames(Iron, "_iron");
+		NameHandler.setNames(Gold, "_gold");
+		NameHandler.setNames(Diamond, "_diamond");
 **/
 		
    	    
@@ -1526,6 +1561,11 @@ public class ModItems {
 		registerItem(warhammerDiamond);
 		registerItem(longbow);
 		registerItem(crossbow);
+		registerItem(scytheWood);
+		registerItem(scytheStone);
+		registerItem(scytheIron);
+		registerItem(scytheGold);
+		registerItem(scytheDiamond);
 		
 		// Early Modern Age
 		registerItem(multiToolWood);
@@ -1669,6 +1709,8 @@ public class ModItems {
 		registerItem(epicBattleAxe);
 		registerItem(herobrineBow);
 		registerItem(herobrineSword);
+		registerItem(paradoxStaff);
+		registerItem(sentinelGlave);
 		
 		registerItem(castNet);
 		registerItem(grapplingIron);

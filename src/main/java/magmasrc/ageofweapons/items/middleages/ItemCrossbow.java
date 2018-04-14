@@ -133,7 +133,7 @@ public class ItemCrossbow extends ItemBow {
                       }
                       
                                         // Damage
-                      entityarrow.setDamage(8.0F);
+                      entityarrow.setDamage(5.0F);
 
                       int j = EnchantmentHelper.getEnchantmentLevel(Enchantments.POWER, stack);
 

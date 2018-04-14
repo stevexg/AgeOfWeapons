@@ -80,7 +80,7 @@ public class ItemCastNet extends Item {
         
         if (!worldIn.isRemote){
             EntityCastNet obj = new EntityCastNet(worldIn, playerIn);
-            //obj.setHeadingFromThrower(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 0.3F + (float) Math.random(), 1.0F);
+            obj.shoot(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 0.3F + (float) Math.random(), 1.0F);
             worldIn.spawnEntity(obj);
         }
 

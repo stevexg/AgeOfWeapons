@@ -66,7 +66,7 @@ public class ItemKunai extends ItemCustomWeapon {
         
         if (!worldIn.isRemote){
             EntityKunai obj = new EntityKunai(worldIn, playerIn);
-            //obj.setHeadingFromThrower(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 1.3F + (float) Math.random(), 1.0F);
+            obj.shoot(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 1.3F + (float) Math.random(), 1.0F);
             worldIn.spawnEntity(obj);
         }
 

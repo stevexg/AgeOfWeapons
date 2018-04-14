@@ -55,7 +55,7 @@ public class ItemGrenadePoison extends Item {
         
         if (!worldIn.isRemote){
             EntityGrenadePoison grenade = new EntityGrenadePoison(worldIn, playerIn);
-            //grenade.setHeadingFromThrower(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 1.0F, 1.0F);
+            grenade.shoot(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 1.0F, 1.0F);
             worldIn.spawnEntity(grenade);
         }
 

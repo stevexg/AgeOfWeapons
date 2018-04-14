@@ -7,5 +7,9 @@
  **/
 package magmasrc.ageofweapons.main;
 /**  Dev Change Log
+* 
+* * changes for aow recipes in crafting table (config option)
+* * changed caveman spear recipe
+* + china language file
 *
 **/

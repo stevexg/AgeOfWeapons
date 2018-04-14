@@ -20,8 +20,57 @@ import net.minecraftforge.registries.IForgeRegistryModifiable;
 public class ModRecipes {
 
 		public void register() {
-			//////
-	}	
+			
+			GameRegistry.addSmelting(ModItems.daggerGold, new ItemStack(Items.GOLD_NUGGET), 0);
+			GameRegistry.addSmelting(ModItems.kniveGold, new ItemStack(Items.GOLD_NUGGET), 0);
+			GameRegistry.addSmelting(ModItems.skewerGold, new ItemStack(Items.GOLD_NUGGET), 0);
+			GameRegistry.addSmelting(ModItems.katanaGold, new ItemStack(Items.GOLD_NUGGET), 0);
+			GameRegistry.addSmelting(ModItems.ninjatoGold, new ItemStack(Items.GOLD_NUGGET), 0);
+			GameRegistry.addSmelting(ModItems.clawGold, new ItemStack(Items.GOLD_NUGGET), 0);
+			GameRegistry.addSmelting(ModItems.clawSwordGold, new ItemStack(Items.GOLD_NUGGET), 0);
+			GameRegistry.addSmelting(ModItems.claymoreGold, new ItemStack(Items.GOLD_NUGGET), 0);
+			GameRegistry.addSmelting(ModItems.fantasySwordGold, new ItemStack(Items.GOLD_NUGGET), 0);
+			GameRegistry.addSmelting(ModItems.longClaymoreGold, new ItemStack(Items.GOLD_NUGGET), 0);
+			GameRegistry.addSmelting(ModItems.battleAxeGold, new ItemStack(Items.GOLD_NUGGET), 0);
+			GameRegistry.addSmelting(ModItems.flailGold, new ItemStack(Items.GOLD_NUGGET), 0);
+			GameRegistry.addSmelting(ModItems.halbertGold, new ItemStack(Items.GOLD_NUGGET), 0);
+			GameRegistry.addSmelting(ModItems.longswordGold, new ItemStack(Items.GOLD_NUGGET), 0);
+			GameRegistry.addSmelting(ModItems.spearGold, new ItemStack(Items.GOLD_NUGGET), 0);
+			GameRegistry.addSmelting(ModItems.tridentGold, new ItemStack(Items.GOLD_NUGGET), 0);
+			GameRegistry.addSmelting(ModItems.waraxeGold, new ItemStack(Items.GOLD_NUGGET), 0);
+			GameRegistry.addSmelting(ModItems.warhammerGold, new ItemStack(Items.GOLD_NUGGET), 0);
+			GameRegistry.addSmelting(ModItems.scytheGold, new ItemStack(Items.GOLD_NUGGET), 0);
+			GameRegistry.addSmelting(ModItems.multiToolGold, new ItemStack(Items.GOLD_NUGGET), 0);
+			GameRegistry.addSmelting(ModItems.macheteGold, new ItemStack(Items.GOLD_NUGGET), 0);
+			GameRegistry.addSmelting(ModItems.saberGold, new ItemStack(Items.GOLD_NUGGET), 0);
+			
+			GameRegistry.addSmelting(ModItems.daggerIron, new ItemStack(Items.IRON_NUGGET), 0);
+			GameRegistry.addSmelting(ModItems.kniveIron, new ItemStack(Items.IRON_NUGGET), 0);
+			GameRegistry.addSmelting(ModItems.skewerIron, new ItemStack(Items.IRON_NUGGET), 0);
+			GameRegistry.addSmelting(ModItems.batonIron, new ItemStack(Items.IRON_NUGGET), 0);
+			GameRegistry.addSmelting(ModItems.katanaIron, new ItemStack(Items.IRON_NUGGET), 0);
+			GameRegistry.addSmelting(ModItems.ninjatoIron, new ItemStack(Items.IRON_NUGGET), 0);
+			GameRegistry.addSmelting(ModItems.nunchuckIron, new ItemStack(Items.IRON_NUGGET), 0);
+			GameRegistry.addSmelting(ModItems.clawIron, new ItemStack(Items.IRON_NUGGET), 0);
+			GameRegistry.addSmelting(ModItems.clawSwordIron, new ItemStack(Items.IRON_NUGGET), 0);
+			GameRegistry.addSmelting(ModItems.claymoreIron, new ItemStack(Items.IRON_NUGGET), 0);
+			GameRegistry.addSmelting(ModItems.fantasySwordIron, new ItemStack(Items.IRON_NUGGET), 0);
+			GameRegistry.addSmelting(ModItems.longClaymoreIron, new ItemStack(Items.IRON_NUGGET), 0);
+			GameRegistry.addSmelting(ModItems.battleAxeIron, new ItemStack(Items.IRON_NUGGET), 0);
+			GameRegistry.addSmelting(ModItems.flailIron, new ItemStack(Items.IRON_NUGGET), 0);
+			GameRegistry.addSmelting(ModItems.halbertIron, new ItemStack(Items.IRON_NUGGET), 0);
+			GameRegistry.addSmelting(ModItems.longswordIron, new ItemStack(Items.IRON_NUGGET), 0);
+			GameRegistry.addSmelting(ModItems.spearIron, new ItemStack(Items.IRON_NUGGET), 0);
+			GameRegistry.addSmelting(ModItems.tridentIron, new ItemStack(Items.IRON_NUGGET), 0);
+			GameRegistry.addSmelting(ModItems.waraxeIron, new ItemStack(Items.IRON_NUGGET), 0);
+			GameRegistry.addSmelting(ModItems.scytheIron, new ItemStack(Items.IRON_NUGGET), 0);
+			GameRegistry.addSmelting(ModItems.warhammerIron, new ItemStack(Items.IRON_NUGGET), 0);
+			GameRegistry.addSmelting(ModItems.multiToolIron, new ItemStack(Items.IRON_NUGGET), 0);
+			GameRegistry.addSmelting(ModItems.macheteIron, new ItemStack(Items.IRON_NUGGET), 0);
+			GameRegistry.addSmelting(ModItems.saberIron, new ItemStack(Items.IRON_NUGGET), 0);
+			GameRegistry.addSmelting(ModItems.grapplingHook, new ItemStack(Items.IRON_NUGGET), 0);
+			GameRegistry.addSmelting(ModItems.grapplingIron, new ItemStack(Items.IRON_NUGGET), 0);
+}	
 	 
 		
 		
@@ -48,7 +97,7 @@ public class ModRecipes {
 		     }
 		     
 		     if(!AgeOfWeapons.activateBasicRecipesOnWorkbench) {
-			    ResourceLocation basic0 = new ResourceLocation("ageofweapons:ruby");
+			/** ResourceLocation basic0 = new ResourceLocation("ageofweapons:ruby");
 			   	ResourceLocation basic1 = new ResourceLocation("ageofweapons:ruby_block");
 			   	ResourceLocation basic2 = new ResourceLocation("ageofweapons:sapphire");
 			   	ResourceLocation basic3 = new ResourceLocation("ageofweapons:sapphire_block");
@@ -57,18 +106,53 @@ public class ModRecipes {
 		    	ResourceLocation basic6 = new ResourceLocation("ageofweapons:amber");
 		    	ResourceLocation basic7 = new ResourceLocation("ageofweapons:amber_block");
 			    ResourceLocation basic8 = new ResourceLocation("ageofweapons:withered_iron_block");
-			   	ResourceLocation basic9 = new ResourceLocation("ageofweapons:withered_iron_ingot");
-			    modRegistry.remove(basic0);
-			    modRegistry.remove(basic1);
-			    modRegistry.remove(basic2);
-			    modRegistry.remove(basic3);
-			    modRegistry.remove(basic4);
-			    modRegistry.remove(basic5);
-			    modRegistry.remove(basic6);
-		        modRegistry.remove(basic7);
-		        modRegistry.remove(basic8);
-		        modRegistry.remove(basic9);
-			}
+			   	ResourceLocation basic9 = new ResourceLocation("ageofweapons:withered_iron_ingot"); **/
+			   	ResourceLocation basic10 = new ResourceLocation("ageofweapons:axe_blade_diamond");
+			   	ResourceLocation basic11 = new ResourceLocation("ageofweapons:axe_blade_gold");
+			   	ResourceLocation basic12 = new ResourceLocation("ageofweapons:axe_blade_iron");
+			   	ResourceLocation basic13 = new ResourceLocation("ageofweapons:axe_blade_wood");
+			   	ResourceLocation basic14 = new ResourceLocation("ageofweapons:axe_blade_stone");
+			   	ResourceLocation basic15 = new ResourceLocation("ageofweapons:axe_blade_withered_iron");
+			   	ResourceLocation basic16 = new ResourceLocation("ageofweapons:broad_blade_diamond");
+			   	ResourceLocation basic17 = new ResourceLocation("ageofweapons:broad_blade_gold");
+			   	ResourceLocation basic18 = new ResourceLocation("ageofweapons:broad_blade_iron");
+			   	ResourceLocation basic19 = new ResourceLocation("ageofweapons:broad_blade_stone");
+			   	ResourceLocation basic20 = new ResourceLocation("ageofweapons:broad_blade_wood");
+			   	ResourceLocation basic21 = new ResourceLocation("ageofweapons:broad_blade_withered_iron");
+			   	ResourceLocation basic22 = new ResourceLocation("ageofweapons:sword_blade_diamond");
+			   	ResourceLocation basic23 = new ResourceLocation("ageofweapons:sword_blade_gold");
+			   	ResourceLocation basic24 = new ResourceLocation("ageofweapons:sword_blade_iron");
+			   	ResourceLocation basic25 = new ResourceLocation("ageofweapons:sword_blade_stone");
+			   	ResourceLocation basic26 = new ResourceLocation("ageofweapons:sword_blade_wood");
+			   	ResourceLocation basic27 = new ResourceLocation("ageofweapons:sword_blade_withered_iron");
+			   	ResourceLocation basic28 = new ResourceLocation("ageofweapons:nexus1");
+			   	ResourceLocation basic29 = new ResourceLocation("ageofweapons:nexus2");
+			   	ResourceLocation basic30 = new ResourceLocation("ageofweapons:nexus3");
+			   	ResourceLocation basic31 = new ResourceLocation("ageofweapons:nexus4");
+			   	modRegistry.remove(basic10);
+			    modRegistry.remove(basic11);
+			    modRegistry.remove(basic12);
+			    modRegistry.remove(basic13);
+			    modRegistry.remove(basic14);
+			    modRegistry.remove(basic15);
+			    modRegistry.remove(basic16);
+		        modRegistry.remove(basic17);
+		        modRegistry.remove(basic18);
+		        modRegistry.remove(basic19);
+			    modRegistry.remove(basic30);
+			   	modRegistry.remove(basic20);
+			    modRegistry.remove(basic21);
+			    modRegistry.remove(basic22);
+			    modRegistry.remove(basic23);
+			    modRegistry.remove(basic24);
+			    modRegistry.remove(basic25);
+			    modRegistry.remove(basic26);
+		        modRegistry.remove(basic27);
+		        modRegistry.remove(basic28);
+		        modRegistry.remove(basic29);
+			    modRegistry.remove(basic30);
+			    modRegistry.remove(basic31);
+		     }
 		     
 		    if(AgeOfWeapons.activateHardcoreMode) {
 			    ResourceLocation default0 = new ResourceLocation("minecraft:wooden_axe");
@@ -122,11 +206,11 @@ public class ModRecipes {
 			    ResourceLocation default48 = new ResourceLocation("minecraft:chainmail_leggings");
 			    ResourceLocation default49 = new ResourceLocation("minecraft:chainmail_chestplate");
 			    
-			    modRegistry.remove(default0);
-			    modRegistry.remove(default1);
-			    modRegistry.remove(default2);
-			    modRegistry.remove(default3);
-			    modRegistry.remove(default4);
+			    //modRegistry.remove(default0);
+			    //modRegistry.remove(default1);
+			    //modRegistry.remove(default2);
+			    //modRegistry.remove(default3);
+			    //modRegistry.remove(default4);
 			    modRegistry.remove(default5);
 			    modRegistry.remove(default6);
 			    modRegistry.remove(default7);

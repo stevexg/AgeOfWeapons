@@ -63,7 +63,7 @@ public class ItemSpearDiamond extends ItemCustomWeapon {
         
         if (!worldIn.isRemote){
             EntitySpearDiamond obj = new EntitySpearDiamond(worldIn, playerIn);
-            //obj.setHeadingFromThrower(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 1.0F, 1.0F);
+            obj.shoot(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 1.0F, 1.0F);
             worldIn.spawnEntity(obj);
         }
 
