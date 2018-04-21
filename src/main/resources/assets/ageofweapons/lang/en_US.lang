@@ -210,6 +210,16 @@ item.scythe_stone.name=Stone Scythe
 item.scythe_iron.name=Iron Scythe
 item.scythe_gold.name=Golden Scythe
 item.scythe_diamond.name=Diamond Scythe
+item.lance_wood.name=Wooden Lance
+item.lance_stone.name=Stone Lance
+item.lance_iron.name=Iron Lance
+item.lance_gold.name=Golden Lance
+item.lance_diamond.name=Diamod Lance
+item.heavy_staff_wood.name=Wooden Heavy Staff
+item.heavy_staff_stone.name=Stone Heavy Staff
+item.heavy_staff_iron.name=Iron Heavy Staff
+item.heavy_staff_gold.name=Golden Heavy Staff
+item.heavy_staff_diamond.name=Diamond Heavy Staff
 
 //EarlyModernAge
 item.multi_tool_wood.name=Wooden Multi Tool
@@ -242,6 +252,8 @@ item.wand_holy.name=Holy Wand
 item.wand_maelstrom.name=Maelstrom Wand
 item.warhorn_offensive.name=Offensive Warhorn
 item.warhorn_defensive.name=Defensive Warhorn
+item.wand_storm.name=Storm Wand
+item.scepter_changing.name=Scepter of Changing
 
 //Fantasy
 item.claw_wood.name=Wooden Claw

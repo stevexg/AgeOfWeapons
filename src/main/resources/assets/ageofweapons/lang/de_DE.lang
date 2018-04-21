@@ -213,6 +213,16 @@ item.scythe_stone.name=Stein Sense
 item.scythe_iron.name=Eisen Sense
 item.scythe_gold.name=Gold Sense
 item.scythe_diamond.name=Diamant Sense
+item.lance_wood.name=Holz Lanze
+item.lance_stone.name=Stein Lanze
+item.lance_iron.name=Eisen Lanze
+item.lance_gold.name=Gold Lanze
+item.lance_diamond.name=Diamant Lanze
+item.heavy_staff_wood.name=Holz Schlegel
+item.heavy_staff_stone.name=Stein Schlegel
+item.heavy_staff_iron.name=Eise Schlegel
+item.heavy_staff_gold.name=Gold Schlegel
+item.heavy_staff_diamond.name=Diamant Schlegel
 
 //EarlyModernAge
 item.multi_tool_wood.name=Holz Multifunktions Werkzeug
@@ -226,15 +236,15 @@ item.cannonball.name=Kanonen Kugel
 item.pebble.name=Steinchen
 item.compound_bow.name=Compoundbogen
 item.dynamite.name=Dynamit Stange
-item.nails.name=NÃ¤gel
-item.nails_toxic.name=Giftige NÃ¤gel
+item.nails.name=Nägel
+item.nails_toxic.name=Giftige Nägel
 item.soldier_helmet.name=Soldaten Helm
 item.soldier_chestplate.name=Soldaten Brustpanzer
 item.soldier_leggings.name=Soldaten Beinschutz
 item.soldier_boots.name=Soldaten Stiefel
 
 //Mystic
-item.mystic_knive.name=Mystisches Schwert
+item.mystic_knive.name=Mystisches Messer
 item.pufferfish_stick.name=Kugelfisch auf einem Stab
 item.scepter_unholy.name=Unheiliges Zepter
 item.wand_basic.name=Zauberstab
@@ -245,6 +255,8 @@ item.wand_holy.name=Heiliger Zauberstab
 item.wand_maelstrom.name=Malstrom Zauberstab
 item.warhorn_offensive.name=Ofensives Kriegshorn
 item.warhorn_defensive.name=Defensives Kriegshorn
+item.wand_storm.name=Sturm Zauberstab
+item.scepter_changing.name=Zepter der Veränderung
 
 //Fantasy
 item.claw_wood.name=Holz Klaue

@@ -21,8 +21,8 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 /**---------------------------------------------------------------------------------*
  * @author XxRexRaptorxX (RexRaptor) & Stvxv.g
- * @forumThread https://www.planetminecraft.com/mod/age-of-weapons/
  * @projectPage https://minecraft.curseforge.com/projects/age-of-weapons
+ * @forumThread https://www.planetminecraft.com/mod/age-of-weapons/
  **---------------------------------------------------------------------------------*/
 
 
@@ -30,7 +30,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class AgeOfWeapons {
    
     public static final String MODID = "ageofweapons";
-    public static final String VERSION = "0.13.4";
+    public static final String VERSION = "0.13.5";
 
    
     @Instance("ageofweapons")
@@ -39,7 +39,7 @@ public class AgeOfWeapons {
     @SidedProxy(clientSide = "magmasrc.ageofweapons.proxy.ClientProxy", serverSide = "magmasrc.ageofweapons.proxy.ServerProxy")
     public static ServerProxy proxy;
 
-    //TODO Steve: Schusswaffen, schauen wegen OreRecipes am ToA, waffen mit höherer reichweite
+    //TODO Steve: schauen wegen OreRecipes am ToA, Schusswaffen, waffen mit höherer reichweite
     //TODO Rex: weapon modifier => cfg., new weapons
     
     

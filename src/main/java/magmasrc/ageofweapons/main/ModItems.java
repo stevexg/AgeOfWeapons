@@ -109,6 +109,16 @@ public class ModItems {
 	public static ToolMaterial scytheIronTM;
 	public static ToolMaterial scytheGoldTM;
 	public static ToolMaterial scytheDiamondTM;
+	public static ToolMaterial lanceWoodTM;
+	public static ToolMaterial lanceStoneTM;
+	public static ToolMaterial lanceIronTM;
+	public static ToolMaterial lanceGoldTM;
+	public static ToolMaterial lanceDiamondTM;
+	public static ToolMaterial heavyStaffWoodTM;
+	public static ToolMaterial heavyStaffStoneTM;
+	public static ToolMaterial heavyStaffIronTM;
+	public static ToolMaterial heavyStaffGoldTM;
+	public static ToolMaterial heavyStaffDiamondTM;
 	
 	public static ToolMaterial multiToolWoodTM;
 	public static ToolMaterial multiToolStoneTM;
@@ -344,6 +354,16 @@ public class ModItems {
 	public static Item scytheIron;
 	public static Item scytheGold;
 	public static Item scytheDiamond;
+	public static Item lanceWood;
+	public static Item lanceStone;
+	public static Item lanceIron;
+	public static Item lanceGold;
+	public static Item lanceDiamond;
+	public static Item heavyStaffWood;
+	public static Item heavyStaffStone;
+	public static Item heavyStaffIron;
+	public static Item heavyStaffGold;
+	public static Item heavyStaffDiamond;
 	
 	// Early Modern Age
 	public static Item multiToolWood;
@@ -376,6 +396,8 @@ public class ModItems {
 	public static Item wandNether;
 	public static Item warhornOffensive;
 	public static Item warhornDefensive;
+	public static Item wandStorm;
+	public static Item scepterChanging;
 	
 	// Fantasy
 	public static Item clawWood;
@@ -605,6 +627,16 @@ public class ModItems {
 		scytheIronTM = EnumHelper.addToolMaterial("scytheIron",                    2,  230,  6.5F,   5.0F, 14);
 		scytheGoldTM = EnumHelper.addToolMaterial("scytheGold",                    0,  140, 12.5F,   4.3F, 22);
 		scytheDiamondTM = EnumHelper.addToolMaterial("scytheDiamond",              3,  500,  8.5F,   6.0F, 10);
+		lanceWoodTM = EnumHelper.addToolMaterial("lanceWood",                      0,  140,  2.0F,   2.0F, 15);
+		lanceStoneTM = EnumHelper.addToolMaterial("lanceStone",                    1,  190,  4.0F,   2.5F,  5);
+		lanceIronTM = EnumHelper.addToolMaterial("lanceIron",                      2,  240,  6.0F,   3.0F, 14);
+		lanceGoldTM = EnumHelper.addToolMaterial("lanceGold",                      0,  150, 12.0F,   2.3F, 22);
+		lanceDiamondTM = EnumHelper.addToolMaterial("lanceDiamond",                3,  520,  8.0F,   4.0F, 10);
+		heavyStaffWoodTM = EnumHelper.addToolMaterial("heavyStaffWood",            0,  155,  2.0F,   3.0F, 15);
+		heavyStaffStoneTM = EnumHelper.addToolMaterial("heavyStaffStone",          1,  200,  4.0F,   5.5F,  5);
+		heavyStaffIronTM = EnumHelper.addToolMaterial("heavyStaffIron",            2,  250,  6.0F,   6.8F, 14);
+		heavyStaffGoldTM = EnumHelper.addToolMaterial("heavyStaffGold",            0,  165, 12.0F,   5.3F, 22);
+		heavyStaffDiamondTM = EnumHelper.addToolMaterial("heavyStaffDiamond",      3, 1000,  8.0F,   7.2F, 10);
                                                                      //     harv.lvl, uses, efficy., dmg., enchant.,
 		multiToolWoodTM = EnumHelper.addToolMaterial("multiToolWood",              0,  120,  2.0F,   5.0F, 15);
 		multiToolStoneTM = EnumHelper.addToolMaterial("multiToolStone",            1,  160,  4.0F,   5.5F,  5);
@@ -899,6 +931,16 @@ public class ModItems {
 		scytheIron = new ItemScytheIron(scytheIronTM);
 		scytheGold = new ItemScytheGold(scytheGoldTM);
 		scytheDiamond = new ItemScytheDiamond(scytheDiamondTM);
+		lanceWood = new ItemLanceWood(lanceWoodTM);
+		lanceStone = new ItemLanceStone(lanceStoneTM);
+		lanceIron = new ItemLanceIron(lanceIronTM);
+		lanceGold = new ItemLanceGold(lanceGoldTM);
+		lanceDiamond = new ItemLanceDiamond(lanceDiamondTM);
+		heavyStaffWood = new ItemHeavyStaffWood(heavyStaffWoodTM);
+		heavyStaffStone = new ItemHeavyStaffStone(heavyStaffStoneTM);
+		heavyStaffIron = new ItemHeavyStaffIron(heavyStaffIronTM);
+		heavyStaffGold = new ItemHeavyStaffGold(heavyStaffGoldTM);
+		heavyStaffDiamond = new ItemHeavyStaffDiamond(heavyStaffDiamondTM);
 		
 		// Early Modern Age
 		multiToolWood = new ItemMultiToolWood(multiToolWoodTM);
@@ -931,6 +973,8 @@ public class ModItems {
 		wandNether = new ItemWandNether();
 		warhornOffensive = new ItemWarhornOffensive();
 		warhornDefensive = new ItemWarhornDefensive();
+		wandStorm = new ItemWandStorm();
+		scepterChanging = new ItemScepterChanging();
 		
 		// Fantasy
 		clawWood = new ItemClawWood(clawWoodTM);
@@ -1238,6 +1282,16 @@ public class ModItems {
 		NameHandler.setNames(scytheIron, "scythe_iron");
 		NameHandler.setNames(scytheGold, "scythe_gold");
 		NameHandler.setNames(scytheDiamond, "scythe_diamond");
+		NameHandler.setNames(lanceWood, "lance_wood");
+		NameHandler.setNames(lanceStone, "lance_stone");
+		NameHandler.setNames(lanceIron, "lance_iron");
+		NameHandler.setNames(lanceGold, "lance_gold");
+		NameHandler.setNames(lanceDiamond, "lance_diamond");
+		NameHandler.setNames(heavyStaffWood, "heavy_staff_wood");
+		NameHandler.setNames(heavyStaffStone, "heavy_staff_stone");
+		NameHandler.setNames(heavyStaffIron, "heavy_staff_iron");
+		NameHandler.setNames(heavyStaffGold, "heavy_staff_gold");
+		NameHandler.setNames(heavyStaffDiamond, "heavy_staff_diamond");
 		
 		// Early Modern Age
 		NameHandler.setNames(multiToolWood, "multi_tool_wood");
@@ -1270,6 +1324,8 @@ public class ModItems {
 		NameHandler.setNames(wandMaelstrom, "wand_maelstrom");
 		NameHandler.setNames(warhornDefensive, "warhorn_defensive");
 		NameHandler.setNames(warhornOffensive, "warhorn_offensive");
+		NameHandler.setNames(wandStorm, "wand_storm");
+		NameHandler.setNames(scepterChanging, "scepter_changing");
 		
 		// Fantasy
 		NameHandler.setNames(clawWood, "claw_wood");
@@ -1566,6 +1622,16 @@ public class ModItems {
 		registerItem(scytheIron);
 		registerItem(scytheGold);
 		registerItem(scytheDiamond);
+		registerItem(lanceWood);
+		registerItem(lanceStone);
+		registerItem(lanceIron);
+		registerItem(lanceGold);
+		registerItem(lanceDiamond);		
+		registerItem(heavyStaffWood);
+		registerItem(heavyStaffStone);
+		registerItem(heavyStaffIron);
+		registerItem(heavyStaffGold);
+		registerItem(heavyStaffDiamond);
 		
 		// Early Modern Age
 		registerItem(multiToolWood);
@@ -1597,6 +1663,7 @@ public class ModItems {
 		// Mystic
 		registerItem(mysticKnive);
 		registerItem(pufferfishStick);
+		registerItem(scepterChanging);
 		registerItem(scepterUnholy);
 		registerItem(wandBasic);
 		registerItem(wandNether);
@@ -1604,6 +1671,7 @@ public class ModItems {
 		registerItem(wandHoly);
 		registerItem(wandCurse);
 		registerItem(wandMaelstrom);
+		registerItem(wandStorm);
 		registerItem(warhornDefensive);
 		registerItem(warhornOffensive);
 		

@@ -212,6 +212,16 @@ item.scythe_stone.name=石镰刀
 item.scythe_iron.name=铁镰刀
 item.scythe_gold.name=金镰刀
 item.scythe_diamond.name=钻石镰刀
+item.lance_wood.name=
+item.lance_stone.name=
+item.lance_iron.name=
+item.lance_gold.name=
+item.lance_diamond.name=
+item.heavy_staff_wood.name=
+item.heavy_staff_stone.name=
+item.heavy_staff_iron.name=
+item.heavy_staff_gold.name=
+item.heavy_staff_diamond.name=
 
 //EarlyModernAge
 item.multi_tool_wood.name=木制多功能挖掘工具

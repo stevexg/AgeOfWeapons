@@ -172,6 +172,16 @@ public class ClientProxy extends ServerProxy {
     	ModelHandler.registerModel(ModItems.scytheIron);
     	ModelHandler.registerModel(ModItems.scytheStone);
     	ModelHandler.registerModel(ModItems.scytheWood);
+    	ModelHandler.registerModel(ModItems.lanceDiamond);
+    	ModelHandler.registerModel(ModItems.lanceGold);
+    	ModelHandler.registerModel(ModItems.lanceIron);
+    	ModelHandler.registerModel(ModItems.lanceStone);
+    	ModelHandler.registerModel(ModItems.lanceWood);
+    	ModelHandler.registerModel(ModItems.heavyStaffDiamond);
+    	ModelHandler.registerModel(ModItems.heavyStaffGold);
+    	ModelHandler.registerModel(ModItems.heavyStaffIron);
+    	ModelHandler.registerModel(ModItems.heavyStaffStone);
+    	ModelHandler.registerModel(ModItems.heavyStaffWood);
 
 		//Early Modern Age
     	ModelHandler.registerModel(ModItems.multiToolDiamond);
@@ -197,10 +207,12 @@ public class ClientProxy extends ServerProxy {
     	ModelHandler.registerModel(ModItems.mysticKnive);
     	ModelHandler.registerModel(ModItems.pufferfishStick);
     	ModelHandler.registerModel(ModItems.scepterUnholy);
+    	ModelHandler.registerModel(ModItems.scepterChanging);
     	ModelHandler.registerModel(ModItems.wandAether);
     	ModelHandler.registerModel(ModItems.wandBasic);
     	ModelHandler.registerModel(ModItems.wandCurse);
     	ModelHandler.registerModel(ModItems.wandHoly);
+    	ModelHandler.registerModel(ModItems.wandStorm);
     	ModelHandler.registerModel(ModItems.wandMaelstrom);
     	ModelHandler.registerModel(ModItems.wandNether);
     	ModelHandler.registerModel(ModItems.warhornDefensive);
