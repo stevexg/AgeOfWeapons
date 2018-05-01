@@ -1,0 +1,18 @@
+{
+  "type": "forge:ore_shapeless",
+  "ingredients": [
+  
+    {  
+       "item": "minecraft:gold_ingot"
+    },
+    {
+      "item": "ageofweapons:hammer",
+      "data": 32767
+    }
+    
+  ],
+  "result": {
+    "item": "ageofweapons:gold_shard",
+    "count": 3
+  }
+}

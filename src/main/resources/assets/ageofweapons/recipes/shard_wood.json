@@ -1,0 +1,19 @@
+{
+  "type": "forge:ore_shapeless",
+  "ingredients": [
+  
+    {  
+      "type": "forge:ore_dict",
+      "ore": "plankWood"
+    },
+    {
+      "item": "ageofweapons:hammer",
+      "data": 32767
+    }
+    
+  ],
+  "result": {
+    "item": "ageofweapons:wood_shard",
+    "count": 3
+  }
+}

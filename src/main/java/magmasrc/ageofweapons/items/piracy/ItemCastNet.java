@@ -8,6 +8,7 @@ import magmasrc.ageofweapons.entity.EntityCastNet;
 import magmasrc.ageofweapons.entity.EntityKunai;
 import magmasrc.ageofweapons.main.AgeOfWeapons;
 import magmasrc.ageofweapons.main.ModTabs;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.player.EntityPlayer;
@@ -38,12 +39,12 @@ public class ItemCastNet extends Item {
     }
 	
 	
-    @Override
-    public void addInformation(ItemStack stack, EntityPlayer playerIn, List addList, boolean advanced) {
-    	if(AgeOfWeapons.activateShowAges) {
-    		addList.add(ChatFormatting.DARK_GRAY + "Golden age of piracy");
-    	}	
-    }
+	@Override
+	public void addInformation(ItemStack stack, World player, List<String> addList, ITooltipFlag advanced) {
+		if(AgeOfWeapons.activateShowAges) {
+			addList.add(ChatFormatting.DARK_GRAY + "Golden age of Piracy");
+		}	
+	}
     
 
 	@Override
@@ -79,7 +80,7 @@ public class ItemCastNet extends Item {
         
         if (!worldIn.isRemote){
             EntityCastNet obj = new EntityCastNet(worldIn, playerIn);
-            obj.setHeadingFromThrower(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 0.3F + (float) Math.random(), 1.0F);
+            obj.shoot(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 0.3F + (float) Math.random(), 1.0F);
             worldIn.spawnEntity(obj);
         }
 

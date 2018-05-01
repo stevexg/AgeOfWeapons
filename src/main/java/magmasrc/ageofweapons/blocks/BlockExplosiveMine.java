@@ -106,7 +106,7 @@ public class BlockExplosiveMine extends Block {
 
     
     private boolean canBePlacedOn(World worldIn, BlockPos pos){
-        return worldIn.getBlockState(pos).isFullyOpaque() || worldIn.getBlockState(pos).getBlock() instanceof BlockFence;
+        return worldIn.getBlockState(pos).isFullCube() || worldIn.getBlockState(pos).getBlock() instanceof BlockFence;
     }
 	
 }

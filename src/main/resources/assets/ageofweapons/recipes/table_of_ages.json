@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+  
+    "XXX",
+    "#O#",
+    "#I#"
+  ],
+  
+  "key": {
+    "X": {
+      "item": "minecraft:stone_slab",
+      "data": 0
+    },
+    "#": {
+      "item": "minecraft:stone",
+      "data": 0
+    },
+    "O": {
+      "item": "minecraft:crafting_table"
+    },  
+    "I": {
+      "item": "minecraft:chest"
+    } 
+  },
+  
+  
+  "result": {
+    "item": "ageofweapons:table_of_ages"
+  }
+}

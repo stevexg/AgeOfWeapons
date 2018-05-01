@@ -1,0 +1,25 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+  
+    "XX ",
+    "X# ",
+    "   "
+  ],
+  
+  "key": {
+    "X": {
+     "type": "forge:ore_dict",
+      "ore": "shardStone"
+    },
+    "#": {
+      "item": "minecraft:stone",
+      "data": 0
+    }
+  },
+  
+  
+  "result": {
+    "item": "ageofweapons:axe_blade_stone"
+  }
+}

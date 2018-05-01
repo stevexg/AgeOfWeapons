@@ -10,6 +10,7 @@ import magmasrc.ageofweapons.util.NameHandler;
 import net.minecraft.block.Block;
 import net.minecraft.item.ItemBlock;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
+import net.minecraftforge.fml.common.registry.ForgeRegistries;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class ModBlocks {
@@ -29,6 +30,11 @@ public class ModBlocks {
 	public static Block topazBlock;
 	public static Block amberBlock;
 	public static Block witheredIronBlock;
+	public static Block rubyOre;
+	public static Block sapphireOre;
+	public static Block amethystOre;
+	public static Block topazOre;
+	public static Block amberOre;
 	
 	public static Block barbedWire;
 	public static Block nailTrap;
@@ -70,6 +76,11 @@ public class ModBlocks {
 			amethystBlock = new BlockAmethyst();
 			topazBlock = new BlockTopaz();
 			amberBlock = new BlockAmber();
+			rubyOre = new BlockRubyOre();
+			sapphireOre = new BlockSapphireOre();
+			amethystOre = new BlockAmethystOre();
+			topazOre = new BlockTopazOre();
+			amberOre = new BlockAmberOre();
 			witheredIronBlock = new BlockWitheredIron();
 			
 			barbedWire = new BlockBarbedWire();
@@ -112,6 +123,11 @@ public class ModBlocks {
 			NameHandler.setNames(topazBlock, "topaz_block");
 			NameHandler.setNames(amberBlock, "amber_block");
 			NameHandler.setNames(witheredIronBlock, "withered_iron_block");
+			NameHandler.setNames(rubyOre, "ruby_ore");
+			NameHandler.setNames(sapphireOre, "sapphire_ore");
+			NameHandler.setNames(amethystOre, "amethyst_ore");
+			NameHandler.setNames(topazOre, "topaz_ore");
+			NameHandler.setNames(amberOre, "amber_ore");
 			
 			NameHandler.setNames(barbedWire, "barbed_wire");
 			NameHandler.setNames(nailTrap, "nail_trap");
@@ -144,7 +160,7 @@ public class ModBlocks {
 
 			registerBlock(tableOfAges);
 			registerBlock(crusher);
-			GameRegistry.register(crusherOn);
+			ForgeRegistries.BLOCKS.register(crusherOn);
 			registerBlock(weaponBox);
 			registerBlock(nexus);
 			registerBlock(nexus2);
@@ -156,6 +172,11 @@ public class ModBlocks {
 			registerBlock(topazBlock);
 			registerBlock(amberBlock);
 			registerBlock(witheredIronBlock);
+			registerBlock(rubyOre);
+			registerBlock(sapphireOre);
+			registerBlock(amethystOre);
+			registerBlock(topazOre);
+			registerBlock(amberOre);
 			
 			registerBlock(barbedWire);
 			registerBlock(razorWire);
@@ -173,9 +194,9 @@ public class ModBlocks {
 			registerBlock(neutronBomb);
 			registerBlock(nuclearBomb);
 			registerBlock(spikes);
-			GameRegistry.register(spikesOn);
+			ForgeRegistries.BLOCKS.register(spikesOn);
 			registerBlock(spikesToxic);
-			GameRegistry.register(spikesToxicOn);
+			ForgeRegistries.BLOCKS.register(spikesToxicOn);
 			registerBlock(timeBomb);
 
 			
@@ -193,10 +214,11 @@ public class ModBlocks {
 		
 		
 		
-		private void registerBlock(Block block) {
-			GameRegistry.register(block);
+		
+		private static void registerBlock(Block block) {
+			ForgeRegistries.BLOCKS.register(block);
 			ItemBlock itemblock = new ItemBlock(block);
-			itemblock.setUnlocalizedName(block.getUnlocalizedName()).setRegistryName(block.getRegistryName());
-			GameRegistry.register(itemblock);
+			itemblock.setRegistryName(block.getRegistryName());
+			ForgeRegistries.ITEMS.register(itemblock);
 		}
 }

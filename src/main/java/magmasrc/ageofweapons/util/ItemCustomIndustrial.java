@@ -44,7 +44,7 @@ public class ItemCustomIndustrial extends ItemTool {
 		this.harvesttool = hartool;
 		this.harvestlevel = harlevel;
 		this.attackSpeed = attackSpeed - 4.0F;
-		this.attackDamage = material.getDamageVsEntity() - 1.0F;
+		this.attackDamage = material.getAttackDamage() - 1.0F;
 
 
 	}

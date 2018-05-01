@@ -1,4 +1,4 @@
-ï»¿
+Ã¯Â»Â¿
 itemGroup.generalTab=Age of Weapons
 itemGroup.stoneAgeTab=AoW: Steinzeit
 itemGroup.antiquityTab=AoW: Antike
@@ -32,6 +32,11 @@ tile.amethyst_block.name=Amethyst Block
 tile.topaz_block.name=Topas Block
 tile.amber_block.name=Bernstein Block
 tile.withered_iron_block.name=Verdorrter Eisen Block
+tile.ruby_ore.name=Rubin Erz
+tile.sapphire_ore.name=Saphir Erz
+tile.amethyst_ore.name=Amethyst Erz
+tile.topaz_ore.name=Topas Erz
+tile.amber_ore.name=Bernstein Erz
 
 tile.barbed_wire.name=Stacheldraht
 tile.nail_trap.name=Nagel Falle
@@ -109,7 +114,7 @@ item.blank_rifle.name=Blankes Gewehr
 item.gun_handle.name=Griff
 item.haft_wood.name=Holz Schaft
 item.haft_iron.name=Eisen Schaft
-item.visor.name=Visir
+item.visor.name=Visier
 item.amethyst.name=Amethyst
 item.topaz.name=Topas
 item.amber.name=Bernstein
@@ -203,6 +208,21 @@ item.war_hammer_gold.name=Gold Kriegshammer
 item.war_hammer_diamond.name=Diamant Kriegshammer
 item.longbow.name=Langbogen
 item.crossbow.name=Armbrust
+item.scythe_wood.name=Holz Sense
+item.scythe_stone.name=Stein Sense
+item.scythe_iron.name=Eisen Sense
+item.scythe_gold.name=Gold Sense
+item.scythe_diamond.name=Diamant Sense
+item.lance_wood.name=Holz Lanze
+item.lance_stone.name=Stein Lanze
+item.lance_iron.name=Eisen Lanze
+item.lance_gold.name=Gold Lanze
+item.lance_diamond.name=Diamant Lanze
+item.heavy_staff_wood.name=Holz Schlegel
+item.heavy_staff_stone.name=Stein Schlegel
+item.heavy_staff_iron.name=Eise Schlegel
+item.heavy_staff_gold.name=Gold Schlegel
+item.heavy_staff_diamond.name=Diamant Schlegel
 
 //EarlyModernAge
 item.multi_tool_wood.name=Holz Multifunktions Werkzeug
@@ -224,7 +244,7 @@ item.soldier_leggings.name=Soldaten Beinschutz
 item.soldier_boots.name=Soldaten Stiefel
 
 //Mystic
-item.mystic_knive.name=Mystisches Schwert
+item.mystic_knive.name=Mystisches Messer
 item.pufferfish_stick.name=Kugelfisch auf einem Stab
 item.scepter_unholy.name=Unheiliges Zepter
 item.wand_basic.name=Zauberstab
@@ -235,6 +255,8 @@ item.wand_holy.name=Heiliger Zauberstab
 item.wand_maelstrom.name=Malstrom Zauberstab
 item.warhorn_offensive.name=Ofensives Kriegshorn
 item.warhorn_defensive.name=Defensives Kriegshorn
+item.wand_storm.name=Sturm Zauberstab
+item.scepter_changing.name=Zepter der Veränderung
 
 //Fantasy
 item.claw_wood.name=Holz Klaue
@@ -257,11 +279,11 @@ item.long_claymore_stone.name=Langes Stein Breitschwert
 item.long_claymore_iron.name=Langes Eisen Breitschwert
 item.long_claymore_gold.name=Langes Gold Breitschwert
 item.long_claymore_diamond.name=Langes Diamant  Breitschwert
-item.fantasy_sword_wood.name=Holz Drachentöter Schwert
-item.fantasy_sword_stone.name=Stein Drachentöter Schwert
-item.fantasy_sword_iron.name=Eisen Drachentöter Schwert
-item.fantasy_sword_gold.name=Gold Drachentöter Schwert
-item.fantasy_sword_diamond.name=Diamant Drachentöter Schwert
+item.fantasy_sword_wood.name=Holz Drachentöter
+item.fantasy_sword_stone.name=Stein Drachentöter
+item.fantasy_sword_iron.name=Eisen Drachentöter
+item.fantasy_sword_gold.name=Gold Drachentöter
+item.fantasy_sword_diamond.name=Diamant Drachentöter
 item.light_bow.name=Licht Bogen
 item.shadow_bow.name=Schatten Bogen
 
@@ -302,7 +324,7 @@ item.night_vision_goggles.name=Nachtsicht Gerät
 item.taser.name=Elektro Schocker
 item.flame_thrower.name=Flammenwerfer
 item.industrial_miner.name=Industrieller Schürfer
-item.industrial_excavator.name=Industrieller Gräber
+item.industrial_excavator.name=Industrieller Graber
 item.tank_flame.name=Tank (Feuer)
 item.machine_case.name=Maschinen Gehäuse
 item.ammo_small.name=Kleine Munition
@@ -354,6 +376,8 @@ item.legendary_sword.name=Legendäres Schwert
 item.epic_katana.name=Rex's Katana
 item.epic_waraxe.name=Steve's Kriegsaxt
 item.epic_battle_axe.name=JSQ's Kampfaxt
+item.paradox_staff.name=Paradox Stab
+item.sentinel_glave.name=Wächter Glave
 
 //Piracy
 item.cast_net.name=Fangnetz

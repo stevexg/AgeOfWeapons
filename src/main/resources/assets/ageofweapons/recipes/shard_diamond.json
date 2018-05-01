@@ -1,0 +1,18 @@
+{
+  "type": "forge:ore_shapeless",
+  "ingredients": [
+  
+    {  
+       "item": "minecraft:diamond"
+    },
+    {
+      "item": "ageofweapons:hammer",
+      "data": 32767
+    }
+    
+  ],
+  "result": {
+    "item": "ageofweapons:diamond_shard",
+    "count": 3
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+  
+    "###",
+    "###",
+    "###"
+    
+  ],
+  
+  "key": {
+    "#": {
+      "item": "ageofweapons:sapphire"
+    }    
+  },
+  
+  
+  "result": {
+    "item": "ageofweapons:sapphire_block"
+  }
+}

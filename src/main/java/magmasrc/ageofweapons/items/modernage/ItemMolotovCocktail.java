@@ -5,6 +5,7 @@ import java.util.List;
 import magmasrc.ageofweapons.entity.EntityMolotovCocktail;
 import magmasrc.ageofweapons.main.AgeOfWeapons;
 import magmasrc.ageofweapons.main.ModTabs;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.SoundEvents;
 import net.minecraft.item.Item;
@@ -31,14 +32,14 @@ public class ItemMolotovCocktail extends Item {
 	}
 	
 	
-    @Override
-    public void addInformation(ItemStack stack, EntityPlayer playerIn, List addList, boolean advanced) {
-    	if(AgeOfWeapons.activateShowAges) {
-    		addList.add(ChatFormatting.DARK_GRAY + "Modern Age");
-    	}
+
+	@Override
+	public void addInformation(ItemStack stack, World player, List<String> addList, ITooltipFlag advanced) {
+		if(AgeOfWeapons.activateShowAges) {
+			addList.add(ChatFormatting.DARK_GRAY + "Modern Age");
+		}
 		addList.add(ChatFormatting.RED + "Work in progress");
-    }
-    
+	}
     
     
     
@@ -55,7 +56,7 @@ public class ItemMolotovCocktail extends Item {
         
         if (!worldIn.isRemote){
             EntityMolotovCocktail grenade = new EntityMolotovCocktail(worldIn, playerIn);
-            grenade.setHeadingFromThrower(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 1.0F, 1.0F);
+            grenade.shoot(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 1.0F, 1.0F);
             worldIn.spawnEntity(grenade);
         }
 

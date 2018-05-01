@@ -7,13 +7,19 @@ import javax.annotation.Nullable;
 import magmasrc.ageofweapons.main.AgeOfWeapons;
 import magmasrc.ageofweapons.main.ModItems;
 import magmasrc.ageofweapons.main.ModTabs;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.EntityRenderer;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.IItemPropertyGetter;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.ActionResult;
+import net.minecraft.util.EnumHand;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
+import net.minecraftforge.fml.common.ObfuscationReflectionHelper;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
@@ -46,9 +52,19 @@ public class ItemFieldGlasses extends Item {
 
    
 	@Override
-	public void addInformation(ItemStack  stack, EntityPlayer playerIn, List addList, boolean advanced) {
-		if(AgeOfWeapons.activateShowAges) {	
-			addList.add(ChatFormatting.GRAY + "Modern Age");
-		}
+	public void addInformation(ItemStack stack, World player, List<String> addList, ITooltipFlag advanced) {
+		if(AgeOfWeapons.activateShowAges) {
+			addList.add(ChatFormatting.DARK_GRAY + "Modern Age");
+		}	
+	}
+	
+	
+	@Override
+	public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn) {
+		try {
+			ObfuscationReflectionHelper.setPrivateValue(EntityRenderer.class, Minecraft.getMinecraft().entityRenderer, 0.25F, "fovModifierHand", "field_78507_R");
+		} catch(Exception e) {
+			System.err.println(e);
+		} 		return super.onItemRightClick(worldIn, playerIn, handIn);
 	}
 }

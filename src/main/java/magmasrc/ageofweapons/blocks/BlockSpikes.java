@@ -15,6 +15,7 @@ import net.minecraft.block.BlockFence;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
@@ -131,10 +132,11 @@ public class BlockSpikes extends Block {
         return new ItemStack(ModBlocks.spikes);
     }
 	
-    @Override
-    public void addInformation(ItemStack stack, EntityPlayer playerIn, List addList, boolean advanced) {
-    		addList.add(ChatFormatting.GRAY + "Needs redstone power");
-    }
+
+	@Override
+	public void addInformation(ItemStack stack, World player, List<String> addList, ITooltipFlag advanced) {
+		addList.add(ChatFormatting.GRAY + "Needs redstone power");
+	}
     
     
     @Override
@@ -143,7 +145,7 @@ public class BlockSpikes extends Block {
     }
 
     private boolean canBePlacedOn(World worldIn, BlockPos pos){
-        return worldIn.getBlockState(pos).isFullyOpaque() || worldIn.getBlockState(pos).getBlock() instanceof BlockFence;
+        return worldIn.getBlockState(pos).isFullCube() || worldIn.getBlockState(pos).getBlock() instanceof BlockFence;
     }
 	
 	

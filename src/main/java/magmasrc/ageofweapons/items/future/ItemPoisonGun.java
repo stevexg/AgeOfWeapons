@@ -8,6 +8,7 @@ import com.mojang.realmsclient.gui.ChatFormatting;
 import magmasrc.ageofweapons.main.AgeOfWeapons;
 import magmasrc.ageofweapons.main.ModItems;
 import magmasrc.ageofweapons.main.ModTabs;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -43,10 +44,10 @@ public class ItemPoisonGun extends Item {
     
     
 	@Override
-	public void addInformation(ItemStack  stack, EntityPlayer playerIn, List addList, boolean advanced) {
-		if(AgeOfWeapons.activateShowAges) {	
-			addList.add(ChatFormatting.GRAY + "Future");
-		}
+	public void addInformation(ItemStack stack, World player, List<String> addList, ITooltipFlag advanced) {
+		if(AgeOfWeapons.activateShowAges) {
+			addList.add(ChatFormatting.DARK_GRAY + "Future");
+		}	
 	}
 	
 	
@@ -59,9 +60,9 @@ public class ItemPoisonGun extends Item {
 	@Override
 	public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn) {
 		Vec3d lockVector = playerIn.getLookVec();
-		double x = lockVector.xCoord / 10;
-		double y = lockVector.yCoord / 10;
-		double z = lockVector.zCoord / 10;
+		double x = lockVector.x / 10;
+		double y = lockVector.y / 10;
+		double z = lockVector.z / 10;
 		Random random = new Random();
         ItemStack itemstack = playerIn.getHeldItem(handIn);
 		for (int i = 0; i < 100; i++) {

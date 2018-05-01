@@ -1,10 +1,15 @@
 package magmasrc.ageofweapons.items.fantasy;
 
+import java.util.List;
+
 import javax.annotation.Nullable;
+
+import com.mojang.realmsclient.gui.ChatFormatting;
 
 import magmasrc.ageofweapons.main.AgeOfWeapons;
 import magmasrc.ageofweapons.main.ModItems;
 import magmasrc.ageofweapons.main.ModTabs;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
@@ -114,7 +119,7 @@ public class ItemShadowBow extends ItemBow {
                   {
                       ItemArrow itemarrow = (ItemArrow)((ItemArrow)(itemstack.getItem() instanceof ItemArrow ? itemstack.getItem() : Items.ARROW));
                       EntityArrow entityarrow = itemarrow.createArrow(worldIn, itemstack, entityplayer);
-                      entityarrow.setAim(entityplayer, entityplayer.rotationPitch, entityplayer.rotationYaw, 0.0F, f * 3.5F, 1.0F);
+                      entityarrow.shoot(entityplayer, entityplayer.rotationPitch, entityplayer.rotationYaw, 0.0F, f * 3.5F, 1.0F);
                       entityarrow.setKnockbackStrength(1); // <<<<<<<<<<<
 
                       if (f == 1.0F)
@@ -177,4 +182,12 @@ public class ItemShadowBow extends ItemBow {
 	public boolean getIsRepairable(ItemStack armor, ItemStack stack) {
 	 return stack.getItem() == Items.FIREWORK_CHARGE;
 	} 
+	
+	
+	@Override
+	public void addInformation(ItemStack stack, World player, List<String> addList, ITooltipFlag advanced) {
+		if(AgeOfWeapons.activateShowAges) {
+			addList.add(ChatFormatting.DARK_GRAY + "Fantasy");
+		}	
+	}
 }

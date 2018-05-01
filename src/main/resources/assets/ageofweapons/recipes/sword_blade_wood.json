@@ -1,0 +1,21 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+  
+    " X ",
+    " X ",
+    "   "
+  ],
+  
+  "key": {
+    "X": {
+     "type": "forge:ore_dict",
+      "ore": "plankWood"    
+    }
+  },
+  
+  
+  "result": {
+    "item": "ageofweapons:sword_blade_wood"
+  }
+}

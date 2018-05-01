@@ -1,0 +1,25 @@
+{
+  "type": "forge:ore_shapeless",
+  "ingredients": [
+    {  
+      "item": "ageofweapons:toxin"
+    },
+     [
+        {  
+        "type": "forge:ore_dict",
+        "ore": "uranium"
+        },
+        {  
+        "type": "forge:ore_dict",
+        "ore": "ingotUranium"
+        },
+        {  
+        "type": "forge:ore_dict",
+        "ore": "dustUranium"
+        }
+     ]
+  ],
+  "result": {
+    "item": "ageofweapons:radioactive_toxin"
+  }
+}

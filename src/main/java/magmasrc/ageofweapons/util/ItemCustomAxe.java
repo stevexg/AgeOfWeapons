@@ -17,14 +17,25 @@ public class ItemCustomAxe extends ItemTool {
 
 	public ItemCustomAxe(ToolMaterial material, float attackSpeed) {
 		super(material, EFFECTIVE_ON);
-		this.damageVsEntity = material.getDamageVsEntity();
+		this.attackDamage = material.getAttackDamage();
 		this.attackSpeed = attackSpeed - 4.0F;
 		ObfuscationReflectionHelper.setPrivateValue(ItemTool.class, this, "axe", "toolClass");
 	}
 
+    @Override
+    public boolean canHarvestBlock(IBlockState state, ItemStack stack) {
+        if (!(state.getMaterial() == Material.WOOD) && !(state.getMaterial() == Material.PLANTS) && !(state.getMaterial() == Material.VINE)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
+	/**                 old
 	public float getStrVsBlock(ItemStack stack, IBlockState state) {
 		Material material = state.getMaterial();
 		return material != Material.WOOD && material != Material.PLANTS && material != Material.VINE ? super.getStrVsBlock(stack, state) : this.efficiencyOnProperMaterial;
 	}
+	**/
 }
 	

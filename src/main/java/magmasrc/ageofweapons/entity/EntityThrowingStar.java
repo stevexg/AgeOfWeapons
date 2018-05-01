@@ -28,7 +28,7 @@ public class EntityThrowingStar extends EntityThrowable {
 		     if (result.entityHit instanceof Entity) {
 		            int i = 1;
 
-		            result.entityHit.attackEntityFrom(DamageSource.GENERIC, 1.0F);
+		            result.entityHit.attackEntityFrom(DamageSource.GENERIC, 1.5F);
 		        }
 
 		        if (!this.world.isRemote) {

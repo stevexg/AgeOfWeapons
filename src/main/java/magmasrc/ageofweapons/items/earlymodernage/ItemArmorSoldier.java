@@ -1,8 +1,13 @@
 package magmasrc.ageofweapons.items.earlymodernage;
 
+import java.util.List;
+
+import com.mojang.realmsclient.gui.ChatFormatting;
+
 import magmasrc.ageofweapons.main.AgeOfWeapons;
 import magmasrc.ageofweapons.main.ModItems;
 import magmasrc.ageofweapons.main.ModTabs;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.init.MobEffects;
@@ -27,5 +32,12 @@ public class ItemArmorSoldier extends ItemArmor {
 	@Override
 	public boolean getIsRepairable(ItemStack armor, ItemStack stack) {
 	 return stack.getItem() == Items.IRON_INGOT;
-	} 	
+	}
+	
+	@Override
+	public void addInformation(ItemStack stack, World player, List<String> addList, ITooltipFlag advanced) {
+		if(AgeOfWeapons.activateShowAges) {
+			addList.add(ChatFormatting.DARK_GRAY + "Early modern age");
+		}	
+	}
 }

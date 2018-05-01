@@ -7,6 +7,8 @@ import com.mojang.realmsclient.gui.ChatFormatting;
 import magmasrc.ageofweapons.main.AgeOfWeapons;
 import magmasrc.ageofweapons.main.ModItems;
 import magmasrc.ageofweapons.main.ModTabs;
+import net.minecraft.client.util.ITooltipFlag;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityAreaEffectCloud;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
@@ -40,12 +42,12 @@ public class ItemWandNether extends Item {
 	
 	
 	
-    @Override
-    public void addInformation(ItemStack stack, EntityPlayer playerIn, List addList, boolean advanced) {
-    	if(AgeOfWeapons.activateShowAges) {
-    		addList.add(ChatFormatting.DARK_GRAY + "Mystic");
-    	}	
-    }
+	@Override
+	public void addInformation(ItemStack stack, World player, List<String> addList, ITooltipFlag advanced) {
+		if(AgeOfWeapons.activateShowAges) {
+			addList.add(ChatFormatting.DARK_GRAY + "Mystic");
+		}	
+	}
     
     
     
@@ -78,6 +80,14 @@ public class ItemWandNether extends Item {
             itemstack.damageItem(1, player);
             return EnumActionResult.SUCCESS;
         }
+    }
+    
+    
+    @Override
+    public boolean onLeftClickEntity(ItemStack stack, EntityPlayer player, Entity entity) {
+		stack.damageItem(1, player);
+    	entity.setFire(10);
+    	return super.onLeftClickEntity(stack, player, entity);
     }
     
     

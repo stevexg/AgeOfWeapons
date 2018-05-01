@@ -8,6 +8,8 @@ import magmasrc.ageofweapons.util.ItemCustomWeapon;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.state.IBlockState;
+import net.minecraft.client.util.ITooltipFlag;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -19,6 +21,7 @@ import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
 
 import java.util.List;
@@ -37,12 +40,12 @@ public class ItemWarHammerStone extends ItemCustomWeapon {
     }
 
     
-    @Override
-    public void addInformation(ItemStack stack, EntityPlayer playerIn, List addList, boolean advanced) {
-    	if(AgeOfWeapons.activateShowAges) {
-    		addList.add(ChatFormatting.DARK_GRAY + "Middle Ages");
-    	}	
-    }
+	@Override
+	public void addInformation(ItemStack stack, World player, List<String> addList, ITooltipFlag advanced) {
+		if(AgeOfWeapons.activateShowAges) {
+			addList.add(ChatFormatting.DARK_GRAY + "Middle Ages");
+		}	
+	}
     
     
 	@Override
@@ -86,5 +89,31 @@ public class ItemWarHammerStone extends ItemCustomWeapon {
 	            }
 	        }
 	    }
+	
+	
+	@Override
+	public boolean hitEntity(ItemStack stack, EntityLivingBase target, EntityLivingBase attacker) {
+		stack.damageItem(1, attacker);
+
+		double d = attacker.posX - target.posX;
+                double d1;
+                for(d1 = attacker.posZ - target.posZ; d * d + d1 * d1 < 0.0001D; d1 = (Math.random() - Math.random()) * 1.01D) {
+                    d = (Math.random() - Math.random()) * 1.1D;
+                }
+
+		target.isAirBorne = true;
+		float f = MathHelper.sqrt(d * d + d1 * d1);
+		float f1 = 1.500F;
+		target.motionX /= 2D;
+		target.motionY /= 2D;
+		target.motionZ /= 2D;
+		target.motionX -= (d / (double)f) * (double)f1;
+		target.motionY += 0.80000000596046448D;
+		target.motionZ -= (d1 / (double)f) * (double)f1;
+        	if(target.motionY > 0.80000000596046448D) {
+        		target.motionY = 0.80000000596046448D;
+        	}
+        	return true;
+	}
 
 }

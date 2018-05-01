@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+
+    {  
+      "item": "ageofweapons:ruby_block"
+    }
+    
+  ],
+  "result": {
+    "item": "ageofweapons:ruby",
+    "count": 9
+  }
+}

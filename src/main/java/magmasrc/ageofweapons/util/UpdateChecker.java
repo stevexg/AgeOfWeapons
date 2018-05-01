@@ -10,7 +10,7 @@ import magmasrc.ageofweapons.main.AgeOfWeapons;
 
 public class UpdateChecker {
 
-	private static final String UPDATE_URL = "https://www.dropbox.com/s/gascxc44vf6xkud/AgeOfWeapons%201.11.2.txt?dl=1";
+	private static final String UPDATE_URL = "https://www.dropbox.com/s/rr7r6w6k890xs5q/AgeOfWeapons%201.12.2.txt?dl=1";
 
 	private static boolean newVersionAvailable = false;
 			

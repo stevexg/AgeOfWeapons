@@ -6,6 +6,7 @@ import com.mojang.realmsclient.gui.ChatFormatting;
 
 import magmasrc.ageofweapons.main.AgeOfWeapons;
 import magmasrc.ageofweapons.main.ModTabs;
+import net.minecraft.client.util.ITooltipFlag;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.player.EntityPlayer;
@@ -15,6 +16,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.EnumParticleTypes;
+import net.minecraft.world.World;
 
 public class ItemTaser extends Item {
 
@@ -31,12 +33,11 @@ public class ItemTaser extends Item {
     
     
 	@Override
-	public void addInformation(ItemStack  stack, EntityPlayer playerIn, List addList, boolean advanced) {
-		if(AgeOfWeapons.activateShowAges) {	
-			addList.add(ChatFormatting.GRAY + "Modern Age");
+	public void addInformation(ItemStack stack, World player, List<String> addList, ITooltipFlag advanced) {
+		if(AgeOfWeapons.activateShowAges) {
+			addList.add(ChatFormatting.DARK_GRAY + "Modern Age");
 		}
-			addList.add(ChatFormatting.RED + "Work in progress");
-
+		addList.add(ChatFormatting.RED + "Work in progress");
 	}
 	
 	

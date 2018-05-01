@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+
+    {  
+      "item": "ageofweapons:amber_block"
+    }
+    
+  ],
+  "result": {
+    "item": "ageofweapons:amber",
+    "count": 9
+  }
+}
