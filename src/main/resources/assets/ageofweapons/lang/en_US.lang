@@ -1,4 +1,4 @@
-Ã¯Â»Â¿
+ÃƒÂ¯Ã‚Â»Ã‚Â¿
 itemGroup.generalTab=Age of Weapons
 itemGroup.stoneAgeTab=AoW: Stone Age
 itemGroup.antiquityTab=AoW: Antiquity
@@ -29,6 +29,11 @@ tile.amethyst_block.name=Amethyst Block
 tile.topaz_block.name=Topaz Block
 tile.amber_block.name=Amber Block
 tile.withered_iron_block.name=Withered Iron Block
+tile.ruby_ore.name=Ruby Ore
+tile.sapphire_ore.name=Sapphire Ore
+tile.amethyst_ore.name=Amethyst Ore
+tile.topaz_ore.name=Topaz Ore
+tile.amber_ore.name=Amber Ore
 
 tile.barbed_wire.name=Barbed Wire
 tile.nail_trap.name=Nail Trap
@@ -200,6 +205,21 @@ item.war_hammer_diamond.name=Diamond War Hammer
 item.longbow.name=Longbow
 item.crossbow.name=Crossbow
 item.hammer.name=Hammer
+item.scythe_wood.name=Wooden Scythe
+item.scythe_stone.name=Stone Scythe
+item.scythe_iron.name=Iron Scythe
+item.scythe_gold.name=Golden Scythe
+item.scythe_diamond.name=Diamond Scythe
+item.lance_wood.name=Wooden Lance
+item.lance_stone.name=Stone Lance
+item.lance_iron.name=Iron Lance
+item.lance_gold.name=Golden Lance
+item.lance_diamond.name=Diamod Lance
+item.heavy_staff_wood.name=Wooden Heavy Staff
+item.heavy_staff_stone.name=Stone Heavy Staff
+item.heavy_staff_iron.name=Iron Heavy Staff
+item.heavy_staff_gold.name=Golden Heavy Staff
+item.heavy_staff_diamond.name=Diamond Heavy Staff
 
 //EarlyModernAge
 item.multi_tool_wood.name=Wooden Multi Tool
@@ -232,6 +252,8 @@ item.wand_holy.name=Holy Wand
 item.wand_maelstrom.name=Maelstrom Wand
 item.warhorn_offensive.name=Offensive Warhorn
 item.warhorn_defensive.name=Defensive Warhorn
+item.wand_storm.name=Storm Wand
+item.scepter_changing.name=Scepter of Changing
 
 //Fantasy
 item.claw_wood.name=Wooden Claw
@@ -268,11 +290,11 @@ item.katana_stone.name=Stone Katana
 item.katana_iron.name=Iron Katana
 item.katana_gold.name=Golden Katana
 item.katana_diamond.name=Diamond Katana
-item.ninjato_wood.name=Wooden NinjatÅ�
-item.ninjato_stone.name=Stone NinjatÅ�
-item.ninjato_iron.name=Iron NinjatÅ�
-item.ninjato_gold.name=Golden NinjatÅ�
-item.ninjato_diamond.name=Diamond NinjatÅ�
+item.ninjato_wood.name=Wooden Ninjatō
+item.ninjato_stone.name=Stone Ninjatō
+item.ninjato_iron.name=Iron Ninjatō
+item.ninjato_gold.name=Golden Ninjatō
+item.ninjato_diamond.name=Diamond Ninjatō
 item.baton_iron.name=Iron Baton
 item.baton_wood.name=Wooden Baton
 item.blowgun.name=Blowgun
@@ -351,6 +373,8 @@ item.legendary_sword.name=Legendary Sword
 item.epic_katana.name=Rex's Katana
 item.epic_waraxe.name=Steve's Waraxe
 item.epic_battle_axe.name=JSQ's Battle Axe
+item.paradox_staff.name=Paradox Staff
+item.sentinel_glave.name=Sentinel Glave
 
 //Piracy
 item.cast_net.name=Cast Net

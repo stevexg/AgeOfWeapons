@@ -45,7 +45,7 @@ public class ItemThrowWood extends Item {
         
         if (!worldIn.isRemote){
             EntityThrowWood obj = new EntityThrowWood(worldIn, playerIn);
-            //obj.setHeadingFromThrower(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 1.8F, 1.0F);
+            obj.shoot(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 1.8F, 1.0F);
             worldIn.spawnEntity(obj);
         }
 

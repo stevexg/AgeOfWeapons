@@ -1,4 +1,4 @@
-package magmasrc.ageofweapons.util;
+package magmasrc.ageofweapons.worldgen;
 
 import magmasrc.ageofweapons.main.AgeOfWeapons;
 import magmasrc.ageofweapons.main.ModBlocks;

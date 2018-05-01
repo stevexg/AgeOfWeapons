@@ -54,7 +54,7 @@ public class ItemHarpoon extends Item {
         
         if (!worldIn.isRemote){
             EntityHarpoon obj = new EntityHarpoon(worldIn, playerIn);
-            //obj.setHeadingFromThrower(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 1.6F, 0.5F);
+            obj.shoot(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 1.6F, 0.5F);
             worldIn.spawnEntity(obj);
         }
 

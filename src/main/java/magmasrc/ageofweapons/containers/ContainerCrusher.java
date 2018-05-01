@@ -54,22 +54,22 @@ public class ContainerCrusher extends Container {
 
             if (this.cookTime != this.tileCrusher.getField(2))
             {
-                icontainerlistener.sendProgressBarUpdate(this, 2, this.tileCrusher.getField(2));
+                icontainerlistener.sendWindowProperty(this, 2, this.tileCrusher.getField(2));
             }
 
             if (this.crusherBurnTime != this.tileCrusher.getField(0))
             {
-                icontainerlistener.sendProgressBarUpdate(this, 0, this.tileCrusher.getField(0));
+                icontainerlistener.sendWindowProperty(this, 0, this.tileCrusher.getField(0));
             }
 
             if (this.currentItemBurnTime != this.tileCrusher.getField(1))
             {
-                icontainerlistener.sendProgressBarUpdate(this, 1, this.tileCrusher.getField(1));
+                icontainerlistener.sendWindowProperty(this, 1, this.tileCrusher.getField(1));
             }
 
             if (this.totalCookTime != this.tileCrusher.getField(3))
             {
-                icontainerlistener.sendProgressBarUpdate(this, 3, this.tileCrusher.getField(3));
+                icontainerlistener.sendWindowProperty(this, 3, this.tileCrusher.getField(3));
             }
         }
 

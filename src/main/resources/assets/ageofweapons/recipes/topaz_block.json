@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+  
+    "###",
+    "###",
+    "###"
+    
+  ],
+  
+  "key": {
+    "#": {
+      "item": "ageofweapons:topaz"
+    }    
+  },
+  
+  
+  "result": {
+    "item": "ageofweapons:topaz_block"
+  }
+}

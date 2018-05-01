@@ -4,6 +4,7 @@ import net.minecraft.inventory.InventoryCrafting;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.IRecipe;
 import net.minecraft.util.NonNullList;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.World;
 
 public class ShapedRecipesTableOfAges implements IRecipe
@@ -151,4 +152,31 @@ public class ShapedRecipesTableOfAges implements IRecipe
     {
         return this.recipeWidth * this.recipeHeight;
     }
+    
+    
+    
+    ////////// new
+	@Override
+	public IRecipe setRegistryName(ResourceLocation name) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public ResourceLocation getRegistryName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Class<IRecipe> getRegistryType() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean canFit(int width, int height) {
+		// TODO Auto-generated method stub
+		return false;
+	}
 }

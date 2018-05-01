@@ -1,0 +1,25 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+  
+    "   ",
+    "XXX",
+    " I "
+    
+  ],
+  
+  "key": {
+    "X": {
+      "type": "forge:ore_dict",
+      "ore": "shardIron"
+    },
+    "I": {
+      "item": "minecraft:stick"
+}    
+  },
+  
+  
+  "result": {
+    "item": "ageofweapons:sword_handle"
+  }
+}

@@ -10,6 +10,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.world.World;
+import net.minecraft.item.EnumRarity;
 import net.minecraft.item.ItemSpade;
 import net.minecraft.item.ItemStack;
 
@@ -36,7 +37,10 @@ public class ItemMasterShovel extends ItemSpade {
 		}	
 	}
     
-    
+	@Override
+    public EnumRarity getRarity(ItemStack stack) {
+        return EnumRarity.EPIC;
+    }
 	
 	@Override
 	public boolean getIsRepairable(ItemStack armor, ItemStack stack) {

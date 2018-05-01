@@ -1,0 +1,19 @@
+{
+  "type": "forge:ore_shapeless",
+  "ingredients": [
+  
+    {  
+       "item": "minecraft:skull",
+       "data": 1
+    },
+    {
+      "item": "ageofweapons:hammer",
+      "data": 32767
+    }
+    
+  ],
+  "result": {
+    "item": "ageofweapons:wither_dust",
+    "count": 8
+  }
+}

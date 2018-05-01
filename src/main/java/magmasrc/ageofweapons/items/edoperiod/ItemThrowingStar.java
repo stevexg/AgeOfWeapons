@@ -57,7 +57,7 @@ public class ItemThrowingStar extends Item {
         
         if (!worldIn.isRemote){
             EntityThrowingStar obj = new EntityThrowingStar(worldIn, playerIn);
-            //obj.setHeadingFromThrower(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 1.0F, 1.0F);
+            obj.shoot(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0F, 1.0F, 1.0F);
             worldIn.spawnEntity(obj);
         }
 

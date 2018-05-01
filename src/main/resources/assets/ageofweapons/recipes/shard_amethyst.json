@@ -1,0 +1,18 @@
+{
+  "type": "forge:ore_shapeless",
+  "ingredients": [
+  
+    {  
+       "item": "ageofweapons:amethyst"
+    },
+    {
+      "item": "ageofweapons:hammer",
+      "data": 32767
+    }
+    
+  ],
+  "result": {
+    "item": "ageofweapons:amethyst_shard",
+    "count": 3
+  }
+}

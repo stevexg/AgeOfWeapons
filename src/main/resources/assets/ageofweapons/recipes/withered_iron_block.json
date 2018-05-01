@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+  
+    "###",
+    "###",
+    "###"
+    
+  ],
+  
+  "key": {
+    "#": {
+      "item": "ageofweapons:withered_iron_ingot"
+    }    
+  },
+  
+  
+  "result": {
+    "item": "ageofweapons:withered_iron_block"
+  }
+}
